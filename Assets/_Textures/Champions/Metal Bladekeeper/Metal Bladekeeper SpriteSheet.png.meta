@@ -1,0 +1,3935 @@
+fileFormatVersion: 2
+guid: cf3ba71c0a0484340b98d2f68a558d9e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8955097004722601947
+    second: Metal Bladekeeper SpriteSheet_0
+  - first:
+      213: 2986912572393569700
+    second: Metal Bladekeeper SpriteSheet_1
+  - first:
+      213: -5403246786003435148
+    second: Metal Bladekeeper SpriteSheet_2
+  - first:
+      213: 9120102778102329834
+    second: Metal Bladekeeper SpriteSheet_3
+  - first:
+      213: 3877957897664474886
+    second: Metal Bladekeeper SpriteSheet_4
+  - first:
+      213: -8393161328238735301
+    second: Metal Bladekeeper SpriteSheet_5
+  - first:
+      213: -7614382616417029877
+    second: Metal Bladekeeper SpriteSheet_6
+  - first:
+      213: -1041074904121959738
+    second: Metal Bladekeeper SpriteSheet_7
+  - first:
+      213: 7789432379673222928
+    second: Metal Bladekeeper SpriteSheet_8
+  - first:
+      213: -4596143691636083007
+    second: Metal Bladekeeper SpriteSheet_9
+  - first:
+      213: -7280911162456990513
+    second: Metal Bladekeeper SpriteSheet_10
+  - first:
+      213: -133244499162684109
+    second: Metal Bladekeeper SpriteSheet_11
+  - first:
+      213: -8082342237238335261
+    second: Metal Bladekeeper SpriteSheet_12
+  - first:
+      213: -6350186064807051315
+    second: Metal Bladekeeper SpriteSheet_13
+  - first:
+      213: -7473648619178900383
+    second: Metal Bladekeeper SpriteSheet_14
+  - first:
+      213: -1432526728917512916
+    second: Metal Bladekeeper SpriteSheet_15
+  - first:
+      213: -7523321855252458622
+    second: Metal Bladekeeper SpriteSheet_16
+  - first:
+      213: 5388537736441916803
+    second: Metal Bladekeeper SpriteSheet_17
+  - first:
+      213: 2080966942246133163
+    second: Metal Bladekeeper SpriteSheet_18
+  - first:
+      213: 5324244605140402906
+    second: Metal Bladekeeper SpriteSheet_19
+  - first:
+      213: 5733523600382765498
+    second: Metal Bladekeeper SpriteSheet_20
+  - first:
+      213: 6426969204924050893
+    second: Metal Bladekeeper SpriteSheet_21
+  - first:
+      213: 8210479595860379361
+    second: Metal Bladekeeper SpriteSheet_22
+  - first:
+      213: -3704955255583795322
+    second: Metal Bladekeeper SpriteSheet_23
+  - first:
+      213: 4468266305799185577
+    second: Metal Bladekeeper SpriteSheet_24
+  - first:
+      213: -1517466202932312139
+    second: Metal Bladekeeper SpriteSheet_25
+  - first:
+      213: 235225161656166407
+    second: Metal Bladekeeper SpriteSheet_26
+  - first:
+      213: -1052564151281655908
+    second: Metal Bladekeeper SpriteSheet_27
+  - first:
+      213: 5293565020020239953
+    second: Metal Bladekeeper SpriteSheet_28
+  - first:
+      213: 5737268318828347759
+    second: Metal Bladekeeper SpriteSheet_29
+  - first:
+      213: 5759449953240418388
+    second: Metal Bladekeeper SpriteSheet_30
+  - first:
+      213: 1956901611853680955
+    second: Metal Bladekeeper SpriteSheet_31
+  - first:
+      213: 9108585497027569353
+    second: Metal Bladekeeper SpriteSheet_32
+  - first:
+      213: -1476794062198630008
+    second: Metal Bladekeeper SpriteSheet_33
+  - first:
+      213: 5973151309148181065
+    second: Metal Bladekeeper SpriteSheet_34
+  - first:
+      213: 7661892992969327256
+    second: Metal Bladekeeper SpriteSheet_35
+  - first:
+      213: 6084443373855053656
+    second: Metal Bladekeeper SpriteSheet_36
+  - first:
+      213: 1022718384956384257
+    second: Metal Bladekeeper SpriteSheet_37
+  - first:
+      213: 3872362521471524737
+    second: Metal Bladekeeper SpriteSheet_38
+  - first:
+      213: 3486731545429560165
+    second: Metal Bladekeeper SpriteSheet_39
+  - first:
+      213: 905845648465216359
+    second: Metal Bladekeeper SpriteSheet_40
+  - first:
+      213: -1397231854787796523
+    second: Metal Bladekeeper SpriteSheet_41
+  - first:
+      213: 4458943930156750731
+    second: Metal Bladekeeper SpriteSheet_42
+  - first:
+      213: -7276849494123450770
+    second: Metal Bladekeeper SpriteSheet_43
+  - first:
+      213: 6899972040574369868
+    second: Metal Bladekeeper SpriteSheet_44
+  - first:
+      213: 2400617026159616986
+    second: Metal Bladekeeper SpriteSheet_45
+  - first:
+      213: 2306593465725471818
+    second: Metal Bladekeeper SpriteSheet_46
+  - first:
+      213: -7537709312248336850
+    second: Metal Bladekeeper SpriteSheet_47
+  - first:
+      213: -4601062800643523323
+    second: Metal Bladekeeper SpriteSheet_48
+  - first:
+      213: 7051030609628092693
+    second: Metal Bladekeeper SpriteSheet_49
+  - first:
+      213: -5073858686633385199
+    second: Metal Bladekeeper SpriteSheet_50
+  - first:
+      213: 5525927928159929217
+    second: Metal Bladekeeper SpriteSheet_51
+  - first:
+      213: 1630960371289304046
+    second: Metal Bladekeeper SpriteSheet_52
+  - first:
+      213: 6552190025605186487
+    second: Metal Bladekeeper SpriteSheet_53
+  - first:
+      213: 3873285990793577352
+    second: Metal Bladekeeper SpriteSheet_54
+  - first:
+      213: 1279351222770915595
+    second: Metal Bladekeeper SpriteSheet_55
+  - first:
+      213: 3123463169403513932
+    second: Metal Bladekeeper SpriteSheet_56
+  - first:
+      213: 6554958258670352975
+    second: Metal Bladekeeper SpriteSheet_57
+  - first:
+      213: -7299985821401291929
+    second: Metal Bladekeeper SpriteSheet_58
+  - first:
+      213: 3833268891224490474
+    second: Metal Bladekeeper SpriteSheet_59
+  - first:
+      213: -5821250811224453263
+    second: Metal Bladekeeper SpriteSheet_60
+  - first:
+      213: 4327270048563321037
+    second: Metal Bladekeeper SpriteSheet_61
+  - first:
+      213: -1130397372893348644
+    second: Metal Bladekeeper SpriteSheet_62
+  - first:
+      213: -1828643684127735
+    second: Metal Bladekeeper SpriteSheet_63
+  - first:
+      213: 1807963922253781752
+    second: Metal Bladekeeper SpriteSheet_64
+  - first:
+      213: 1787142744517745076
+    second: Metal Bladekeeper SpriteSheet_65
+  - first:
+      213: 6146610328703705335
+    second: Metal Bladekeeper SpriteSheet_66
+  - first:
+      213: -1304588463699726932
+    second: Metal Bladekeeper SpriteSheet_67
+  - first:
+      213: -4702437363160481124
+    second: Metal Bladekeeper SpriteSheet_68
+  - first:
+      213: -636540186803129245
+    second: Metal Bladekeeper SpriteSheet_69
+  - first:
+      213: -8873580681592308029
+    second: Metal Bladekeeper SpriteSheet_70
+  - first:
+      213: -8477499385305896329
+    second: Metal Bladekeeper SpriteSheet_71
+  - first:
+      213: 5297924847388262894
+    second: Metal Bladekeeper SpriteSheet_72
+  - first:
+      213: -250657359997515298
+    second: Metal Bladekeeper SpriteSheet_73
+  - first:
+      213: -5392454738085588046
+    second: Metal Bladekeeper SpriteSheet_74
+  - first:
+      213: 8948625820440481349
+    second: Metal Bladekeeper SpriteSheet_75
+  - first:
+      213: 2654511688759841027
+    second: Metal Bladekeeper SpriteSheet_76
+  - first:
+      213: -2035986157858721730
+    second: Metal Bladekeeper SpriteSheet_77
+  - first:
+      213: -4658104484606322294
+    second: Metal Bladekeeper SpriteSheet_78
+  - first:
+      213: -1067816865049799187
+    second: Metal Bladekeeper SpriteSheet_79
+  - first:
+      213: -2959006616102224584
+    second: Metal Bladekeeper SpriteSheet_80
+  - first:
+      213: -9206327827046273160
+    second: Metal Bladekeeper SpriteSheet_81
+  - first:
+      213: -5510416115259997064
+    second: Metal Bladekeeper SpriteSheet_82
+  - first:
+      213: 4181804621923203452
+    second: Metal Bladekeeper SpriteSheet_83
+  - first:
+      213: 3200090882692337509
+    second: Metal Bladekeeper SpriteSheet_84
+  - first:
+      213: -470368988698630443
+    second: Metal Bladekeeper SpriteSheet_85
+  - first:
+      213: -4932486003819152236
+    second: Metal Bladekeeper SpriteSheet_86
+  - first:
+      213: -4457440717086605889
+    second: Metal Bladekeeper SpriteSheet_87
+  - first:
+      213: 9055830134629187139
+    second: Metal Bladekeeper SpriteSheet_88
+  - first:
+      213: 8259520370892382650
+    second: Metal Bladekeeper SpriteSheet_89
+  - first:
+      213: -3201668745588340217
+    second: Metal Bladekeeper SpriteSheet_90
+  - first:
+      213: 6692408918740961950
+    second: Metal Bladekeeper SpriteSheet_91
+  - first:
+      213: -2331135059188896202
+    second: Metal Bladekeeper SpriteSheet_92
+  - first:
+      213: -4540137614212992355
+    second: Metal Bladekeeper SpriteSheet_93
+  - first:
+      213: -4620442246742103856
+    second: Metal Bladekeeper SpriteSheet_94
+  - first:
+      213: -6576935949037590476
+    second: Metal Bladekeeper SpriteSheet_95
+  - first:
+      213: 7738717369329969271
+    second: Metal Bladekeeper SpriteSheet_96
+  - first:
+      213: 5498107746142092138
+    second: Metal Bladekeeper SpriteSheet_97
+  - first:
+      213: -2083644578006381215
+    second: Metal Bladekeeper SpriteSheet_98
+  - first:
+      213: 3395918815259718072
+    second: Metal Bladekeeper SpriteSheet_99
+  - first:
+      213: -705230437823412340
+    second: Metal Bladekeeper SpriteSheet_100
+  - first:
+      213: 6145709332134278739
+    second: Metal Bladekeeper SpriteSheet_101
+  - first:
+      213: -3843707610156481456
+    second: Metal Bladekeeper SpriteSheet_102
+  - first:
+      213: -487698230333677520
+    second: Metal Bladekeeper SpriteSheet_103
+  - first:
+      213: -6670033109446376917
+    second: Metal Bladekeeper SpriteSheet_104
+  - first:
+      213: -3704996168680149768
+    second: Metal Bladekeeper SpriteSheet_105
+  - first:
+      213: -7087764680128743635
+    second: Metal Bladekeeper SpriteSheet_106
+  - first:
+      213: 2406970531489543666
+    second: Metal Bladekeeper SpriteSheet_107
+  - first:
+      213: 6021689262211971726
+    second: Metal Bladekeeper SpriteSheet_108
+  - first:
+      213: 153089311862416922
+    second: Metal Bladekeeper SpriteSheet_109
+  - first:
+      213: 8761274084262262436
+    second: Metal Bladekeeper SpriteSheet_110
+  - first:
+      213: -277262862054980080
+    second: Metal Bladekeeper SpriteSheet_111
+  - first:
+      213: 5284189384444971712
+    second: Metal Bladekeeper SpriteSheet_112
+  - first:
+      213: -4536489662838353713
+    second: Metal Bladekeeper SpriteSheet_113
+  - first:
+      213: -4129308464350463008
+    second: Metal Bladekeeper SpriteSheet_114
+  - first:
+      213: -3986019177773514374
+    second: Metal Bladekeeper SpriteSheet_115
+  - first:
+      213: 3238669028727037957
+    second: Metal Bladekeeper SpriteSheet_116
+  - first:
+      213: -684755236352640259
+    second: Metal Bladekeeper SpriteSheet_117
+  - first:
+      213: 2994055433486015626
+    second: Metal Bladekeeper SpriteSheet_118
+  - first:
+      213: -8052452310720903624
+    second: Metal Bladekeeper SpriteSheet_119
+  - first:
+      213: -2833844451776375677
+    second: Metal Bladekeeper SpriteSheet_120
+  - first:
+      213: -3888849522098612310
+    second: Metal Bladekeeper SpriteSheet_121
+  - first:
+      213: 3284626836380278060
+    second: Metal Bladekeeper SpriteSheet_122
+  - first:
+      213: 7389855528794780264
+    second: Metal Bladekeeper SpriteSheet_123
+  - first:
+      213: 9037295100714048452
+    second: Metal Bladekeeper SpriteSheet_124
+  - first:
+      213: -1274149545693746046
+    second: Metal Bladekeeper SpriteSheet_125
+  - first:
+      213: -6935211862702270929
+    second: Metal Bladekeeper SpriteSheet_126
+  - first:
+      213: 2898622376144799564
+    second: Metal Bladekeeper SpriteSheet_127
+  - first:
+      213: -4213587184711492586
+    second: Metal Bladekeeper SpriteSheet_128
+  - first:
+      213: -7858427014710259028
+    second: Metal Bladekeeper SpriteSheet_129
+  - first:
+      213: -6478322786553911448
+    second: Metal Bladekeeper SpriteSheet_130
+  - first:
+      213: -6759791599503939540
+    second: Metal Bladekeeper SpriteSheet_131
+  - first:
+      213: 8427947546427751091
+    second: Metal Bladekeeper SpriteSheet_132
+  - first:
+      213: 5467061253699391098
+    second: Metal Bladekeeper SpriteSheet_133
+  - first:
+      213: 4139372052019466037
+    second: Metal Bladekeeper SpriteSheet_134
+  - first:
+      213: -4100831977433955977
+    second: Metal Bladekeeper SpriteSheet_135
+  - first:
+      213: 1821766189979746624
+    second: Metal Bladekeeper SpriteSheet_136
+  - first:
+      213: -630588160922398007
+    second: Metal Bladekeeper SpriteSheet_137
+  - first:
+      213: -1136620308929847388
+    second: Metal Bladekeeper SpriteSheet_138
+  - first:
+      213: -8877680181064969447
+    second: Metal Bladekeeper SpriteSheet_139
+  - first:
+      213: -4313876297809986463
+    second: Metal Bladekeeper SpriteSheet_140
+  - first:
+      213: 8068761998758053838
+    second: Metal Bladekeeper SpriteSheet_141
+  - first:
+      213: -3357738837542234039
+    second: Metal Bladekeeper SpriteSheet_142
+  - first:
+      213: -3857411347177078517
+    second: Metal Bladekeeper SpriteSheet_143
+  - first:
+      213: -8081337926688719925
+    second: Metal Bladekeeper SpriteSheet_144
+  - first:
+      213: 607813334299482771
+    second: Metal Bladekeeper SpriteSheet_145
+  - first:
+      213: 2578698258545014734
+    second: Metal Bladekeeper SpriteSheet_146
+  - first:
+      213: -7753740874701335381
+    second: Metal Bladekeeper SpriteSheet_147
+  - first:
+      213: -6092501974226320693
+    second: Metal Bladekeeper SpriteSheet_148
+  - first:
+      213: -3690388590652521113
+    second: Metal Bladekeeper SpriteSheet_149
+  - first:
+      213: -7839988395839301140
+    second: Metal Bladekeeper SpriteSheet_150
+  - first:
+      213: -7463893620821068336
+    second: Metal Bladekeeper SpriteSheet_151
+  - first:
+      213: 7812750239828361636
+    second: Metal Bladekeeper SpriteSheet_152
+  - first:
+      213: 9177270116492091070
+    second: Metal Bladekeeper SpriteSheet_153
+  - first:
+      213: -4724948337999532392
+    second: Metal Bladekeeper SpriteSheet_154
+  - first:
+      213: -6751566534358952761
+    second: Metal Bladekeeper SpriteSheet_155
+  - first:
+      213: 5751357621325655212
+    second: Metal Bladekeeper SpriteSheet_156
+  - first:
+      213: 7635186389925618034
+    second: Metal Bladekeeper SpriteSheet_157
+  - first:
+      213: -5156848091618949537
+    second: Metal Bladekeeper SpriteSheet_158
+  - first:
+      213: -832799021445203225
+    second: Metal Bladekeeper SpriteSheet_159
+  - first:
+      213: 6537524653599264642
+    second: Metal Bladekeeper SpriteSheet_160
+  - first:
+      213: 2257731847867520355
+    second: Metal Bladekeeper SpriteSheet_161
+  - first:
+      213: 807977928943742093
+    second: Metal Bladekeeper SpriteSheet_162
+  - first:
+      213: -1124208082648607756
+    second: Metal Bladekeeper SpriteSheet_163
+  - first:
+      213: 2273116644947035990
+    second: Metal Bladekeeper SpriteSheet_164
+  - first:
+      213: 4564279085734968531
+    second: Metal Bladekeeper SpriteSheet_165
+  - first:
+      213: -8927625594407796755
+    second: Metal Bladekeeper SpriteSheet_166
+  - first:
+      213: -3510952727450597475
+    second: Metal Bladekeeper SpriteSheet_167
+  - first:
+      213: -4357803026972407139
+    second: Metal Bladekeeper SpriteSheet_168
+  - first:
+      213: 3015516281716751288
+    second: Metal Bladekeeper SpriteSheet_169
+  - first:
+      213: -2725262251770558679
+    second: Metal Bladekeeper SpriteSheet_170
+  - first:
+      213: 3222519323786528551
+    second: Metal Bladekeeper SpriteSheet_171
+  - first:
+      213: 8124595289584328326
+    second: Metal Bladekeeper SpriteSheet_172
+  - first:
+      213: 552048873363161233
+    second: Metal Bladekeeper SpriteSheet_173
+  - first:
+      213: -793284885329755973
+    second: Metal Bladekeeper SpriteSheet_174
+  - first:
+      213: 3834880182271771698
+    second: Metal Bladekeeper SpriteSheet_175
+  - first:
+      213: -1638421283641429395
+    second: Metal Bladekeeper SpriteSheet_176
+  - first:
+      213: -4890391454344809104
+    second: Metal Bladekeeper SpriteSheet_177
+  - first:
+      213: 6826945145979841724
+    second: Metal Bladekeeper SpriteSheet_178
+  - first:
+      213: 8314177788549051026
+    second: Metal Bladekeeper SpriteSheet_179
+  - first:
+      213: 4088579821350251179
+    second: Metal Bladekeeper SpriteSheet_180
+  - first:
+      213: -8542494370413236640
+    second: Metal Bladekeeper SpriteSheet_181
+  - first:
+      213: -4530172759066768112
+    second: Metal Bladekeeper SpriteSheet_182
+  - first:
+      213: -9025964306897677547
+    second: Metal Bladekeeper SpriteSheet_183
+  - first:
+      213: 2906356360746725249
+    second: Metal Bladekeeper SpriteSheet_184
+  - first:
+      213: -7259753993649943095
+    second: Metal Bladekeeper SpriteSheet_185
+  - first:
+      213: 1911135833077294226
+    second: Metal Bladekeeper SpriteSheet_186
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfb7a79745e64c70800000000000000
+      internalID: 8955097004722601947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1920
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4adbaa4c825a37920800000000000000
+      internalID: 2986912572393569700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1920
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4718e7efcafc305b0800000000000000
+      internalID: -5403246786003435148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1920
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1b7d3082d119e70800000000000000
+      internalID: 9120102778102329834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1920
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f2630692641d530800000000000000
+      internalID: 3877957897664474886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1920
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30d8c7ad30858b80800000000000000
+      internalID: -8393161328238735301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1920
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01bd846a57445690800000000000000
+      internalID: -7614382616417029877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1920
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca9c3bf3eb5d81f0800000000000000
+      internalID: -1041074904121959738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f1958aa7f991c60800000000000000
+      internalID: 7789432379673222928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1792
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6f063f9a73730c0800000000000000
+      internalID: -4596143691636083007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1792
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc1398afd105fa90800000000000000
+      internalID: -7280911162456990513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1792
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335222f75de962ef0800000000000000
+      internalID: -133244499162684109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1792
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8e54cae80c5df80800000000000000
+      internalID: -8082342237238335261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1792
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf3a853b6b9fd7a0800000000000000
+      internalID: -6350186064807051315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1792
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164c0cd8d24484890800000000000000
+      internalID: -7473648619178900383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1792
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d8e97a784ae1ce0800000000000000
+      internalID: -1432526728917512916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2839eb602aac79790800000000000000
+      internalID: -7523321855252458622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d6867858ee7ca40800000000000000
+      internalID: 5388537736441916803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad59e5986411ec10800000000000000
+      internalID: 2080966942246133163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad20fa2624483e940800000000000000
+      internalID: 5324244605140402906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab922284651919f40800000000000000
+      internalID: 5733523600382765498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd6fd9b07e213950800000000000000
+      internalID: 6426969204924050893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6c9d201bb71f170800000000000000
+      internalID: 8210479595860379361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687163223da559cc0800000000000000
+      internalID: -3704955255583795322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4e10ff788720e30800000000000000
+      internalID: 4468266305799185577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b70f8f3780e0fae0800000000000000
+      internalID: -1517466202932312139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708efbac900b34300800000000000000
+      internalID: 235225161656166407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9fdb8b2b7a8461f0800000000000000
+      internalID: -1052564151281655908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e6db5d655867940800000000000000
+      internalID: 5293565020020239953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61cddc732fde9f40800000000000000
+      internalID: 5737268318828347759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4580984b73dadef40800000000000000
+      internalID: 5759449953240418388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b319dead5af482b10800000000000000
+      internalID: 1956901611853680955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c66a9c0042386e70800000000000000
+      internalID: 9108585497027569353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8899e34ff9f518be0800000000000000
+      internalID: -1476794062198630008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942df63f775e4e250800000000000000
+      internalID: 5973151309148181065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892cdf82513845a60800000000000000
+      internalID: 7661892992969327256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8571c920309407450800000000000000
+      internalID: 6084443373855053656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1042698d3fc613e00800000000000000
+      internalID: 1022718384956384257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f98d552356db530800000000000000
+      internalID: 3872362521471524737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b4a78fddb536030800000000000000
+      internalID: 3486731545429560165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7634a1261d5329c00800000000000000
+      internalID: 905845648465216359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1638ae7090c9ce0800000000000000
+      internalID: -1397231854787796523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b87906641e951ed30800000000000000
+      internalID: 4458943930156750731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e6ac280ff630b90800000000000000
+      internalID: -7276849494123450770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4000966300a1cf50800000000000000
+      internalID: 6899972040574369868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3affd5774b05120800000000000000
+      internalID: 2400617026159616986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ccdc5498aa20020800000000000000
+      internalID: 2306593465725471818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ea847215da46790800000000000000
+      internalID: -7537709312248336850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50df062a2cdb520c0800000000000000
+      internalID: -4601062800643523323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519d9434bfa4ad160800000000000000
+      internalID: 7051030609628092693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113efae28680699b0800000000000000
+      internalID: -5073858686633385199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183026c4c2a00bc40800000000000000
+      internalID: 5525927928159929217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb207501d552a610800000000000000
+      internalID: 1630960371289304046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b30e010d1e0eea50800000000000000
+      internalID: 6552190025605186487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8838fba461da0c530800000000000000
+      internalID: 3873285990793577352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09d838a82b21c110800000000000000
+      internalID: 1279351222770915595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4cef492435c85b20800000000000000
+      internalID: 3123463169403513932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a3f8d7ec3e7fa50800000000000000
+      internalID: 6554958258670352975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763ecf9829d31ba90800000000000000
+      internalID: -7299985821401291929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1cdfd3fb1823530800000000000000
+      internalID: 3833268891224490474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f0380ca33c63fa0800000000000000
+      internalID: -5821250811224453263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8ddcbae2d8d0c30800000000000000
+      internalID: 4327270048563321037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc38a514950050f0800000000000000
+      internalID: -1130397372893348644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c69c6bbd089fff0800000000000000
+      internalID: -1828643684127735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa98a8bb9d271910800000000000000
+      internalID: 1807963922253781752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b995e18bd43dc810800000000000000
+      internalID: 1787142744517745076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0a12f17852d4550800000000000000
+      internalID: 6146610328703705335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cadea1b44bb25ede0800000000000000
+      internalID: -1304588463699726932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c928b4ef1269dbeb0800000000000000
+      internalID: -4702437363160481124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364b658921e8a27f0800000000000000
+      internalID: -636540186803129245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cefbe36265bad480800000000000000
+      internalID: -8873580681592308029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77aef3b893fd95a80800000000000000
+      internalID: -8477499385305896329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee10b4f3492068940800000000000000
+      internalID: 5297924847388262894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9c209857c758cf0800000000000000
+      internalID: -250657359997515298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b359057cf62a25b0800000000000000
+      internalID: -5392454738085588046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e4e3795c7ef2c70800000000000000
+      internalID: 8948625820440481349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30117a41158b6d420800000000000000
+      internalID: 2654511688759841027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30f7356069beb3e0800000000000000
+      internalID: -2035986157858721730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a89d264a6a61b5fb0800000000000000
+      internalID: -4658104484606322294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de51981083a5e21f0800000000000000
+      internalID: -1067816865049799187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d323ff82f7fe6d0800000000000000
+      internalID: -2959006616102224584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87fec175e9d8c3080800000000000000
+      internalID: -9206327827046273160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87407551db11783b0800000000000000
+      internalID: -5510416115259997064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79b1d1c521c80a30800000000000000
+      internalID: 4181804621923203452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fc7d7f3b1096c20800000000000000
+      internalID: 3200090882692337509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6224b95e9e879f0800000000000000
+      internalID: -470368988698630443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49cf5caec1a4c8bb0800000000000000
+      internalID: -4932486003819152236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbdb0bac84df322c0800000000000000
+      internalID: -4457440717086605889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34eb9d01785ccad70800000000000000
+      internalID: 9055830134629187139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1a42a3406bf9270800000000000000
+      internalID: 8259520370892382650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a8cb23d336193d0800000000000000
+      internalID: -3201668745588340217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a0635247630ec50800000000000000
+      internalID: 6692408918740961950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e2699b30526afd0800000000000000
+      internalID: -2331135059188896202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d92f17105e03ef0c0800000000000000
+      internalID: -4540137614212992355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8aab9b144e0efb0800000000000000
+      internalID: -4620442246742103856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4382e17b9970ab4a0800000000000000
+      internalID: -6576935949037590476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778ee082272756b60800000000000000
+      internalID: 7738717369329969271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b7f996dd33d4c40800000000000000
+      internalID: 5498107746142092138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16dc2c1cb486513e0800000000000000
+      internalID: -2083644578006381215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1fe9d8b2ab02f20800000000000000
+      internalID: 3395918815259718072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c870ebc37a48636f0800000000000000
+      internalID: -705230437823412340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356baa28312f94550800000000000000
+      internalID: 6145709332134278739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054482c1b4868aac0800000000000000
+      internalID: -3843707610156481456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030ef5f1b095b39f0800000000000000
+      internalID: -487698230333677520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22ca5fe9384f63a0800000000000000
+      internalID: -6670033109446376917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fce2af4d95359cc0800000000000000
+      internalID: -3704996168680149768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27bd55739333ad90800000000000000
+      internalID: -7087764680128743635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5744a12f6476120800000000000000
+      internalID: 2406970531489543666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8abdedca76519350800000000000000
+      internalID: 6021689262211971726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16e7740be1ef1200800000000000000
+      internalID: 153089311862416922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6b9444c5c469970800000000000000
+      internalID: 8761274084262262436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0160ecd55e6f62cf0800000000000000
+      internalID: -277262862054980080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca8bb19f36355940800000000000000
+      internalID: 5284189384444971712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0d94fdfa62b01c0800000000000000
+      internalID: -4536489662838353713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eb706664dfb1b6c0800000000000000
+      internalID: -4129308464350463008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a714ae83da0dea8c0800000000000000
+      internalID: -3986019177773514374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500a55a825012fc20800000000000000
+      internalID: 3238669028727037957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfabc139db24f76f0800000000000000
+      internalID: -684755236352640259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c13c6bd850d8920800000000000000
+      internalID: 2994055433486015626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83605b08941ff3090800000000000000
+      internalID: -8052452310720903624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38458274c792ca8d0800000000000000
+      internalID: -2833844451776375677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa75d52b6f7080ac0800000000000000
+      internalID: -3888849522098612310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d592a74b6559d20800000000000000
+      internalID: 3284626836380278060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 862f447437a0e8660800000000000000
+      internalID: 7389855528794780264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb5070330cea6d70800000000000000
+      internalID: 9037295100714048452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ce23a2dbf415ee0800000000000000
+      internalID: -1274149545693746046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f265e812e8d21cf90800000000000000
+      internalID: -6935211862702270929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c470c1c81b9f93820800000000000000
+      internalID: 2898622376144799564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c1221b7c45685c0800000000000000
+      internalID: -4213587184711492586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_129
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca29cde044241f290800000000000000
+      internalID: -7858427014710259028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_130
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867a22fcfbf5816a0800000000000000
+      internalID: -6478322786553911448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_131
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28e5ebea556032a0800000000000000
+      internalID: -6759791599503939540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_132
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba737ae3a516f470800000000000000
+      internalID: 8427947546427751091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_133
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ecd089e37eedb40800000000000000
+      internalID: 5467061253699391098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_134
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53fccc133f0027930800000000000000
+      internalID: 4139372052019466037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7718c7d2b0be617c0800000000000000
+      internalID: -4100831977433955977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_136
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0414f8992b6384910800000000000000
+      internalID: 1821766189979746624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_137
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c257ac9863bf37f0800000000000000
+      internalID: -630588160922398007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_138
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afddb1e9d9e930f0800000000000000
+      internalID: -1136620308929847388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_139
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913d81a49e42cc480800000000000000
+      internalID: -8877680181064969447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_140
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16cfe00fc580224c0800000000000000
+      internalID: -4313876297809986463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_141
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec70529a9400aff60800000000000000
+      internalID: 8068761998758053838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_142
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94813cb315ae661d0800000000000000
+      internalID: -3357738837542234039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_143
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0103f231d8b77ac0800000000000000
+      internalID: -3857411347177078517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_144
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcbb3d1f8f159df80800000000000000
+      internalID: -8081337926688719925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_145
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a9aa8d1036f6800800000000000000
+      internalID: 607813334299482771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal Bladekeeper SpriteSheet_146
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec77e73576069c320800000000000000
+      internalID: 2578698258545014734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d4f848c746ef9cb4eb2fa2b39d31162d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Metal Bladekeeper SpriteSheet_0: 8955097004722601947
+      Metal Bladekeeper SpriteSheet_1: 2986912572393569700
+      Metal Bladekeeper SpriteSheet_10: -7280911162456990513
+      Metal Bladekeeper SpriteSheet_100: -705230437823412340
+      Metal Bladekeeper SpriteSheet_101: 6145709332134278739
+      Metal Bladekeeper SpriteSheet_102: -3843707610156481456
+      Metal Bladekeeper SpriteSheet_103: -487698230333677520
+      Metal Bladekeeper SpriteSheet_104: -6670033109446376917
+      Metal Bladekeeper SpriteSheet_105: -3704996168680149768
+      Metal Bladekeeper SpriteSheet_106: -7087764680128743635
+      Metal Bladekeeper SpriteSheet_107: 2406970531489543666
+      Metal Bladekeeper SpriteSheet_108: 6021689262211971726
+      Metal Bladekeeper SpriteSheet_109: 153089311862416922
+      Metal Bladekeeper SpriteSheet_11: -133244499162684109
+      Metal Bladekeeper SpriteSheet_110: 8761274084262262436
+      Metal Bladekeeper SpriteSheet_111: -277262862054980080
+      Metal Bladekeeper SpriteSheet_112: 5284189384444971712
+      Metal Bladekeeper SpriteSheet_113: -4536489662838353713
+      Metal Bladekeeper SpriteSheet_114: -4129308464350463008
+      Metal Bladekeeper SpriteSheet_115: -3986019177773514374
+      Metal Bladekeeper SpriteSheet_116: 3238669028727037957
+      Metal Bladekeeper SpriteSheet_117: -684755236352640259
+      Metal Bladekeeper SpriteSheet_118: 2994055433486015626
+      Metal Bladekeeper SpriteSheet_119: -8052452310720903624
+      Metal Bladekeeper SpriteSheet_12: -8082342237238335261
+      Metal Bladekeeper SpriteSheet_120: -2833844451776375677
+      Metal Bladekeeper SpriteSheet_121: -3888849522098612310
+      Metal Bladekeeper SpriteSheet_122: 3284626836380278060
+      Metal Bladekeeper SpriteSheet_123: 7389855528794780264
+      Metal Bladekeeper SpriteSheet_124: 9037295100714048452
+      Metal Bladekeeper SpriteSheet_125: -1274149545693746046
+      Metal Bladekeeper SpriteSheet_126: -6935211862702270929
+      Metal Bladekeeper SpriteSheet_127: 2898622376144799564
+      Metal Bladekeeper SpriteSheet_128: -4213587184711492586
+      Metal Bladekeeper SpriteSheet_129: -7858427014710259028
+      Metal Bladekeeper SpriteSheet_13: -6350186064807051315
+      Metal Bladekeeper SpriteSheet_130: -6478322786553911448
+      Metal Bladekeeper SpriteSheet_131: -6759791599503939540
+      Metal Bladekeeper SpriteSheet_132: 8427947546427751091
+      Metal Bladekeeper SpriteSheet_133: 5467061253699391098
+      Metal Bladekeeper SpriteSheet_134: 4139372052019466037
+      Metal Bladekeeper SpriteSheet_135: -4100831977433955977
+      Metal Bladekeeper SpriteSheet_136: 1821766189979746624
+      Metal Bladekeeper SpriteSheet_137: -630588160922398007
+      Metal Bladekeeper SpriteSheet_138: -1136620308929847388
+      Metal Bladekeeper SpriteSheet_139: -8877680181064969447
+      Metal Bladekeeper SpriteSheet_14: -7473648619178900383
+      Metal Bladekeeper SpriteSheet_140: -4313876297809986463
+      Metal Bladekeeper SpriteSheet_141: 8068761998758053838
+      Metal Bladekeeper SpriteSheet_142: -3357738837542234039
+      Metal Bladekeeper SpriteSheet_143: -3857411347177078517
+      Metal Bladekeeper SpriteSheet_144: -8081337926688719925
+      Metal Bladekeeper SpriteSheet_145: 607813334299482771
+      Metal Bladekeeper SpriteSheet_146: 2578698258545014734
+      Metal Bladekeeper SpriteSheet_15: -1432526728917512916
+      Metal Bladekeeper SpriteSheet_16: -7523321855252458622
+      Metal Bladekeeper SpriteSheet_17: 5388537736441916803
+      Metal Bladekeeper SpriteSheet_18: 2080966942246133163
+      Metal Bladekeeper SpriteSheet_19: 5324244605140402906
+      Metal Bladekeeper SpriteSheet_2: -5403246786003435148
+      Metal Bladekeeper SpriteSheet_20: 5733523600382765498
+      Metal Bladekeeper SpriteSheet_21: 6426969204924050893
+      Metal Bladekeeper SpriteSheet_22: 8210479595860379361
+      Metal Bladekeeper SpriteSheet_23: -3704955255583795322
+      Metal Bladekeeper SpriteSheet_24: 4468266305799185577
+      Metal Bladekeeper SpriteSheet_25: -1517466202932312139
+      Metal Bladekeeper SpriteSheet_26: 235225161656166407
+      Metal Bladekeeper SpriteSheet_27: -1052564151281655908
+      Metal Bladekeeper SpriteSheet_28: 5293565020020239953
+      Metal Bladekeeper SpriteSheet_29: 5737268318828347759
+      Metal Bladekeeper SpriteSheet_3: 9120102778102329834
+      Metal Bladekeeper SpriteSheet_30: 5759449953240418388
+      Metal Bladekeeper SpriteSheet_31: 1956901611853680955
+      Metal Bladekeeper SpriteSheet_32: 9108585497027569353
+      Metal Bladekeeper SpriteSheet_33: -1476794062198630008
+      Metal Bladekeeper SpriteSheet_34: 5973151309148181065
+      Metal Bladekeeper SpriteSheet_35: 7661892992969327256
+      Metal Bladekeeper SpriteSheet_36: 6084443373855053656
+      Metal Bladekeeper SpriteSheet_37: 1022718384956384257
+      Metal Bladekeeper SpriteSheet_38: 3872362521471524737
+      Metal Bladekeeper SpriteSheet_39: 3486731545429560165
+      Metal Bladekeeper SpriteSheet_4: 3877957897664474886
+      Metal Bladekeeper SpriteSheet_40: 905845648465216359
+      Metal Bladekeeper SpriteSheet_41: -1397231854787796523
+      Metal Bladekeeper SpriteSheet_42: 4458943930156750731
+      Metal Bladekeeper SpriteSheet_43: -7276849494123450770
+      Metal Bladekeeper SpriteSheet_44: 6899972040574369868
+      Metal Bladekeeper SpriteSheet_45: 2400617026159616986
+      Metal Bladekeeper SpriteSheet_46: 2306593465725471818
+      Metal Bladekeeper SpriteSheet_47: -7537709312248336850
+      Metal Bladekeeper SpriteSheet_48: -4601062800643523323
+      Metal Bladekeeper SpriteSheet_49: 7051030609628092693
+      Metal Bladekeeper SpriteSheet_5: -8393161328238735301
+      Metal Bladekeeper SpriteSheet_50: -5073858686633385199
+      Metal Bladekeeper SpriteSheet_51: 5525927928159929217
+      Metal Bladekeeper SpriteSheet_52: 1630960371289304046
+      Metal Bladekeeper SpriteSheet_53: 6552190025605186487
+      Metal Bladekeeper SpriteSheet_54: 3873285990793577352
+      Metal Bladekeeper SpriteSheet_55: 1279351222770915595
+      Metal Bladekeeper SpriteSheet_56: 3123463169403513932
+      Metal Bladekeeper SpriteSheet_57: 6554958258670352975
+      Metal Bladekeeper SpriteSheet_58: -7299985821401291929
+      Metal Bladekeeper SpriteSheet_59: 3833268891224490474
+      Metal Bladekeeper SpriteSheet_6: -7614382616417029877
+      Metal Bladekeeper SpriteSheet_60: -5821250811224453263
+      Metal Bladekeeper SpriteSheet_61: 4327270048563321037
+      Metal Bladekeeper SpriteSheet_62: -1130397372893348644
+      Metal Bladekeeper SpriteSheet_63: -1828643684127735
+      Metal Bladekeeper SpriteSheet_64: 1807963922253781752
+      Metal Bladekeeper SpriteSheet_65: 1787142744517745076
+      Metal Bladekeeper SpriteSheet_66: 6146610328703705335
+      Metal Bladekeeper SpriteSheet_67: -1304588463699726932
+      Metal Bladekeeper SpriteSheet_68: -4702437363160481124
+      Metal Bladekeeper SpriteSheet_69: -636540186803129245
+      Metal Bladekeeper SpriteSheet_7: -1041074904121959738
+      Metal Bladekeeper SpriteSheet_70: -8873580681592308029
+      Metal Bladekeeper SpriteSheet_71: -8477499385305896329
+      Metal Bladekeeper SpriteSheet_72: 5297924847388262894
+      Metal Bladekeeper SpriteSheet_73: -250657359997515298
+      Metal Bladekeeper SpriteSheet_74: -5392454738085588046
+      Metal Bladekeeper SpriteSheet_75: 8948625820440481349
+      Metal Bladekeeper SpriteSheet_76: 2654511688759841027
+      Metal Bladekeeper SpriteSheet_77: -2035986157858721730
+      Metal Bladekeeper SpriteSheet_78: -4658104484606322294
+      Metal Bladekeeper SpriteSheet_79: -1067816865049799187
+      Metal Bladekeeper SpriteSheet_8: 7789432379673222928
+      Metal Bladekeeper SpriteSheet_80: -2959006616102224584
+      Metal Bladekeeper SpriteSheet_81: -9206327827046273160
+      Metal Bladekeeper SpriteSheet_82: -5510416115259997064
+      Metal Bladekeeper SpriteSheet_83: 4181804621923203452
+      Metal Bladekeeper SpriteSheet_84: 3200090882692337509
+      Metal Bladekeeper SpriteSheet_85: -470368988698630443
+      Metal Bladekeeper SpriteSheet_86: -4932486003819152236
+      Metal Bladekeeper SpriteSheet_87: -4457440717086605889
+      Metal Bladekeeper SpriteSheet_88: 9055830134629187139
+      Metal Bladekeeper SpriteSheet_89: 8259520370892382650
+      Metal Bladekeeper SpriteSheet_9: -4596143691636083007
+      Metal Bladekeeper SpriteSheet_90: -3201668745588340217
+      Metal Bladekeeper SpriteSheet_91: 6692408918740961950
+      Metal Bladekeeper SpriteSheet_92: -2331135059188896202
+      Metal Bladekeeper SpriteSheet_93: -4540137614212992355
+      Metal Bladekeeper SpriteSheet_94: -4620442246742103856
+      Metal Bladekeeper SpriteSheet_95: -6576935949037590476
+      Metal Bladekeeper SpriteSheet_96: 7738717369329969271
+      Metal Bladekeeper SpriteSheet_97: 5498107746142092138
+      Metal Bladekeeper SpriteSheet_98: -2083644578006381215
+      Metal Bladekeeper SpriteSheet_99: 3395918815259718072
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

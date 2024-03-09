@@ -1,0 +1,1705 @@
+fileFormatVersion: 2
+guid: 876b43f2fc438fa478dad8bba17369c1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7436118634893900572
+    second: Leaf Ranger Projectiles And Effects_0
+  - first:
+      213: -6186047946267919478
+    second: Leaf Ranger Projectiles And Effects_1
+  - first:
+      213: 277085514943883932
+    second: Leaf Ranger Projectiles And Effects_2
+  - first:
+      213: -1006218971414702280
+    second: Leaf Ranger Projectiles And Effects_3
+  - first:
+      213: 8046543604146301320
+    second: Leaf Ranger Projectiles And Effects_4
+  - first:
+      213: 6160853800242068321
+    second: Leaf Ranger Projectiles And Effects_5
+  - first:
+      213: -1410641976605283854
+    second: Leaf Ranger Projectiles And Effects_6
+  - first:
+      213: -8956025058415112004
+    second: Leaf Ranger Projectiles And Effects_7
+  - first:
+      213: -6454141938372310458
+    second: Leaf Ranger Projectiles And Effects_8
+  - first:
+      213: 1146003058869998216
+    second: Leaf Ranger Projectiles And Effects_9
+  - first:
+      213: -2741571953016279150
+    second: Leaf Ranger Projectiles And Effects_10
+  - first:
+      213: -5675270663589643334
+    second: Leaf Ranger Projectiles And Effects_11
+  - first:
+      213: 582653328727671508
+    second: Leaf Ranger Projectiles And Effects_12
+  - first:
+      213: -4612125635151474750
+    second: Leaf Ranger Projectiles And Effects_13
+  - first:
+      213: 8649644839630630414
+    second: Leaf Ranger Projectiles And Effects_14
+  - first:
+      213: -302674604358099400
+    second: Leaf Ranger Projectiles And Effects_15
+  - first:
+      213: -8820081992503837895
+    second: Leaf Ranger Projectiles And Effects_16
+  - first:
+      213: -4773740487994000757
+    second: Leaf Ranger Projectiles And Effects_17
+  - first:
+      213: 4921782132139082076
+    second: Leaf Ranger Projectiles And Effects_18
+  - first:
+      213: -7372779519131254969
+    second: Leaf Ranger Projectiles And Effects_19
+  - first:
+      213: 907589540910212363
+    second: Leaf Ranger Projectiles And Effects_20
+  - first:
+      213: 5838013854132456935
+    second: Leaf Ranger Projectiles And Effects_21
+  - first:
+      213: 9140522055235644230
+    second: Leaf Ranger Projectiles And Effects_22
+  - first:
+      213: -1642427779357044585
+    second: Leaf Ranger Projectiles And Effects_23
+  - first:
+      213: 4664410603427409159
+    second: Leaf Ranger Projectiles And Effects_24
+  - first:
+      213: 1599452927502967951
+    second: Leaf Ranger Projectiles And Effects_25
+  - first:
+      213: 6222708619146231494
+    second: Leaf Ranger Projectiles And Effects_26
+  - first:
+      213: -5762609479881239483
+    second: Leaf Ranger Projectiles And Effects_27
+  - first:
+      213: -6733049611305061725
+    second: Leaf Ranger Projectiles And Effects_28
+  - first:
+      213: 4524062934691591408
+    second: Leaf Ranger Projectiles And Effects_29
+  - first:
+      213: -1413278564563286286
+    second: Leaf Ranger Projectiles And Effects_30
+  - first:
+      213: -650368296974900309
+    second: Leaf Ranger Projectiles And Effects_31
+  - first:
+      213: -8743896016894081874
+    second: Leaf Ranger Projectiles And Effects_32
+  - first:
+      213: -8290198542507416279
+    second: Leaf Ranger Projectiles And Effects_33
+  - first:
+      213: 4362526675087735160
+    second: Leaf Ranger Projectiles And Effects_34
+  - first:
+      213: -9060612417591498428
+    second: Leaf Ranger Projectiles And Effects_35
+  - first:
+      213: -1606780594374344949
+    second: Leaf Ranger Projectiles And Effects_36
+  - first:
+      213: 2703026733077472184
+    second: Leaf Ranger Projectiles And Effects_37
+  - first:
+      213: 5362549863889773609
+    second: Leaf Ranger Projectiles And Effects_38
+  - first:
+      213: -8054935383479623091
+    second: Leaf Ranger Projectiles And Effects_39
+  - first:
+      213: 6541487223627160408
+    second: Leaf Ranger Projectiles And Effects_40
+  - first:
+      213: 6598773880674676179
+    second: Leaf Ranger Projectiles And Effects_41
+  - first:
+      213: -1306127112136348885
+    second: Leaf Ranger Projectiles And Effects_42
+  - first:
+      213: -2268199349656230777
+    second: Leaf Ranger Projectiles And Effects_43
+  - first:
+      213: -6501586352107005661
+    second: Leaf Ranger Projectiles And Effects_44
+  - first:
+      213: 748488622715228888
+    second: Leaf Ranger Projectiles And Effects_45
+  - first:
+      213: 7653163041606439695
+    second: Leaf Ranger Projectiles And Effects_46
+  - first:
+      213: -4347768477043481684
+    second: Leaf Ranger Projectiles And Effects_47
+  - first:
+      213: -328196095124273477
+    second: Leaf Ranger Projectiles And Effects_48
+  - first:
+      213: -7754877714250304662
+    second: Leaf Ranger Projectiles And Effects_49
+  - first:
+      213: -9208296126241241665
+    second: Leaf Ranger Projectiles And Effects_50
+  - first:
+      213: 6261442714541164864
+    second: Leaf Ranger Projectiles And Effects_51
+  - first:
+      213: 7993590801432564061
+    second: Leaf Ranger Projectiles And Effects_52
+  - first:
+      213: 1703971450140559007
+    second: Leaf Ranger Projectiles And Effects_53
+  - first:
+      213: 4553054595822214117
+    second: Leaf Ranger Projectiles And Effects_54
+  - first:
+      213: -4517042612839587745
+    second: Leaf Ranger Projectiles And Effects_55
+  - first:
+      213: -6865789986102978682
+    second: Leaf Ranger Projectiles And Effects_56
+  - first:
+      213: 4865168496744942940
+    second: Leaf Ranger Projectiles And Effects_57
+  - first:
+      213: -7259841650988944484
+    second: Leaf Ranger Projectiles And Effects_58
+  - first:
+      213: 7500320963082224699
+    second: Leaf Ranger Projectiles And Effects_59
+  - first:
+      213: -86125700460783160
+    second: Leaf Ranger Projectiles And Effects_60
+  - first:
+      213: -7723049591081909871
+    second: Leaf Ranger Projectiles And Effects_61
+  - first:
+      213: -8164784520008332457
+    second: Leaf Ranger Projectiles And Effects_62
+  - first:
+      213: -3151493019322075601
+    second: Leaf Ranger Projectiles And Effects_63
+  - first:
+      213: 7757653100690439018
+    second: Leaf Ranger Projectiles And Effects_64
+  - first:
+      213: 1583157263227390212
+    second: Leaf Ranger Projectiles And Effects_65
+  - first:
+      213: 6100289694639094538
+    second: Leaf Ranger Projectiles And Effects_66
+  - first:
+      213: -6880726554495997856
+    second: Leaf Ranger Projectiles And Effects_67
+  - first:
+      213: -3941901926803767881
+    second: Leaf Ranger Projectiles And Effects_68
+  - first:
+      213: 1918822576615202211
+    second: Leaf Ranger Projectiles And Effects_69
+  - first:
+      213: -7718965949033460881
+    second: Leaf Ranger Projectiles And Effects_70
+  - first:
+      213: 4398784745437217280
+    second: Leaf Ranger Projectiles And Effects_71
+  - first:
+      213: -8794594411494863809
+    second: Leaf Ranger Projectiles And Effects_72
+  - first:
+      213: -407401895100185416
+    second: Leaf Ranger Projectiles And Effects_73
+  - first:
+      213: 5682508558364637410
+    second: Leaf Ranger Projectiles And Effects_74
+  - first:
+      213: -5602333037144277545
+    second: Leaf Ranger Projectiles And Effects_75
+  - first:
+      213: -552375517952773008
+    second: Leaf Ranger Projectiles And Effects_76
+  - first:
+      213: 4795178204698775633
+    second: Leaf Ranger Projectiles And Effects_77
+  - first:
+      213: -3486759870876141254
+    second: Leaf Ranger Projectiles And Effects_78
+  - first:
+      213: 4560393017249711250
+    second: Leaf Ranger Projectiles And Effects_79
+  - first:
+      213: 5861421323051860104
+    second: Leaf Ranger Projectiles And Effects_80
+  - first:
+      213: -2238864542047417068
+    second: Leaf Ranger Projectiles And Effects_81
+  - first:
+      213: 1403760615931181942
+    second: Leaf Ranger Projectiles And Effects_82
+  - first:
+      213: 7683985128224763445
+    second: Leaf Ranger Projectiles And Effects_83
+  - first:
+      213: 3182987419853753673
+    second: Leaf Ranger Projectiles And Effects_84
+  - first:
+      213: 6038985162375451998
+    second: Leaf Ranger Projectiles And Effects_85
+  - first:
+      213: -8260959697401321272
+    second: Leaf Ranger Projectiles And Effects_86
+  - first:
+      213: 7337562865693730569
+    second: Leaf Ranger Projectiles And Effects_87
+  - first:
+      213: -7125539467081936268
+    second: Leaf Ranger Projectiles And Effects_88
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e48c73ff799dc890800000000000000
+      internalID: -7436118634893900572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b7a2ffa2eb62aa0800000000000000
+      internalID: -6186047946267919478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ae2aacec768d300800000000000000
+      internalID: 277085514943883932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 896
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837519a3d213902f0800000000000000
+      internalID: -1006218971414702280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 896
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889e4da86c01baf60800000000000000
+      internalID: 8046543604146301320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 896
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b3b84c3efbf7550800000000000000
+      internalID: 6160853800242068321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_6
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 896
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9ef2f98946c6ce0800000000000000
+      internalID: -1410641976605283854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb09ba119aec5b380800000000000000
+      internalID: -8956025058415112004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a0e514a184e66a0800000000000000
+      internalID: -6454141938372310458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8821573d5bb67ef00800000000000000
+      internalID: 1146003058869998216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f6a4e85daf3f9d0800000000000000
+      internalID: -2741571953016279150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb3b8c76636d31b0800000000000000
+      internalID: -5675270663589643334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_12
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2030e8d10061800800000000000000
+      internalID: 582653328727671508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfc251cb207effb0800000000000000
+      internalID: -4612125635151474750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e69736726b90870800000000000000
+      internalID: 8649644839630630414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e14bc0d0faccbf0800000000000000
+      internalID: -302674604358099400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b3dfa9826c89580800000000000000
+      internalID: -8820081992503837895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ab73b815440cdb0800000000000000
+      internalID: -4773740487994000757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51c300c5cead4440800000000000000
+      internalID: 4921782132139082076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_19
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 640
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ff7ea0710aea990800000000000000
+      internalID: -7372779519131254969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 640
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0520dbf0e7689c00800000000000000
+      internalID: 907589540910212363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_21
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 640
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7edcf515baac40150800000000000000
+      internalID: 5838013854132456935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_22
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 640
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ba1f37168a9de70800000000000000
+      internalID: 9140522055235644230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790903af2ace439e0800000000000000
+      internalID: -1642427779357044585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d2bdf0bb05bb040800000000000000
+      internalID: 4664410603427409159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84e5ca96f5623610800000000000000
+      internalID: 1599452927502967951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cef8f015808b5650800000000000000
+      internalID: 6222708619146231494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544516ca5391700b0800000000000000
+      internalID: -5762609479881239483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 384
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2741f3d076f82a0800000000000000
+      internalID: -6733049611305061725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_29
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 384
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f4bdc30543b8ce30800000000000000
+      internalID: 4524062934691591408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6088622a6036ce0800000000000000
+      internalID: -1413278564563286286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3a2adca7d69f6f0800000000000000
+      internalID: -650368296974900309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_32
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4431856e077a680800000000000000
+      internalID: -8743896016894081874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_33
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9256264595c43fc80800000000000000
+      internalID: -8290198542507416279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_34
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87935c7b5eeca8c30800000000000000
+      internalID: 4362526675087735160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_35
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44927f9e20d324280800000000000000
+      internalID: -9060612417591498428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_36
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0f7350009193b9e0800000000000000
+      internalID: -1606780594374344949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_37
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3a7731e74138520800000000000000
+      internalID: 2703026733077472184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924287f60ba9b6a40800000000000000
+      internalID: 5362549863889773609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42e8f212fe173090800000000000000
+      internalID: -8054935383479623091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_40
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b9d0bb8f708ca50800000000000000
+      internalID: 6541487223627160408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_41
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd6db6f1ed839b50800000000000000
+      internalID: 6598773880674676179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_42
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b2b99cf44bfdde0800000000000000
+      internalID: -1306127112136348885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_43
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784e7fb75bcb580e0800000000000000
+      internalID: -2268199349656230777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_44
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329522ed8a9b5c5a0800000000000000
+      internalID: -6501586352107005661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_45
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2dc5bcf6a236a00800000000000000
+      internalID: 748488622715228888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_46
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f039917fc3f753a60800000000000000
+      internalID: 7653163041606439695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_47
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3ae280b9f99a3c0800000000000000
+      internalID: -4347768477043481684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_48
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6827de363027bf0800000000000000
+      internalID: -328196095124273477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_49
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6374855ec3216490800000000000000
+      internalID: -7754877714250304662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_50
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb509c8f57f853080800000000000000
+      internalID: -9208296126241241665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_51
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0490fad69fc15e650800000000000000
+      internalID: 6261442714541164864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_52
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51d7376b70feee60800000000000000
+      internalID: 7993590801432564061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_53
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9609018109b5a710800000000000000
+      internalID: 1703971450140559007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_54
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 128
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb51f22803bf2f30800000000000000
+      internalID: 4553054595822214117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50e46a0dad3051c0800000000000000
+      internalID: -4517042612839587745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687d5e75260d7b0a0800000000000000
+      internalID: -6865789986102978682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_57
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d47e498fc848340800000000000000
+      internalID: 4865168496744942940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Ranger Projectiles And Effects_58
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93f7339b7cdf3b90800000000000000
+      internalID: -7259841650988944484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6b62ec2de6c65fe48a5722d314a67910
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Leaf Ranger Projectiles And Effects_0: -7436118634893900572
+      Leaf Ranger Projectiles And Effects_1: -6186047946267919478
+      Leaf Ranger Projectiles And Effects_10: -2741571953016279150
+      Leaf Ranger Projectiles And Effects_11: -5675270663589643334
+      Leaf Ranger Projectiles And Effects_12: 582653328727671508
+      Leaf Ranger Projectiles And Effects_13: -4612125635151474750
+      Leaf Ranger Projectiles And Effects_14: 8649644839630630414
+      Leaf Ranger Projectiles And Effects_15: -302674604358099400
+      Leaf Ranger Projectiles And Effects_16: -8820081992503837895
+      Leaf Ranger Projectiles And Effects_17: -4773740487994000757
+      Leaf Ranger Projectiles And Effects_18: 4921782132139082076
+      Leaf Ranger Projectiles And Effects_19: -7372779519131254969
+      Leaf Ranger Projectiles And Effects_2: 277085514943883932
+      Leaf Ranger Projectiles And Effects_20: 907589540910212363
+      Leaf Ranger Projectiles And Effects_21: 5838013854132456935
+      Leaf Ranger Projectiles And Effects_22: 9140522055235644230
+      Leaf Ranger Projectiles And Effects_23: -1642427779357044585
+      Leaf Ranger Projectiles And Effects_24: 4664410603427409159
+      Leaf Ranger Projectiles And Effects_25: 1599452927502967951
+      Leaf Ranger Projectiles And Effects_26: 6222708619146231494
+      Leaf Ranger Projectiles And Effects_27: -5762609479881239483
+      Leaf Ranger Projectiles And Effects_28: -6733049611305061725
+      Leaf Ranger Projectiles And Effects_29: 4524062934691591408
+      Leaf Ranger Projectiles And Effects_3: -1006218971414702280
+      Leaf Ranger Projectiles And Effects_30: -1413278564563286286
+      Leaf Ranger Projectiles And Effects_31: -650368296974900309
+      Leaf Ranger Projectiles And Effects_32: -8743896016894081874
+      Leaf Ranger Projectiles And Effects_33: -8290198542507416279
+      Leaf Ranger Projectiles And Effects_34: 4362526675087735160
+      Leaf Ranger Projectiles And Effects_35: -9060612417591498428
+      Leaf Ranger Projectiles And Effects_36: -1606780594374344949
+      Leaf Ranger Projectiles And Effects_37: 2703026733077472184
+      Leaf Ranger Projectiles And Effects_38: 5362549863889773609
+      Leaf Ranger Projectiles And Effects_39: -8054935383479623091
+      Leaf Ranger Projectiles And Effects_4: 8046543604146301320
+      Leaf Ranger Projectiles And Effects_40: 6541487223627160408
+      Leaf Ranger Projectiles And Effects_41: 6598773880674676179
+      Leaf Ranger Projectiles And Effects_42: -1306127112136348885
+      Leaf Ranger Projectiles And Effects_43: -2268199349656230777
+      Leaf Ranger Projectiles And Effects_44: -6501586352107005661
+      Leaf Ranger Projectiles And Effects_45: 748488622715228888
+      Leaf Ranger Projectiles And Effects_46: 7653163041606439695
+      Leaf Ranger Projectiles And Effects_47: -4347768477043481684
+      Leaf Ranger Projectiles And Effects_48: -328196095124273477
+      Leaf Ranger Projectiles And Effects_49: -7754877714250304662
+      Leaf Ranger Projectiles And Effects_5: 6160853800242068321
+      Leaf Ranger Projectiles And Effects_50: -9208296126241241665
+      Leaf Ranger Projectiles And Effects_51: 6261442714541164864
+      Leaf Ranger Projectiles And Effects_52: 7993590801432564061
+      Leaf Ranger Projectiles And Effects_53: 1703971450140559007
+      Leaf Ranger Projectiles And Effects_54: 4553054595822214117
+      Leaf Ranger Projectiles And Effects_55: -4517042612839587745
+      Leaf Ranger Projectiles And Effects_56: -6865789986102978682
+      Leaf Ranger Projectiles And Effects_57: 4865168496744942940
+      Leaf Ranger Projectiles And Effects_58: -7259841650988944484
+      Leaf Ranger Projectiles And Effects_6: -1410641976605283854
+      Leaf Ranger Projectiles And Effects_7: -8956025058415112004
+      Leaf Ranger Projectiles And Effects_8: -6454141938372310458
+      Leaf Ranger Projectiles And Effects_9: 1146003058869998216
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

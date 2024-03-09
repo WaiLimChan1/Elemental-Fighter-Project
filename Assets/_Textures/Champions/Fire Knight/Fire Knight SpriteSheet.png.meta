@@ -1,0 +1,4647 @@
+fileFormatVersion: 2
+guid: 9b637deb7da69ba4fb942dfad0a88d7f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8628255128128179646
+    second: Fire Knight SpriteSheet_0
+  - first:
+      213: 1261198758015512618
+    second: Fire Knight SpriteSheet_1
+  - first:
+      213: -2257950599167702183
+    second: Fire Knight SpriteSheet_2
+  - first:
+      213: 6166500997530902998
+    second: Fire Knight SpriteSheet_3
+  - first:
+      213: 2635942754481117593
+    second: Fire Knight SpriteSheet_4
+  - first:
+      213: -596556238983974412
+    second: Fire Knight SpriteSheet_5
+  - first:
+      213: 1880948042797492812
+    second: Fire Knight SpriteSheet_6
+  - first:
+      213: 229686805827972911
+    second: Fire Knight SpriteSheet_7
+  - first:
+      213: -4639291177687906876
+    second: Fire Knight SpriteSheet_8
+  - first:
+      213: 6530658522535180615
+    second: Fire Knight SpriteSheet_9
+  - first:
+      213: -7926278405437414286
+    second: Fire Knight SpriteSheet_10
+  - first:
+      213: -3858926522961795889
+    second: Fire Knight SpriteSheet_11
+  - first:
+      213: 1085685202488495309
+    second: Fire Knight SpriteSheet_12
+  - first:
+      213: -2150229803386245937
+    second: Fire Knight SpriteSheet_13
+  - first:
+      213: -2985201282741480498
+    second: Fire Knight SpriteSheet_14
+  - first:
+      213: 6748645362622090545
+    second: Fire Knight SpriteSheet_15
+  - first:
+      213: -3002650529604895769
+    second: Fire Knight SpriteSheet_16
+  - first:
+      213: -3050127331209544494
+    second: Fire Knight SpriteSheet_17
+  - first:
+      213: 499651361705415967
+    second: Fire Knight SpriteSheet_18
+  - first:
+      213: -7317748543822001430
+    second: Fire Knight SpriteSheet_19
+  - first:
+      213: -411395082985131991
+    second: Fire Knight SpriteSheet_20
+  - first:
+      213: -4622002635990944640
+    second: Fire Knight SpriteSheet_21
+  - first:
+      213: 1657121887847058716
+    second: Fire Knight SpriteSheet_22
+  - first:
+      213: -3477723787959132422
+    second: Fire Knight SpriteSheet_23
+  - first:
+      213: 5927749877212294067
+    second: Fire Knight SpriteSheet_24
+  - first:
+      213: -6786692479855754302
+    second: Fire Knight SpriteSheet_25
+  - first:
+      213: -2826169173966560471
+    second: Fire Knight SpriteSheet_26
+  - first:
+      213: -6678797925603728447
+    second: Fire Knight SpriteSheet_27
+  - first:
+      213: 410916480367714645
+    second: Fire Knight SpriteSheet_28
+  - first:
+      213: -7370407516718018512
+    second: Fire Knight SpriteSheet_29
+  - first:
+      213: -6938780027177791919
+    second: Fire Knight SpriteSheet_30
+  - first:
+      213: -4755177956039135277
+    second: Fire Knight SpriteSheet_31
+  - first:
+      213: -6549714311415423535
+    second: Fire Knight SpriteSheet_32
+  - first:
+      213: 3959704453476611831
+    second: Fire Knight SpriteSheet_33
+  - first:
+      213: 145175158410353579
+    second: Fire Knight SpriteSheet_34
+  - first:
+      213: -6538368982328290680
+    second: Fire Knight SpriteSheet_35
+  - first:
+      213: 3327276358031931879
+    second: Fire Knight SpriteSheet_36
+  - first:
+      213: 8823469831599987861
+    second: Fire Knight SpriteSheet_37
+  - first:
+      213: -5173744542482970827
+    second: Fire Knight SpriteSheet_38
+  - first:
+      213: 2776104782286839737
+    second: Fire Knight SpriteSheet_39
+  - first:
+      213: 2996613617762309809
+    second: Fire Knight SpriteSheet_40
+  - first:
+      213: 5631285121377094638
+    second: Fire Knight SpriteSheet_41
+  - first:
+      213: -8240635589453015212
+    second: Fire Knight SpriteSheet_42
+  - first:
+      213: 4445241294246288513
+    second: Fire Knight SpriteSheet_43
+  - first:
+      213: 3033021151409282352
+    second: Fire Knight SpriteSheet_44
+  - first:
+      213: 8595318742916284949
+    second: Fire Knight SpriteSheet_45
+  - first:
+      213: -7376686058089750679
+    second: Fire Knight SpriteSheet_46
+  - first:
+      213: -3564026693462653736
+    second: Fire Knight SpriteSheet_47
+  - first:
+      213: 4846420823960652748
+    second: Fire Knight SpriteSheet_48
+  - first:
+      213: -8212039226933099365
+    second: Fire Knight SpriteSheet_49
+  - first:
+      213: -1462937010502866087
+    second: Fire Knight SpriteSheet_50
+  - first:
+      213: 9072549296069526387
+    second: Fire Knight SpriteSheet_51
+  - first:
+      213: -7895420238055422325
+    second: Fire Knight SpriteSheet_52
+  - first:
+      213: -7109584198864714413
+    second: Fire Knight SpriteSheet_53
+  - first:
+      213: -3379786138556929916
+    second: Fire Knight SpriteSheet_54
+  - first:
+      213: -3510737885516981049
+    second: Fire Knight SpriteSheet_55
+  - first:
+      213: -8308910683444718283
+    second: Fire Knight SpriteSheet_56
+  - first:
+      213: -4536425788882535386
+    second: Fire Knight SpriteSheet_57
+  - first:
+      213: 7293426980483215943
+    second: Fire Knight SpriteSheet_58
+  - first:
+      213: -6282804481831167942
+    second: Fire Knight SpriteSheet_59
+  - first:
+      213: 2701594947328937026
+    second: Fire Knight SpriteSheet_60
+  - first:
+      213: 1995978909835796741
+    second: Fire Knight SpriteSheet_61
+  - first:
+      213: 3404926138645537864
+    second: Fire Knight SpriteSheet_62
+  - first:
+      213: -4030412908312436635
+    second: Fire Knight SpriteSheet_63
+  - first:
+      213: -1631345719374058100
+    second: Fire Knight SpriteSheet_64
+  - first:
+      213: -3966183675711490934
+    second: Fire Knight SpriteSheet_65
+  - first:
+      213: -1162320801766133948
+    second: Fire Knight SpriteSheet_66
+  - first:
+      213: 4848843655108834545
+    second: Fire Knight SpriteSheet_67
+  - first:
+      213: -5503887090674764731
+    second: Fire Knight SpriteSheet_68
+  - first:
+      213: 9118140582384295503
+    second: Fire Knight SpriteSheet_69
+  - first:
+      213: -1632090502682726770
+    second: Fire Knight SpriteSheet_70
+  - first:
+      213: 6864064248188768532
+    second: Fire Knight SpriteSheet_71
+  - first:
+      213: -1839778418141361847
+    second: Fire Knight SpriteSheet_72
+  - first:
+      213: 8879565093093989775
+    second: Fire Knight SpriteSheet_73
+  - first:
+      213: 4024332178877711585
+    second: Fire Knight SpriteSheet_74
+  - first:
+      213: -3717490445898493737
+    second: Fire Knight SpriteSheet_75
+  - first:
+      213: -4517610434105068827
+    second: Fire Knight SpriteSheet_76
+  - first:
+      213: -3633350044267036182
+    second: Fire Knight SpriteSheet_77
+  - first:
+      213: -8767482842131401693
+    second: Fire Knight SpriteSheet_78
+  - first:
+      213: -8220515818315607567
+    second: Fire Knight SpriteSheet_79
+  - first:
+      213: 6530771854389570818
+    second: Fire Knight SpriteSheet_80
+  - first:
+      213: 4510259198102187456
+    second: Fire Knight SpriteSheet_81
+  - first:
+      213: -2915956141230276753
+    second: Fire Knight SpriteSheet_82
+  - first:
+      213: 3912357823511332291
+    second: Fire Knight SpriteSheet_83
+  - first:
+      213: 3796691525372117869
+    second: Fire Knight SpriteSheet_84
+  - first:
+      213: -7337704665974301941
+    second: Fire Knight SpriteSheet_85
+  - first:
+      213: 7548895184342878445
+    second: Fire Knight SpriteSheet_86
+  - first:
+      213: -5532648652534913331
+    second: Fire Knight SpriteSheet_87
+  - first:
+      213: 6091996464885518456
+    second: Fire Knight SpriteSheet_88
+  - first:
+      213: -5474440186335831917
+    second: Fire Knight SpriteSheet_89
+  - first:
+      213: -9116477162130529467
+    second: Fire Knight SpriteSheet_90
+  - first:
+      213: 5257196390445163296
+    second: Fire Knight SpriteSheet_91
+  - first:
+      213: -9074571924474104323
+    second: Fire Knight SpriteSheet_92
+  - first:
+      213: 1496447045195797412
+    second: Fire Knight SpriteSheet_93
+  - first:
+      213: -106652965564559307
+    second: Fire Knight SpriteSheet_94
+  - first:
+      213: 6392452105598368531
+    second: Fire Knight SpriteSheet_95
+  - first:
+      213: -9021530205723783365
+    second: Fire Knight SpriteSheet_96
+  - first:
+      213: -3179748302612323820
+    second: Fire Knight SpriteSheet_97
+  - first:
+      213: 8285131318720277208
+    second: Fire Knight SpriteSheet_98
+  - first:
+      213: -8614443425139060720
+    second: Fire Knight SpriteSheet_99
+  - first:
+      213: 6118154551409398907
+    second: Fire Knight SpriteSheet_100
+  - first:
+      213: 5551581107512521345
+    second: Fire Knight SpriteSheet_101
+  - first:
+      213: -3547706291855844474
+    second: Fire Knight SpriteSheet_102
+  - first:
+      213: 2012185740179986175
+    second: Fire Knight SpriteSheet_103
+  - first:
+      213: 402978874085331513
+    second: Fire Knight SpriteSheet_104
+  - first:
+      213: -4947837625082345628
+    second: Fire Knight SpriteSheet_105
+  - first:
+      213: 5629937348796387090
+    second: Fire Knight SpriteSheet_106
+  - first:
+      213: 530818089305810773
+    second: Fire Knight SpriteSheet_107
+  - first:
+      213: -3040169117763332801
+    second: Fire Knight SpriteSheet_108
+  - first:
+      213: 2693144264385019048
+    second: Fire Knight SpriteSheet_109
+  - first:
+      213: -8024409946478817967
+    second: Fire Knight SpriteSheet_110
+  - first:
+      213: -767554630550595067
+    second: Fire Knight SpriteSheet_111
+  - first:
+      213: 3149441481022184760
+    second: Fire Knight SpriteSheet_112
+  - first:
+      213: -4147032055735196733
+    second: Fire Knight SpriteSheet_113
+  - first:
+      213: 4962175900292443415
+    second: Fire Knight SpriteSheet_114
+  - first:
+      213: 3222637346183384880
+    second: Fire Knight SpriteSheet_115
+  - first:
+      213: -8953176853996049474
+    second: Fire Knight SpriteSheet_116
+  - first:
+      213: 7988391216643078997
+    second: Fire Knight SpriteSheet_117
+  - first:
+      213: -8743662878528571773
+    second: Fire Knight SpriteSheet_118
+  - first:
+      213: 3533300779362441003
+    second: Fire Knight SpriteSheet_119
+  - first:
+      213: -1309003961035790232
+    second: Fire Knight SpriteSheet_120
+  - first:
+      213: 8293560245716899608
+    second: Fire Knight SpriteSheet_121
+  - first:
+      213: -5980564328690062394
+    second: Fire Knight SpriteSheet_122
+  - first:
+      213: -787352490765953253
+    second: Fire Knight SpriteSheet_123
+  - first:
+      213: 6643465313518945156
+    second: Fire Knight SpriteSheet_124
+  - first:
+      213: -5938479787978503694
+    second: Fire Knight SpriteSheet_125
+  - first:
+      213: -2240039024508977887
+    second: Fire Knight SpriteSheet_126
+  - first:
+      213: -1854465317146557252
+    second: Fire Knight SpriteSheet_127
+  - first:
+      213: 6266350977138810745
+    second: Fire Knight SpriteSheet_128
+  - first:
+      213: 555008797710400745
+    second: Fire Knight SpriteSheet_129
+  - first:
+      213: 7901561090917029440
+    second: Fire Knight SpriteSheet_130
+  - first:
+      213: -7681621405443889359
+    second: Fire Knight SpriteSheet_131
+  - first:
+      213: 1758580914479091533
+    second: Fire Knight SpriteSheet_132
+  - first:
+      213: -1514684209141755772
+    second: Fire Knight SpriteSheet_133
+  - first:
+      213: 7149209261397462965
+    second: Fire Knight SpriteSheet_134
+  - first:
+      213: -9221921871037029303
+    second: Fire Knight SpriteSheet_135
+  - first:
+      213: -4293616087479038086
+    second: Fire Knight SpriteSheet_136
+  - first:
+      213: -7509063448185654869
+    second: Fire Knight SpriteSheet_137
+  - first:
+      213: 3900954250392257225
+    second: Fire Knight SpriteSheet_138
+  - first:
+      213: 732440410034269456
+    second: Fire Knight SpriteSheet_139
+  - first:
+      213: 1109418391375045410
+    second: Fire Knight SpriteSheet_140
+  - first:
+      213: 6382028957958330436
+    second: Fire Knight SpriteSheet_141
+  - first:
+      213: -1525888781466288819
+    second: Fire Knight SpriteSheet_142
+  - first:
+      213: -15209347307669941
+    second: Fire Knight SpriteSheet_143
+  - first:
+      213: 4655157547626260369
+    second: Fire Knight SpriteSheet_144
+  - first:
+      213: 3196584607607471736
+    second: Fire Knight SpriteSheet_145
+  - first:
+      213: 3856413081453033730
+    second: Fire Knight SpriteSheet_146
+  - first:
+      213: -2327125309701002351
+    second: Fire Knight SpriteSheet_147
+  - first:
+      213: -3850475986471978520
+    second: Fire Knight SpriteSheet_148
+  - first:
+      213: -7328014594165007323
+    second: Fire Knight SpriteSheet_149
+  - first:
+      213: 952709721221918645
+    second: Fire Knight SpriteSheet_150
+  - first:
+      213: -1476633243228302429
+    second: Fire Knight SpriteSheet_151
+  - first:
+      213: 1530768178441038497
+    second: Fire Knight SpriteSheet_152
+  - first:
+      213: -5915574216649608341
+    second: Fire Knight SpriteSheet_153
+  - first:
+      213: 2909966310755193105
+    second: Fire Knight SpriteSheet_154
+  - first:
+      213: 5132118814726223442
+    second: Fire Knight SpriteSheet_155
+  - first:
+      213: 8843284526307546468
+    second: Fire Knight SpriteSheet_156
+  - first:
+      213: 5058325290590475079
+    second: Fire Knight SpriteSheet_157
+  - first:
+      213: -8586121825777226659
+    second: Fire Knight SpriteSheet_158
+  - first:
+      213: -8562046220348121729
+    second: Fire Knight SpriteSheet_159
+  - first:
+      213: 1611127895946796124
+    second: Fire Knight SpriteSheet_160
+  - first:
+      213: 13862361939467666
+    second: Fire Knight SpriteSheet_161
+  - first:
+      213: 1720477892310662209
+    second: Fire Knight SpriteSheet_162
+  - first:
+      213: -6889449552874393707
+    second: Fire Knight SpriteSheet_163
+  - first:
+      213: 285398213420723421
+    second: Fire Knight SpriteSheet_164
+  - first:
+      213: -2541086280051731068
+    second: Fire Knight SpriteSheet_165
+  - first:
+      213: -1283310856225351384
+    second: Fire Knight SpriteSheet_166
+  - first:
+      213: 4866057961854644785
+    second: Fire Knight SpriteSheet_167
+  - first:
+      213: -5756139877147314911
+    second: Fire Knight SpriteSheet_168
+  - first:
+      213: -7460215337437103657
+    second: Fire Knight SpriteSheet_169
+  - first:
+      213: -2791140011474399653
+    second: Fire Knight SpriteSheet_170
+  - first:
+      213: 4895040731008160337
+    second: Fire Knight SpriteSheet_171
+  - first:
+      213: 5059222821558684018
+    second: Fire Knight SpriteSheet_172
+  - first:
+      213: -6201781162021932384
+    second: Fire Knight SpriteSheet_173
+  - first:
+      213: -4072763903624716723
+    second: Fire Knight SpriteSheet_174
+  - first:
+      213: 8891730654271611577
+    second: Fire Knight SpriteSheet_175
+  - first:
+      213: 1963264073931529017
+    second: Fire Knight SpriteSheet_176
+  - first:
+      213: 5774627258720101500
+    second: Fire Knight SpriteSheet_177
+  - first:
+      213: 1147890952833903158
+    second: Fire Knight SpriteSheet_178
+  - first:
+      213: 7218604234061106109
+    second: Fire Knight SpriteSheet_179
+  - first:
+      213: -8680702626531033690
+    second: Fire Knight SpriteSheet_180
+  - first:
+      213: -3002645126368032972
+    second: Fire Knight SpriteSheet_181
+  - first:
+      213: 6883045422160360604
+    second: Fire Knight SpriteSheet_182
+  - first:
+      213: 5136516129870573928
+    second: Fire Knight SpriteSheet_183
+  - first:
+      213: 4703533334459753611
+    second: Fire Knight SpriteSheet_184
+  - first:
+      213: -3033263895930934963
+    second: Fire Knight SpriteSheet_185
+  - first:
+      213: -4003921099148392565
+    second: Fire Knight SpriteSheet_186
+  - first:
+      213: -364619432519149401
+    second: Fire Knight SpriteSheet_187
+  - first:
+      213: -3134011472010497750
+    second: Fire Knight SpriteSheet_188
+  - first:
+      213: -6641236872352748365
+    second: Fire Knight SpriteSheet_189
+  - first:
+      213: -7007200463397898566
+    second: Fire Knight SpriteSheet_190
+  - first:
+      213: 7958079788178565640
+    second: Fire Knight SpriteSheet_191
+  - first:
+      213: -8016133682035139218
+    second: Fire Knight SpriteSheet_192
+  - first:
+      213: 6731898828854605590
+    second: Fire Knight SpriteSheet_193
+  - first:
+      213: -3463368609293152953
+    second: Fire Knight SpriteSheet_194
+  - first:
+      213: -7297961723091745367
+    second: Fire Knight SpriteSheet_195
+  - first:
+      213: 5722934670533246145
+    second: Fire Knight SpriteSheet_196
+  - first:
+      213: -7042597517759908488
+    second: Fire Knight SpriteSheet_197
+  - first:
+      213: 4327740471292673930
+    second: Fire Knight SpriteSheet_198
+  - first:
+      213: 8982258373071765665
+    second: Fire Knight SpriteSheet_199
+  - first:
+      213: 1404558486761079935
+    second: Fire Knight SpriteSheet_200
+  - first:
+      213: 8158166104173011740
+    second: Fire Knight SpriteSheet_201
+  - first:
+      213: 5300451312415593507
+    second: Fire Knight SpriteSheet_202
+  - first:
+      213: 8662494639259163527
+    second: Fire Knight SpriteSheet_203
+  - first:
+      213: 7209947638878609644
+    second: Fire Knight SpriteSheet_204
+  - first:
+      213: -4148420313082405850
+    second: Fire Knight SpriteSheet_205
+  - first:
+      213: -7225549244565342260
+    second: Fire Knight SpriteSheet_206
+  - first:
+      213: 2417878560345662679
+    second: Fire Knight SpriteSheet_207
+  - first:
+      213: 6282288778176642205
+    second: Fire Knight SpriteSheet_208
+  - first:
+      213: 8945049797621239203
+    second: Fire Knight SpriteSheet_209
+  - first:
+      213: 3389623327232832746
+    second: Fire Knight SpriteSheet_210
+  - first:
+      213: -8537144889297772817
+    second: Fire Knight SpriteSheet_211
+  - first:
+      213: -8697789047488131512
+    second: Fire Knight SpriteSheet_212
+  - first:
+      213: 1252074631474180782
+    second: Fire Knight SpriteSheet_213
+  - first:
+      213: 8943465400988597953
+    second: Fire Knight SpriteSheet_214
+  - first:
+      213: 1558476143294496131
+    second: Fire Knight SpriteSheet_215
+  - first:
+      213: 2774340978487333418
+    second: Fire Knight SpriteSheet_216
+  - first:
+      213: 5607437732972541264
+    second: Fire Knight SpriteSheet_217
+  - first:
+      213: 4705728742807377118
+    second: Fire Knight SpriteSheet_218
+  - first:
+      213: -7672735491314740087
+    second: Fire Knight SpriteSheet_219
+  - first:
+      213: -6530884281505785789
+    second: Fire Knight SpriteSheet_220
+  - first:
+      213: -9042963009158917095
+    second: Fire Knight SpriteSheet_221
+  - first:
+      213: -1884529888280702542
+    second: Fire Knight SpriteSheet_222
+  - first:
+      213: 2125300413052995656
+    second: Fire Knight SpriteSheet_223
+  - first:
+      213: 3590208803287059715
+    second: Fire Knight SpriteSheet_224
+  - first:
+      213: -1627809160196373810
+    second: Fire Knight SpriteSheet_225
+  - first:
+      213: 7436116981386347349
+    second: Fire Knight SpriteSheet_226
+  - first:
+      213: 159372049482040084
+    second: Fire Knight SpriteSheet_227
+  - first:
+      213: -1372518846167845191
+    second: Fire Knight SpriteSheet_228
+  - first:
+      213: -2323719151915074499
+    second: Fire Knight SpriteSheet_229
+  - first:
+      213: -4239006929564070989
+    second: Fire Knight SpriteSheet_230
+  - first:
+      213: -5706776249480973801
+    second: Fire Knight SpriteSheet_231
+  - first:
+      213: -7528059677104750091
+    second: Fire Knight SpriteSheet_232
+  - first:
+      213: 1286546034605047468
+    second: Fire Knight SpriteSheet_233
+  - first:
+      213: -8909738314202687833
+    second: Fire Knight SpriteSheet_234
+  - first:
+      213: 8165031101801898788
+    second: Fire Knight SpriteSheet_235
+  - first:
+      213: 4415082322238763397
+    second: Fire Knight SpriteSheet_236
+  - first:
+      213: 4506548082599544060
+    second: Fire Knight SpriteSheet_237
+  - first:
+      213: -8228999099045682594
+    second: Fire Knight SpriteSheet_238
+  - first:
+      213: 1549461899261645107
+    second: Fire Knight SpriteSheet_239
+  - first:
+      213: 5228626716998091517
+    second: Fire Knight SpriteSheet_240
+  - first:
+      213: 9089465381194173446
+    second: Fire Knight SpriteSheet_241
+  - first:
+      213: -7737574215973864013
+    second: Fire Knight SpriteSheet_242
+  - first:
+      213: -3769359877955334567
+    second: Fire Knight SpriteSheet_243
+  - first:
+      213: 8595428481424472930
+    second: Fire Knight SpriteSheet_244
+  - first:
+      213: 31714026072229679
+    second: Fire Knight SpriteSheet_245
+  - first:
+      213: -1959668292613324274
+    second: Fire Knight SpriteSheet_246
+  - first:
+      213: -5041679270454340519
+    second: Fire Knight SpriteSheet_247
+  - first:
+      213: -1416539288427034782
+    second: Fire Knight SpriteSheet_248
+  - first:
+      213: -7611678792181403715
+    second: Fire Knight SpriteSheet_249
+  - first:
+      213: 4222057348252221128
+    second: Fire Knight SpriteSheet_250
+  - first:
+      213: 5926341973662842927
+    second: Fire Knight SpriteSheet_251
+  - first:
+      213: -8626640865912786608
+    second: Fire Knight SpriteSheet_252
+  - first:
+      213: -3760302925629266551
+    second: Fire Knight SpriteSheet_253
+  - first:
+      213: -1262651889472018237
+    second: Fire Knight SpriteSheet_254
+  - first:
+      213: -6724380155995296743
+    second: Fire Knight SpriteSheet_255
+  - first:
+      213: -7088594433359306047
+    second: Fire Knight SpriteSheet_256
+  - first:
+      213: -9023139611951826612
+    second: Fire Knight SpriteSheet_257
+  - first:
+      213: -7825147027241790737
+    second: Fire Knight SpriteSheet_258
+  - first:
+      213: -6546618479368561600
+    second: Fire Knight SpriteSheet_259
+  - first:
+      213: -7952325169206701395
+    second: Fire Knight SpriteSheet_260
+  - first:
+      213: 758414383488572862
+    second: Fire Knight SpriteSheet_261
+  - first:
+      213: 4140979451303547077
+    second: Fire Knight SpriteSheet_262
+  - first:
+      213: -3939918765774817872
+    second: Fire Knight SpriteSheet_263
+  - first:
+      213: -7194274524115752062
+    second: Fire Knight SpriteSheet_264
+  - first:
+      213: 3550939268171525611
+    second: Fire Knight SpriteSheet_265
+  - first:
+      213: -8175601658620265352
+    second: Fire Knight SpriteSheet_266
+  - first:
+      213: 6218148639131482229
+    second: Fire Knight SpriteSheet_267
+  - first:
+      213: -7356124493709935816
+    second: Fire Knight SpriteSheet_268
+  - first:
+      213: -4470573714167519614
+    second: Fire Knight SpriteSheet_269
+  - first:
+      213: 2405024290188616706
+    second: Fire Knight SpriteSheet_270
+  - first:
+      213: -2781934945328224804
+    second: Fire Knight SpriteSheet_271
+  - first:
+      213: 1068544329584219883
+    second: Fire Knight SpriteSheet_272
+  - first:
+      213: -289455252155311073
+    second: Fire Knight SpriteSheet_273
+  - first:
+      213: -4464261963960047072
+    second: Fire Knight SpriteSheet_274
+  - first:
+      213: 5656085533584877607
+    second: Fire Knight SpriteSheet_275
+  - first:
+      213: 5002089645774807012
+    second: Fire Knight SpriteSheet_276
+  - first:
+      213: 4266034615127916908
+    second: Fire Knight SpriteSheet_277
+  - first:
+      213: 2964935265509599936
+    second: Fire Knight SpriteSheet_278
+  - first:
+      213: -4510061052165862400
+    second: Fire Knight SpriteSheet_279
+  - first:
+      213: 5570574741113703580
+    second: Fire Knight SpriteSheet_280
+  - first:
+      213: 6319165642668270746
+    second: Fire Knight SpriteSheet_281
+  - first:
+      213: 5982283709978907802
+    second: Fire Knight SpriteSheet_282
+  - first:
+      213: 1212289227876906238
+    second: Fire Knight SpriteSheet_283
+  - first:
+      213: -844724233539290128
+    second: Fire Knight SpriteSheet_284
+  - first:
+      213: 7731704388142263751
+    second: Fire Knight SpriteSheet_285
+  - first:
+      213: 4289499603705702942
+    second: Fire Knight SpriteSheet_286
+  - first:
+      213: -4491043690712500020
+    second: Fire Knight SpriteSheet_287
+  - first:
+      213: 4358076354633984800
+    second: Fire Knight SpriteSheet_288
+  - first:
+      213: 8910386626906958608
+    second: Fire Knight SpriteSheet_289
+  - first:
+      213: -3981151009381610092
+    second: Fire Knight SpriteSheet_290
+  - first:
+      213: 6675568894298341814
+    second: Fire Knight SpriteSheet_291
+  - first:
+      213: 2404334512951791679
+    second: Fire Knight SpriteSheet_292
+  - first:
+      213: -208845402285336603
+    second: Fire Knight SpriteSheet_293
+  - first:
+      213: -6812273730242156349
+    second: Fire Knight SpriteSheet_294
+  - first:
+      213: 7395901100739323027
+    second: Fire Knight SpriteSheet_295
+  - first:
+      213: -4167069996176904727
+    second: Fire Knight SpriteSheet_296
+  - first:
+      213: 3965967670564195386
+    second: Fire Knight SpriteSheet_297
+  - first:
+      213: -2184859590226820645
+    second: Fire Knight SpriteSheet_298
+  - first:
+      213: -483554512700585879
+    second: Fire Knight SpriteSheet_299
+  - first:
+      213: -4830236126404412575
+    second: Fire Knight SpriteSheet_300
+  - first:
+      213: 6530669815202802281
+    second: Fire Knight SpriteSheet_301
+  - first:
+      213: -985544855596963911
+    second: Fire Knight SpriteSheet_302
+  - first:
+      213: -9075053504101583164
+    second: Fire Knight SpriteSheet_303
+  - first:
+      213: 7640970158839453684
+    second: Fire Knight SpriteSheet_304
+  - first:
+      213: 6217767808354833650
+    second: Fire Knight SpriteSheet_305
+  - first:
+      213: 5942051106789533746
+    second: Fire Knight SpriteSheet_306
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2423a78eca7424880800000000000000
+      internalID: -8628255128128179646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20bdaa969da08110800000000000000
+      internalID: 1261198758015512618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b8a38a4e52aa0e0800000000000000
+      internalID: -2257950599167702183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1ebe85cffc39550800000000000000
+      internalID: 6166500997530902998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9999c1928ffb49420800000000000000
+      internalID: 2635942754481117593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f131d6e24b98b7f0800000000000000
+      internalID: -596556238983974412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a29eb77487a1a10800000000000000
+      internalID: 1880948042797492812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1664
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f68f6dee2003300800000000000000
+      internalID: 229686805827972911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c50f40014ded9fb0800000000000000
+      internalID: -4639291177687906876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7493619435f81aa50800000000000000
+      internalID: 6530658522535180615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274ad0519c3300290800000000000000
+      internalID: -7926278405437414286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc46788d5c6527ac0800000000000000
+      internalID: -3858926522961795889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc893080f0211f00800000000000000
+      internalID: 1085685202488495309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc64bfd269d822e0800000000000000
+      internalID: -2150229803386245937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec35727ef3f6296d0800000000000000
+      internalID: -2985201282741480498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1536
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d4d22933108ad50800000000000000
+      internalID: 6748645362622090545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ebf24680417456d0800000000000000
+      internalID: -3002650529604895769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc7b8f3a55cba5d0800000000000000
+      internalID: -3050127331209544494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1408
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15ddf5244e1fe600800000000000000
+      internalID: 499651361705415967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea8bd17872227a90800000000000000
+      internalID: -7317748543822001430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92034580a5e6a4af0800000000000000
+      internalID: -411395082985131991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1280
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08437da47195bdfb0800000000000000
+      internalID: -4622002635990944640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d06a2c3974ff610800000000000000
+      internalID: 1657121887847058716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe15cff3a4acbfc0800000000000000
+      internalID: -3477723787959132422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbaa945b19934250800000000000000
+      internalID: 5927749877212294067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c30262a523d0d1a0800000000000000
+      internalID: -6786692479855754302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92360962c1e67c8d0800000000000000
+      internalID: -2826169173966560471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c326c52ca42053a0800000000000000
+      internalID: -6678797925603728447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551ebac9c5ed3b500800000000000000
+      internalID: 410916480367714645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0305724e96d07b990800000000000000
+      internalID: -7370407516718018512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e0e79145084bf90800000000000000
+      internalID: -6938780027177791919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfe48ec7d6320eb0800000000000000
+      internalID: -4755177956039135277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd9acf198dba15a0800000000000000
+      internalID: -6549714311415423535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f671059832b3f630800000000000000
+      internalID: 3959704453476611831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab92439904c30200800000000000000
+      internalID: 145175158410353579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882d3e56d0c0345a0800000000000000
+      internalID: -6538368982328290680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e97c0e083cdc2e20800000000000000
+      internalID: 3327276358031931879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c94e62013437a70800000000000000
+      internalID: 8823469831599987861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537cfa210ca2338b0800000000000000
+      internalID: -5173744542482970827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf587f4794b68620800000000000000
+      internalID: 2776104782286839737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b612d7653c169920800000000000000
+      internalID: 2996613617762309809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 1152
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebcf986bf7562e40800000000000000
+      internalID: 5631285121377094638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4571637979163ad80800000000000000
+      internalID: -8240635589453015212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c927cb76ba0bd30800000000000000
+      internalID: 4445241294246288513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d1ff5eaa4771a20800000000000000
+      internalID: 3033021151409282352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51248c25bd4b84770800000000000000
+      internalID: 8595318742916284949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96fdbff0d1fb0a990800000000000000
+      internalID: -7376686058089750679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d40626fa980a8ec0800000000000000
+      internalID: -3564026693462653736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb0b3cdf02f14340800000000000000
+      internalID: 4846420823960652748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 1024
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94441515d9f80e80800000000000000
+      internalID: -8212039226933099365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b64383a8a92bbe0800000000000000
+      internalID: -1462937010502866087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373c17f248b28ed70800000000000000
+      internalID: 9072549296069526387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b86c64e0025dd6290800000000000000
+      internalID: -7895420238055422325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35540fdd6dea55d90800000000000000
+      internalID: -7109584198864714413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4886682f9669811d0800000000000000
+      internalID: -3379786138556929916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc114a6e7a574fc0800000000000000
+      internalID: -3510737885516981049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53554d281c1d0bc80800000000000000
+      internalID: -8308910683444718283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 896
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c3cbfa7c06b01c0800000000000000
+      internalID: -4536425788882535386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742b3fe4235773560800000000000000
+      internalID: 7293426980483215943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38983b8c9efec8a0800000000000000
+      internalID: -6282804481831167942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c088a7a4efd7520800000000000000
+      internalID: 2701594947328937026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5012feb4e3423bb10800000000000000
+      internalID: 1995978909835796741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844e864784ab04f20800000000000000
+      internalID: 3404926138645537864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56063ed50d81118c0800000000000000
+      internalID: -4030412908312436635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8dead226bb4c59e0800000000000000
+      internalID: -1631345719374058100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84734fe5f845f8c0800000000000000
+      internalID: -3966183675711490934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44faea7936b9edfe0800000000000000
+      internalID: -1162320801766133948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f43b223d9d8a4340800000000000000
+      internalID: 4848843655108834545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 768
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544f8741ad34e93b0800000000000000
+      internalID: -5503887090674764731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ed619bc842a8e70800000000000000
+      internalID: 9118140582384295503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8eae42c556a959e0800000000000000
+      internalID: -1632090502682726770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41110ccf01e024f50800000000000000
+      internalID: 6864064248188768532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9490149b64bc776e0800000000000000
+      internalID: -1839778418141361847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d53ddf76d8a3b70800000000000000
+      internalID: 8879565093093989775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e40e2c7bcc49d730800000000000000
+      internalID: 4024332178877711585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0df44b222d86cc0800000000000000
+      internalID: -3717490445898493737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2b199de393e41c0800000000000000
+      internalID: -4517610434105068827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae140d2926fb39dc0800000000000000
+      internalID: -3633350044267036182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324fc64aec4a35680800000000000000
+      internalID: -8767482842131401693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f191dada6cdaed80800000000000000
+      internalID: -8220515818315607567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d620a6666f1aa50800000000000000
+      internalID: 6530771854389570818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cda1d328d8a79e30800000000000000
+      internalID: 4510259198102187456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fb955c6517887d0800000000000000
+      internalID: -2915956141230276753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c50d9046bc7b4630800000000000000
+      internalID: 3912357823511332291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d638a8b93de80b430800000000000000
+      internalID: 3796691525372117869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b10edab7c3b2a90800000000000000
+      internalID: -7337704665974301941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de80a65ac2013c860800000000000000
+      internalID: 7548895184342878445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 640
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6ec9e1d551833b0800000000000000
+      internalID: -5532648652534913331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870df6e028e1b8450800000000000000
+      internalID: 6091996464885518456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3985455c7a1e604b0800000000000000
+      internalID: -5474440186335831917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543af3c7254cb7180800000000000000
+      internalID: -9116477162130529467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02323f6634055f840800000000000000
+      internalID: 5257196390445163296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5fcf0f9e4a01280800000000000000
+      internalID: -9074571924474104323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3141ab8a274c410800000000000000
+      internalID: 1496447045195797412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530584161b7158ef0800000000000000
+      internalID: -106652965564559307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b73e5425d86b850800000000000000
+      internalID: 6392452105598368531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f806573161dc280800000000000000
+      internalID: -9021530205723783365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41224ab04c34fd3d0800000000000000
+      internalID: -3179748302612323820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da29c1b903baf270800000000000000
+      internalID: 8285131318720277208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01013ea9859537880800000000000000
+      internalID: -8614443425139060720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7452bd262d08e450800000000000000
+      internalID: 6118154551409398907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182bd0f8a9d2b0d40800000000000000
+      internalID: 5551581107512521345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b93829ce304cec0800000000000000
+      internalID: -3547706291855844474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6d8890548bceb10800000000000000
+      internalID: 2012185740179986175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932d7d1a62ba79500800000000000000
+      internalID: 402978874085331513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46787ae05efb55bb0800000000000000
+      internalID: -4947837625082345628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f86b6a03e812e40800000000000000
+      internalID: 5629937348796387090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557ac656d38dd5700800000000000000
+      internalID: 530818089305810773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f359a9e7b462fc5d0800000000000000
+      internalID: -3040169117763332801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 6048
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8acbc878078ff5520800000000000000
+      internalID: 2693144264385019048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15dc4083ba193a090800000000000000
+      internalID: -8024409946478817967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 6624
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a535451291955f0800000000000000
+      internalID: -767554630550595067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 6912
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d153d275015bb20800000000000000
+      internalID: 3149441481022184760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3eeb53158c276c0800000000000000
+      internalID: -4147032055735196733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 7488
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d6fe9c0b03dd440800000000000000
+      internalID: 4962175900292443415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 512
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03f0b23979b19bc20800000000000000
+      internalID: 3222637346183384880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebbe056561defb380800000000000000
+      internalID: -8953176853996049474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b7cdabc777cde60800000000000000
+      internalID: 7988391216643078997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386f88910f448a680800000000000000
+      internalID: -8743662878528571773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27528ea65ec80130800000000000000
+      internalID: 3533300779362441003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868e1e435db75dde0800000000000000
+      internalID: -1309003961035790232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817d1413a15a81370800000000000000
+      internalID: 8293560245716899608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb6e00fd64c00da0800000000000000
+      internalID: -5980564328690062394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2198e75549d0734a90c6e06aba996a2
+      internalID: -787352490765953253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc3baea60cfc6543867a39cf2e9a88d
+      internalID: 6643465313518945156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5234b4df85ed14ca3e2c1ecd522dea
+      internalID: -5938479787978503694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dcbb4656c36424b897f3b0366a484e
+      internalID: -2240039024508977887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27619d67d2f4d484e9adad01134cf6c6
+      internalID: -1854465317146557252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99af85651f809eb4c99ca419a2f4e1b7
+      internalID: 6266350977138810745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_129
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e760afa48c37424aa1354c64a51885a
+      internalID: 555008797710400745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_130
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af22faa76be10864dbf74eca5ea17bc2
+      internalID: 7901561090917029440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_131
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f63a8082acce544197a67846f64c47b
+      internalID: -7681621405443889359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_132
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f7906882007c442b6d50690bc3b453
+      internalID: 1758580914479091533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_133
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 384
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b44985dae62754888ad36af8cbcb23
+      internalID: -1514684209141755772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_134
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e471ca86d9db51f45a2a3bf19b3f97d6
+      internalID: 7149209261397462965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_135
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a5779df4df761428a7544e2f81c15c
+      internalID: -9221921871037029303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_136
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83f0865d2d93284ea3a4dca43aaa398
+      internalID: -4293616087479038086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_137
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2316847cc9c77844284c193a40c1ea3a
+      internalID: -7509063448185654869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_138
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76c3e30c4715ee4688870c1151d025d
+      internalID: 3900954250392257225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_139
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7fa5cd4c9adc14aa0ea0097bb132e6
+      internalID: 732440410034269456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_140
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab0a2514d69bf4488afbd88a9d8765c
+      internalID: 1109418391375045410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_141
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8b7c9ba9afcc44587f1bdc34f2d190
+      internalID: 6382028957958330436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_142
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd1ea0471926ae44a41a321c3bf21e5
+      internalID: -1525888781466288819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_143
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 256
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648971d759f98284bbfea21e16cc54cd
+      internalID: -15209347307669941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd2f7b1500f77d409c824d2e62d618b
+      internalID: 4655157547626260369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_145
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb39cb9b6423a94db742dfe363f9db0
+      internalID: 3196584607607471736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_146
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3b15d09bd6cf542a3dde6c5b964fea
+      internalID: 3856413081453033730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_147
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2757e36404749d48b0413ece1479fb3
+      internalID: -2327125309701002351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_148
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18739cbf5ff38441bd142f761bf833b
+      internalID: -3850475986471978520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_149
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 128
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd279dfa936be449b9f8de11191d58d
+      internalID: -7328014594165007323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f9f49b893b21c48973de2602f6b74f
+      internalID: 952709721221918645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_151
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5415256dcd82dd447a4ce702b4a53481
+      internalID: -1476633243228302429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_152
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff193e477d23ff47bfa039a7d546367
+      internalID: 1530768178441038497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_153
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9ae1e878b7bb441b525b650cdd1032
+      internalID: -5915574216649608341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_154
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed743085ce84c243a546aa1ad28158d
+      internalID: 2909966310755193105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_155
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6976707f78e1b4ea7618e02f58a171
+      internalID: 5132118814726223442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_156
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a73af9b0be8e0498bcccb8a4de087a
+      internalID: 8843284526307546468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_157
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b243ac79968a5b847ab5e7cde01e22eb
+      internalID: 5058325290590475079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_158
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a0e5948f342a94ebe0aa6cc93530e2
+      internalID: -8586121825777226659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_159
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e76fc082ac2134bbc556a96cb0dbe0
+      internalID: -8562046220348121729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_160
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a619b31ad68b2814581022297cb6e767
+      internalID: 1611127895946796124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_161
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff78dd1a0d510b542a230eda7b6bd5ef
+      internalID: 13862361939467666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Knight SpriteSheet_162
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5026997, y: 0.1689682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a0fd91ce840094492bcdb437ee3815
+      internalID: 1720477892310662209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 53e3ddbd15edd214999bbb725f37de66
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Fire Knight SpriteSheet_0: -8628255128128179646
+      Fire Knight SpriteSheet_1: 1261198758015512618
+      Fire Knight SpriteSheet_10: -7926278405437414286
+      Fire Knight SpriteSheet_100: 6118154551409398907
+      Fire Knight SpriteSheet_101: 5551581107512521345
+      Fire Knight SpriteSheet_102: -3547706291855844474
+      Fire Knight SpriteSheet_103: 2012185740179986175
+      Fire Knight SpriteSheet_104: 402978874085331513
+      Fire Knight SpriteSheet_105: -4947837625082345628
+      Fire Knight SpriteSheet_106: 5629937348796387090
+      Fire Knight SpriteSheet_107: 530818089305810773
+      Fire Knight SpriteSheet_108: -3040169117763332801
+      Fire Knight SpriteSheet_109: 2693144264385019048
+      Fire Knight SpriteSheet_11: -3858926522961795889
+      Fire Knight SpriteSheet_110: -8024409946478817967
+      Fire Knight SpriteSheet_111: -767554630550595067
+      Fire Knight SpriteSheet_112: 3149441481022184760
+      Fire Knight SpriteSheet_113: -4147032055735196733
+      Fire Knight SpriteSheet_114: 4962175900292443415
+      Fire Knight SpriteSheet_115: 3222637346183384880
+      Fire Knight SpriteSheet_116: -8953176853996049474
+      Fire Knight SpriteSheet_117: 7988391216643078997
+      Fire Knight SpriteSheet_118: -8743662878528571773
+      Fire Knight SpriteSheet_119: 3533300779362441003
+      Fire Knight SpriteSheet_12: 1085685202488495309
+      Fire Knight SpriteSheet_120: -1309003961035790232
+      Fire Knight SpriteSheet_121: 8293560245716899608
+      Fire Knight SpriteSheet_122: -5980564328690062394
+      Fire Knight SpriteSheet_123: -787352490765953253
+      Fire Knight SpriteSheet_124: 6643465313518945156
+      Fire Knight SpriteSheet_125: -5938479787978503694
+      Fire Knight SpriteSheet_126: -2240039024508977887
+      Fire Knight SpriteSheet_127: -1854465317146557252
+      Fire Knight SpriteSheet_128: 6266350977138810745
+      Fire Knight SpriteSheet_129: 555008797710400745
+      Fire Knight SpriteSheet_13: -2150229803386245937
+      Fire Knight SpriteSheet_130: 7901561090917029440
+      Fire Knight SpriteSheet_131: -7681621405443889359
+      Fire Knight SpriteSheet_132: 1758580914479091533
+      Fire Knight SpriteSheet_133: -1514684209141755772
+      Fire Knight SpriteSheet_134: 7149209261397462965
+      Fire Knight SpriteSheet_135: -9221921871037029303
+      Fire Knight SpriteSheet_136: -4293616087479038086
+      Fire Knight SpriteSheet_137: -7509063448185654869
+      Fire Knight SpriteSheet_138: 3900954250392257225
+      Fire Knight SpriteSheet_139: 732440410034269456
+      Fire Knight SpriteSheet_14: -2985201282741480498
+      Fire Knight SpriteSheet_140: 1109418391375045410
+      Fire Knight SpriteSheet_141: 6382028957958330436
+      Fire Knight SpriteSheet_142: -1525888781466288819
+      Fire Knight SpriteSheet_143: -15209347307669941
+      Fire Knight SpriteSheet_144: 4655157547626260369
+      Fire Knight SpriteSheet_145: 3196584607607471736
+      Fire Knight SpriteSheet_146: 3856413081453033730
+      Fire Knight SpriteSheet_147: -2327125309701002351
+      Fire Knight SpriteSheet_148: -3850475986471978520
+      Fire Knight SpriteSheet_149: -7328014594165007323
+      Fire Knight SpriteSheet_15: 6748645362622090545
+      Fire Knight SpriteSheet_150: 952709721221918645
+      Fire Knight SpriteSheet_151: -1476633243228302429
+      Fire Knight SpriteSheet_152: 1530768178441038497
+      Fire Knight SpriteSheet_153: -5915574216649608341
+      Fire Knight SpriteSheet_154: 2909966310755193105
+      Fire Knight SpriteSheet_155: 5132118814726223442
+      Fire Knight SpriteSheet_156: 8843284526307546468
+      Fire Knight SpriteSheet_157: 5058325290590475079
+      Fire Knight SpriteSheet_158: -8586121825777226659
+      Fire Knight SpriteSheet_159: -8562046220348121729
+      Fire Knight SpriteSheet_16: -3002650529604895769
+      Fire Knight SpriteSheet_160: 1611127895946796124
+      Fire Knight SpriteSheet_161: 13862361939467666
+      Fire Knight SpriteSheet_162: 1720477892310662209
+      Fire Knight SpriteSheet_17: -3050127331209544494
+      Fire Knight SpriteSheet_18: 499651361705415967
+      Fire Knight SpriteSheet_19: -7317748543822001430
+      Fire Knight SpriteSheet_2: -2257950599167702183
+      Fire Knight SpriteSheet_20: -411395082985131991
+      Fire Knight SpriteSheet_21: -4622002635990944640
+      Fire Knight SpriteSheet_22: 1657121887847058716
+      Fire Knight SpriteSheet_23: -3477723787959132422
+      Fire Knight SpriteSheet_24: 5927749877212294067
+      Fire Knight SpriteSheet_25: -6786692479855754302
+      Fire Knight SpriteSheet_26: -2826169173966560471
+      Fire Knight SpriteSheet_27: -6678797925603728447
+      Fire Knight SpriteSheet_28: 410916480367714645
+      Fire Knight SpriteSheet_29: -7370407516718018512
+      Fire Knight SpriteSheet_3: 6166500997530902998
+      Fire Knight SpriteSheet_30: -6938780027177791919
+      Fire Knight SpriteSheet_31: -4755177956039135277
+      Fire Knight SpriteSheet_32: -6549714311415423535
+      Fire Knight SpriteSheet_33: 3959704453476611831
+      Fire Knight SpriteSheet_34: 145175158410353579
+      Fire Knight SpriteSheet_35: -6538368982328290680
+      Fire Knight SpriteSheet_36: 3327276358031931879
+      Fire Knight SpriteSheet_37: 8823469831599987861
+      Fire Knight SpriteSheet_38: -5173744542482970827
+      Fire Knight SpriteSheet_39: 2776104782286839737
+      Fire Knight SpriteSheet_4: 2635942754481117593
+      Fire Knight SpriteSheet_40: 2996613617762309809
+      Fire Knight SpriteSheet_41: 5631285121377094638
+      Fire Knight SpriteSheet_42: -8240635589453015212
+      Fire Knight SpriteSheet_43: 4445241294246288513
+      Fire Knight SpriteSheet_44: 3033021151409282352
+      Fire Knight SpriteSheet_45: 8595318742916284949
+      Fire Knight SpriteSheet_46: -7376686058089750679
+      Fire Knight SpriteSheet_47: -3564026693462653736
+      Fire Knight SpriteSheet_48: 4846420823960652748
+      Fire Knight SpriteSheet_49: -8212039226933099365
+      Fire Knight SpriteSheet_5: -596556238983974412
+      Fire Knight SpriteSheet_50: -1462937010502866087
+      Fire Knight SpriteSheet_51: 9072549296069526387
+      Fire Knight SpriteSheet_52: -7895420238055422325
+      Fire Knight SpriteSheet_53: -7109584198864714413
+      Fire Knight SpriteSheet_54: -3379786138556929916
+      Fire Knight SpriteSheet_55: -3510737885516981049
+      Fire Knight SpriteSheet_56: -8308910683444718283
+      Fire Knight SpriteSheet_57: -4536425788882535386
+      Fire Knight SpriteSheet_58: 7293426980483215943
+      Fire Knight SpriteSheet_59: -6282804481831167942
+      Fire Knight SpriteSheet_6: 1880948042797492812
+      Fire Knight SpriteSheet_60: 2701594947328937026
+      Fire Knight SpriteSheet_61: 1995978909835796741
+      Fire Knight SpriteSheet_62: 3404926138645537864
+      Fire Knight SpriteSheet_63: -4030412908312436635
+      Fire Knight SpriteSheet_64: -1631345719374058100
+      Fire Knight SpriteSheet_65: -3966183675711490934
+      Fire Knight SpriteSheet_66: -1162320801766133948
+      Fire Knight SpriteSheet_67: 4848843655108834545
+      Fire Knight SpriteSheet_68: -5503887090674764731
+      Fire Knight SpriteSheet_69: 9118140582384295503
+      Fire Knight SpriteSheet_7: 229686805827972911
+      Fire Knight SpriteSheet_70: -1632090502682726770
+      Fire Knight SpriteSheet_71: 6864064248188768532
+      Fire Knight SpriteSheet_72: -1839778418141361847
+      Fire Knight SpriteSheet_73: 8879565093093989775
+      Fire Knight SpriteSheet_74: 4024332178877711585
+      Fire Knight SpriteSheet_75: -3717490445898493737
+      Fire Knight SpriteSheet_76: -4517610434105068827
+      Fire Knight SpriteSheet_77: -3633350044267036182
+      Fire Knight SpriteSheet_78: -8767482842131401693
+      Fire Knight SpriteSheet_79: -8220515818315607567
+      Fire Knight SpriteSheet_8: -4639291177687906876
+      Fire Knight SpriteSheet_80: 6530771854389570818
+      Fire Knight SpriteSheet_81: 4510259198102187456
+      Fire Knight SpriteSheet_82: -2915956141230276753
+      Fire Knight SpriteSheet_83: 3912357823511332291
+      Fire Knight SpriteSheet_84: 3796691525372117869
+      Fire Knight SpriteSheet_85: -7337704665974301941
+      Fire Knight SpriteSheet_86: 7548895184342878445
+      Fire Knight SpriteSheet_87: -5532648652534913331
+      Fire Knight SpriteSheet_88: 6091996464885518456
+      Fire Knight SpriteSheet_89: -5474440186335831917
+      Fire Knight SpriteSheet_9: 6530658522535180615
+      Fire Knight SpriteSheet_90: -9116477162130529467
+      Fire Knight SpriteSheet_91: 5257196390445163296
+      Fire Knight SpriteSheet_92: -9074571924474104323
+      Fire Knight SpriteSheet_93: 1496447045195797412
+      Fire Knight SpriteSheet_94: -106652965564559307
+      Fire Knight SpriteSheet_95: 6392452105598368531
+      Fire Knight SpriteSheet_96: -9021530205723783365
+      Fire Knight SpriteSheet_97: -3179748302612323820
+      Fire Knight SpriteSheet_98: 8285131318720277208
+      Fire Knight SpriteSheet_99: -8614443425139060720
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
