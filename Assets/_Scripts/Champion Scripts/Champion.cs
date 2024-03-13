@@ -385,12 +385,14 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (isFacingLeftNetworked) AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         else AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
-        //ChampionAnimationController.ChangeAnimation(statusNetworked);
         if (statusNetworked == Status.TAKE_HIT)
         {
             if (tookHitNetworked) ChampionAnimationController.RestartAnimation(); //Restart take hit animation
             tookHitNetworked = false;
         }
+
+        if (ChampionAnimationController.AnimationFinished())
+            ChampionAnimationController.RestartAnimation();
     }
 
     protected virtual void UpdatePosition()

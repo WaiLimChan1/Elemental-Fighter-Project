@@ -55,7 +55,7 @@ public class Projectile : NetworkBehaviour
         gameObject.transform.parent = StuckTarget.GetComponent<Champion>().AttackBoxesParent;
 
         stuckYRotation = enemy.isFacingLeftNetworked ? 180 : 0;
-        stuckZRotation = transform.rotation.z * Mathf.Rad2Deg + Random.Range(championStuckRotationRange.x, championStuckRotationRange.y);
+        stuckZRotation = transform.rotation.eulerAngles.z + Random.Range(championStuckRotationRange.x, championStuckRotationRange.y);
         stuckLocalPosition = gameObject.transform.localPosition;
     }
 
@@ -70,7 +70,7 @@ public class Projectile : NetworkBehaviour
         gameObject.transform.parent = networkObject.transform;
 
         stuckYRotation = 0;
-        stuckZRotation = transform.rotation.z * Mathf.Rad2Deg + Random.Range(environmentStuckRotationRange.x, environmentStuckRotationRange.y);
+        stuckZRotation = transform.rotation.eulerAngles.z + Random.Range(environmentStuckRotationRange.x, environmentStuckRotationRange.y);
         stuckLocalPosition = gameObject.transform.localPosition;
     }
 
