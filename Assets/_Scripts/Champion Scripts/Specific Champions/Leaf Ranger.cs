@@ -18,6 +18,28 @@ public class LeafRanger : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    public override void AnimationTriggerAttack()
+    {
+        //if (Runner.IsServer)
+        {
+            int index = 0;
+            if (statusNetworked == Status.ATTACK1) index = 1;
+            else if (statusNetworked == Status.SPECIAL_ATTACK) index = 4;
+            else return;
+
+            BoxCollider2D attackBox = AttackBoxes[index];
+            float damage = AttackDamages[index];
+
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(attackBox.bounds.center, attackBox.bounds.size, 0, LayerMask.GetMask("Champion"));
+            foreach (Collider2D collider in colliders)
+            {
+                Champion enemy = collider.GetComponent<Champion>();
+                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
+                    enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
+            }
+        }
+    }
+
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;

@@ -22,36 +22,36 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -2466459942133813538, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.1
+    - time: 0.09090909
       value: {fileID: -643752691791555070, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.2
+    - time: 0.18181819
       value: {fileID: -971555882737944156, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.3
+    - time: 0.27272728
       value: {fileID: -5633246382927315042, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.4
+    - time: 0.36363637
       value: {fileID: 2368409121237656735, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.5
+    - time: 0.45454547
       value: {fileID: -4457068080280820922, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.6
+    - time: 0.54545456
       value: {fileID: 8206210690026167606, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.7
+    - time: 0.6363636
       value: {fileID: 1292137463368934009, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.8
+    - time: 0.72727275
       value: {fileID: 5711667680439523872, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 0.9
+    - time: 0.8181818
       value: {fileID: -2781812584763243380, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 1
+    - time: 0.90909094
       value: {fileID: -4397701636377439591, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 1.1
+    - time: 1
       value: {fileID: 3338803928619772669, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
-    - time: 1.2
+    - time: 1.0909091
       value: {fileID: 7618446653858114485, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 10
+  m_SampleRate: 11
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -86,7 +86,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.3000001
+    m_StopTime: 1.1818182
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -106,7 +106,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.8
+  - time: 0.72727275
     functionName: AnimationTriggerProjectileSpawn
     data: 
     objectReferenceParameter: {fileID: 0}

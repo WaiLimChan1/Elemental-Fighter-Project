@@ -159,7 +159,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         Rigid.velocity += velocity;
     }
 
-    public void AnimationTriggerAttack()
+    public virtual void AnimationTriggerAttack()
     {
         //if (Runner.IsServer)
         {
@@ -169,6 +169,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             else if (statusNetworked == Status.ATTACK2) index = 2;
             else if (statusNetworked == Status.ATTACK3) index = 3;
             else if (statusNetworked == Status.SPECIAL_ATTACK) index = 4;
+            else return;
 
             BoxCollider2D attackBox = AttackBoxes[index];
             float damage = AttackDamages[index];
