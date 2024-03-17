@@ -10,7 +10,7 @@ public class LightningRonin : Champion
     [SerializeField] private float lightningDashSpeed = 30;
 
     [SerializeField] private BoxCollider2D lightningDashAttackBox;
-    [SerializeField] private float lightningDashDamage = 20;
+    [SerializeField] private float lightningDashDamage = 5;
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     public override void DealDamageToVictim(Champion enemy, float damage)

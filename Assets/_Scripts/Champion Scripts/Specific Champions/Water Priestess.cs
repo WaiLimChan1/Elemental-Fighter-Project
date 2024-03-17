@@ -4,8 +4,29 @@ using UnityEngine;
 
 public class WaterPriestess : Champion
 {
-    [Header("Water Priestess Variables")]
-    [SerializeField] private float slideSpeed = 25;
+    [Header("Water Priestess Water Slide Variables")]
+    [SerializeField] private float waterSlideSpeed = 25;
+    [SerializeField] private BoxCollider2D waterSlideAttackBox;
+    [SerializeField] private float waterSlideDashDamage = 5;
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    public override void AnimationTriggerAttack()
+    {
+        base.AnimationTriggerAttack();
+        if (statusNetworked == Status.UNIQUE3)
+        {
+            BoxCollider2D attackBox = waterSlideAttackBox;
+            float damage = waterSlideDashDamage;
+
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(attackBox.bounds.center, attackBox.bounds.size, 0, LayerMask.GetMask("Champion"));
+            foreach (Collider2D collider in colliders)
+            {
+                Champion enemy = collider.GetComponent<Champion>();
+                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
+                    DealDamageToVictim(enemy, damage);
+            }
+        }
+    }
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
@@ -15,11 +36,12 @@ public class WaterPriestess : Champion
         if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
         else if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength * 1 / 5, crowdControlStrength));
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status.UNIQUE1 : Begin_Meditation
     //Status.UNIQUE2 : Meditation
-    //Status.UNIQUE3 : Slide
+    //Status.UNIQUE3 : Water_Slide
 
     protected override bool SingleAnimationStatus()
     {
@@ -73,7 +95,7 @@ public class WaterPriestess : Champion
         base.UpdatePosition();
         if (statusNetworked == Status.UNIQUE3)
         {
-            float xChange = slideSpeed * Time.fixedDeltaTime;
+            float xChange = waterSlideSpeed * Time.fixedDeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
