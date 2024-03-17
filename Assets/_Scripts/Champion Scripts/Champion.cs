@@ -23,6 +23,13 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         BEGIN_DEATH, FINISHED_DEATH,
         UNIQUE1, UNIQUE2, UNIQUE3
     }
+
+    public enum AttackType
+    {
+        BlockByFacingAttack, //Block by facing in the opposite direction of the attacker
+        BlockByFacingAttacker, //Block by facing towards the attack's direction
+        Unblockable //Can't Block
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -140,12 +147,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
-    public void TakeDamageNetworked(float damage, bool attackerIsFacingLeft)
+    public void TakeDamageNetworked(float damage, bool attackerIsFacingLeft, AttackType attackType = AttackType.BlockByFacingAttack, Vector2 attackerPosition = default(Vector2))
     {
         if (dead) return;
         if (healthNetworked <= 0) return;
 
-        if (statusNetworked == Status.DEFEND && isFacingLeftNetworked != attackerIsFacingLeft)
+        //Blocked
+        if (statusNetworked == Status.DEFEND && attackType == AttackType.BlockByFacingAttack 
+            && isFacingLeftNetworked != attackerIsFacingLeft)
+            damage -= damage * blockPercentage;
+        else if (statusNetworked == Status.DEFEND && attackType == AttackType.BlockByFacingAttacker
+            && ((isFacingLeftNetworked && transform.position.x > attackerPosition.x) || (!isFacingLeftNetworked && transform.position.x < attackerPosition.x)))
             damage -= damage * blockPercentage;
         else
             tookHitNetworked = true;
@@ -157,6 +169,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     public void AddVelocity(Vector2 velocity)
     {
         Rigid.velocity += velocity;
+    }
+
+    public virtual void DealDamageToVictim(Champion enemy, float damage)
+    {
+        enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
     }
 
     public virtual void AnimationTriggerAttack()
@@ -179,7 +196,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             {
                 Champion enemy = collider.GetComponent<Champion>();
                 if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
+                    DealDamageToVictim(enemy, damage);
             }
         }
     }

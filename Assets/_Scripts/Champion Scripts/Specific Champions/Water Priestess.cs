@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WaterPriestess : Champion
 {
+    [Header("Water Priestess Variables")]
+    [SerializeField] private float slideSpeed = 25;
+
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;
@@ -70,7 +73,7 @@ public class WaterPriestess : Champion
         base.UpdatePosition();
         if (statusNetworked == Status.UNIQUE3)
         {
-            float xChange = rollMoveSpeed * Time.fixedDeltaTime;
+            float xChange = slideSpeed * Time.fixedDeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }

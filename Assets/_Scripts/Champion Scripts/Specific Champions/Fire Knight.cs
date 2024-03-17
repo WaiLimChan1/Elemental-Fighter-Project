@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class FireKnight : Champion
 {
+    public override void DealDamageToVictim(Champion enemy, float damage)
+    {
+        if (statusNetworked == Status.ATTACK2) enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+    }
+
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;

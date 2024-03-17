@@ -24,6 +24,8 @@ public class ChampionAnimationController : MonoBehaviour
     }
 
     public int GetAnimatorStatus() { return Animator.GetInteger("Status"); }
+
+    public float GetNormalizedTime() { return Animator.GetCurrentAnimatorStateInfo(0).normalizedTime; }
     public bool AnimationFinished() { return Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f; }
     public void Flip(bool isFacingLeft) { GetComponent<SpriteRenderer>().flipX = isFacingLeft; }
     public void ChangeAnimation(Champion.Status status) { Animator.SetInteger("Status", (int)status); }
