@@ -1,0 +1,4001 @@
+fileFormatVersion: 2
+guid: c55a456a376f7a040bdc2512c36a7044
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9175009792163603869
+    second: Blood Moon Ravager SpriteSheet_0
+  - first:
+      213: -356632460846582070
+    second: Blood Moon Ravager SpriteSheet_1
+  - first:
+      213: 6631620164731817225
+    second: Blood Moon Ravager SpriteSheet_2
+  - first:
+      213: -2646016599422112423
+    second: Blood Moon Ravager SpriteSheet_3
+  - first:
+      213: 7476753027217649348
+    second: Blood Moon Ravager SpriteSheet_4
+  - first:
+      213: -7378176623322657787
+    second: Blood Moon Ravager SpriteSheet_5
+  - first:
+      213: -2238097810056242447
+    second: Blood Moon Ravager SpriteSheet_6
+  - first:
+      213: 1005082689037204893
+    second: Blood Moon Ravager SpriteSheet_7
+  - first:
+      213: 351485144348129485
+    second: Blood Moon Ravager SpriteSheet_8
+  - first:
+      213: 4578783873304410904
+    second: Blood Moon Ravager SpriteSheet_9
+  - first:
+      213: -6706383740108203512
+    second: Blood Moon Ravager SpriteSheet_10
+  - first:
+      213: -2347422435025343736
+    second: Blood Moon Ravager SpriteSheet_11
+  - first:
+      213: 4021377463788279769
+    second: Blood Moon Ravager SpriteSheet_12
+  - first:
+      213: -751939578329470196
+    second: Blood Moon Ravager SpriteSheet_13
+  - first:
+      213: -546732108052150965
+    second: Blood Moon Ravager SpriteSheet_14
+  - first:
+      213: -5985366320340658580
+    second: Blood Moon Ravager SpriteSheet_15
+  - first:
+      213: -8662203015161025791
+    second: Blood Moon Ravager SpriteSheet_16
+  - first:
+      213: -6257267892098303824
+    second: Blood Moon Ravager SpriteSheet_17
+  - first:
+      213: 381153260072401687
+    second: Blood Moon Ravager SpriteSheet_18
+  - first:
+      213: -5658364052521572667
+    second: Blood Moon Ravager SpriteSheet_19
+  - first:
+      213: -1012848475267134991
+    second: Blood Moon Ravager SpriteSheet_20
+  - first:
+      213: -8874759769692402203
+    second: Blood Moon Ravager SpriteSheet_21
+  - first:
+      213: -2660397376800241345
+    second: Blood Moon Ravager SpriteSheet_22
+  - first:
+      213: 1089740645361796230
+    second: Blood Moon Ravager SpriteSheet_23
+  - first:
+      213: -1334594387860704849
+    second: Blood Moon Ravager SpriteSheet_24
+  - first:
+      213: 2998934439602005921
+    second: Blood Moon Ravager SpriteSheet_25
+  - first:
+      213: -1415995056915359975
+    second: Blood Moon Ravager SpriteSheet_26
+  - first:
+      213: -9174797778261623736
+    second: Blood Moon Ravager SpriteSheet_27
+  - first:
+      213: 8785463335146402789
+    second: Blood Moon Ravager SpriteSheet_28
+  - first:
+      213: 2239391198207204322
+    second: Blood Moon Ravager SpriteSheet_29
+  - first:
+      213: 1210084577138271779
+    second: Blood Moon Ravager SpriteSheet_30
+  - first:
+      213: -1012296508496698155
+    second: Blood Moon Ravager SpriteSheet_31
+  - first:
+      213: 789594432159739231
+    second: Blood Moon Ravager SpriteSheet_32
+  - first:
+      213: 8702191246277128092
+    second: Blood Moon Ravager SpriteSheet_33
+  - first:
+      213: -3907421983141669311
+    second: Blood Moon Ravager SpriteSheet_34
+  - first:
+      213: -958192892493908219
+    second: Blood Moon Ravager SpriteSheet_35
+  - first:
+      213: 7968123663345959048
+    second: Blood Moon Ravager SpriteSheet_36
+  - first:
+      213: -1114016292691976228
+    second: Blood Moon Ravager SpriteSheet_37
+  - first:
+      213: 4646498654928816347
+    second: Blood Moon Ravager SpriteSheet_38
+  - first:
+      213: 8922865829061551419
+    second: Blood Moon Ravager SpriteSheet_39
+  - first:
+      213: -4119082056636113066
+    second: Blood Moon Ravager SpriteSheet_40
+  - first:
+      213: 5054392659833076545
+    second: Blood Moon Ravager SpriteSheet_41
+  - first:
+      213: 1320444481958864156
+    second: Blood Moon Ravager SpriteSheet_42
+  - first:
+      213: 702838020384164048
+    second: Blood Moon Ravager SpriteSheet_43
+  - first:
+      213: -8085785450596903758
+    second: Blood Moon Ravager SpriteSheet_44
+  - first:
+      213: 5611357462597472716
+    second: Blood Moon Ravager SpriteSheet_45
+  - first:
+      213: -3519433567870642673
+    second: Blood Moon Ravager SpriteSheet_46
+  - first:
+      213: -5887837480116728589
+    second: Blood Moon Ravager SpriteSheet_47
+  - first:
+      213: 8972325067685188998
+    second: Blood Moon Ravager SpriteSheet_48
+  - first:
+      213: -6204051570914186337
+    second: Blood Moon Ravager SpriteSheet_49
+  - first:
+      213: -5606888691462197665
+    second: Blood Moon Ravager SpriteSheet_50
+  - first:
+      213: -3671322009110702913
+    second: Blood Moon Ravager SpriteSheet_51
+  - first:
+      213: 8282771935162744286
+    second: Blood Moon Ravager SpriteSheet_52
+  - first:
+      213: -2683802193341041175
+    second: Blood Moon Ravager SpriteSheet_53
+  - first:
+      213: 5293065257615007961
+    second: Blood Moon Ravager SpriteSheet_54
+  - first:
+      213: 5444106477207958535
+    second: Blood Moon Ravager SpriteSheet_55
+  - first:
+      213: 9121340387746180408
+    second: Blood Moon Ravager SpriteSheet_56
+  - first:
+      213: -6532730636996260677
+    second: Blood Moon Ravager SpriteSheet_57
+  - first:
+      213: -7392516911062577454
+    second: Blood Moon Ravager SpriteSheet_58
+  - first:
+      213: 6450080564735182318
+    second: Blood Moon Ravager SpriteSheet_59
+  - first:
+      213: -3123119321683238598
+    second: Blood Moon Ravager SpriteSheet_60
+  - first:
+      213: -8588268713666615836
+    second: Blood Moon Ravager SpriteSheet_61
+  - first:
+      213: 4096729479219387218
+    second: Blood Moon Ravager SpriteSheet_62
+  - first:
+      213: -1929587463602581002
+    second: Blood Moon Ravager SpriteSheet_63
+  - first:
+      213: 6640961732321148262
+    second: Blood Moon Ravager SpriteSheet_64
+  - first:
+      213: 6917846061199222897
+    second: Blood Moon Ravager SpriteSheet_65
+  - first:
+      213: -2543818383247661935
+    second: Blood Moon Ravager SpriteSheet_66
+  - first:
+      213: -4740945482871463718
+    second: Blood Moon Ravager SpriteSheet_67
+  - first:
+      213: 289946113891464423
+    second: Blood Moon Ravager SpriteSheet_68
+  - first:
+      213: 8273012245174944143
+    second: Blood Moon Ravager SpriteSheet_69
+  - first:
+      213: -1017903555685795364
+    second: Blood Moon Ravager SpriteSheet_70
+  - first:
+      213: 5935645920316300052
+    second: Blood Moon Ravager SpriteSheet_71
+  - first:
+      213: 4440224794765455633
+    second: Blood Moon Ravager SpriteSheet_72
+  - first:
+      213: 6481923635329546584
+    second: Blood Moon Ravager SpriteSheet_73
+  - first:
+      213: -1892995888092463330
+    second: Blood Moon Ravager SpriteSheet_74
+  - first:
+      213: -763338780256269594
+    second: Blood Moon Ravager SpriteSheet_75
+  - first:
+      213: 3370702915215858599
+    second: Blood Moon Ravager SpriteSheet_76
+  - first:
+      213: 1314644318864650379
+    second: Blood Moon Ravager SpriteSheet_77
+  - first:
+      213: -7867404068760986869
+    second: Blood Moon Ravager SpriteSheet_78
+  - first:
+      213: -1022389172701343522
+    second: Blood Moon Ravager SpriteSheet_79
+  - first:
+      213: 6217123002252592400
+    second: Blood Moon Ravager SpriteSheet_80
+  - first:
+      213: 1809166028970714483
+    second: Blood Moon Ravager SpriteSheet_81
+  - first:
+      213: -3127704546916423047
+    second: Blood Moon Ravager SpriteSheet_82
+  - first:
+      213: -3349587982430746417
+    second: Blood Moon Ravager SpriteSheet_83
+  - first:
+      213: 6746097378235483614
+    second: Blood Moon Ravager SpriteSheet_84
+  - first:
+      213: -5940265456969307931
+    second: Blood Moon Ravager SpriteSheet_85
+  - first:
+      213: 2176033118307456051
+    second: Blood Moon Ravager SpriteSheet_86
+  - first:
+      213: -8004162959855695439
+    second: Blood Moon Ravager SpriteSheet_87
+  - first:
+      213: -3483231660612660922
+    second: Blood Moon Ravager SpriteSheet_88
+  - first:
+      213: -5449401268494829677
+    second: Blood Moon Ravager SpriteSheet_89
+  - first:
+      213: 5030498009969105295
+    second: Blood Moon Ravager SpriteSheet_90
+  - first:
+      213: -4402990525530503253
+    second: Blood Moon Ravager SpriteSheet_91
+  - first:
+      213: 7664777811460125069
+    second: Blood Moon Ravager SpriteSheet_92
+  - first:
+      213: 4716179099521325096
+    second: Blood Moon Ravager SpriteSheet_93
+  - first:
+      213: 6867766809248898797
+    second: Blood Moon Ravager SpriteSheet_94
+  - first:
+      213: -4762266601911769631
+    second: Blood Moon Ravager SpriteSheet_95
+  - first:
+      213: 7426702989599975380
+    second: Blood Moon Ravager SpriteSheet_96
+  - first:
+      213: 4202613960633389108
+    second: Blood Moon Ravager SpriteSheet_97
+  - first:
+      213: -3475728833150827607
+    second: Blood Moon Ravager SpriteSheet_98
+  - first:
+      213: 8672395439186565548
+    second: Blood Moon Ravager SpriteSheet_99
+  - first:
+      213: -153495004378980784
+    second: Blood Moon Ravager SpriteSheet_100
+  - first:
+      213: -7459252654107420981
+    second: Blood Moon Ravager SpriteSheet_101
+  - first:
+      213: -2430826748757318218
+    second: Blood Moon Ravager SpriteSheet_102
+  - first:
+      213: -7042627673768945397
+    second: Blood Moon Ravager SpriteSheet_103
+  - first:
+      213: -4732243188110935180
+    second: Blood Moon Ravager SpriteSheet_104
+  - first:
+      213: 4269510100148047625
+    second: Blood Moon Ravager SpriteSheet_105
+  - first:
+      213: -4511310168434227872
+    second: Blood Moon Ravager SpriteSheet_106
+  - first:
+      213: 6812518561605145274
+    second: Blood Moon Ravager SpriteSheet_107
+  - first:
+      213: 7788493632162997884
+    second: Blood Moon Ravager SpriteSheet_108
+  - first:
+      213: 7576364407534102006
+    second: Blood Moon Ravager SpriteSheet_109
+  - first:
+      213: -8200712789576482011
+    second: Blood Moon Ravager SpriteSheet_110
+  - first:
+      213: -4445742554907650416
+    second: Blood Moon Ravager SpriteSheet_111
+  - first:
+      213: -168672197163482146
+    second: Blood Moon Ravager SpriteSheet_112
+  - first:
+      213: -8179041442531535970
+    second: Blood Moon Ravager SpriteSheet_113
+  - first:
+      213: -1606436559724507802
+    second: Blood Moon Ravager SpriteSheet_114
+  - first:
+      213: 3417000494797486101
+    second: Blood Moon Ravager SpriteSheet_115
+  - first:
+      213: 6190576671762489164
+    second: Blood Moon Ravager SpriteSheet_116
+  - first:
+      213: 108900532952899115
+    second: Blood Moon Ravager SpriteSheet_117
+  - first:
+      213: 5697427137072457897
+    second: Blood Moon Ravager SpriteSheet_118
+  - first:
+      213: 4447621690215536971
+    second: Blood Moon Ravager SpriteSheet_119
+  - first:
+      213: 3840776504680345553
+    second: Blood Moon Ravager SpriteSheet_120
+  - first:
+      213: -6478149799966422236
+    second: Blood Moon Ravager SpriteSheet_121
+  - first:
+      213: -3238511386029232069
+    second: Blood Moon Ravager SpriteSheet_122
+  - first:
+      213: -8190473938478731818
+    second: Blood Moon Ravager SpriteSheet_123
+  - first:
+      213: 8748708231420518494
+    second: Blood Moon Ravager SpriteSheet_124
+  - first:
+      213: -8089605426309904920
+    second: Blood Moon Ravager SpriteSheet_125
+  - first:
+      213: -6250220052510544864
+    second: Blood Moon Ravager SpriteSheet_126
+  - first:
+      213: -2926642048253176653
+    second: Blood Moon Ravager SpriteSheet_127
+  - first:
+      213: 6365441778146061406
+    second: Blood Moon Ravager SpriteSheet_128
+  - first:
+      213: -5847332133114686629
+    second: Blood Moon Ravager SpriteSheet_129
+  - first:
+      213: -1303896156715673562
+    second: Blood Moon Ravager SpriteSheet_130
+  - first:
+      213: -5458838656656668351
+    second: Blood Moon Ravager SpriteSheet_131
+  - first:
+      213: 5132748290083507236
+    second: Blood Moon Ravager SpriteSheet_132
+  - first:
+      213: 8964187879956965057
+    second: Blood Moon Ravager SpriteSheet_133
+  - first:
+      213: -8718619220291726207
+    second: Blood Moon Ravager SpriteSheet_134
+  - first:
+      213: -4852333080167501137
+    second: Blood Moon Ravager SpriteSheet_135
+  - first:
+      213: -7127676544460770410
+    second: Blood Moon Ravager SpriteSheet_136
+  - first:
+      213: 1967667023618213289
+    second: Blood Moon Ravager SpriteSheet_137
+  - first:
+      213: -8385514767285932008
+    second: Blood Moon Ravager SpriteSheet_138
+  - first:
+      213: -9120562938957418497
+    second: Blood Moon Ravager SpriteSheet_139
+  - first:
+      213: 2194742669543524428
+    second: Blood Moon Ravager SpriteSheet_140
+  - first:
+      213: 8546704691850454027
+    second: Blood Moon Ravager SpriteSheet_141
+  - first:
+      213: 2349258634860148103
+    second: Blood Moon Ravager SpriteSheet_142
+  - first:
+      213: -4216029584692484897
+    second: Blood Moon Ravager SpriteSheet_143
+  - first:
+      213: -7796150804469749837
+    second: Blood Moon Ravager SpriteSheet_144
+  - first:
+      213: 3110179943276889538
+    second: Blood Moon Ravager SpriteSheet_145
+  - first:
+      213: 6069793363417268210
+    second: Blood Moon Ravager SpriteSheet_146
+  - first:
+      213: -3581106554994495361
+    second: Blood Moon Ravager SpriteSheet_147
+  - first:
+      213: 2169247999800324623
+    second: Blood Moon Ravager SpriteSheet_148
+  - first:
+      213: -3107662785572014481
+    second: Blood Moon Ravager SpriteSheet_149
+  - first:
+      213: 9072871236637078361
+    second: Blood Moon Ravager SpriteSheet_150
+  - first:
+      213: -8255122456691478025
+    second: Blood Moon Ravager SpriteSheet_151
+  - first:
+      213: -7619963458542845850
+    second: Blood Moon Ravager SpriteSheet_152
+  - first:
+      213: 8496798915013674267
+    second: Blood Moon Ravager SpriteSheet_153
+  - first:
+      213: 3667655418701978131
+    second: Blood Moon Ravager SpriteSheet_154
+  - first:
+      213: -5836453109761312557
+    second: Blood Moon Ravager SpriteSheet_155
+  - first:
+      213: -9160920309323638620
+    second: Blood Moon Ravager SpriteSheet_156
+  - first:
+      213: -3531449747983551226
+    second: Blood Moon Ravager SpriteSheet_157
+  - first:
+      213: 3562877260088907519
+    second: Blood Moon Ravager SpriteSheet_158
+  - first:
+      213: 5941879336090792923
+    second: Blood Moon Ravager SpriteSheet_159
+  - first:
+      213: -460031044109227801
+    second: Blood Moon Ravager SpriteSheet_160
+  - first:
+      213: 6912820884807168154
+    second: Blood Moon Ravager SpriteSheet_161
+  - first:
+      213: -8339602619615947381
+    second: Blood Moon Ravager SpriteSheet_162
+  - first:
+      213: 3367305306159436874
+    second: Blood Moon Ravager SpriteSheet_163
+  - first:
+      213: 1259478918849139565
+    second: Blood Moon Ravager SpriteSheet_164
+  - first:
+      213: 802296326282213450
+    second: Blood Moon Ravager SpriteSheet_165
+  - first:
+      213: -7065844437580917834
+    second: Blood Moon Ravager SpriteSheet_166
+  - first:
+      213: 7930374692181122687
+    second: Blood Moon Ravager SpriteSheet_167
+  - first:
+      213: 519284700684320297
+    second: Blood Moon Ravager SpriteSheet_168
+  - first:
+      213: 2686086471870743814
+    second: Blood Moon Ravager SpriteSheet_169
+  - first:
+      213: 8754320345557374684
+    second: Blood Moon Ravager SpriteSheet_170
+  - first:
+      213: -7230196245200087518
+    second: Blood Moon Ravager SpriteSheet_171
+  - first:
+      213: 2198374572249750492
+    second: Blood Moon Ravager SpriteSheet_172
+  - first:
+      213: -1594914833832574107
+    second: Blood Moon Ravager SpriteSheet_173
+  - first:
+      213: 2987702961890927456
+    second: Blood Moon Ravager SpriteSheet_174
+  - first:
+      213: -2019630179467301904
+    second: Blood Moon Ravager SpriteSheet_175
+  - first:
+      213: 648781569173917386
+    second: Blood Moon Ravager SpriteSheet_176
+  - first:
+      213: -1323093288889906549
+    second: Blood Moon Ravager SpriteSheet_177
+  - first:
+      213: -4073973232134414843
+    second: Blood Moon Ravager SpriteSheet_178
+  - first:
+      213: 5145189320249704131
+    second: Blood Moon Ravager SpriteSheet_179
+  - first:
+      213: -7162280189220626127
+    second: Blood Moon Ravager SpriteSheet_180
+  - first:
+      213: -2554636376859040021
+    second: Blood Moon Ravager SpriteSheet_181
+  - first:
+      213: 661041798588141662
+    second: Blood Moon Ravager SpriteSheet_182
+  - first:
+      213: 1014425775982915864
+    second: Blood Moon Ravager SpriteSheet_183
+  - first:
+      213: -6843871629937024494
+    second: Blood Moon Ravager SpriteSheet_184
+  - first:
+      213: 7639200650744233617
+    second: Blood Moon Ravager SpriteSheet_185
+  - first:
+      213: -7172156887272766768
+    second: Blood Moon Ravager SpriteSheet_186
+  - first:
+      213: -1873400614237689418
+    second: Blood Moon Ravager SpriteSheet_187
+  - first:
+      213: -4045116312655806080
+    second: Blood Moon Ravager SpriteSheet_188
+  - first:
+      213: -3459694363377442197
+    second: Blood Moon Ravager SpriteSheet_189
+  - first:
+      213: -2006564646850156140
+    second: Blood Moon Ravager SpriteSheet_190
+  - first:
+      213: -698246496311186087
+    second: Blood Moon Ravager SpriteSheet_191
+  - first:
+      213: -3796473336586767387
+    second: Blood Moon Ravager SpriteSheet_192
+  - first:
+      213: -8314799716502841651
+    second: Blood Moon Ravager SpriteSheet_193
+  - first:
+      213: -1421280356933414747
+    second: Blood Moon Ravager SpriteSheet_194
+  - first:
+      213: 6164913686128706781
+    second: Blood Moon Ravager SpriteSheet_195
+  - first:
+      213: -6671722312301716151
+    second: Blood Moon Ravager SpriteSheet_196
+  - first:
+      213: 3913208400969413325
+    second: Blood Moon Ravager SpriteSheet_197
+  - first:
+      213: -4134361796919991761
+    second: Blood Moon Ravager SpriteSheet_198
+  - first:
+      213: -7608360639659232179
+    second: Blood Moon Ravager SpriteSheet_199
+  - first:
+      213: 2176055644868031035
+    second: Blood Moon Ravager SpriteSheet_200
+  - first:
+      213: -492306455937627403
+    second: Blood Moon Ravager SpriteSheet_201
+  - first:
+      213: 8476324306387670903
+    second: Blood Moon Ravager SpriteSheet_202
+  - first:
+      213: 2698209009078782331
+    second: Blood Moon Ravager SpriteSheet_203
+  - first:
+      213: -4837535147810919154
+    second: Blood Moon Ravager SpriteSheet_204
+  - first:
+      213: -8048047726577738732
+    second: Blood Moon Ravager SpriteSheet_205
+  - first:
+      213: 6978443614361974878
+    second: Blood Moon Ravager SpriteSheet_206
+  - first:
+      213: 235749902636893932
+    second: Blood Moon Ravager SpriteSheet_207
+  - first:
+      213: 9215533796969159556
+    second: Blood Moon Ravager SpriteSheet_208
+  - first:
+      213: -6694107571803885582
+    second: Blood Moon Ravager SpriteSheet_209
+  - first:
+      213: 5939498742327715207
+    second: Blood Moon Ravager SpriteSheet_210
+  - first:
+      213: -379684711903854849
+    second: Blood Moon Ravager SpriteSheet_211
+  - first:
+      213: 5703299796951554039
+    second: Blood Moon Ravager SpriteSheet_212
+  - first:
+      213: -1495068118557364099
+    second: Blood Moon Ravager SpriteSheet_213
+  - first:
+      213: 6621680225723905479
+    second: Blood Moon Ravager SpriteSheet_214
+  - first:
+      213: 4450173372448683229
+    second: Blood Moon Ravager SpriteSheet_215
+  - first:
+      213: -8139433882193674784
+    second: Blood Moon Ravager SpriteSheet_216
+  - first:
+      213: -8545595889643647581
+    second: Blood Moon Ravager SpriteSheet_217
+  - first:
+      213: -7295934105821099171
+    second: Blood Moon Ravager SpriteSheet_218
+  - first:
+      213: -4913202331446162407
+    second: Blood Moon Ravager SpriteSheet_219
+  - first:
+      213: -7514161459392723447
+    second: Blood Moon Ravager SpriteSheet_220
+  - first:
+      213: 9075239216016398059
+    second: Blood Moon Ravager SpriteSheet_221
+  - first:
+      213: -6394565623765159223
+    second: Blood Moon Ravager SpriteSheet_222
+  - first:
+      213: 9018733014671751772
+    second: Blood Moon Ravager SpriteSheet_223
+  - first:
+      213: 376179047328208597
+    second: Blood Moon Ravager SpriteSheet_224
+  - first:
+      213: 2502785411927736744
+    second: Blood Moon Ravager SpriteSheet_225
+  - first:
+      213: 3124884041709917268
+    second: Blood Moon Ravager SpriteSheet_226
+  - first:
+      213: -8884545038917711313
+    second: Blood Moon Ravager SpriteSheet_227
+  - first:
+      213: 7435792493029533166
+    second: Blood Moon Ravager SpriteSheet_228
+  - first:
+      213: 7084640117208618962
+    second: Blood Moon Ravager SpriteSheet_229
+  - first:
+      213: 6024444018662649837
+    second: Blood Moon Ravager SpriteSheet_230
+  - first:
+      213: -8905051088600807291
+    second: Blood Moon Ravager SpriteSheet_231
+  - first:
+      213: -8342845972684366398
+    second: Blood Moon Ravager SpriteSheet_232
+  - first:
+      213: 1839662279443006258
+    second: Blood Moon Ravager SpriteSheet_233
+  - first:
+      213: 1630217159326766720
+    second: Blood Moon Ravager SpriteSheet_234
+  - first:
+      213: 8642208360713258846
+    second: Blood Moon Ravager SpriteSheet_235
+  - first:
+      213: -3629727871449669986
+    second: Blood Moon Ravager SpriteSheet_236
+  - first:
+      213: 1632710530095757665
+    second: Blood Moon Ravager SpriteSheet_237
+  - first:
+      213: -4640818109981574333
+    second: Blood Moon Ravager SpriteSheet_238
+  - first:
+      213: 4949265638215299300
+    second: Blood Moon Ravager SpriteSheet_239
+  - first:
+      213: 5730192962293268847
+    second: Blood Moon Ravager SpriteSheet_240
+  - first:
+      213: -151501860094779217
+    second: Blood Moon Ravager SpriteSheet_241
+  - first:
+      213: -2027464307388176616
+    second: Blood Moon Ravager SpriteSheet_242
+  - first:
+      213: 8254100446563728304
+    second: Blood Moon Ravager SpriteSheet_243
+  - first:
+      213: 3982524189233513493
+    second: Blood Moon Ravager SpriteSheet_244
+  - first:
+      213: 8244864207786722698
+    second: Blood Moon Ravager SpriteSheet_245
+  - first:
+      213: -3047988496194735440
+    second: Blood Moon Ravager SpriteSheet_246
+  - first:
+      213: -1545042863716378921
+    second: Blood Moon Ravager SpriteSheet_247
+  - first:
+      213: -2795221581272622739
+    second: Blood Moon Ravager SpriteSheet_248
+  - first:
+      213: -4535887839778063248
+    second: Blood Moon Ravager SpriteSheet_249
+  - first:
+      213: -3000529571641295671
+    second: Blood Moon Ravager SpriteSheet_250
+  - first:
+      213: 3094568576914668143
+    second: Blood Moon Ravager SpriteSheet_251
+  - first:
+      213: 3607250050482694647
+    second: Blood Moon Ravager SpriteSheet_252
+  - first:
+      213: 1053855723234536034
+    second: Blood Moon Ravager SpriteSheet_253
+  - first:
+      213: -6553072391955930564
+    second: Blood Moon Ravager SpriteSheet_254
+  - first:
+      213: 7002957431872586563
+    second: Blood Moon Ravager SpriteSheet_255
+  - first:
+      213: 7467794138095874823
+    second: Blood Moon Ravager SpriteSheet_256
+  - first:
+      213: -8190905329146728013
+    second: Blood Moon Ravager SpriteSheet_257
+  - first:
+      213: 1085984675746781886
+    second: Blood Moon Ravager SpriteSheet_258
+  - first:
+      213: 953130338701020303
+    second: Blood Moon Ravager SpriteSheet_259
+  - first:
+      213: 8816894138309975695
+    second: Blood Moon Ravager SpriteSheet_260
+  - first:
+      213: -9111147470736782328
+    second: Blood Moon Ravager SpriteSheet_261
+  - first:
+      213: -4207603023795532082
+    second: Blood Moon Ravager SpriteSheet_262
+  - first:
+      213: 1829005300742020655
+    second: Blood Moon Ravager SpriteSheet_263
+  - first:
+      213: 9208671665501538444
+    second: Blood Moon Ravager SpriteSheet_264
+  - first:
+      213: -2449701970237652251
+    second: Blood Moon Ravager SpriteSheet_265
+  - first:
+      213: 8860210727213594191
+    second: Blood Moon Ravager SpriteSheet_266
+  - first:
+      213: 123636622972533028
+    second: Blood Moon Ravager SpriteSheet_267
+  - first:
+      213: -2504164928331510547
+    second: Blood Moon Ravager SpriteSheet_268
+  - first:
+      213: 6923111647197382384
+    second: Blood Moon Ravager SpriteSheet_269
+  - first:
+      213: -5079246867372441484
+    second: Blood Moon Ravager SpriteSheet_270
+  - first:
+      213: -1904107413090888026
+    second: Blood Moon Ravager SpriteSheet_271
+  - first:
+      213: 7526642634413617963
+    second: Blood Moon Ravager SpriteSheet_272
+  - first:
+      213: 4213693309436682730
+    second: Blood Moon Ravager SpriteSheet_273
+  - first:
+      213: 4635746347590705499
+    second: Blood Moon Ravager SpriteSheet_274
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9564a07bce245f70800000000000000
+      internalID: 9175009792163603869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6bdd79aacfc0bf0800000000000000
+      internalID: -356632460846582070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d482c676f380c50800000000000000
+      internalID: 6631620164731817225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d68a90ce5774bd0800000000000000
+      internalID: -2646016599422112423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce62a4c343c2c760800000000000000
+      internalID: 7476753027217649348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c03ccc3737b9990800000000000000
+      internalID: -7378176623322657787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa940356eda0f0e0800000000000000
+      internalID: -2238097810056242447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9df4f96165c2fd00800000000000000
+      internalID: 1005082689037204893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc872b460e9b0e400800000000000000
+      internalID: 351485144348129485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1344
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81bb89f5cab1b8f30800000000000000
+      internalID: 4578783873304410904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a156335832ee2a0800000000000000
+      internalID: -6706383740108203512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1248
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b28868bb74c6fd0800000000000000
+      internalID: -2347422435025343736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1248
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d79cd44f7dcec730800000000000000
+      internalID: 4021377463788279769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1248
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b6d1dffe29095f0800000000000000
+      internalID: -751939578329470196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1248
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4540406b0e9968f0800000000000000
+      internalID: -546732108052150965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1248
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6612812b05bfeca0800000000000000
+      internalID: -5985366320340658580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b6205804ca9c780800000000000000
+      internalID: -8662203015161025791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b8f50b2108b929a0800000000000000
+      internalID: -6257267892098303824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71bf89fded02a4500800000000000000
+      internalID: 381153260072401687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6ac9f9fd37971b0800000000000000
+      internalID: -5658364052521572667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f908649da3a1f1f0800000000000000
+      internalID: -1012848475267134991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed8e8c820586d480800000000000000
+      internalID: -8874759769692402203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39c0726eae541bd0800000000000000
+      internalID: -2660397376800241345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6844810e7598f1f00800000000000000
+      internalID: 1089740645361796230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa13558a9719a7de0800000000000000
+      internalID: -1334594387860704849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7a929dbfa5e9920800000000000000
+      internalID: 2998934439602005921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917d9dc7fff595ce0800000000000000
+      internalID: -1415995056915359975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c3ca4e7029ca080800000000000000
+      internalID: -9174797778261623736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3be9e1b5c3ce970800000000000000
+      internalID: 8785463335146402789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ebd6421e6ae31f10800000000000000
+      internalID: 2239391198207204322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3266188f2851bc010800000000000000
+      internalID: 1210084577138271779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4afab50b993f1f0800000000000000
+      internalID: -1012296508496698155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5de18dd3f335fa00800000000000000
+      internalID: 789594432159739231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9facd115d464c870800000000000000
+      internalID: 8702191246277128092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146d943a86c06c9c0800000000000000
+      internalID: -3907421983141669311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 507b89814a0d3b2f0800000000000000
+      internalID: -958192892493908219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880ce104146749e60800000000000000
+      internalID: 7968123663345959048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfd81885183a80f0800000000000000
+      internalID: -1114016292691976228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8cc5098edab7040800000000000000
+      internalID: 4646498654928816347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b356fa7323364db70800000000000000
+      internalID: 8922865829061551419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65fd48d71b416d6c0800000000000000
+      internalID: -4119082056636113066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b31b4485fc42640800000000000000
+      internalID: 5054392659833076545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1568c4a249235210800000000000000
+      internalID: 1320444481958864156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d803aba47bf0c900800000000000000
+      internalID: 702838020384164048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b4562719f489cf80800000000000000
+      internalID: -8085785450596903758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc11cd9c1eb8fdd40800000000000000
+      internalID: 5611357462597472716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f061c7811d5782fc0800000000000000
+      internalID: -3519433567870642673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc4966c1033a4ea0800000000000000
+      internalID: -5887837480116728589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68555b49c1a148c70800000000000000
+      internalID: 8972325067685188998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ba47b77f7c6e9a0800000000000000
+      internalID: -6204051570914186337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ead3211745032b0800000000000000
+      internalID: -5606888691462197665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb412ee8518dc0dc0800000000000000
+      internalID: -3671322009110702913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd33f6e03152f270800000000000000
+      internalID: 8282771935162744286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e53e72ef1831cad0800000000000000
+      internalID: -2683802193341041175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0aa15deceb47940800000000000000
+      internalID: 5293065257615007961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70432653ff95d8b40800000000000000
+      internalID: 5444106477207958535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83de80771c2859e70800000000000000
+      internalID: 9121340387746180408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbcc688f8141755a0800000000000000
+      internalID: -6532730636996260677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de0c006901886990800000000000000
+      internalID: -7392516911062577454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee501b1891a438950800000000000000
+      internalID: 6450080564735182318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3169ef168378a4d0800000000000000
+      internalID: -3123119321683238598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5ec468b1750d880800000000000000
+      internalID: -8588268713666615836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b1eb581c18ad830800000000000000
+      internalID: 4096729479219387218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f1dbecdc6ab835e0800000000000000
+      internalID: -1929587463602581002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66df6fd928f692c50800000000000000
+      internalID: 6640961732321148262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1786d902750210060800000000000000
+      internalID: 6917846061199222897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1942a6d78aa82bcd0800000000000000
+      internalID: -2543818383247661935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad024f1b337c43eb0800000000000000
+      internalID: -4740945482871463718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e471825478160400800000000000000
+      internalID: 289946113891464423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f810c100ec4afc270800000000000000
+      internalID: 8273012245174944143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd9bdb3fb1eafd1f0800000000000000
+      internalID: -1017903555685795364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b13f02486af5250800000000000000
+      internalID: 5935645920316300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11170eeece8de9d30800000000000000
+      internalID: 4440224794765455633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859b601243b64f950800000000000000
+      internalID: 6481923635329546584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f39f0f44abab5e0800000000000000
+      internalID: -1892995888092463330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea8b877c631865f0800000000000000
+      internalID: -763338780256269594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab90d0517427ce20800000000000000
+      internalID: 3370702915215858599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80b9efea0e8e3210800000000000000
+      internalID: 1314644318864650379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bd909cead51d290800000000000000
+      internalID: -7867404068760986869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed05eead67ebfc1f0800000000000000
+      internalID: -1022389172701343522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0150d2a4e68a74650800000000000000
+      internalID: 6217123002252592400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375e0800be27b1910800000000000000
+      internalID: 1809166028970714483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a2cae29492894d0800000000000000
+      internalID: -3127704546916423047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc84c431a7fd381d0800000000000000
+      internalID: -3349587982430746417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed58be9b2d3fe9d50800000000000000
+      internalID: 6746097378235483614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e822dd2a00ff8da0800000000000000
+      internalID: -5940265456969307931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334933c8792d23e10800000000000000
+      internalID: 2176033118307456051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9467522308be090800000000000000
+      internalID: -8004162959855695439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641d9c6724319afc0800000000000000
+      internalID: -3483231660612660922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3977dc02b66df54b0800000000000000
+      internalID: -5449401268494829677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89948f894befc540800000000000000
+      internalID: 5030498009969105295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba70850f17f65e2c0800000000000000
+      internalID: -4402990525530503253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81706e4fc2ce5a60800000000000000
+      internalID: 7664777811460125069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828171457eb337140800000000000000
+      internalID: 4716179099521325096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee9f79a6853f4f50800000000000000
+      internalID: 6867766809248898797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5a753d1c709edb0800000000000000
+      internalID: -4762266601911769631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7207b4503f01760800000000000000
+      internalID: 7426702989599975380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43096ab712fa25a30800000000000000
+      internalID: 4202613960633389108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3467c9a0bb3cfc0800000000000000
+      internalID: -3475728833150827607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9de6024b98a5870800000000000000
+      internalID: 8672395439186565548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e91355b1daeddf0800000000000000
+      internalID: -153495004378980784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6990e5b396b7890800000000000000
+      internalID: -7459252654107420981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b56dc973f7f34ed0800000000000000
+      internalID: -2430826748757318218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b099aa3b17f834e90800000000000000
+      internalID: -7042627673768945397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47bb2e594e1b35eb0800000000000000
+      internalID: -4732243188110935180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f4444b0d8504b30800000000000000
+      internalID: 4269510100148047625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 065ced2cd4b9461c0800000000000000
+      internalID: -4511310168434227872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2da3a998dea8e50800000000000000
+      internalID: 6812518561605145274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76a77871b9461c60800000000000000
+      internalID: 7788493632162997884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5abff8947a42960800000000000000
+      internalID: 7576364407534102006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5238a48ca27313e80800000000000000
+      internalID: -8200712789576482011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09654eb63bc8d42c0800000000000000
+      internalID: -4445742554907650416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed30694c781c8adf0800000000000000
+      internalID: -168672197163482146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9395b674253e7e80800000000000000
+      internalID: -8179041442531535970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d8b6fc57ac4b9e0800000000000000
+      internalID: -1606436559724507802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 518fcb198df9b6f20800000000000000
+      internalID: 3417000494797486101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f19331fa859e550800000000000000
+      internalID: 6190576671762489164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e128e2574e28100800000000000000
+      internalID: 108900532952899115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8efde7bc3511f40800000000000000
+      internalID: 5697427137072457897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b499e9cdc5029bd30800000000000000
+      internalID: 4447621690215536971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df6327b1ed2d4530800000000000000
+      internalID: 3840776504680345553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42bcb33641df816a0800000000000000
+      internalID: -6478149799966422236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b307ba28d0f7e03d0800000000000000
+      internalID: -3238511386029232069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd61e21957955e80800000000000000
+      internalID: -8190473938478731818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e502b59a8c7a96970800000000000000
+      internalID: 8748708231420518494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5c9bfa9b2fbbf80800000000000000
+      internalID: -8089605426309904920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ce5123af1c249a0800000000000000
+      internalID: -6250220052510544864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4d529209a7267d0800000000000000
+      internalID: -2926642048253176653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ca3d85297965850800000000000000
+      internalID: 6365441778146061406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_129
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53d8f9c76a1adea0800000000000000
+      internalID: -5847332133114686629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_130
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62817f29a51a7ede0800000000000000
+      internalID: -1303896156715673562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_131
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1490fc7f92f4e34b0800000000000000
+      internalID: -5458838656656668351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_132
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ccbe7106f2b3740800000000000000
+      internalID: 5132748290083507236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_133
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c662bce161376c70800000000000000
+      internalID: 8964187879956965057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_134
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1845e9a230e310780800000000000000
+      internalID: -8718619220291726207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_135
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa23db8b5cc09acb0800000000000000
+      internalID: -4852333080167501137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_136
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693388562f7651d90800000000000000
+      internalID: -7127676544460770410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood Moon Ravager SpriteSheet_137
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5830b9bbe8e4b10800000000000000
+      internalID: 1967667023618213289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8916d2ee83eec5f4fb1542ec29b4b9b6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blood Moon Ravager SpriteSheet_0: 9175009792163603869
+      Blood Moon Ravager SpriteSheet_1: -356632460846582070
+      Blood Moon Ravager SpriteSheet_10: -6706383740108203512
+      Blood Moon Ravager SpriteSheet_100: -153495004378980784
+      Blood Moon Ravager SpriteSheet_101: -7459252654107420981
+      Blood Moon Ravager SpriteSheet_102: -2430826748757318218
+      Blood Moon Ravager SpriteSheet_103: -7042627673768945397
+      Blood Moon Ravager SpriteSheet_104: -4732243188110935180
+      Blood Moon Ravager SpriteSheet_105: 4269510100148047625
+      Blood Moon Ravager SpriteSheet_106: -4511310168434227872
+      Blood Moon Ravager SpriteSheet_107: 6812518561605145274
+      Blood Moon Ravager SpriteSheet_108: 7788493632162997884
+      Blood Moon Ravager SpriteSheet_109: 7576364407534102006
+      Blood Moon Ravager SpriteSheet_11: -2347422435025343736
+      Blood Moon Ravager SpriteSheet_110: -8200712789576482011
+      Blood Moon Ravager SpriteSheet_111: -4445742554907650416
+      Blood Moon Ravager SpriteSheet_112: -168672197163482146
+      Blood Moon Ravager SpriteSheet_113: -8179041442531535970
+      Blood Moon Ravager SpriteSheet_114: -1606436559724507802
+      Blood Moon Ravager SpriteSheet_115: 3417000494797486101
+      Blood Moon Ravager SpriteSheet_116: 6190576671762489164
+      Blood Moon Ravager SpriteSheet_117: 108900532952899115
+      Blood Moon Ravager SpriteSheet_118: 5697427137072457897
+      Blood Moon Ravager SpriteSheet_119: 4447621690215536971
+      Blood Moon Ravager SpriteSheet_12: 4021377463788279769
+      Blood Moon Ravager SpriteSheet_120: 3840776504680345553
+      Blood Moon Ravager SpriteSheet_121: -6478149799966422236
+      Blood Moon Ravager SpriteSheet_122: -3238511386029232069
+      Blood Moon Ravager SpriteSheet_123: -8190473938478731818
+      Blood Moon Ravager SpriteSheet_124: 8748708231420518494
+      Blood Moon Ravager SpriteSheet_125: -8089605426309904920
+      Blood Moon Ravager SpriteSheet_126: -6250220052510544864
+      Blood Moon Ravager SpriteSheet_127: -2926642048253176653
+      Blood Moon Ravager SpriteSheet_128: 6365441778146061406
+      Blood Moon Ravager SpriteSheet_129: -5847332133114686629
+      Blood Moon Ravager SpriteSheet_13: -751939578329470196
+      Blood Moon Ravager SpriteSheet_130: -1303896156715673562
+      Blood Moon Ravager SpriteSheet_131: -5458838656656668351
+      Blood Moon Ravager SpriteSheet_132: 5132748290083507236
+      Blood Moon Ravager SpriteSheet_133: 8964187879956965057
+      Blood Moon Ravager SpriteSheet_134: -8718619220291726207
+      Blood Moon Ravager SpriteSheet_135: -4852333080167501137
+      Blood Moon Ravager SpriteSheet_136: -7127676544460770410
+      Blood Moon Ravager SpriteSheet_137: 1967667023618213289
+      Blood Moon Ravager SpriteSheet_14: -546732108052150965
+      Blood Moon Ravager SpriteSheet_15: -5985366320340658580
+      Blood Moon Ravager SpriteSheet_16: -8662203015161025791
+      Blood Moon Ravager SpriteSheet_17: -6257267892098303824
+      Blood Moon Ravager SpriteSheet_18: 381153260072401687
+      Blood Moon Ravager SpriteSheet_19: -5658364052521572667
+      Blood Moon Ravager SpriteSheet_2: 6631620164731817225
+      Blood Moon Ravager SpriteSheet_20: -1012848475267134991
+      Blood Moon Ravager SpriteSheet_21: -8874759769692402203
+      Blood Moon Ravager SpriteSheet_22: -2660397376800241345
+      Blood Moon Ravager SpriteSheet_23: 1089740645361796230
+      Blood Moon Ravager SpriteSheet_24: -1334594387860704849
+      Blood Moon Ravager SpriteSheet_25: 2998934439602005921
+      Blood Moon Ravager SpriteSheet_26: -1415995056915359975
+      Blood Moon Ravager SpriteSheet_27: -9174797778261623736
+      Blood Moon Ravager SpriteSheet_28: 8785463335146402789
+      Blood Moon Ravager SpriteSheet_29: 2239391198207204322
+      Blood Moon Ravager SpriteSheet_3: -2646016599422112423
+      Blood Moon Ravager SpriteSheet_30: 1210084577138271779
+      Blood Moon Ravager SpriteSheet_31: -1012296508496698155
+      Blood Moon Ravager SpriteSheet_32: 789594432159739231
+      Blood Moon Ravager SpriteSheet_33: 8702191246277128092
+      Blood Moon Ravager SpriteSheet_34: -3907421983141669311
+      Blood Moon Ravager SpriteSheet_35: -958192892493908219
+      Blood Moon Ravager SpriteSheet_36: 7968123663345959048
+      Blood Moon Ravager SpriteSheet_37: -1114016292691976228
+      Blood Moon Ravager SpriteSheet_38: 4646498654928816347
+      Blood Moon Ravager SpriteSheet_39: 8922865829061551419
+      Blood Moon Ravager SpriteSheet_4: 7476753027217649348
+      Blood Moon Ravager SpriteSheet_40: -4119082056636113066
+      Blood Moon Ravager SpriteSheet_41: 5054392659833076545
+      Blood Moon Ravager SpriteSheet_42: 1320444481958864156
+      Blood Moon Ravager SpriteSheet_43: 702838020384164048
+      Blood Moon Ravager SpriteSheet_44: -8085785450596903758
+      Blood Moon Ravager SpriteSheet_45: 5611357462597472716
+      Blood Moon Ravager SpriteSheet_46: -3519433567870642673
+      Blood Moon Ravager SpriteSheet_47: -5887837480116728589
+      Blood Moon Ravager SpriteSheet_48: 8972325067685188998
+      Blood Moon Ravager SpriteSheet_49: -6204051570914186337
+      Blood Moon Ravager SpriteSheet_5: -7378176623322657787
+      Blood Moon Ravager SpriteSheet_50: -5606888691462197665
+      Blood Moon Ravager SpriteSheet_51: -3671322009110702913
+      Blood Moon Ravager SpriteSheet_52: 8282771935162744286
+      Blood Moon Ravager SpriteSheet_53: -2683802193341041175
+      Blood Moon Ravager SpriteSheet_54: 5293065257615007961
+      Blood Moon Ravager SpriteSheet_55: 5444106477207958535
+      Blood Moon Ravager SpriteSheet_56: 9121340387746180408
+      Blood Moon Ravager SpriteSheet_57: -6532730636996260677
+      Blood Moon Ravager SpriteSheet_58: -7392516911062577454
+      Blood Moon Ravager SpriteSheet_59: 6450080564735182318
+      Blood Moon Ravager SpriteSheet_6: -2238097810056242447
+      Blood Moon Ravager SpriteSheet_60: -3123119321683238598
+      Blood Moon Ravager SpriteSheet_61: -8588268713666615836
+      Blood Moon Ravager SpriteSheet_62: 4096729479219387218
+      Blood Moon Ravager SpriteSheet_63: -1929587463602581002
+      Blood Moon Ravager SpriteSheet_64: 6640961732321148262
+      Blood Moon Ravager SpriteSheet_65: 6917846061199222897
+      Blood Moon Ravager SpriteSheet_66: -2543818383247661935
+      Blood Moon Ravager SpriteSheet_67: -4740945482871463718
+      Blood Moon Ravager SpriteSheet_68: 289946113891464423
+      Blood Moon Ravager SpriteSheet_69: 8273012245174944143
+      Blood Moon Ravager SpriteSheet_7: 1005082689037204893
+      Blood Moon Ravager SpriteSheet_70: -1017903555685795364
+      Blood Moon Ravager SpriteSheet_71: 5935645920316300052
+      Blood Moon Ravager SpriteSheet_72: 4440224794765455633
+      Blood Moon Ravager SpriteSheet_73: 6481923635329546584
+      Blood Moon Ravager SpriteSheet_74: -1892995888092463330
+      Blood Moon Ravager SpriteSheet_75: -763338780256269594
+      Blood Moon Ravager SpriteSheet_76: 3370702915215858599
+      Blood Moon Ravager SpriteSheet_77: 1314644318864650379
+      Blood Moon Ravager SpriteSheet_78: -7867404068760986869
+      Blood Moon Ravager SpriteSheet_79: -1022389172701343522
+      Blood Moon Ravager SpriteSheet_8: 351485144348129485
+      Blood Moon Ravager SpriteSheet_80: 6217123002252592400
+      Blood Moon Ravager SpriteSheet_81: 1809166028970714483
+      Blood Moon Ravager SpriteSheet_82: -3127704546916423047
+      Blood Moon Ravager SpriteSheet_83: -3349587982430746417
+      Blood Moon Ravager SpriteSheet_84: 6746097378235483614
+      Blood Moon Ravager SpriteSheet_85: -5940265456969307931
+      Blood Moon Ravager SpriteSheet_86: 2176033118307456051
+      Blood Moon Ravager SpriteSheet_87: -8004162959855695439
+      Blood Moon Ravager SpriteSheet_88: -3483231660612660922
+      Blood Moon Ravager SpriteSheet_89: -5449401268494829677
+      Blood Moon Ravager SpriteSheet_9: 4578783873304410904
+      Blood Moon Ravager SpriteSheet_90: 5030498009969105295
+      Blood Moon Ravager SpriteSheet_91: -4402990525530503253
+      Blood Moon Ravager SpriteSheet_92: 7664777811460125069
+      Blood Moon Ravager SpriteSheet_93: 4716179099521325096
+      Blood Moon Ravager SpriteSheet_94: 6867766809248898797
+      Blood Moon Ravager SpriteSheet_95: -4762266601911769631
+      Blood Moon Ravager SpriteSheet_96: 7426702989599975380
+      Blood Moon Ravager SpriteSheet_97: 4202613960633389108
+      Blood Moon Ravager SpriteSheet_98: -3475728833150827607
+      Blood Moon Ravager SpriteSheet_99: 8672395439186565548
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

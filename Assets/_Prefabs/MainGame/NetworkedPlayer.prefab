@@ -88,6 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   championPrefabs:
+  - RawGuidValue: 216f0417dd5b7b94ca6911e91b851f59
   - RawGuidValue: f00d098ff0f2f7b4abc23e146b2f622d
   - RawGuidValue: c44b60bc5ee65544b90e42be4c29f36a
   - RawGuidValue: ffa86f3e7206fe74795287698cd5839b
