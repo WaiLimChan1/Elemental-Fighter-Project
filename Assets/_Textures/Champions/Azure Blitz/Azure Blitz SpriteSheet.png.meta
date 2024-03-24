@@ -1,0 +1,2654 @@
+fileFormatVersion: 2
+guid: c52e4c7e4932fba4b80d44f7b0bde5e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2700736210326422071
+    second: Azure Blitz SpriteSheet_0
+  - first:
+      213: 8853378083104053027
+    second: Azure Blitz SpriteSheet_1
+  - first:
+      213: -1073953174850885115
+    second: Azure Blitz SpriteSheet_2
+  - first:
+      213: 4338168627608255576
+    second: Azure Blitz SpriteSheet_3
+  - first:
+      213: -5307945529052524011
+    second: Azure Blitz SpriteSheet_4
+  - first:
+      213: 3375803183114624365
+    second: Azure Blitz SpriteSheet_5
+  - first:
+      213: 7935884483617122078
+    second: Azure Blitz SpriteSheet_6
+  - first:
+      213: -3646555313443622867
+    second: Azure Blitz SpriteSheet_7
+  - first:
+      213: -5551921168557049973
+    second: Azure Blitz SpriteSheet_8
+  - first:
+      213: -3480652329113945532
+    second: Azure Blitz SpriteSheet_9
+  - first:
+      213: -4625356973911067615
+    second: Azure Blitz SpriteSheet_10
+  - first:
+      213: -8505093437042027641
+    second: Azure Blitz SpriteSheet_11
+  - first:
+      213: -2344279282789859471
+    second: Azure Blitz SpriteSheet_12
+  - first:
+      213: -397026104301099363
+    second: Azure Blitz SpriteSheet_13
+  - first:
+      213: 3570871307433701136
+    second: Azure Blitz SpriteSheet_14
+  - first:
+      213: -5239358206952933156
+    second: Azure Blitz SpriteSheet_15
+  - first:
+      213: -7325044131058223627
+    second: Azure Blitz SpriteSheet_16
+  - first:
+      213: -3863981595226636175
+    second: Azure Blitz SpriteSheet_17
+  - first:
+      213: -5404061608982815494
+    second: Azure Blitz SpriteSheet_18
+  - first:
+      213: -2833364411085257466
+    second: Azure Blitz SpriteSheet_19
+  - first:
+      213: -6089071795642958791
+    second: Azure Blitz SpriteSheet_20
+  - first:
+      213: 4744087267428976465
+    second: Azure Blitz SpriteSheet_21
+  - first:
+      213: 3032176271609363513
+    second: Azure Blitz SpriteSheet_22
+  - first:
+      213: 8221296705493631384
+    second: Azure Blitz SpriteSheet_23
+  - first:
+      213: -4004656414288168903
+    second: Azure Blitz SpriteSheet_24
+  - first:
+      213: -5968331598640329189
+    second: Azure Blitz SpriteSheet_25
+  - first:
+      213: -8046701481539870030
+    second: Azure Blitz SpriteSheet_26
+  - first:
+      213: 954050443924190648
+    second: Azure Blitz SpriteSheet_27
+  - first:
+      213: 4595745822698203443
+    second: Azure Blitz SpriteSheet_28
+  - first:
+      213: 8429308796895212692
+    second: Azure Blitz SpriteSheet_29
+  - first:
+      213: 8032773505885387999
+    second: Azure Blitz SpriteSheet_30
+  - first:
+      213: -5248651099484108863
+    second: Azure Blitz SpriteSheet_31
+  - first:
+      213: 7019405998604724641
+    second: Azure Blitz SpriteSheet_32
+  - first:
+      213: -3879520970596015910
+    second: Azure Blitz SpriteSheet_33
+  - first:
+      213: 4158447702936132485
+    second: Azure Blitz SpriteSheet_34
+  - first:
+      213: 1670451747734208138
+    second: Azure Blitz SpriteSheet_35
+  - first:
+      213: 7327649195880854705
+    second: Azure Blitz SpriteSheet_36
+  - first:
+      213: -6453213474577570339
+    second: Azure Blitz SpriteSheet_37
+  - first:
+      213: -7706811332171273806
+    second: Azure Blitz SpriteSheet_38
+  - first:
+      213: 1085885527546913980
+    second: Azure Blitz SpriteSheet_39
+  - first:
+      213: -3955115604264398681
+    second: Azure Blitz SpriteSheet_40
+  - first:
+      213: 1431595142211128327
+    second: Azure Blitz SpriteSheet_41
+  - first:
+      213: -747023943808184363
+    second: Azure Blitz SpriteSheet_42
+  - first:
+      213: 5937915535316285365
+    second: Azure Blitz SpriteSheet_43
+  - first:
+      213: 1165010175442969701
+    second: Azure Blitz SpriteSheet_44
+  - first:
+      213: 5829086454809086837
+    second: Azure Blitz SpriteSheet_45
+  - first:
+      213: -8656557761600715829
+    second: Azure Blitz SpriteSheet_46
+  - first:
+      213: -7532030855447297697
+    second: Azure Blitz SpriteSheet_47
+  - first:
+      213: -1209425178749918671
+    second: Azure Blitz SpriteSheet_48
+  - first:
+      213: 2476620957663627412
+    second: Azure Blitz SpriteSheet_49
+  - first:
+      213: -2491465087351858249
+    second: Azure Blitz SpriteSheet_50
+  - first:
+      213: 6012226973541534509
+    second: Azure Blitz SpriteSheet_51
+  - first:
+      213: 4551462417942144053
+    second: Azure Blitz SpriteSheet_52
+  - first:
+      213: 7104207992610813809
+    second: Azure Blitz SpriteSheet_53
+  - first:
+      213: -1413294265795795128
+    second: Azure Blitz SpriteSheet_54
+  - first:
+      213: -4130943319202852496
+    second: Azure Blitz SpriteSheet_55
+  - first:
+      213: -1532971331470073064
+    second: Azure Blitz SpriteSheet_56
+  - first:
+      213: 7838675874330963932
+    second: Azure Blitz SpriteSheet_57
+  - first:
+      213: -484126048789846864
+    second: Azure Blitz SpriteSheet_58
+  - first:
+      213: -3335442939495723875
+    second: Azure Blitz SpriteSheet_59
+  - first:
+      213: 3642625186772976634
+    second: Azure Blitz SpriteSheet_60
+  - first:
+      213: 6812871808887055885
+    second: Azure Blitz SpriteSheet_61
+  - first:
+      213: 9036224906394020459
+    second: Azure Blitz SpriteSheet_62
+  - first:
+      213: -1386273295503283953
+    second: Azure Blitz SpriteSheet_63
+  - first:
+      213: -8194753793275738745
+    second: Azure Blitz SpriteSheet_64
+  - first:
+      213: 8049816431382949325
+    second: Azure Blitz SpriteSheet_65
+  - first:
+      213: 5596033715268003947
+    second: Azure Blitz SpriteSheet_66
+  - first:
+      213: -1549023194774013988
+    second: Azure Blitz SpriteSheet_67
+  - first:
+      213: -6131817024231176845
+    second: Azure Blitz SpriteSheet_68
+  - first:
+      213: 5410965257408968169
+    second: Azure Blitz SpriteSheet_69
+  - first:
+      213: 4173072933792138856
+    second: Azure Blitz SpriteSheet_70
+  - first:
+      213: 6731179051725406021
+    second: Azure Blitz SpriteSheet_71
+  - first:
+      213: -7987445893575817014
+    second: Azure Blitz SpriteSheet_72
+  - first:
+      213: -6911664288340898552
+    second: Azure Blitz SpriteSheet_73
+  - first:
+      213: 3956842442843465974
+    second: Azure Blitz SpriteSheet_74
+  - first:
+      213: 7885487342690165778
+    second: Azure Blitz SpriteSheet_75
+  - first:
+      213: 5125126113294236433
+    second: Azure Blitz SpriteSheet_76
+  - first:
+      213: -8618958613630880354
+    second: Azure Blitz SpriteSheet_77
+  - first:
+      213: 5643423979999463406
+    second: Azure Blitz SpriteSheet_78
+  - first:
+      213: 8034312394515218095
+    second: Azure Blitz SpriteSheet_79
+  - first:
+      213: -6739836067363741508
+    second: Azure Blitz SpriteSheet_80
+  - first:
+      213: -8692810349528630107
+    second: Azure Blitz SpriteSheet_81
+  - first:
+      213: 7561301735484499942
+    second: Azure Blitz SpriteSheet_82
+  - first:
+      213: 902563006704671443
+    second: Azure Blitz SpriteSheet_83
+  - first:
+      213: -5751637994110413524
+    second: Azure Blitz SpriteSheet_84
+  - first:
+      213: -8021761018363146300
+    second: Azure Blitz SpriteSheet_85
+  - first:
+      213: 6551771045235378697
+    second: Azure Blitz SpriteSheet_86
+  - first:
+      213: 6113332539803003060
+    second: Azure Blitz SpriteSheet_87
+  - first:
+      213: -685430467392459218
+    second: Azure Blitz SpriteSheet_88
+  - first:
+      213: 5093115297623735805
+    second: Azure Blitz SpriteSheet_89
+  - first:
+      213: 9207189274845093026
+    second: Azure Blitz SpriteSheet_90
+  - first:
+      213: 868890125170286370
+    second: Azure Blitz SpriteSheet_91
+  - first:
+      213: -2373163495121762471
+    second: Azure Blitz SpriteSheet_92
+  - first:
+      213: -7684397660373352233
+    second: Azure Blitz SpriteSheet_93
+  - first:
+      213: -132513741347854873
+    second: Azure Blitz SpriteSheet_94
+  - first:
+      213: 4844996175762066729
+    second: Azure Blitz SpriteSheet_95
+  - first:
+      213: -2364953370861801677
+    second: Azure Blitz SpriteSheet_96
+  - first:
+      213: -6060791224365308950
+    second: Azure Blitz SpriteSheet_97
+  - first:
+      213: 8619264475621806095
+    second: Azure Blitz SpriteSheet_98
+  - first:
+      213: -5819248973362608088
+    second: Azure Blitz SpriteSheet_99
+  - first:
+      213: 5125770361465888966
+    second: Azure Blitz SpriteSheet_100
+  - first:
+      213: -2884264173281410507
+    second: Azure Blitz SpriteSheet_101
+  - first:
+      213: -1604852918193635490
+    second: Azure Blitz SpriteSheet_102
+  - first:
+      213: -5632294382621708877
+    second: Azure Blitz SpriteSheet_103
+  - first:
+      213: 1977510618776499682
+    second: Azure Blitz SpriteSheet_104
+  - first:
+      213: 5911158515118181820
+    second: Azure Blitz SpriteSheet_105
+  - first:
+      213: -7999319731976803235
+    second: Azure Blitz SpriteSheet_106
+  - first:
+      213: 5508085216652406861
+    second: Azure Blitz SpriteSheet_107
+  - first:
+      213: -2173772891000090030
+    second: Azure Blitz SpriteSheet_108
+  - first:
+      213: -6712420481987642074
+    second: Azure Blitz SpriteSheet_109
+  - first:
+      213: -5576304564965562758
+    second: Azure Blitz SpriteSheet_110
+  - first:
+      213: 8047281823406301623
+    second: Azure Blitz SpriteSheet_111
+  - first:
+      213: 3913638778215609014
+    second: Azure Blitz SpriteSheet_112
+  - first:
+      213: 5729082040048791510
+    second: Azure Blitz SpriteSheet_113
+  - first:
+      213: -4867427808862018665
+    second: Azure Blitz SpriteSheet_114
+  - first:
+      213: 8976476215603537996
+    second: Azure Blitz SpriteSheet_115
+  - first:
+      213: 6857565661285206576
+    second: Azure Blitz SpriteSheet_116
+  - first:
+      213: 3357178602085758019
+    second: Azure Blitz SpriteSheet_117
+  - first:
+      213: -3172546290694983976
+    second: Azure Blitz SpriteSheet_118
+  - first:
+      213: 5739893754441628425
+    second: Azure Blitz SpriteSheet_119
+  - first:
+      213: -3834341862597929002
+    second: Azure Blitz SpriteSheet_120
+  - first:
+      213: -373272963536143548
+    second: Azure Blitz SpriteSheet_121
+  - first:
+      213: -6804132948737502219
+    second: Azure Blitz SpriteSheet_122
+  - first:
+      213: 41019599242906538
+    second: Azure Blitz SpriteSheet_123
+  - first:
+      213: -809781995045497363
+    second: Azure Blitz SpriteSheet_124
+  - first:
+      213: -311891273662686196
+    second: Azure Blitz SpriteSheet_125
+  - first:
+      213: -8278399439344733527
+    second: Azure Blitz SpriteSheet_126
+  - first:
+      213: 1910357763678364638
+    second: Azure Blitz SpriteSheet_127
+  - first:
+      213: 8096620095031113932
+    second: Azure Blitz SpriteSheet_128
+  - first:
+      213: -5073011477626609723
+    second: Azure Blitz SpriteSheet_129
+  - first:
+      213: 3746244284962113368
+    second: Azure Blitz SpriteSheet_130
+  - first:
+      213: 6987709466131107262
+    second: Azure Blitz SpriteSheet_131
+  - first:
+      213: -1044814063595970737
+    second: Azure Blitz SpriteSheet_132
+  - first:
+      213: -1788807530925089003
+    second: Azure Blitz SpriteSheet_133
+  - first:
+      213: -8589310895870068494
+    second: Azure Blitz SpriteSheet_134
+  - first:
+      213: -1903794767667047945
+    second: Azure Blitz SpriteSheet_135
+  - first:
+      213: 4974974855855150855
+    second: Azure Blitz SpriteSheet_136
+  - first:
+      213: -3350666509663628932
+    second: Azure Blitz SpriteSheet_137
+  - first:
+      213: -66892071434490884
+    second: Azure Blitz SpriteSheet_138
+  - first:
+      213: -3546488343090125569
+    second: Azure Blitz SpriteSheet_139
+  - first:
+      213: 3956445431144548040
+    second: Azure Blitz SpriteSheet_140
+  - first:
+      213: -639061927944774635
+    second: Azure Blitz SpriteSheet_141
+  - first:
+      213: 1198367548486892099
+    second: Azure Blitz SpriteSheet_142
+  - first:
+      213: 1556975398949342103
+    second: Azure Blitz SpriteSheet_143
+  - first:
+      213: 694758881609542277
+    second: Azure Blitz SpriteSheet_144
+  - first:
+      213: -1132972970145520292
+    second: Azure Blitz SpriteSheet_145
+  - first:
+      213: 969220756607390870
+    second: Azure Blitz SpriteSheet_146
+  - first:
+      213: -2294165827383714644
+    second: Azure Blitz SpriteSheet_147
+  - first:
+      213: -8909158975280092912
+    second: Azure Blitz SpriteSheet_148
+  - first:
+      213: -5381529916048676079
+    second: Azure Blitz SpriteSheet_149
+  - first:
+      213: 4218120775297628214
+    second: Azure Blitz SpriteSheet_150
+  - first:
+      213: -4467647468267275777
+    second: Azure Blitz SpriteSheet_151
+  - first:
+      213: -7658538431918306635
+    second: Azure Blitz SpriteSheet_152
+  - first:
+      213: 3529376377897415197
+    second: Azure Blitz SpriteSheet_153
+  - first:
+      213: -158450124752722629
+    second: Azure Blitz SpriteSheet_154
+  - first:
+      213: 1830092246417765267
+    second: Azure Blitz SpriteSheet_155
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd757fc9be058ad0800000000000000
+      internalID: -2700736210326422071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32755a995748dda70800000000000000
+      internalID: 8853378083104053027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a2c9b074d8811f0800000000000000
+      internalID: -1073953174850885115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c7558d165443c30800000000000000
+      internalID: 4338168627608255576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51293bdf9a36656b0800000000000000
+      internalID: -5307945529052524011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d1e29fb1349de20800000000000000
+      internalID: 3375803183114624365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17688844ece12e60800000000000000
+      internalID: 7935884483617122078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2031604345d46dc0800000000000000
+      internalID: -3646555313443622867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b877f2fcc1d93f2b0800000000000000
+      internalID: -5551921168557049973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1152
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44af680e52d32bfc0800000000000000
+      internalID: -3480652329113945532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124b7a2a65e6fcfb0800000000000000
+      internalID: -4625356973911067615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7839a97b496d7f980800000000000000
+      internalID: -8505093437042027641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fb00fa962777fd0800000000000000
+      internalID: -2344279282789859471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9663969cda7d7af0800000000000000
+      internalID: -397026104301099363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f683ae8884e8130800000000000000
+      internalID: 3570871307433701136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8fa87587f0a47b0800000000000000
+      internalID: -5239358206952933156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5f63c2c27385a90800000000000000
+      internalID: -7325044131058223627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1708edd1631606ac0800000000000000
+      internalID: -3863981595226636175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcd04c399ae005b0800000000000000
+      internalID: -5404061608982815494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1056
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6058706741edda8d0800000000000000
+      internalID: -2833364411085257466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93cf9d096754f7ba0800000000000000
+      internalID: -6089071795642958791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157ce860c3266d140800000000000000
+      internalID: 4744087267428976465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 960
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93cf4adf044741a20800000000000000
+      internalID: 3032176271609363513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891890c9bc9e71270800000000000000
+      internalID: 8221296705493631384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9383dd2753a9c68c0800000000000000
+      internalID: -4004656414288168903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 864
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ecd49580a3c2da0800000000000000
+      internalID: -5968331598640329189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2e433c2af545090800000000000000
+      internalID: -8046701481539870030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5b7efe2d77d3d00800000000000000
+      internalID: 954050443924190648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33969e7f97e57cf30800000000000000
+      internalID: 4595745822698203443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 494b30db0bbeaf470800000000000000
+      internalID: 8429308796895212692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcb773b1f42a7f60800000000000000
+      internalID: 8032773505885387999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7494132ab0927b0800000000000000
+      internalID: -5248651099484108863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a9a419b090f96160800000000000000
+      internalID: 7019405998604724641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 768
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad022f85b3c292ac0800000000000000
+      internalID: -3879520970596015910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b1c864726c5b930800000000000000
+      internalID: 4158447702936132485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8eb02e9303ae2710800000000000000
+      internalID: 1670451747734208138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4b72fbe1a01b560800000000000000
+      internalID: 7327649195880854705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 672
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd52a0419849176a0800000000000000
+      internalID: -6453213474577570339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9e9f20de7eb0590800000000000000
+      internalID: -7706811332171273806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4eb205227d11f00800000000000000
+      internalID: 1085885527546913980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a05732205b9c19c0800000000000000
+      internalID: -3955115604264398681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c4ba9623c0ed310800000000000000
+      internalID: 1431595142211128327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df0a965ea902a5f0800000000000000
+      internalID: -747023943808184363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 576
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7fccc08b6b76250800000000000000
+      internalID: 5937915535316285365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5646ef20592fa2010800000000000000
+      internalID: 1165010175442969701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57bcfef2f3315e050800000000000000
+      internalID: 5829086454809086837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3832a849abdd780800000000000000
+      internalID: -8656557761600715829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5148c7e7d9d87790800000000000000
+      internalID: -7532030855447297697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132a23e2532473fe0800000000000000
+      internalID: -1209425178749918671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 480
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49804d8a3a9be5220800000000000000
+      internalID: 2476620957663627412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bbda1214b98c6dd0800000000000000
+      internalID: -2491465087351858249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b07fa0498bf6350800000000000000
+      internalID: 6012226973541534509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5346bf554fa0a2f30800000000000000
+      internalID: 4551462417942144053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177fe029787379260800000000000000
+      internalID: 7104207992610813809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847252c6a58f26ce0800000000000000
+      internalID: -1413294265795795128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07114a710f0fba6c0800000000000000
+      internalID: -4130943319202852496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8136ed032bac9bae0800000000000000
+      internalID: -1532971331470073064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 384
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfebe63d2298cc60800000000000000
+      internalID: 7838675874330963932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b42e537ce90849f0800000000000000
+      internalID: -484126048789846864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9cc5c6815026b1d0800000000000000
+      internalID: -3335442939495723875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af38e73de443d8230800000000000000
+      internalID: 3642625186772976634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d066cf460de2c8e50800000000000000
+      internalID: 6812871808887055885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a27282dae176d70800000000000000
+      internalID: 9036224906394020459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09aae358c7f2cce0800000000000000
+      internalID: -1386273295503283953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785c30ab7d2664e80800000000000000
+      internalID: -8194753793275738745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcdeea30561b6bf60800000000000000
+      internalID: 8049816431382949325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68a8a5d30b19ad40800000000000000
+      internalID: 5596033715268003947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd777a68c93c08ae0800000000000000
+      internalID: -1549023194774013988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375020b77e867eaa0800000000000000
+      internalID: -6131817024231176845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 288
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e577dbab3c971b40800000000000000
+      internalID: 5410965257408968169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8664a7039bbb9e930800000000000000
+      internalID: 4173072933792138856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54fb4a92fa3f96d50800000000000000
+      internalID: 6731179051725406021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8c2c27744e62190800000000000000
+      internalID: -7987445893575817014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d00b603f5d410a0800000000000000
+      internalID: -6911664288340898552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8afddcc3789e630800000000000000
+      internalID: 3956842442843465974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 192
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214e2e585f0ee6d60800000000000000
+      internalID: 7885487342690165778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b3bf3cb0b102740800000000000000
+      internalID: 5125126113294236433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e95fcbc5ece436880800000000000000
+      internalID: -8618958613630880354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee70acca538715e40800000000000000
+      internalID: 5643423979999463406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faef8912e8c9f7f60800000000000000
+      internalID: 8034312394515218095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb02b605eca4772a0800000000000000
+      internalID: -6739836067363741508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 96
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5acb1882b0fec5780800000000000000
+      internalID: -8692810349528630107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7291fedd32fe860800000000000000
+      internalID: 7561301735484499942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da5a0ac54c868c00800000000000000
+      internalID: 902563006704671443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c259864c7b31e20b0800000000000000
+      internalID: -5751637994110413524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf836bdadafca090800000000000000
+      internalID: -8021761018363146300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ac1f88d019cea50800000000000000
+      internalID: 6551771045235378697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b86bcc1e8be6d450800000000000000
+      internalID: 6113332539803003060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ea7d81f9cdc76f0800000000000000
+      internalID: -685430467392459218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd78f2f0616ea640800000000000000
+      internalID: 5093115297623735805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac9dea1dd186cf70800000000000000
+      internalID: 9207189274845093026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f9e9b17faee0c00800000000000000
+      internalID: 868890125170286370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Azure Blitz SpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 160
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957c75fef54d01fd0800000000000000
+      internalID: -2373163495121762471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 36fe97eaf67e3ac41815c3d0f5a5959d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Azure Blitz SpriteSheet_0: -2700736210326422071
+      Azure Blitz SpriteSheet_1: 8853378083104053027
+      Azure Blitz SpriteSheet_10: -4625356973911067615
+      Azure Blitz SpriteSheet_11: -8505093437042027641
+      Azure Blitz SpriteSheet_12: -2344279282789859471
+      Azure Blitz SpriteSheet_13: -397026104301099363
+      Azure Blitz SpriteSheet_14: 3570871307433701136
+      Azure Blitz SpriteSheet_15: -5239358206952933156
+      Azure Blitz SpriteSheet_16: -7325044131058223627
+      Azure Blitz SpriteSheet_17: -3863981595226636175
+      Azure Blitz SpriteSheet_18: -5404061608982815494
+      Azure Blitz SpriteSheet_19: -2833364411085257466
+      Azure Blitz SpriteSheet_2: -1073953174850885115
+      Azure Blitz SpriteSheet_20: -6089071795642958791
+      Azure Blitz SpriteSheet_21: 4744087267428976465
+      Azure Blitz SpriteSheet_22: 3032176271609363513
+      Azure Blitz SpriteSheet_23: 8221296705493631384
+      Azure Blitz SpriteSheet_24: -4004656414288168903
+      Azure Blitz SpriteSheet_25: -5968331598640329189
+      Azure Blitz SpriteSheet_26: -8046701481539870030
+      Azure Blitz SpriteSheet_27: 954050443924190648
+      Azure Blitz SpriteSheet_28: 4595745822698203443
+      Azure Blitz SpriteSheet_29: 8429308796895212692
+      Azure Blitz SpriteSheet_3: 4338168627608255576
+      Azure Blitz SpriteSheet_30: 8032773505885387999
+      Azure Blitz SpriteSheet_31: -5248651099484108863
+      Azure Blitz SpriteSheet_32: 7019405998604724641
+      Azure Blitz SpriteSheet_33: -3879520970596015910
+      Azure Blitz SpriteSheet_34: 4158447702936132485
+      Azure Blitz SpriteSheet_35: 1670451747734208138
+      Azure Blitz SpriteSheet_36: 7327649195880854705
+      Azure Blitz SpriteSheet_37: -6453213474577570339
+      Azure Blitz SpriteSheet_38: -7706811332171273806
+      Azure Blitz SpriteSheet_39: 1085885527546913980
+      Azure Blitz SpriteSheet_4: -5307945529052524011
+      Azure Blitz SpriteSheet_40: -3955115604264398681
+      Azure Blitz SpriteSheet_41: 1431595142211128327
+      Azure Blitz SpriteSheet_42: -747023943808184363
+      Azure Blitz SpriteSheet_43: 5937915535316285365
+      Azure Blitz SpriteSheet_44: 1165010175442969701
+      Azure Blitz SpriteSheet_45: 5829086454809086837
+      Azure Blitz SpriteSheet_46: -8656557761600715829
+      Azure Blitz SpriteSheet_47: -7532030855447297697
+      Azure Blitz SpriteSheet_48: -1209425178749918671
+      Azure Blitz SpriteSheet_49: 2476620957663627412
+      Azure Blitz SpriteSheet_5: 3375803183114624365
+      Azure Blitz SpriteSheet_50: -2491465087351858249
+      Azure Blitz SpriteSheet_51: 6012226973541534509
+      Azure Blitz SpriteSheet_52: 4551462417942144053
+      Azure Blitz SpriteSheet_53: 7104207992610813809
+      Azure Blitz SpriteSheet_54: -1413294265795795128
+      Azure Blitz SpriteSheet_55: -4130943319202852496
+      Azure Blitz SpriteSheet_56: -1532971331470073064
+      Azure Blitz SpriteSheet_57: 7838675874330963932
+      Azure Blitz SpriteSheet_58: -484126048789846864
+      Azure Blitz SpriteSheet_59: -3335442939495723875
+      Azure Blitz SpriteSheet_6: 7935884483617122078
+      Azure Blitz SpriteSheet_60: 3642625186772976634
+      Azure Blitz SpriteSheet_61: 6812871808887055885
+      Azure Blitz SpriteSheet_62: 9036224906394020459
+      Azure Blitz SpriteSheet_63: -1386273295503283953
+      Azure Blitz SpriteSheet_64: -8194753793275738745
+      Azure Blitz SpriteSheet_65: 8049816431382949325
+      Azure Blitz SpriteSheet_66: 5596033715268003947
+      Azure Blitz SpriteSheet_67: -1549023194774013988
+      Azure Blitz SpriteSheet_68: -6131817024231176845
+      Azure Blitz SpriteSheet_69: 5410965257408968169
+      Azure Blitz SpriteSheet_7: -3646555313443622867
+      Azure Blitz SpriteSheet_70: 4173072933792138856
+      Azure Blitz SpriteSheet_71: 6731179051725406021
+      Azure Blitz SpriteSheet_72: -7987445893575817014
+      Azure Blitz SpriteSheet_73: -6911664288340898552
+      Azure Blitz SpriteSheet_74: 3956842442843465974
+      Azure Blitz SpriteSheet_75: 7885487342690165778
+      Azure Blitz SpriteSheet_76: 5125126113294236433
+      Azure Blitz SpriteSheet_77: -8618958613630880354
+      Azure Blitz SpriteSheet_78: 5643423979999463406
+      Azure Blitz SpriteSheet_79: 8034312394515218095
+      Azure Blitz SpriteSheet_8: -5551921168557049973
+      Azure Blitz SpriteSheet_80: -6739836067363741508
+      Azure Blitz SpriteSheet_81: -8692810349528630107
+      Azure Blitz SpriteSheet_82: 7561301735484499942
+      Azure Blitz SpriteSheet_83: 902563006704671443
+      Azure Blitz SpriteSheet_84: -5751637994110413524
+      Azure Blitz SpriteSheet_85: -8021761018363146300
+      Azure Blitz SpriteSheet_86: 6551771045235378697
+      Azure Blitz SpriteSheet_87: 6113332539803003060
+      Azure Blitz SpriteSheet_88: -685430467392459218
+      Azure Blitz SpriteSheet_89: 5093115297623735805
+      Azure Blitz SpriteSheet_9: -3480652329113945532
+      Azure Blitz SpriteSheet_90: 9207189274845093026
+      Azure Blitz SpriteSheet_91: 868890125170286370
+      Azure Blitz SpriteSheet_92: -2373163495121762471
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

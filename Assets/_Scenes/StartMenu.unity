@@ -2172,6 +2172,9 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
+    - m_Text: Azure Blitz
+      m_Image: {fileID: 21300000, guid: cceda99458010a64a82a5c09c6e5a75b, type: 3}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: Blood Moon Ravager
       m_Image: {fileID: 21300000, guid: 4aeb9f02dbc5a6649b134aec1e7ffb9d, type: 3}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2936,7 +2939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Blood Moon Ravager
+  m_text: Azure Blitz
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3072,7 +3075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4aeb9f02dbc5a6649b134aec1e7ffb9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cceda99458010a64a82a5c09c6e5a75b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
