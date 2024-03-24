@@ -1,0 +1,865 @@
+fileFormatVersion: 2
+guid: ccc0b0f7cedbcee4f91f402dd97ca090
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3088316592285586987
+    second: Fire Elemental Projectile SpriteSheet_0
+  - first:
+      213: -4032123164392501924
+    second: Fire Elemental Projectile SpriteSheet_1
+  - first:
+      213: -4901542697535979635
+    second: Fire Elemental Projectile SpriteSheet_2
+  - first:
+      213: -3801484703433286074
+    second: Fire Elemental Projectile SpriteSheet_3
+  - first:
+      213: -744270767988347067
+    second: Fire Elemental Projectile SpriteSheet_4
+  - first:
+      213: 32310848027203820
+    second: Fire Elemental Projectile SpriteSheet_5
+  - first:
+      213: 6545537139798960611
+    second: Fire Elemental Projectile SpriteSheet_6
+  - first:
+      213: 3963952133614239005
+    second: Fire Elemental Projectile SpriteSheet_7
+  - first:
+      213: 5248333813182924672
+    second: Fire Elemental Projectile SpriteSheet_8
+  - first:
+      213: -7964303564668871775
+    second: Fire Elemental Projectile SpriteSheet_9
+  - first:
+      213: -9040708346923013754
+    second: Fire Elemental Projectile SpriteSheet_10
+  - first:
+      213: -8014620875506177984
+    second: Fire Elemental Projectile SpriteSheet_11
+  - first:
+      213: -2192931549552569460
+    second: Fire Elemental Projectile SpriteSheet_12
+  - first:
+      213: 7259021894721021926
+    second: Fire Elemental Projectile SpriteSheet_13
+  - first:
+      213: -3456748556460045072
+    second: Fire Elemental Projectile SpriteSheet_14
+  - first:
+      213: -556494695541344937
+    second: Fire Elemental Projectile SpriteSheet_15
+  - first:
+      213: 4019960038567978539
+    second: Fire Elemental Projectile SpriteSheet_16
+  - first:
+      213: 4179354982976215702
+    second: Fire Elemental Projectile SpriteSheet_17
+  - first:
+      213: -8300491846942197410
+    second: Fire Elemental Projectile SpriteSheet_18
+  - first:
+      213: -8442044797147463469
+    second: Fire Elemental Projectile SpriteSheet_19
+  - first:
+      213: -8432989047097368728
+    second: Fire Elemental Projectile SpriteSheet_20
+  - first:
+      213: 6438480137252100270
+    second: Fire Elemental Projectile SpriteSheet_21
+  - first:
+      213: 6516518906647742253
+    second: Fire Elemental Projectile SpriteSheet_22
+  - first:
+      213: -1965372203717018861
+    second: Fire Elemental Projectile SpriteSheet_23
+  - first:
+      213: 9192320748820782462
+    second: Fire Elemental Projectile SpriteSheet_24
+  - first:
+      213: 7874081950181247942
+    second: Fire Elemental Projectile SpriteSheet_25
+  - first:
+      213: 3080646134990914850
+    second: Fire Elemental Projectile SpriteSheet_26
+  - first:
+      213: 8466937147561204849
+    second: Fire Elemental Projectile SpriteSheet_27
+  - first:
+      213: 3086853622866734290
+    second: Fire Elemental Projectile SpriteSheet_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 112
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d96fd20c681425d0800000000000000
+      internalID: -3088316592285586987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 112
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dc2c758550b08c0800000000000000
+      internalID: -4032123164392501924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 14
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f35f5d2e83afbb0800000000000000
+      internalID: -4901542697535979635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 47
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e17c8adc96e3bc0800000000000000
+      internalID: -3801484703433286074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 41
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54fe8590ea1dba5f0800000000000000
+      internalID: -744270767988347067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 53
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce89d0b8b8ac27000800000000000000
+      internalID: 32310848027203820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 52
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e9e7d1595b66da50800000000000000
+      internalID: 6545537139798960611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 47
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d7abea679c20730800000000000000
+      internalID: 3963952133614239005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 49
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0878075dbc3d5d840800000000000000
+      internalID: 5248333813182924672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 43
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abd888ca1c197190800000000000000
+      internalID: -7964303564668871775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 59
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689aebf78a3f88280800000000000000
+      internalID: -9040708346923013754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 45
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048260ae6c856c090800000000000000
+      internalID: -8014620875506177984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 38
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c831c24df542191e0800000000000000
+      internalID: -2192931549552569460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 64
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e721ab04f93db460800000000000000
+      internalID: 7259021894721021926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 48
+        width: 12
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fcca56a0892700d0800000000000000
+      internalID: -3456748556460045072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 33
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7557ed8d50fe648f0800000000000000
+      internalID: -556494695541344937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 33
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b262c1e3b54c9c730800000000000000
+      internalID: 4019960038567978539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 37
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a5e8eb63d000a30800000000000000
+      internalID: 4179354982976215702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 40
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59fbf1a4aabecc80800000000000000
+      internalID: -8300491846942197410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 35
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d047102cf4d7da80800000000000000
+      internalID: -8442044797147463469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 26
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f500d342108fa80800000000000000
+      internalID: -8432989047097368728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 21
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8d15282931a5950800000000000000
+      internalID: 6438480137252100270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 17
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d270bda6b635f6a50800000000000000
+      internalID: 6516518906647742253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 28
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b350ac46899b4e0800000000000000
+      internalID: -1965372203717018861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 23
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d5aee940fa19f70800000000000000
+      internalID: 9192320748820782462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 14
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb4ed4a0db564d60800000000000000
+      internalID: 7874081950181247942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 10
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22540da7657a0ca20800000000000000
+      internalID: 3080646134990914850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 15
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17cd1f7d97a908570800000000000000
+      internalID: 8466937147561204849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental Projectile SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 8
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc6990e305b6da20800000000000000
+      internalID: 3086853622866734290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Fire Elemental Projectile SpriteSheet_0: -3088316592285586987
+      Fire Elemental Projectile SpriteSheet_1: -4032123164392501924
+      Fire Elemental Projectile SpriteSheet_10: -9040708346923013754
+      Fire Elemental Projectile SpriteSheet_11: -8014620875506177984
+      Fire Elemental Projectile SpriteSheet_12: -2192931549552569460
+      Fire Elemental Projectile SpriteSheet_13: 7259021894721021926
+      Fire Elemental Projectile SpriteSheet_14: -3456748556460045072
+      Fire Elemental Projectile SpriteSheet_15: -556494695541344937
+      Fire Elemental Projectile SpriteSheet_16: 4019960038567978539
+      Fire Elemental Projectile SpriteSheet_17: 4179354982976215702
+      Fire Elemental Projectile SpriteSheet_18: -8300491846942197410
+      Fire Elemental Projectile SpriteSheet_19: -8442044797147463469
+      Fire Elemental Projectile SpriteSheet_2: -4901542697535979635
+      Fire Elemental Projectile SpriteSheet_20: -8432989047097368728
+      Fire Elemental Projectile SpriteSheet_21: 6438480137252100270
+      Fire Elemental Projectile SpriteSheet_22: 6516518906647742253
+      Fire Elemental Projectile SpriteSheet_23: -1965372203717018861
+      Fire Elemental Projectile SpriteSheet_24: 9192320748820782462
+      Fire Elemental Projectile SpriteSheet_25: 7874081950181247942
+      Fire Elemental Projectile SpriteSheet_26: 3080646134990914850
+      Fire Elemental Projectile SpriteSheet_27: 8466937147561204849
+      Fire Elemental Projectile SpriteSheet_28: 3086853622866734290
+      Fire Elemental Projectile SpriteSheet_3: -3801484703433286074
+      Fire Elemental Projectile SpriteSheet_4: -744270767988347067
+      Fire Elemental Projectile SpriteSheet_5: 32310848027203820
+      Fire Elemental Projectile SpriteSheet_6: 6545537139798960611
+      Fire Elemental Projectile SpriteSheet_7: 3963952133614239005
+      Fire Elemental Projectile SpriteSheet_8: 5248333813182924672
+      Fire Elemental Projectile SpriteSheet_9: -7964303564668871775
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AzureBlitz : Champion
 {
-    [Header("Metal Bladekeeper Variables")]
+    [Header("Azure Blitz Variables")]
     [SerializeField] private float dashSpeed = 30;
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)

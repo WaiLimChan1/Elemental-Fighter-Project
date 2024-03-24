@@ -212,6 +212,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             else if (statusNetworked == Status.ATTACK2) index = 2;
             else if (statusNetworked == Status.ATTACK3) index = 3;
             else if (statusNetworked == Status.SPECIAL_ATTACK) index = 4;
+            else return;
 
             BoxCollider2D crowdControlBox = AttackBoxes[index];
             float crowdControlStrength = CrowdControlStrength[index];
@@ -242,7 +243,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             status == Status.TAKE_HIT);
     }
 
-    private bool CanChangeDirectionStatus()
+    protected bool CanChangeDirectionStatus()
     {
         return (status == Status.IDLE || status == Status.RUN || 
             status == Status.JUMP_UP || status == Status.JUMP_DOWN);

@@ -29,7 +29,7 @@ public class GroundMonk : Champion
 
     public override void AnimationTriggerCrowdControl()
     {
-        if (Runner.IsServer)
+        //if (Runner.IsServer)
         {
             int index = 0;
             if (statusNetworked == Status.AIR_ATTACK) index = 0;
@@ -37,6 +37,7 @@ public class GroundMonk : Champion
             else if (statusNetworked == Status.ATTACK2) index = 2;
             else if (statusNetworked == Status.ATTACK3) index = 3;
             else if (statusNetworked == Status.SPECIAL_ATTACK) index = 4;
+            else return;
 
             BoxCollider2D crowdControlBox;
 

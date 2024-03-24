@@ -98,4 +98,5 @@ MonoBehaviour:
   - RawGuidValue: 809dd7f53d007294daecd1143e3319cf
   - RawGuidValue: 19728e7d53f393141bdbc835d5330938
   - RawGuidValue: 31cf4953cbbd83b4d87c2df594da5b80
+  - RawGuidValue: cffc1c790dd8b8a48b7f36078e2350bd
   NetworkedPlayer: {fileID: 5220798038280122695}

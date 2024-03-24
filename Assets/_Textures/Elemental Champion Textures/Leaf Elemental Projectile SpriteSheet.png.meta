@@ -1,0 +1,2465 @@
+fileFormatVersion: 2
+guid: ea89fe9655fe82442a1dcb0fd26a1262
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5564937742277211123
+    second: Leaf Elemental Projectile SpriteSheet_0
+  - first:
+      213: 1008968806073230035
+    second: Leaf Elemental Projectile SpriteSheet_1
+  - first:
+      213: -4277389782698214451
+    second: Leaf Elemental Projectile SpriteSheet_2
+  - first:
+      213: 7006103944146077857
+    second: Leaf Elemental Projectile SpriteSheet_3
+  - first:
+      213: -4648570210629006264
+    second: Leaf Elemental Projectile SpriteSheet_4
+  - first:
+      213: -808006480672402442
+    second: Leaf Elemental Projectile SpriteSheet_5
+  - first:
+      213: 8751907884298495125
+    second: Leaf Elemental Projectile SpriteSheet_6
+  - first:
+      213: 3802100481974248232
+    second: Leaf Elemental Projectile SpriteSheet_7
+  - first:
+      213: -1809905406635330181
+    second: Leaf Elemental Projectile SpriteSheet_8
+  - first:
+      213: 431726535863590034
+    second: Leaf Elemental Projectile SpriteSheet_9
+  - first:
+      213: -4312954452620119242
+    second: Leaf Elemental Projectile SpriteSheet_10
+  - first:
+      213: -6382849617872118678
+    second: Leaf Elemental Projectile SpriteSheet_11
+  - first:
+      213: 7791682415247596124
+    second: Leaf Elemental Projectile SpriteSheet_12
+  - first:
+      213: 6470706411084903451
+    second: Leaf Elemental Projectile SpriteSheet_13
+  - first:
+      213: 7662086340466561760
+    second: Leaf Elemental Projectile SpriteSheet_14
+  - first:
+      213: -1967822451509588155
+    second: Leaf Elemental Projectile SpriteSheet_15
+  - first:
+      213: 9059430289911299994
+    second: Leaf Elemental Projectile SpriteSheet_16
+  - first:
+      213: 6289634511990342153
+    second: Leaf Elemental Projectile SpriteSheet_17
+  - first:
+      213: 4326472637270570705
+    second: Leaf Elemental Projectile SpriteSheet_18
+  - first:
+      213: -5591745938383547048
+    second: Leaf Elemental Projectile SpriteSheet_19
+  - first:
+      213: 9133739911210271815
+    second: Leaf Elemental Projectile SpriteSheet_20
+  - first:
+      213: -8961709702397035204
+    second: Leaf Elemental Projectile SpriteSheet_21
+  - first:
+      213: -676958570982670049
+    second: Leaf Elemental Projectile SpriteSheet_22
+  - first:
+      213: 7532052169983920087
+    second: Leaf Elemental Projectile SpriteSheet_23
+  - first:
+      213: -5430909923782701686
+    second: Leaf Elemental Projectile SpriteSheet_24
+  - first:
+      213: -2730235826946411757
+    second: Leaf Elemental Projectile SpriteSheet_25
+  - first:
+      213: 1319758025769185400
+    second: Leaf Elemental Projectile SpriteSheet_26
+  - first:
+      213: -3471645314199417499
+    second: Leaf Elemental Projectile SpriteSheet_27
+  - first:
+      213: 8678937576459987927
+    second: Leaf Elemental Projectile SpriteSheet_28
+  - first:
+      213: 5479973146269676826
+    second: Leaf Elemental Projectile SpriteSheet_29
+  - first:
+      213: -8259292842335914469
+    second: Leaf Elemental Projectile SpriteSheet_30
+  - first:
+      213: 8792000893659304755
+    second: Leaf Elemental Projectile SpriteSheet_31
+  - first:
+      213: 8078718964409328551
+    second: Leaf Elemental Projectile SpriteSheet_32
+  - first:
+      213: -2455767012680742015
+    second: Leaf Elemental Projectile SpriteSheet_33
+  - first:
+      213: -6679751676227321535
+    second: Leaf Elemental Projectile SpriteSheet_34
+  - first:
+      213: 7677365208556581903
+    second: Leaf Elemental Projectile SpriteSheet_35
+  - first:
+      213: -3523537492000426300
+    second: Leaf Elemental Projectile SpriteSheet_36
+  - first:
+      213: -2840252256706983230
+    second: Leaf Elemental Projectile SpriteSheet_37
+  - first:
+      213: -3294969176989460586
+    second: Leaf Elemental Projectile SpriteSheet_38
+  - first:
+      213: -464090614290596843
+    second: Leaf Elemental Projectile SpriteSheet_39
+  - first:
+      213: 8191156866848080956
+    second: Leaf Elemental Projectile SpriteSheet_40
+  - first:
+      213: 2640632628007918423
+    second: Leaf Elemental Projectile SpriteSheet_41
+  - first:
+      213: 7812674470274032252
+    second: Leaf Elemental Projectile SpriteSheet_42
+  - first:
+      213: -4607202376539936371
+    second: Leaf Elemental Projectile SpriteSheet_43
+  - first:
+      213: -3537023405465085438
+    second: Leaf Elemental Projectile SpriteSheet_44
+  - first:
+      213: -576257561956526063
+    second: Leaf Elemental Projectile SpriteSheet_45
+  - first:
+      213: -2147470303368720839
+    second: Leaf Elemental Projectile SpriteSheet_46
+  - first:
+      213: -6437152036576159618
+    second: Leaf Elemental Projectile SpriteSheet_47
+  - first:
+      213: -95301584658113823
+    second: Leaf Elemental Projectile SpriteSheet_48
+  - first:
+      213: -7215787104293716421
+    second: Leaf Elemental Projectile SpriteSheet_49
+  - first:
+      213: 974344893258128304
+    second: Leaf Elemental Projectile SpriteSheet_50
+  - first:
+      213: -1643584447969998659
+    second: Leaf Elemental Projectile SpriteSheet_51
+  - first:
+      213: 3703617120517757370
+    second: Leaf Elemental Projectile SpriteSheet_52
+  - first:
+      213: 4393689085812670950
+    second: Leaf Elemental Projectile SpriteSheet_53
+  - first:
+      213: 6638397611223433046
+    second: Leaf Elemental Projectile SpriteSheet_54
+  - first:
+      213: -1539437377293002917
+    second: Leaf Elemental Projectile SpriteSheet_55
+  - first:
+      213: 2021010175883488815
+    second: Leaf Elemental Projectile SpriteSheet_56
+  - first:
+      213: 8768887168229619965
+    second: Leaf Elemental Projectile SpriteSheet_57
+  - first:
+      213: -7591004413001845820
+    second: Leaf Elemental Projectile SpriteSheet_58
+  - first:
+      213: 2627734113763467003
+    second: Leaf Elemental Projectile SpriteSheet_59
+  - first:
+      213: -3647152259409063366
+    second: Leaf Elemental Projectile SpriteSheet_60
+  - first:
+      213: 8808864107449827462
+    second: Leaf Elemental Projectile SpriteSheet_61
+  - first:
+      213: -2878530415264778985
+    second: Leaf Elemental Projectile SpriteSheet_62
+  - first:
+      213: -319090952506286630
+    second: Leaf Elemental Projectile SpriteSheet_63
+  - first:
+      213: -16584674129421126
+    second: Leaf Elemental Projectile SpriteSheet_64
+  - first:
+      213: -531851870158078942
+    second: Leaf Elemental Projectile SpriteSheet_65
+  - first:
+      213: 8684689210261003849
+    second: Leaf Elemental Projectile SpriteSheet_66
+  - first:
+      213: -2843880268088329368
+    second: Leaf Elemental Projectile SpriteSheet_67
+  - first:
+      213: -5895338490085272815
+    second: Leaf Elemental Projectile SpriteSheet_68
+  - first:
+      213: 7105973139844986686
+    second: Leaf Elemental Projectile SpriteSheet_69
+  - first:
+      213: -8627842169689999165
+    second: Leaf Elemental Projectile SpriteSheet_70
+  - first:
+      213: 3783508306743322156
+    second: Leaf Elemental Projectile SpriteSheet_71
+  - first:
+      213: -1004847419942207888
+    second: Leaf Elemental Projectile SpriteSheet_72
+  - first:
+      213: -8221537940297846682
+    second: Leaf Elemental Projectile SpriteSheet_73
+  - first:
+      213: 6329926356478448793
+    second: Leaf Elemental Projectile SpriteSheet_74
+  - first:
+      213: 6571561528525826412
+    second: Leaf Elemental Projectile SpriteSheet_75
+  - first:
+      213: -5326772020051210198
+    second: Leaf Elemental Projectile SpriteSheet_76
+  - first:
+      213: 3388175150824530084
+    second: Leaf Elemental Projectile SpriteSheet_77
+  - first:
+      213: -4079878695134625239
+    second: Leaf Elemental Projectile SpriteSheet_78
+  - first:
+      213: 1609003139555310000
+    second: Leaf Elemental Projectile SpriteSheet_79
+  - first:
+      213: 2259380394977681221
+    second: Leaf Elemental Projectile SpriteSheet_80
+  - first:
+      213: 5251176151638802506
+    second: Leaf Elemental Projectile SpriteSheet_81
+  - first:
+      213: -7756185640465382223
+    second: Leaf Elemental Projectile SpriteSheet_82
+  - first:
+      213: 7255218431177814142
+    second: Leaf Elemental Projectile SpriteSheet_83
+  - first:
+      213: 2960306159866263152
+    second: Leaf Elemental Projectile SpriteSheet_84
+  - first:
+      213: 2935548048587317401
+    second: Leaf Elemental Projectile SpriteSheet_85
+  - first:
+      213: 7144669381349712069
+    second: Leaf Elemental Projectile SpriteSheet_86
+  - first:
+      213: -3109397827785729652
+    second: Leaf Elemental Projectile SpriteSheet_87
+  - first:
+      213: -6855737259802517902
+    second: Leaf Elemental Projectile SpriteSheet_88
+  - first:
+      213: 5805418135512141893
+    second: Leaf Elemental Projectile SpriteSheet_89
+  - first:
+      213: -4173062345388446325
+    second: Leaf Elemental Projectile SpriteSheet_90
+  - first:
+      213: -8714004209330139459
+    second: Leaf Elemental Projectile SpriteSheet_91
+  - first:
+      213: -6247808958692343679
+    second: Leaf Elemental Projectile SpriteSheet_92
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1724
+        width: 34
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3f89d6461aa3d40800000000000000
+      internalID: 5564937742277211123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1723
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2e17b88c3900e00800000000000000
+      internalID: 1008968806073230035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1724
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb336cb7a8a3a4c0800000000000000
+      internalID: -4277389782698214451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1724
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a84a42da6eaa3160800000000000000
+      internalID: 7006103944146077857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1724
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ccef9c506fc7fb0800000000000000
+      internalID: -4648570210629006264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1724
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3de47036269c4f0800000000000000
+      internalID: -808006480672402442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1596
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5946d86e9d5057970800000000000000
+      internalID: 8751907884298495125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1590
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823aa647e36c3c430800000000000000
+      internalID: 3802100481974248232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1571
+        width: 59
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7531783f9ce1e6e0800000000000000
+      internalID: -1809905406635330181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1566
+        width: 76
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c524a3ffccdf500800000000000000
+      internalID: 431726535863590034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1566
+        width: 79
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633732fb6ce4524c0800000000000000
+      internalID: -4312954452620119242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1566
+        width: 81
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c9eff17109b67a0800000000000000
+      internalID: -6382849617872118678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1566
+        width: 81
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a9d73efdd912c60800000000000000
+      internalID: 7791682415247596124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 1566
+        width: 81
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14fe8692319cc950800000000000000
+      internalID: 6470706411084903451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 1484
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2d1e16ee2355a60800000000000000
+      internalID: 7662086340466561760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1484
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f8bb408e3e0b4e0800000000000000
+      internalID: -1967822451509588155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 1490
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fb39989df89bd70800000000000000
+      internalID: 9059430289911299994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 1490
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902c836c345494750800000000000000
+      internalID: 6289634511990342153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1494
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6b5f2e0f7ba0c30800000000000000
+      internalID: 4326472637270570705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1490
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8555a6402b02662b0800000000000000
+      internalID: -5591745938383547048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1497
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7440f7e7e0091ce70800000000000000
+      internalID: 9133739911210271815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1461
+        width: 44
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3df370c18c91a380800000000000000
+      internalID: -8961709702397035204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1461
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f110ce034c5fa96f0800000000000000
+      internalID: -676958570982670049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1476
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d70a95ca89378860800000000000000
+      internalID: 7532052169983920087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1476
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8dc9c1d23881a4b0800000000000000
+      internalID: -5430909923782701686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1461
+        width: 46
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31370d51bf04c1ad0800000000000000
+      internalID: -2730235826946411757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1461
+        width: 44
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870717b9ee8b05210800000000000000
+      internalID: 1319758025769185400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1483
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d8ef4fafc32dfc0800000000000000
+      internalID: -3471645314199417499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1461
+        width: 44
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dbefa82eb7c17870800000000000000
+      internalID: 8678937576459987927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 1461
+        width: 44
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15751ada86cc0c40800000000000000
+      internalID: 5479973146269676826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1468
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1634a46be8116d80800000000000000
+      internalID: -8259292842335914469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1466
+        width: 39
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333da731b36730a70800000000000000
+      internalID: 8792000893659304755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 1462
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a364d168106d1070800000000000000
+      internalID: 8078718964409328551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1457
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18bca06c9ec5bedd0800000000000000
+      internalID: -2455767012680742015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1453
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14186a6cd31cc43a0800000000000000
+      internalID: -6679751676227321535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1451
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0435f21bfa7b8a60800000000000000
+      internalID: 7677365208556581903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1449
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c63b8cc151e91fc0800000000000000
+      internalID: -3523537492000426300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 1454
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca8a7eee956598d0800000000000000
+      internalID: -2840252256706983230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1447
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6979ea3bdfae542d0800000000000000
+      internalID: -3294969176989460586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 1451
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51cbd9f8b083f89f0800000000000000
+      internalID: -464090614290596843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1330
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c344bf395c5dca170800000000000000
+      internalID: 8191156866848080956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1205
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75bd7be626965a420800000000000000
+      internalID: 2640632628007918423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1205
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72627299023c6c60800000000000000
+      internalID: 7812674470274032252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1205
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89600a39ddef00c0800000000000000
+      internalID: -4607202376539936371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1205
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ad203e3f7f9eec0800000000000000
+      internalID: -3537023405465085438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1205
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118d270fcc8b008f0800000000000000
+      internalID: -576257561956526063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1205
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ec10a0327a232e0800000000000000
+      internalID: -2147470303368720839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 941
+        width: 49
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7812b60454aaa6a0800000000000000
+      internalID: -6437152036576159618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 954
+        width: 49
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eadbe3b6bb6daef0800000000000000
+      internalID: -95301584658113823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 930
+        width: 41
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e7ab90cdf5cdb90800000000000000
+      internalID: -7215787104293716421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 955
+        width: 40
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbdd53a481958d00800000000000000
+      internalID: 974344893258128304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 960
+        width: 54
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8446417a0d039e0800000000000000
+      internalID: -1643584447969998659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 997
+        width: 52
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab914840624e56330800000000000000
+      internalID: 3703617120517757370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 940
+        width: 63
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1006dd1f489fc30800000000000000
+      internalID: 4393689085812670950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 989
+        width: 52
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f36c6a473502c50800000000000000
+      internalID: 6638397611223433046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 896
+        width: 58
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57dd749cd1d2aae0800000000000000
+      internalID: -1539437377293002917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 896
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e2cf41c021c0c10800000000000000
+      internalID: 2021010175883488815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 896
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df8bec18b6851b970800000000000000
+      internalID: 8768887168229619965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 896
+        width: 11
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c33a9a84b557a690800000000000000
+      internalID: -7591004413001845820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 896
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe1c0f0146977420800000000000000
+      internalID: 2627734113763467003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 831
+        width: 427
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32d820f756b26dc0800000000000000
+      internalID: -3647152259409063366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 896
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6804c3ffb3f5f3a70800000000000000
+      internalID: 8808864107449827462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 896
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7153cf2a6d76d08d0800000000000000
+      internalID: -2878530415264778985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 896
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add52d4287c529bf0800000000000000
+      internalID: -319090952506286630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 896
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abcdcc5a35415cff0800000000000000
+      internalID: -16584674129421126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 896
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cb91eba8b7e98f0800000000000000
+      internalID: -531851870158078942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 896
+        width: 12
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e5642c2d6368870800000000000000
+      internalID: 8684689210261003849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 896
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b3ad4b6f18888d0800000000000000
+      internalID: -2843880268088329368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 896
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11397cbc0ec8f2ea0800000000000000
+      internalID: -5895338490085272815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 896
+        width: 16
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e377defebec7d9260800000000000000
+      internalID: 7105973139844986686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 896
+        width: 13
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8fd79424fb34880800000000000000
+      internalID: -8627842169689999165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 896
+        width: 61
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26ec2452c8b18430800000000000000
+      internalID: 3783508306743322156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 896
+        width: 12
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e70e078901e02f0800000000000000
+      internalID: -1004847419942207888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 896
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66076298dca37ed80800000000000000
+      internalID: -8221537940297846682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 896
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994d74cdb7a68d750800000000000000
+      internalID: 6329926356478448793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 896
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69a76f7460e23b50800000000000000
+      internalID: 6571561528525826412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 896
+        width: 81
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a209b59f1118316b0800000000000000
+      internalID: -5326772020051210198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 896
+        width: 61
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0a3bd2957350f20800000000000000
+      internalID: 3388175150824530084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 2398
+        y: 896
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92201d161fb5167c0800000000000000
+      internalID: -4079878695134625239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 896
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9beaf94d3545610800000000000000
+      internalID: 1609003139555310000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 2459
+        y: 896
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f502f9f7eea5f10800000000000000
+      internalID: 2259380394977681221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 896
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a400f6353ecefd840800000000000000
+      internalID: 5251176151638802506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 896
+        width: 42
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b44318014e7c5490800000000000000
+      internalID: -7756185640465382223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 2715
+        y: 896
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70783e29b6bfa460800000000000000
+      internalID: 7255218431177814142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 896
+        width: 63
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076ba3d94ce151920800000000000000
+      internalID: 2960306159866263152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 3166
+        y: 896
+        width: 45
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9906321a5692db820800000000000000
+      internalID: 2935548048587317401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 3433
+        y: 896
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c0a5f0c2f6f62360800000000000000
+      internalID: 7144669381349712069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 896
+        width: 519
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89d571662339d4d0800000000000000
+      internalID: -3109397827785729652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 697
+        width: 597
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e9f0419478bd0a0800000000000000
+      internalID: -6855737259802517902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 442
+        width: 31
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540dfcb290df09050800000000000000
+      internalID: 5805418135512141893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 191
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d209d18ed4616c0800000000000000
+      internalID: -4173062345388446325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 62
+        width: 60
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe4e932753a11780800000000000000
+      internalID: -8714004209330139459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf Elemental Projectile SpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 59
+        width: 316
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180c3a8bad25b49a0800000000000000
+      internalID: -6247808958692343679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Leaf Elemental Projectile SpriteSheet_0: 5564937742277211123
+      Leaf Elemental Projectile SpriteSheet_1: 1008968806073230035
+      Leaf Elemental Projectile SpriteSheet_10: -4312954452620119242
+      Leaf Elemental Projectile SpriteSheet_11: -6382849617872118678
+      Leaf Elemental Projectile SpriteSheet_12: 7791682415247596124
+      Leaf Elemental Projectile SpriteSheet_13: 6470706411084903451
+      Leaf Elemental Projectile SpriteSheet_14: 7662086340466561760
+      Leaf Elemental Projectile SpriteSheet_15: -1967822451509588155
+      Leaf Elemental Projectile SpriteSheet_16: 9059430289911299994
+      Leaf Elemental Projectile SpriteSheet_17: 6289634511990342153
+      Leaf Elemental Projectile SpriteSheet_18: 4326472637270570705
+      Leaf Elemental Projectile SpriteSheet_19: -5591745938383547048
+      Leaf Elemental Projectile SpriteSheet_2: -4277389782698214451
+      Leaf Elemental Projectile SpriteSheet_20: 9133739911210271815
+      Leaf Elemental Projectile SpriteSheet_21: -8961709702397035204
+      Leaf Elemental Projectile SpriteSheet_22: -676958570982670049
+      Leaf Elemental Projectile SpriteSheet_23: 7532052169983920087
+      Leaf Elemental Projectile SpriteSheet_24: -5430909923782701686
+      Leaf Elemental Projectile SpriteSheet_25: -2730235826946411757
+      Leaf Elemental Projectile SpriteSheet_26: 1319758025769185400
+      Leaf Elemental Projectile SpriteSheet_27: -3471645314199417499
+      Leaf Elemental Projectile SpriteSheet_28: 8678937576459987927
+      Leaf Elemental Projectile SpriteSheet_29: 5479973146269676826
+      Leaf Elemental Projectile SpriteSheet_3: 7006103944146077857
+      Leaf Elemental Projectile SpriteSheet_30: -8259292842335914469
+      Leaf Elemental Projectile SpriteSheet_31: 8792000893659304755
+      Leaf Elemental Projectile SpriteSheet_32: 8078718964409328551
+      Leaf Elemental Projectile SpriteSheet_33: -2455767012680742015
+      Leaf Elemental Projectile SpriteSheet_34: -6679751676227321535
+      Leaf Elemental Projectile SpriteSheet_35: 7677365208556581903
+      Leaf Elemental Projectile SpriteSheet_36: -3523537492000426300
+      Leaf Elemental Projectile SpriteSheet_37: -2840252256706983230
+      Leaf Elemental Projectile SpriteSheet_38: -3294969176989460586
+      Leaf Elemental Projectile SpriteSheet_39: -464090614290596843
+      Leaf Elemental Projectile SpriteSheet_4: -4648570210629006264
+      Leaf Elemental Projectile SpriteSheet_40: 8191156866848080956
+      Leaf Elemental Projectile SpriteSheet_41: 2640632628007918423
+      Leaf Elemental Projectile SpriteSheet_42: 7812674470274032252
+      Leaf Elemental Projectile SpriteSheet_43: -4607202376539936371
+      Leaf Elemental Projectile SpriteSheet_44: -3537023405465085438
+      Leaf Elemental Projectile SpriteSheet_45: -576257561956526063
+      Leaf Elemental Projectile SpriteSheet_46: -2147470303368720839
+      Leaf Elemental Projectile SpriteSheet_47: -6437152036576159618
+      Leaf Elemental Projectile SpriteSheet_48: -95301584658113823
+      Leaf Elemental Projectile SpriteSheet_49: -7215787104293716421
+      Leaf Elemental Projectile SpriteSheet_5: -808006480672402442
+      Leaf Elemental Projectile SpriteSheet_50: 974344893258128304
+      Leaf Elemental Projectile SpriteSheet_51: -1643584447969998659
+      Leaf Elemental Projectile SpriteSheet_52: 3703617120517757370
+      Leaf Elemental Projectile SpriteSheet_53: 4393689085812670950
+      Leaf Elemental Projectile SpriteSheet_54: 6638397611223433046
+      Leaf Elemental Projectile SpriteSheet_55: -1539437377293002917
+      Leaf Elemental Projectile SpriteSheet_56: 2021010175883488815
+      Leaf Elemental Projectile SpriteSheet_57: 8768887168229619965
+      Leaf Elemental Projectile SpriteSheet_58: -7591004413001845820
+      Leaf Elemental Projectile SpriteSheet_59: 2627734113763467003
+      Leaf Elemental Projectile SpriteSheet_6: 8751907884298495125
+      Leaf Elemental Projectile SpriteSheet_60: -3647152259409063366
+      Leaf Elemental Projectile SpriteSheet_61: 8808864107449827462
+      Leaf Elemental Projectile SpriteSheet_62: -2878530415264778985
+      Leaf Elemental Projectile SpriteSheet_63: -319090952506286630
+      Leaf Elemental Projectile SpriteSheet_64: -16584674129421126
+      Leaf Elemental Projectile SpriteSheet_65: -531851870158078942
+      Leaf Elemental Projectile SpriteSheet_66: 8684689210261003849
+      Leaf Elemental Projectile SpriteSheet_67: -2843880268088329368
+      Leaf Elemental Projectile SpriteSheet_68: -5895338490085272815
+      Leaf Elemental Projectile SpriteSheet_69: 7105973139844986686
+      Leaf Elemental Projectile SpriteSheet_7: 3802100481974248232
+      Leaf Elemental Projectile SpriteSheet_70: -8627842169689999165
+      Leaf Elemental Projectile SpriteSheet_71: 3783508306743322156
+      Leaf Elemental Projectile SpriteSheet_72: -1004847419942207888
+      Leaf Elemental Projectile SpriteSheet_73: -8221537940297846682
+      Leaf Elemental Projectile SpriteSheet_74: 6329926356478448793
+      Leaf Elemental Projectile SpriteSheet_75: 6571561528525826412
+      Leaf Elemental Projectile SpriteSheet_76: -5326772020051210198
+      Leaf Elemental Projectile SpriteSheet_77: 3388175150824530084
+      Leaf Elemental Projectile SpriteSheet_78: -4079878695134625239
+      Leaf Elemental Projectile SpriteSheet_79: 1609003139555310000
+      Leaf Elemental Projectile SpriteSheet_8: -1809905406635330181
+      Leaf Elemental Projectile SpriteSheet_80: 2259380394977681221
+      Leaf Elemental Projectile SpriteSheet_81: 5251176151638802506
+      Leaf Elemental Projectile SpriteSheet_82: -7756185640465382223
+      Leaf Elemental Projectile SpriteSheet_83: 7255218431177814142
+      Leaf Elemental Projectile SpriteSheet_84: 2960306159866263152
+      Leaf Elemental Projectile SpriteSheet_85: 2935548048587317401
+      Leaf Elemental Projectile SpriteSheet_86: 7144669381349712069
+      Leaf Elemental Projectile SpriteSheet_87: -3109397827785729652
+      Leaf Elemental Projectile SpriteSheet_88: -6855737259802517902
+      Leaf Elemental Projectile SpriteSheet_89: 5805418135512141893
+      Leaf Elemental Projectile SpriteSheet_9: 431726535863590034
+      Leaf Elemental Projectile SpriteSheet_90: -4173062345388446325
+      Leaf Elemental Projectile SpriteSheet_91: -8714004209330139459
+      Leaf Elemental Projectile SpriteSheet_92: -6247808958692343679
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
