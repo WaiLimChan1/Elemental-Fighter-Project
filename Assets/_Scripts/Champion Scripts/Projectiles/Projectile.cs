@@ -90,7 +90,7 @@ public class Projectile : NetworkBehaviour
                 transform.position = new Vector3(transform.position.x + velocity.x * Runner.DeltaTime, transform.position.y + velocity.y * Runner.DeltaTime, 0);
 
                 //Server checks and handles collision
-                Collider2D[] colliders = Physics2D.OverlapBoxAll(HitBox.bounds.center, HitBox.bounds.size, 0, LayerMask.GetMask("Champion"));
+                Collider2D[] colliders = Physics2D.OverlapBoxAll(HitBox.bounds.center, HitBox.bounds.size, HitBox.transform.eulerAngles.z, LayerMask.GetMask("Champion"));
                 foreach (Collider2D collider in colliders)
                 {
                     Champion enemy = collider.GetComponent<Champion>();
@@ -105,7 +105,7 @@ public class Projectile : NetworkBehaviour
                 if (flying)
                 {
                     //Server checks and handles collision
-                    colliders = Physics2D.OverlapBoxAll(HitBox.bounds.center, HitBox.bounds.size, 0, LayerMask.GetMask("Ground"));
+                    colliders = Physics2D.OverlapBoxAll(HitBox.bounds.center, HitBox.bounds.size, HitBox.transform.eulerAngles.z, LayerMask.GetMask("Ground"));
                     if (colliders.Length > 0)
                     {
                         RPC_StuckOntoEnvironment(colliders[0].GetComponentInParent<NetworkObject>());

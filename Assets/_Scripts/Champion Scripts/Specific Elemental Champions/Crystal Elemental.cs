@@ -21,7 +21,10 @@ public class CrystalElemental : ElementalChampion
 
         if (statusNetworked == Status.ATTACK3)
         {
-            if (enemy.transform.position.x < transform.position.x) enemy.AddVelocity(new Vector2(crowdControlStrength / 2, crowdControlStrength));
+            BoxCollider2D SpecialAttackBox = AttackBoxes[4];
+            Vector2 center = AttackBoxesParent.TransformPoint(SpecialAttackBox.offset);
+
+            if (enemy.transform.position.x < center.x) enemy.AddVelocity(new Vector2(crowdControlStrength / 2, crowdControlStrength));
             else enemy.AddVelocity(new Vector2(-1 * crowdControlStrength / 2, crowdControlStrength));
         }
         else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(0, crowdControlStrength));

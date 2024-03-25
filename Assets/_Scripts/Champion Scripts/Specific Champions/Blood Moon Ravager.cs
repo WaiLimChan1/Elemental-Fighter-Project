@@ -64,7 +64,7 @@ public class BloodMoonRavager : Champion
 
             if (championTarget != null)
             {
-                Vector3 changeVector = championTarget.transform.position - AttackBoxesParent.TransformPoint(AttackBoxes[4].offset);
+                Vector3 changeVector = championTarget.transform.TransformPoint(championTarget.Collider.offset) - AttackBoxesParent.TransformPoint(AttackBoxes[4].offset);
                 transform.position = transform.position + changeVector;
             }
         }

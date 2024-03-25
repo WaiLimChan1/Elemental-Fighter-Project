@@ -43,7 +43,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     private ResourceBar ResourceBar;
     protected ChampionAnimationController ChampionAnimationController;
     protected Rigidbody2D Rigid;
-    protected CapsuleCollider2D Collider;
+    public CapsuleCollider2D Collider;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 

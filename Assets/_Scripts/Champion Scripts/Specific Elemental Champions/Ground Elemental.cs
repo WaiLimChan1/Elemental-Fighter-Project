@@ -15,6 +15,25 @@ public class GroundElemental : ElementalChampion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+
+    protected override void TakeInput()
+    {
+        base.TakeInput();
+
+        if (dead)
+        {
+            return;
+        }
+
+        //Ground Elemental does not have Defend
+        if (status == Status.BEGIN_DEFEND || status == Status.DEFEND) status = Status.IDLE;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
     public override void DealDamageToVictim(Champion enemy, float damage)
     {
