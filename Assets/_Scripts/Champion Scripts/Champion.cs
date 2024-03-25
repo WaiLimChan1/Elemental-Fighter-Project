@@ -340,6 +340,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         Rigid.velocity += velocity;
     }
 
+    public void SetVelocity(Vector2 velocity)
+    {
+        Rigid.velocity = velocity;
+    }
+
     public virtual void DealDamageToVictim(Champion enemy, float damage)
     {
         enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
