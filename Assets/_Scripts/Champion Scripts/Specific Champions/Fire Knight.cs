@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FireKnight : Champion
 {
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Attack Logic
     public override void DealDamageToVictim(Champion enemy, float damage)
     {
         if (statusNetworked == Status.ATTACK2) enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
@@ -19,4 +21,5 @@ public class FireKnight : Champion
         else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
 
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 }

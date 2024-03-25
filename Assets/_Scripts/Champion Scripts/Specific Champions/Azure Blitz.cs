@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class AzureBlitz : Champion
 {
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Variables
     [Header("Azure Blitz Variables")]
     [SerializeField] private float dashSpeed = 30;
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Attack Logic
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;
@@ -15,8 +22,12 @@ public class AzureBlitz : Champion
         if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
         else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
     protected override void UpdatePosition()
     {
         base.UpdatePosition();
@@ -25,8 +36,8 @@ public class AzureBlitz : Champion
             ChampionAnimationController.GetNormalizedTime() <= 5.0f / 8.0f)
         {
             float xChange = dashSpeed * Time.fixedDeltaTime;
-
             if (isFacingLeftNetworked) xChange *= -1;
+
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
     }

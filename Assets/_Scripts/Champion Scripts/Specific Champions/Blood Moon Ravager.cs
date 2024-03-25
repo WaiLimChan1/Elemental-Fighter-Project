@@ -5,11 +5,44 @@ using UnityEngine;
 
 public class BloodMoonRavager : Champion
 {
-    [Header("Special Attack Variables")]
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Variables
+    [Header("Blood Moon Ravager Variables")]
     [SerializeField] private float SpecialAttackRange = 20f;
     [SerializeField][Networked] private Champion championTarget { get; set; }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    
+    
+    
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    //Status.UNIQUE1 : Howl
+    protected override bool SingleAnimationStatus()
+    {
+        return (base.SingleAnimationStatus() ||
+            status == Status.UNIQUE1);
+    }
+
+    protected override void TakeInput()
+    {
+        base.TakeInput();
+
+        if (dead)
+        {
+            return;
+        }
+
+        if (!inAir && InterruptableStatus())
+        {
+            if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE1;
+        }
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Attack Logic
     public override void AnimationTriggerMobility()
     {
         if (statusNetworked == Status.SPECIAL_ATTACK)
@@ -34,33 +67,6 @@ public class BloodMoonRavager : Champion
                 Vector3 changeVector = championTarget.transform.position - AttackBoxesParent.TransformPoint(AttackBoxes[4].offset);
                 transform.position = transform.position + changeVector;
             }
-        }
-    }
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Status.UNIQUE1 : Howl
-
-    protected override bool SingleAnimationStatus()
-    {
-        return (base.SingleAnimationStatus() ||
-            status == Status.UNIQUE1);
-    }
-
-    protected override void TakeInput()
-    {
-        base.TakeInput();
-
-        if (dead)
-        {
-            return;
-        }
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE1;
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------

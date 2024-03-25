@@ -7,10 +7,17 @@ using UnityEngine.UIElements;
 
 public class WindHashasin : Champion
 {
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Variables
     [Header("Special Attack Variables")]
     [SerializeField] private float SpecialAttackRange = 20f;
     [SerializeField] [Networked] private Champion championTarget { get; set; }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Attack Logic
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;
@@ -44,6 +51,9 @@ public class WindHashasin : Champion
             }
         }
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
     protected override void OnDrawGizmos()
     {

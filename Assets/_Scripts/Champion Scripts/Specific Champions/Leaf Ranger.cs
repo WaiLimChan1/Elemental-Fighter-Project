@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LeafRanger : Champion
 {
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Variables
     [Header("Leaf Ranger Variables")]
     [SerializeField] protected float slideMoveSpeed = 20;
 
@@ -15,29 +17,47 @@ public class LeafRanger : Champion
     [SerializeField] private float ArrowSpeed = 30;
     [SerializeField] private float ArrowDamage = 10;
     [SerializeField] private float ArrowLifeTime = 5;
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    
+    
+    
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    //Status.UNIQUE1 : Slide
+    protected override bool SingleAnimationStatus()
+    {
+        return (base.SingleAnimationStatus() ||
+            status == Status.UNIQUE1);
+    }
+
+    protected override void TakeInput()
+    {
+        base.TakeInput();
+
+        if (dead)
+        {
+            return;
+        }
+
+        if (!inAir && InterruptableStatus())
+        {
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
+                if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE1;
+            }
+        }
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    public override void AnimationTriggerAttack()
+    //Attack Logic
+    public override int GetAttackBoxIndex()
     {
-        //if (Runner.IsServer)
-        {
-            int index = 0;
-            if (statusNetworked == Status.ATTACK1) index = 1;
-            else if (statusNetworked == Status.SPECIAL_ATTACK) index = 4;
-            else return;
-
-            BoxCollider2D attackBox = AttackBoxes[index];
-            float damage = AttackDamages[index];
-
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(attackBox.bounds.center, attackBox.bounds.size, 0, LayerMask.GetMask("Champion"));
-            foreach (Collider2D collider in colliders)
-            {
-                Champion enemy = collider.GetComponent<Champion>();
-                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
-            }
-        }
+        if (statusNetworked == Status.ATTACK1) return 1;
+        else if (statusNetworked == Status.SPECIAL_ATTACK) return 4;
+        else return -1;
     }
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
@@ -82,36 +102,7 @@ public class LeafRanger : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Status.UNIQUE1 : Slide
-
-    protected override bool SingleAnimationStatus()
-    {
-        return (base.SingleAnimationStatus() ||
-            status == Status.UNIQUE1);
-    }
-
-    protected override void TakeInput()
-    {
-        base.TakeInput();
-
-        if (dead)
-        {
-            return;
-        }
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-            {
-                if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE1;
-            }
-        }
-    }
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
     protected override void UpdatePosition()
     {
         base.UpdatePosition();

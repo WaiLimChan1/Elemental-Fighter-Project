@@ -7,10 +7,13 @@ using TMPro;
 using Unity.VisualScripting;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine.UIElements;
+using System;
+using System.Reflection;
 
 public class Champion : NetworkBehaviour, IBeforeUpdate
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Enums
     public enum Status
     {
         IDLE, RUN,
@@ -35,6 +38,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Componets
     [Header("Components")]
     private ResourceBar ResourceBar;
     protected ChampionAnimationController ChampionAnimationController;
@@ -55,7 +59,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Variables
     [Header("Champion Variables")]
     [Networked] public float healthNetworked { get; set; }
     [SerializeField] private float maxHealth = 500;
@@ -84,7 +90,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    [Header("Champion Jump Variables")]
+    //Champion Air Variables
+    [Header("Champion Air Variables")]
     [SerializeField] protected float jumpForce = 20;
     [SerializeField] private LayerMask WhatIsGround;
 
@@ -104,6 +111,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Attack Variables
     [Header("Champion Attack Variables")]
     [SerializeField] public Transform AttackBoxesParent;
     [SerializeField] protected string[] ListNames = { "Air Attack", "Attack1", "Attack2", "Attack3", "Special Attack" };
@@ -117,6 +125,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Initialization
     private void SetLocalObjects()
     {
         if (Runner.LocalPlayer == Object.InputAuthority)
@@ -146,106 +155,18 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Attack Logic
-    public void TakeDamageNetworked(float damage, bool attackerIsFacingLeft, AttackType attackType = AttackType.BlockByFacingAttack, Vector2 attackerPosition = default(Vector2))
-    {
-        if (dead) return;
-        if (healthNetworked <= 0) return;
-
-        //Blocked
-        if (statusNetworked == Status.DEFEND && attackType == AttackType.BlockByFacingAttack 
-            && isFacingLeftNetworked != attackerIsFacingLeft)
-            damage -= damage * blockPercentage;
-        else if (statusNetworked == Status.DEFEND && attackType == AttackType.BlockByFacingAttacker
-            && ((isFacingLeftNetworked && transform.position.x > attackerPosition.x) || (!isFacingLeftNetworked && transform.position.x < attackerPosition.x)))
-            damage -= damage * blockPercentage;
-        else
-            tookHitNetworked = true;
-
-        healthNetworked -= damage;
-        if (healthNetworked < 0) healthNetworked = 0;
-    }
-
-    public void AddVelocity(Vector2 velocity)
-    {
-        Rigid.velocity += velocity;
-    }
-
-    public virtual void DealDamageToVictim(Champion enemy, float damage)
-    {
-        enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
-    }
-
-    public virtual void AnimationTriggerAttack()
-    {
-        //if (Runner.IsServer)
-        {
-            int index = 0;
-            if (statusNetworked == Status.AIR_ATTACK) index = 0;
-            else if (statusNetworked == Status.ATTACK1) index = 1;
-            else if (statusNetworked == Status.ATTACK2) index = 2;
-            else if (statusNetworked == Status.ATTACK3) index = 3;
-            else if (statusNetworked == Status.SPECIAL_ATTACK) index = 4;
-            else return;
-
-            BoxCollider2D attackBox = AttackBoxes[index];
-            float damage = AttackDamages[index];
-
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(attackBox.bounds.center, attackBox.bounds.size, 0, LayerMask.GetMask("Champion"));
-            foreach (Collider2D collider in colliders)
-            {
-                Champion enemy = collider.GetComponent<Champion>();
-                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    DealDamageToVictim(enemy, damage);
-            }
-        }
-    }
-
-    public virtual void ApplyCrowdControl(Champion enemy, float crowdControlStrength) { }
-    public virtual void AnimationTriggerCrowdControl()
-    {
-        //if (Runner.IsServer)
-        {
-            int index = 0;
-            if (statusNetworked == Status.AIR_ATTACK) index = 0;
-            else if (statusNetworked == Status.ATTACK1) index = 1;
-            else if (statusNetworked == Status.ATTACK2) index = 2;
-            else if (statusNetworked == Status.ATTACK3) index = 3;
-            else if (statusNetworked == Status.SPECIAL_ATTACK) index = 4;
-            else return;
-
-            BoxCollider2D crowdControlBox = AttackBoxes[index];
-            float crowdControlStrength = CrowdControlStrength[index];
-
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(crowdControlBox.bounds.center, crowdControlBox.bounds.size, 0, LayerMask.GetMask("Champion"));
-            foreach (Collider2D collider in colliders)
-            {
-                Champion enemy = collider.GetComponent<Champion>();
-                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    ApplyCrowdControl(enemy, crowdControlStrength);
-            }
-        }
-    }
-
-    public virtual void AnimationTriggerProjectileSpawn() {}
-    public virtual void AnimationTriggerMobility() {}
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Different Types Of Statuses
     protected virtual bool SingleAnimationStatus()
     {
-        return (status == Status.ROLL || 
-            status == Status.AIR_ATTACK || 
+        return (status == Status.ROLL ||
+            status == Status.AIR_ATTACK ||
             status == Status.ATTACK1 || status == Status.ATTACK2 || status == Status.ATTACK3 || status == Status.SPECIAL_ATTACK ||
             status == Status.TAKE_HIT);
     }
 
     protected bool CanChangeDirectionStatus()
     {
-        return (status == Status.IDLE || status == Status.RUN || 
+        return (status == Status.IDLE || status == Status.RUN ||
             status == Status.JUMP_UP || status == Status.JUMP_DOWN);
     }
 
@@ -393,7 +314,105 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
 
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Attack Logic
+    public void TakeDamageNetworked(float damage, bool attackerIsFacingLeft, AttackType attackType = AttackType.BlockByFacingAttack, Vector2 attackerPosition = default(Vector2))
+    {
+        if (dead) return;
+        if (healthNetworked <= 0) return;
 
+        //Blocked
+        if (statusNetworked == Status.DEFEND && attackType == AttackType.BlockByFacingAttack
+            && isFacingLeftNetworked != attackerIsFacingLeft)
+            damage -= damage * blockPercentage;
+        else if (statusNetworked == Status.DEFEND && attackType == AttackType.BlockByFacingAttacker
+            && ((isFacingLeftNetworked && transform.position.x > attackerPosition.x) || (!isFacingLeftNetworked && transform.position.x < attackerPosition.x)))
+            damage -= damage * blockPercentage;
+        else
+            tookHitNetworked = true;
+
+        healthNetworked -= damage;
+        if (healthNetworked < 0) healthNetworked = 0;
+    }
+
+    public void AddVelocity(Vector2 velocity)
+    {
+        Rigid.velocity += velocity;
+    }
+
+    public virtual void DealDamageToVictim(Champion enemy, float damage)
+    {
+        enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
+    }
+
+    public virtual int GetAttackBoxIndex()
+    {
+        if (statusNetworked == Status.AIR_ATTACK) return 0;
+        else if (statusNetworked == Status.ATTACK1) return 1;
+        else if (statusNetworked == Status.ATTACK2) return 2;
+        else if (statusNetworked == Status.ATTACK3) return 3;
+        else if (statusNetworked == Status.SPECIAL_ATTACK) return 4;
+        else return -1;
+    }
+
+    public virtual void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
+    {
+        attackBox = AttackBoxes[index];
+        damage = AttackDamages[index];
+    }
+    public virtual void AnimationTriggerAttack()
+    {
+        int index = GetAttackBoxIndex();
+        if (index == -1) return;
+
+        BoxCollider2D attackBox = default;
+        float damage = 0;
+
+        GetAttackBoxAndDamage(ref attackBox, ref damage, index);
+
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(attackBox.bounds.center, attackBox.bounds.size, 0, LayerMask.GetMask("Champion"));
+        foreach (Collider2D collider in colliders)
+        {
+            Champion enemy = collider.GetComponent<Champion>();
+            if (enemy != null && enemy != this && enemy.healthNetworked > 0)
+                DealDamageToVictim(enemy, damage);
+        }
+    }
+
+    public virtual void ApplyCrowdControl(Champion enemy, float crowdControlStrength) {}
+
+    public virtual void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
+    {
+        crowdControlBox = AttackBoxes[index];
+        crowdControlStrength = CrowdControlStrength[index];
+    }
+    public virtual void AnimationTriggerCrowdControl()
+    {
+        int index = GetAttackBoxIndex();
+        if (index == -1) return;
+
+        BoxCollider2D crowdControlBox = default;
+        float crowdControlStrength = 0;
+
+        GetControlBoxAndStrength(ref crowdControlBox, ref crowdControlStrength, index);
+
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(crowdControlBox.bounds.center, crowdControlBox.bounds.size, 0, LayerMask.GetMask("Champion"));
+        foreach (Collider2D collider in colliders)
+        {
+            Champion enemy = collider.GetComponent<Champion>();
+            if (enemy != null && enemy != this && enemy.healthNetworked > 0)
+                ApplyCrowdControl(enemy, crowdControlStrength);
+        }
+    }
+
+    public virtual void AnimationTriggerProjectileSpawn() {}
+    public virtual void AnimationTriggerMobility() {}
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
     private void UpdateChampionVisual()
     {
         ChampionAnimationController.Flip(isFacingLeftNetworked);
@@ -476,6 +495,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             status = temp;
         }
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
     public ChampionData GetChampionData()
     {

@@ -4,41 +4,18 @@ using UnityEngine;
 
 public class WaterPriestess : Champion
 {
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Variables
     [Header("Water Priestess Water Slide Variables")]
     [SerializeField] private float waterSlideSpeed = 25;
     [SerializeField] private BoxCollider2D waterSlideAttackBox;
     [SerializeField] private float waterSlideDashDamage = 5;
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-    public override void AnimationTriggerAttack()
-    {
-        base.AnimationTriggerAttack();
-        if (statusNetworked == Status.UNIQUE3)
-        {
-            BoxCollider2D attackBox = waterSlideAttackBox;
-            float damage = waterSlideDashDamage;
-
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(attackBox.bounds.center, attackBox.bounds.size, 0, LayerMask.GetMask("Champion"));
-            foreach (Collider2D collider in colliders)
-            {
-                Champion enemy = collider.GetComponent<Champion>();
-                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    DealDamageToVictim(enemy, damage);
-            }
-        }
-    }
-
-    public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
-    {
-        float direction = 1;
-        if (isFacingLeftNetworked) direction *= -1;
-
-        if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
-        else if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength * 1 / 5, crowdControlStrength));
-    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
     //Status.UNIQUE1 : Begin_Meditation
     //Status.UNIQUE2 : Meditation
     //Status.UNIQUE3 : Water_Slide
@@ -90,6 +67,46 @@ public class WaterPriestess : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Attack Logic
+    public override int GetAttackBoxIndex()
+    {
+        if (statusNetworked == Status.AIR_ATTACK) return 0;
+        else if (statusNetworked == Status.ATTACK1) return 1;
+        else if (statusNetworked == Status.ATTACK2) return 2;
+        else if (statusNetworked == Status.ATTACK3) return 3;
+        else if (statusNetworked == Status.SPECIAL_ATTACK) return 4;
+        else if (statusNetworked == Status.UNIQUE3) return -2;
+        else return -1;
+    }
+
+    public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
+    {
+        if (statusNetworked == Status.UNIQUE3)
+        {
+            attackBox = waterSlideAttackBox;
+            damage = waterSlideDashDamage;
+        }
+        else
+        {
+            attackBox = AttackBoxes[index];
+            damage = AttackDamages[index];
+        }
+    }
+
+    public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
+    {
+        float direction = 1;
+        if (isFacingLeftNetworked) direction *= -1;
+
+        if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
+        else if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength * 1 / 5, crowdControlStrength));
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
     protected override void UpdatePosition()
     {
         base.UpdatePosition();

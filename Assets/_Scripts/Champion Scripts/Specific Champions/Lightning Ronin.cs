@@ -5,49 +5,20 @@ using UnityEngine;
 
 public class LightningRonin : Champion
 {
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Variables
     [Header("Lightning Ronin Dash Variables")]
     [SerializeField] private float dashSpeed = 25;
     [SerializeField] private float lightningDashSpeed = 30;
 
     [SerializeField] private BoxCollider2D lightningDashAttackBox;
     [SerializeField] private float lightningDashDamage = 5;
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-    public override void DealDamageToVictim(Champion enemy, float damage)
-    {
-        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
-    }
-
-    public override void AnimationTriggerAttack()
-    {
-        base.AnimationTriggerAttack();
-        if (statusNetworked == Status.UNIQUE2)
-        {
-            BoxCollider2D attackBox = lightningDashAttackBox;
-            float damage = lightningDashDamage;
-
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(attackBox.bounds.center, attackBox.bounds.size, 0, LayerMask.GetMask("Champion"));
-            foreach (Collider2D collider in colliders)
-            {
-                Champion enemy = collider.GetComponent<Champion>();
-                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    DealDamageToVictim(enemy, damage);
-            }
-        }
-    }
-
-    public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
-    {
-        float direction = 1;
-        if (isFacingLeftNetworked) direction *= -1;
-
-        if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
-    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
     //Status.UNIQUE1 : Dash
     //Status.UNIQUE2 : Lightning Dash
 
@@ -77,7 +48,54 @@ public class LightningRonin : Champion
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Attack Logic
+    public override void DealDamageToVictim(Champion enemy, float damage)
+    {
+        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+    }
+
+    public override int GetAttackBoxIndex()
+    {
+        if (statusNetworked == Status.AIR_ATTACK) return 0;
+        else if (statusNetworked == Status.ATTACK1) return 1;
+        else if (statusNetworked == Status.ATTACK2) return 2;
+        else if (statusNetworked == Status.ATTACK3) return 3;
+        else if (statusNetworked == Status.SPECIAL_ATTACK) return 4;
+        else if (statusNetworked == Status.UNIQUE2) return -2;
+        else return -1;
+    }
+
+    public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
+    {
+        if (statusNetworked == Status.UNIQUE2)
+        {
+            attackBox = lightningDashAttackBox;
+            damage = lightningDashDamage;
+        }
+        else
+        {
+            attackBox = AttackBoxes[index];
+            damage = AttackDamages[index];
+        }
+    }
+
+    public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
+    {
+        float direction = 1;
+        if (isFacingLeftNetworked) direction *= -1;
+
+        if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
     protected override void UpdatePosition()
     {
         base.UpdatePosition();
