@@ -13,6 +13,7 @@ public class CrystalElemental : ElementalChampion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Attack Logic
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;
