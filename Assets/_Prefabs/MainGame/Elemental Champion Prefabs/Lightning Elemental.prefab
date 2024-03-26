@@ -261,8 +261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  Collider: {fileID: 0}
   _healthNetworked: 0
-  maxHealth: 500
+  maxHealth: 1500
   maxMana: 500
   _isFacingLeftNetworked: 0
   isFacingLeft: 0
@@ -309,7 +310,7 @@ MonoBehaviour:
   - 5
   - 0
   - 0
-  SpecialAttackRange: 15
+  attack1DashRange: 15
   _championTarget: {fileID: 0}
 --- !u!1 &1878230729937941712
 GameObject:

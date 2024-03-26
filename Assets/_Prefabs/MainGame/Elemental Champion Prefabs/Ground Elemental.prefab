@@ -261,8 +261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  Collider: {fileID: 0}
   _healthNetworked: 0
-  maxHealth: 500
+  maxHealth: 3000
   maxMana: 500
   _isFacingLeftNetworked: 0
   isFacingLeft: 0

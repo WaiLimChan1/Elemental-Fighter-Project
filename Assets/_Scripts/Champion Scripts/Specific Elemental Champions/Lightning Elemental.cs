@@ -52,7 +52,8 @@ public class LightningElemental : ElementalChampion
 
             if (championTarget != null)
             {
-                Vector3 changeVector = championTarget.transform.TransformPoint(championTarget.Collider.offset) - AttackBoxesParent.TransformPoint(AttackBoxes[1].offset);
+                Vector3 linkPoint = new Vector3(AttackBoxes[1].offset.x, Collider.offset.y);
+                Vector3 changeVector = championTarget.transform.TransformPoint(championTarget.Collider.offset) - AttackBoxesParent.TransformPoint(linkPoint);
                 transform.position = transform.position + changeVector;
             }
         }
