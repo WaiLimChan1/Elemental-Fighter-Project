@@ -7,9 +7,49 @@ using UnityEngine;
 
 public class Projectile : NetworkBehaviour
 {
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Static Projectile Spawn Functions
+    public static void SpawnProjectileHorizontal(NetworkRunner Runner, Champion owner, bool isFacingLeft,
+                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float lifeTime)
+    {
+        var Projectile = Runner.Spawn(projectilePrefab, SpawnPoint.position, Quaternion.identity);
+
+        Vector2 velocity;
+        if (isFacingLeft) velocity = new Vector2(-1 * speed, 0);
+        else velocity = new Vector2(1 * speed, 0);
+
+        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, lifeTime);
+    }
+
+    public static void SpawnProjectileDiagonal(NetworkRunner Runner, Champion owner, bool isFacingLeft,
+                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float lifeTime)
+    {
+        NetworkObject Projectile;
+
+        if (isFacingLeft) Projectile = Runner.Spawn(projectilePrefab, SpawnPoint.position, Quaternion.Euler(0, 0, 45));
+        else Projectile = Runner.Spawn(projectilePrefab, SpawnPoint.position, Quaternion.Euler(0, 0, -45));
+
+        Vector2 velocity;
+        if (isFacingLeft) velocity = new Vector2(Mathf.Cos(-135 * Mathf.Deg2Rad), Mathf.Sin(-135 * Mathf.Deg2Rad));
+        else velocity = new Vector2(Mathf.Cos(-45 * Mathf.Deg2Rad), Mathf.Sin(-45 * Mathf.Deg2Rad));
+        velocity = velocity.normalized * speed;
+
+        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, lifeTime);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Static Stuck Rotation Range
     static Vector2 championStuckRotationRange = new Vector2(-30, 30);
     static Vector2 environmentStuckRotationRange = new Vector2(-5, 5);
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Projectile Variables
     [SerializeField][Networked] private Champion owner { get; set; }
     [SerializeField][Networked] private NetworkObject StuckTarget { get; set; }
     [SerializeField] private BoxCollider2D HitBox;
@@ -26,6 +66,9 @@ public class Projectile : NetworkBehaviour
 
     [SerializeField][Networked] private float lifeTime { get; set; }
     [SerializeField][Networked] private TickTimer remainingLifeTime { get; set; }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
     public override void Spawned()
     {

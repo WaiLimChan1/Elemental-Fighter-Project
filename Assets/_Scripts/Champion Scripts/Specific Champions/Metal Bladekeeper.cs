@@ -88,29 +88,9 @@ public class MetalBladekeeper : Champion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE1)
-        {
-            var Dagger = Runner.Spawn(DaggerPrefab, DaggerSpawnSpot.position, Quaternion.identity);
-
-            Vector2 velocity;
-            if (isFacingLeftNetworked) velocity = new Vector2(-1 * DaggerSpeed, 0);
-            else velocity = new Vector2(1 * DaggerSpeed, 0);
-
-            Dagger.GetComponent<Dagger>().SetUp(this, velocity, DaggerDamage, DaggerLifeTime);
-        }
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, DaggerDamage, DaggerLifeTime);
         else if (statusNetworked == Status.UNIQUE2)
-        {
-            NetworkObject Dagger;
-
-            if (isFacingLeftNetworked) Dagger = Runner.Spawn(DaggerPrefab, DaggerSpawnSpot.position, Quaternion.Euler(0,0,45));
-            else Dagger = Runner.Spawn(DaggerPrefab, DaggerSpawnSpot.position, Quaternion.Euler(0, 0, -45));
-
-            Vector2 velocity;
-            if (isFacingLeftNetworked) velocity = new Vector2(Mathf.Cos(-135 * Mathf.Deg2Rad), Mathf.Sin(-135 * Mathf.Deg2Rad));
-            else velocity = new Vector2(Mathf.Cos(-45 * Mathf.Deg2Rad), Mathf.Sin(-45 * Mathf.Deg2Rad));
-            velocity = velocity.normalized * DaggerSpeed;
-
-            Dagger.GetComponent<Dagger>().SetUp(this, velocity, DaggerDamage, DaggerLifeTime);
-        }
+            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, DaggerDamage, DaggerLifeTime);
     }
 
     public override void AnimationTriggerMobility()

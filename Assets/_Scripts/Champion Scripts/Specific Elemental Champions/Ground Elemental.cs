@@ -6,10 +6,10 @@ public class GroundElemental : ElementalChampion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
-    [Header("Ground Monk Variables")]
+    [Header("Ground Elemental Variables")]
     [SerializeField] protected BoxCollider2D TransformPullCrowdControlBox;
     [SerializeField] protected float TransformPullStrength = 2.0f;
-    private const float PullCutOffTime = 18.0f / 28.0f;
+    private const float TransformPullCutOffTime = 18.0f / 28.0f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -43,7 +43,7 @@ public class GroundElemental : ElementalChampion
 
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
     {
-        if (statusNetworked == Status.UNIQUE1 && ChampionAnimationController.GetNormalizedTime() < PullCutOffTime)
+        if (statusNetworked == Status.UNIQUE1 && ChampionAnimationController.GetNormalizedTime() < TransformPullCutOffTime)
         {
             crowdControlBox = TransformPullCrowdControlBox;
             crowdControlStrength = TransformPullStrength;
@@ -71,7 +71,7 @@ public class GroundElemental : ElementalChampion
         }    
         else if (statusNetworked == Status.UNIQUE1)
         {
-            if (ChampionAnimationController.GetNormalizedTime() < PullCutOffTime) //Pulling
+            if (ChampionAnimationController.GetNormalizedTime() < TransformPullCutOffTime) //Pulling
             {
                 BoxCollider2D crowdControlBox = TransformPullCrowdControlBox;
                 Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1903673249240770408}
   - component: {fileID: 1691030093680635915}
   - component: {fileID: 7457603977302645292}
-  - component: {fileID: 740047902202919802}
+  - component: {fileID: 4190483842875011737}
   m_Layer: 0
-  m_Name: Arrow
+  m_Name: Dart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,11 +55,11 @@ MonoBehaviour:
   AoiPositionSource: {fileID: 0}
   Flags: 2305
   NetworkGuid:
-    RawGuidValue: 15846bf2657c9fa468b1e3291d9fb728
+    RawGuidValue: 40c2dbc389d8b39418feb2d54199005f
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 1691030093680635915}
-  - {fileID: 740047902202919802}
+  - {fileID: 4190483842875011737}
   SimulationBehaviours: []
 --- !u!114 &1691030093680635915
 MonoBehaviour:
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.11301792, y: 0.0491611}
+  m_Offset: {x: 0.1630292, y: 0.024155676}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -133,9 +133,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.7268264, y: 0.11610271}
+  m_Size: {x: 2.826849, y: 1.4464024}
   m_EdgeRadius: 0
---- !u!114 &740047902202919802
+--- !u!114 &4190483842875011737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2609174608360895674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e55bb8099797a4646b5ccf0dd8e0227a, type: 3}
+  m_Script: {fileID: 11500000, guid: ea7645f845097694c98655befff71bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
@@ -236,7 +236,7 @@ SpriteRenderer:
   m_SortingLayerID: 1283403327
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7436118634893900572, guid: 876b43f2fc438fa478dad8bba17369c1, type: 3}
+  m_Sprite: {fileID: 2627734113763467003, guid: ea89fe9655fe82442a1dcb0fd26a1262, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -257,7 +257,7 @@ Animator:
   m_GameObject: {fileID: 5735799083667572303}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0a947517c15ed8a44aea3452987e08f7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1c8edbd3d8404534389eabefbb07b53e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
