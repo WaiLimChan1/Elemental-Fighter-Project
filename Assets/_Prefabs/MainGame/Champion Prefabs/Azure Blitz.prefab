@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  Collider: {fileID: 0}
   _healthNetworked: 0
   maxHealth: 500
   maxMana: 500
@@ -271,11 +272,11 @@ MonoBehaviour:
   _tookHitNetworked: 0
   tookHit: 0
   dead: 0
-  moveSpeed: 17
-  airMoveSpeed: 12
+  moveSpeed: 20
+  airMoveSpeed: 15
   rollMoveSpeed: 27
   blockPercentage: 0.8
-  jumpForce: 20
+  jumpForce: 22
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 128
