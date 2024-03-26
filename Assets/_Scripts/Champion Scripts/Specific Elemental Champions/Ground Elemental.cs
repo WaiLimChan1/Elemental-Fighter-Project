@@ -16,7 +16,6 @@ public class GroundElemental : ElementalChampion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
-
     protected override void TakeInput()
     {
         base.TakeInput();
@@ -37,7 +36,8 @@ public class GroundElemental : ElementalChampion
     //Attack Logic
     public override void DealDamageToVictim(Champion enemy, float damage)
     {
-        if (statusNetworked == Status.SPECIAL_ATTACK || statusNetworked == Status.UNIQUE1) enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        if (statusNetworked == Status.SPECIAL_ATTACK || statusNetworked == Status.UNIQUE1) 
+            enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
         else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 

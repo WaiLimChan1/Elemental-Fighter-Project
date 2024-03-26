@@ -16,6 +16,13 @@ public class LightningElemental : ElementalChampion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
+    public override void DealDamageToVictim(Champion enemy, float damage)
+    {
+        if (statusNetworked == Status.AIR_ATTACK || statusNetworked == Status.SPECIAL_ATTACK || statusNetworked == Status.UNIQUE1)
+            enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+    }
+
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;
