@@ -7,10 +7,14 @@ public class LeafElemental : ElementalChampion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
-    [Header("Ground Monk Variables")]
+    [Header("Leaf Elemental Variables")]
     [SerializeField] protected BoxCollider2D SpecialAttackPullCrowdControlBox;
     [SerializeField] protected float SpecialAttackPullStrength = 2.0f;
     private const float SpecialAttackPullCutOffTime = 27.0f / 35.0f;
+
+    [SerializeField] protected BoxCollider2D TransformAttackCrowdControlBox;
+    [SerializeField] protected float TransformAttackKnockUpStrength = 20.0f;
+    private const float TransformAttackKnockUpCutOffTime = 26.0f / 36.0f;
 
     [Header("Dart Variables")]
     [SerializeField] private NetworkPrefabRef DartPrefab;
@@ -41,6 +45,11 @@ public class LeafElemental : ElementalChampion
             crowdControlBox = SpecialAttackPullCrowdControlBox;
             crowdControlStrength = SpecialAttackPullStrength;
         }
+        else if (statusNetworked == Status.UNIQUE1 && ChampionAnimationController.GetNormalizedTime() < TransformAttackKnockUpCutOffTime)
+        {
+            crowdControlBox = TransformAttackCrowdControlBox;
+            crowdControlStrength = CrowdControlStrength[index];
+        }
         else
         {
             crowdControlBox = AttackBoxes[index];
@@ -69,6 +78,13 @@ public class LeafElemental : ElementalChampion
             {
                 enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 3, crowdControlStrength));
             }
+        }
+        else if (statusNetworked == Status.UNIQUE1)
+        {
+            if (ChampionAnimationController.GetNormalizedTime() < TransformAttackKnockUpCutOffTime) //Knock Up
+                enemy.AddVelocity(new Vector2(0, TransformAttackKnockUpStrength));
+            else //slam
+                enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
         }
     }
 

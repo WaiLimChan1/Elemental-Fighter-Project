@@ -93,11 +93,7 @@ public class WindElemental : ElementalChampion
 
         if (statusNetworked == Status.ATTACK1) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
         else if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
-        else if (statusNetworked == Status.SPECIAL_ATTACK)
-        {
-            enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
-            Debug.Log(ChampionAnimationController.GetNormalizedTime());
-        }
+        else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
         else if (statusNetworked == Status.UNIQUE1)
         {
             if (enemy.transform.position.x < transform.position.x) enemy.AddVelocity(new Vector2(-1 * crowdControlStrength, crowdControlStrength));
