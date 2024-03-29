@@ -64,7 +64,8 @@ public class LeafRanger : Champion
         float direction = 1;
         if (isFacingLeftNetworked) direction *= -1;
 
-        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
+        if (statusNetworked == Status.ATTACK1) enemy.SetVelocity(new Vector2(direction * crowdControlStrength, 0));
+        else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength/2));
     }
 
     public override void AnimationTriggerProjectileSpawn()

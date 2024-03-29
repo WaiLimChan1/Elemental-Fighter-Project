@@ -7,7 +7,10 @@ public class AzureBlitz : Champion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
     [Header("Azure Blitz Variables")]
-    [SerializeField] private float dashSpeed = 30;
+    [SerializeField] private float airAttackDashSpeed = 30;
+
+    private const float airAttackDashStartTime = 2.0f / 8.0f;
+    private const float airAttackDashEndTime = 6.0f / 8.0f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -19,7 +22,8 @@ public class AzureBlitz : Champion
         float direction = 1;
         if (isFacingLeftNetworked) direction *= -1;
 
-        if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
+        if (statusNetworked == Status.AIR_ATTACK) enemy.SetVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength));
+        else if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
         else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,10 +36,10 @@ public class AzureBlitz : Champion
     {
         base.UpdatePosition();
         if (statusNetworked == Status.AIR_ATTACK &&
-            ChampionAnimationController.GetNormalizedTime() >= 2.0f / 8.0f &&
-            ChampionAnimationController.GetNormalizedTime() <= 5.0f / 8.0f)
+            ChampionAnimationController.GetNormalizedTime() >= airAttackDashStartTime &&
+            ChampionAnimationController.GetNormalizedTime() < airAttackDashEndTime)
         {
-            float xChange = dashSpeed * Time.fixedDeltaTime;
+            float xChange = airAttackDashSpeed * Time.fixedDeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
 
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);

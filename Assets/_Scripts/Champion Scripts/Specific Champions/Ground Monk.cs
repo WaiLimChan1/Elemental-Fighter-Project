@@ -54,16 +54,6 @@ public class GroundMonk : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
-    public override int GetAttackBoxIndex()
-    {
-        if (statusNetworked == Status.AIR_ATTACK) return 0;
-        else if (statusNetworked == Status.ATTACK1) return 1;
-        else if (statusNetworked == Status.ATTACK2) return 2;
-        else if (statusNetworked == Status.ATTACK3) return 3;
-        else if (statusNetworked == Status.SPECIAL_ATTACK) return 4;
-        else return -1;
-    }
-
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;
@@ -76,8 +66,8 @@ public class GroundMonk : Champion
             BoxCollider2D crowdControlBox = SpecialAttackCrowdControlBox;
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
 
-            if (enemy.transform.position.x < center.x) enemy.AddVelocity(new Vector2(crowdControlStrength, 0));
-            else enemy.AddVelocity(new Vector2(-1 * crowdControlStrength, 0));
+            if (enemy.transform.position.x < center.x) enemy.SetVelocity(new Vector2(crowdControlStrength, 0));
+            else enemy.SetVelocity(new Vector2(-1 * crowdControlStrength, 0));
         }
     }
 

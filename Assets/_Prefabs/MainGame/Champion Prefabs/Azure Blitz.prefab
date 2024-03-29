@@ -301,12 +301,12 @@ MonoBehaviour:
   - 20
   - 50
   CrowdControlStrength:
-  - 0
+  - 15
   - 0
   - 10
   - 0
   - 15
-  dashSpeed: 30
+  airAttackDashSpeed: 30
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +574,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 4.2736015, y: -0.31292868}
+  m_Offset: {x: 3.0916529, y: -0.21554446}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -584,7 +584,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.6943896, y: 3.162303}
+  m_Size: {x: 4.8363285, y: 1.2362573}
   m_EdgeRadius: 0
 --- !u!1 &5434413564875323202
 GameObject:
@@ -799,7 +799,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.9264947, y: -0.010635048}
+  m_Offset: {x: 1.8507522, y: 0.021827012}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -809,7 +809,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.3438013, y: 1.6815}
+  m_Size: {x: 2.1923168, y: 0.9240653}
   m_EdgeRadius: 0
 --- !u!1001 &1402819715383663719
 PrefabInstance:

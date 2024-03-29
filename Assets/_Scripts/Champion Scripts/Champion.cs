@@ -98,13 +98,51 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Networked] private float inAirHorizontalMovementNetworked { get; set; }
     [SerializeField] private float inAirHorizontalMovement;
 
+
+    private const float inAirRayCastBuffer = 0.01f;
+    private const float sideRayCastOffSetModifier = 1f/4f;
     [SerializeField] protected bool inAir 
     {
-        get 
+        get
         {
-            Vector2 position = new Vector2(transform.position.x, transform.position.y) + Collider.offset;
-            return !Physics2D.Raycast(position, Vector2.down, Collider.size.y / 2 + 0.01f, WhatIsGround); 
+            float sideRayCastOffSet = Collider.size.x * sideRayCastOffSetModifier;
+            float rayCastDistance = Collider.size.y / 2 + inAirRayCastBuffer;
+
+            Vector2 centerPosition = new Vector2(transform.position.x, transform.position.y) + Collider.offset;
+            Vector2 leftPosition = new Vector2(transform.position.x - sideRayCastOffSet, transform.position.y) + Collider.offset;
+            Vector2 rightPosition = new Vector2(transform.position.x + sideRayCastOffSet, transform.position.y) + Collider.offset;
+
+
+            return !Physics2D.Raycast(centerPosition, Vector2.down, rayCastDistance, WhatIsGround) && 
+                   !Physics2D.Raycast(leftPosition, Vector2.down, rayCastDistance, WhatIsGround) &&
+                   !Physics2D.Raycast(rightPosition, Vector2.down, rayCastDistance, WhatIsGround); 
         } 
+    }
+
+    private void OnDrawGizmosInAirRayCast()
+    {
+        if (inAir) Gizmos.color = Color.red;
+        else Gizmos.color = Color.green;
+
+        float sideRayCastOffSet = Collider.size.x * sideRayCastOffSetModifier;
+        float rayCastDistance = Collider.size.y / 2 + inAirRayCastBuffer;
+
+        Vector2 centerPosition = new Vector2(transform.position.x, transform.position.y) + Collider.offset;
+        Vector2 leftPosition = new Vector2(transform.position.x - sideRayCastOffSet, transform.position.y) + Collider.offset;
+        Vector2 rightPosition = new Vector2(transform.position.x + sideRayCastOffSet, transform.position.y) + Collider.offset;
+
+
+        if (!Physics2D.Raycast(centerPosition, Vector2.down, rayCastDistance, WhatIsGround)) Gizmos.color = Color.red;
+        else Gizmos.color = Color.green;
+        Gizmos.DrawLine(centerPosition, new Vector2(centerPosition.x, centerPosition.y - rayCastDistance));
+
+        if (!Physics2D.Raycast(leftPosition, Vector2.down, rayCastDistance, WhatIsGround)) Gizmos.color = Color.red;
+        else Gizmos.color = Color.green;
+        Gizmos.DrawLine(leftPosition, new Vector2(leftPosition.x, leftPosition.y - rayCastDistance));
+
+        if (!Physics2D.Raycast(rightPosition, Vector2.down, rayCastDistance, WhatIsGround)) Gizmos.color = Color.red;
+        else Gizmos.color = Color.green;
+        Gizmos.DrawLine(rightPosition, new Vector2(rightPosition.x, rightPosition.y - rayCastDistance));
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -449,7 +487,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (statusNetworked == Status.JUMP_UP)
         {
             //Jumping up from the ground
-            if (!inAir)
+            if (!inAir && Rigid.velocity.y < 0.05)
             {
                 Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + jumpForce);
             }
@@ -515,9 +553,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     protected virtual void OnDrawGizmos()
     {
-        if (inAir) Gizmos.color = Color.red;
-        else Gizmos.color = Color.green;
-        Vector2 position = new Vector2(transform.position.x, transform.position.y) + Collider.offset;
-        Gizmos.DrawLine(position, new Vector2(position.x, position.y - Collider.size.y / 2 + 0.01f));
+        OnDrawGizmosInAirRayCast();
     }
 }
