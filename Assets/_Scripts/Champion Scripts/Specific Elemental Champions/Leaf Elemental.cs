@@ -26,6 +26,7 @@ public class LeafElemental : ElementalChampion
     [SerializeField] private NetworkPrefabRef JavelinPrefab;
     [SerializeField] private Transform JavelinSpawnPoint;
     [SerializeField] private float JavelinSpeed = 45;
+    [SerializeField] private float JavelinCCStrength = 15;
     [SerializeField] private float JavelinLifeTime = 5;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -101,9 +102,9 @@ public class LeafElemental : ElementalChampion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.ATTACK1)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DartPrefab, DartSpawnPoint, DartSpeed, AttackDamages[1], DartLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DartPrefab, DartSpawnPoint, DartSpeed, AttackDamages[1], 0, DartLifeTime);
         else if (statusNetworked == Status.ATTACK2) 
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, JavelinPrefab, JavelinSpawnPoint, JavelinSpeed, AttackDamages[2], JavelinLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, JavelinPrefab, JavelinSpawnPoint, JavelinSpeed, AttackDamages[2], JavelinCCStrength, JavelinLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

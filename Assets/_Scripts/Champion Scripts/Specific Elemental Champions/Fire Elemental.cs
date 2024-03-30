@@ -1,3 +1,4 @@
+using Fusion;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,14 @@ public class FireElemental : ElementalChampion
 
     private const float attack3DashStartTime = 1.0f / 10.0f;
     private const float attack3DashEndTime = 6.0f / 10.0f;
+
+    [Header("Fire Ball Variables")]
+    [SerializeField] private NetworkPrefabRef FireBallPrefab;
+    [SerializeField] private Transform FireBallSpawnPoint;
+    [SerializeField] private float FireBallSpeed = 45;
+    [SerializeField] private float FireBallDamage = 30;
+    [SerializeField] private float FireBallCCStrength = 15;
+    [SerializeField] private float FireBallLifeTime = 5;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -82,6 +91,14 @@ public class FireElemental : ElementalChampion
 
             Rigid.velocity = new Vector3(direction * attack3DashForce, 0, 0);
         }
+    }
+
+    public override void AnimationTriggerProjectileSpawn()
+    {
+        if (!Runner.IsServer) return;
+
+        if (statusNetworked == Status.UNIQUE2)
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, FireBallPrefab, FireBallSpawnPoint, FireBallSpeed, FireBallDamage, FireBallCCStrength, FireBallLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

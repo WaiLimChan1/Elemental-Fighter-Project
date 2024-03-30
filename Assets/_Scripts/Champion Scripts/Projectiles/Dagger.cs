@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Dagger : Projectile
+public class Dagger : StickyProjectile
 {
 
 }

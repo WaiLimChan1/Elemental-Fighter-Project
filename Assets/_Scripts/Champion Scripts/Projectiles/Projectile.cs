@@ -10,7 +10,7 @@ public class Projectile : NetworkBehaviour
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Static Projectile Spawn Functions
     public static void SpawnProjectileHorizontal(NetworkRunner Runner, Champion owner, bool isFacingLeft,
-                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float lifeTime)
+                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float ccStrength, float lifeTime)
     {
         var Projectile = Runner.Spawn(projectilePrefab, SpawnPoint.position, Quaternion.identity);
 
@@ -18,11 +18,11 @@ public class Projectile : NetworkBehaviour
         if (isFacingLeft) velocity = new Vector2(-1 * speed, 0);
         else velocity = new Vector2(1 * speed, 0);
 
-        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, lifeTime);
+        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, ccStrength, lifeTime);
     }
 
     public static void SpawnProjectileDiagonal(NetworkRunner Runner, Champion owner, bool isFacingLeft,
-                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float lifeTime)
+                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float ccStrength, float lifeTime)
     {
         NetworkObject Projectile;
 
@@ -34,7 +34,7 @@ public class Projectile : NetworkBehaviour
         else velocity = new Vector2(Mathf.Cos(-45 * Mathf.Deg2Rad), Mathf.Sin(-45 * Mathf.Deg2Rad));
         velocity = velocity.normalized * speed;
 
-        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, lifeTime);
+        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, ccStrength, lifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -50,22 +50,19 @@ public class Projectile : NetworkBehaviour
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Projectile Variables
-    [SerializeField][Networked] private Champion owner { get; set; }
-    [SerializeField][Networked] private NetworkObject StuckTarget { get; set; }
-    [SerializeField] private BoxCollider2D HitBox;
-    [SerializeField] private SpriteRenderer SpriteRenderer;
+    [SerializeField][Networked] protected Champion owner { get; set; }
+    [SerializeField] protected BoxCollider2D HitBox;
+    [SerializeField] protected SpriteRenderer SpriteRenderer;
+    [SerializeField] protected Animator Animator;
 
-    [SerializeField][Networked] private bool flying { get; set; }
-    [SerializeField][Networked] private bool isFacingLeft { get; set; }
-    [SerializeField][Networked] private Vector2 velocity { get; set; }
-    [SerializeField] private float damage;
+    [SerializeField][Networked] protected bool flying { get; set; }
+    [SerializeField][Networked] protected bool isFacingLeft { get; set; }
+    [SerializeField][Networked] protected Vector2 velocity { get; set; }
+    [SerializeField] protected float damage;
+    [SerializeField] protected float crowdControlStrength;
 
-    [SerializeField][Networked] private float stuckYRotation { get; set; }
-    [SerializeField][Networked] private float stuckZRotation { get; set; }
-    [SerializeField][Networked] private Vector3 stuckLocalPosition { get; set; }
-
-    [SerializeField][Networked] private float lifeTime { get; set; }
-    [SerializeField][Networked] private TickTimer remainingLifeTime { get; set; }
+    [SerializeField][Networked] protected float lifeTime { get; set; }
+    [SerializeField][Networked] protected TickTimer remainingLifeTime { get; set; }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -75,15 +72,17 @@ public class Projectile : NetworkBehaviour
     {
         HitBox = GetComponent<BoxCollider2D>();
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        Animator = GetComponentInChildren<Animator>();
     }
 
-    public void SetUp(Champion owner, Vector2 velocity, float damage, float lifeTime)
+    public void SetUp(Champion owner, Vector2 velocity, float damage, float ccStrength, float lifeTime)
     {
         flying = true;
         this.owner = owner;
         this.velocity = velocity;
         this.isFacingLeft = owner.isFacingLeftNetworked;
         this.damage = damage;
+        this.crowdControlStrength = ccStrength;
         this.lifeTime = lifeTime;
         remainingLifeTime = TickTimer.CreateFromSeconds(Runner, lifeTime);
     }
@@ -92,65 +91,31 @@ public class Projectile : NetworkBehaviour
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Stuck Logic
-    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
-    public void RPC_StuckOntoChampion(Champion enemy)
+    //Projectile Logic
+    public virtual void HitChampion(Champion enemy) 
     {
-        if (enemy == null) return;
-
         flying = false;
-        remainingLifeTime = TickTimer.CreateFromSeconds(Runner, lifeTime);
-        StuckTarget = enemy.GetComponent<NetworkObject>();
-        gameObject.transform.parent = StuckTarget.GetComponent<Champion>().AttackBoxesParent;
-
-        stuckYRotation = enemy.isFacingLeftNetworked ? 180 : 0;
-        stuckZRotation = transform.rotation.eulerAngles.z + Random.Range(championStuckRotationRange.x, championStuckRotationRange.y);
-        stuckLocalPosition = gameObject.transform.localPosition;
+        enemy.TakeDamageNetworked(damage, isFacingLeft);
+        ApplyCrowdControl(enemy, crowdControlStrength);
+    }
+    public virtual void HitEnvironment(NetworkObject collided) 
+    { 
+        flying = false; 
     }
 
-    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
-    public void RPC_StuckOntoEnvironment(NetworkObject networkObject)
+    public virtual void ApplyCrowdControl(Champion enemy, float CrowdControlStrength)
     {
-        if (networkObject == null) return;
+        float direction = 1;
+        if (isFacingLeft) direction *= -1;
 
-        flying = false;
-        remainingLifeTime = TickTimer.CreateFromSeconds(Runner, lifeTime);
-        StuckTarget = networkObject;
-        gameObject.transform.parent = networkObject.transform;
-
-        stuckYRotation = 0;
-        stuckZRotation = transform.rotation.eulerAngles.z + Random.Range(environmentStuckRotationRange.x, environmentStuckRotationRange.y);
-        stuckLocalPosition = gameObject.transform.localPosition;
+        enemy.AddVelocity(new Vector2(direction * CrowdControlStrength, CrowdControlStrength / 2));
     }
 
-    public void FixStuck()
-    {
-        //Stopped flying but not properly stuck
-        if (!flying && gameObject.transform.parent == null)
-        {
-            //Stuck to a champion
-            if (StuckTarget.GetComponent<Champion>() != null)
-                gameObject.transform.parent = StuckTarget.GetComponent<Champion>().AttackBoxesParent;
-
-            //Stuck to a champion
-            if (StuckTarget.GetComponent<Environment>() != null)
-                gameObject.transform.parent = StuckTarget.transform;
-        }
-
-        //Move to stuck position
-        if (!flying)
-        {
-            gameObject.GetComponent<NetworkTransform>().enabled = false;
-            gameObject.transform.localPosition = stuckLocalPosition;
-            gameObject.transform.localRotation = Quaternion.Euler(0, stuckYRotation, stuckZRotation);
-            gameObject.GetComponent<NetworkTransform>().InterpolationTarget.transform.localPosition = new Vector3(0, 0, 0);
-        }
-    }
-    //---------------------------------------------------------------------------------------------------------------------------------------------
+    public virtual bool ShouldDespawn() { return remainingLifeTime.ExpiredOrNotRunning(Runner);  }
 
     public override void FixedUpdateNetwork()
     {
-        if (remainingLifeTime.ExpiredOrNotRunning(Runner))
+        if (ShouldDespawn())
         {
             Runner.Despawn(this.Object);
             return;
@@ -170,8 +135,7 @@ public class Projectile : NetworkBehaviour
                     Champion enemy = collider.GetComponent<Champion>();
                     if (enemy != null && enemy != owner && enemy.healthNetworked > 0 && enemy.statusNetworked != Champion.Status.ROLL)
                     {
-                        enemy.TakeDamageNetworked(damage, isFacingLeft);
-                        RPC_StuckOntoChampion(enemy);
+                        HitChampion(enemy);
                         break;
                     }
                 }
@@ -182,13 +146,13 @@ public class Projectile : NetworkBehaviour
                     colliders = Physics2D.OverlapBoxAll(HitBox.bounds.center, HitBox.bounds.size, HitBox.transform.eulerAngles.z, LayerMask.GetMask("Ground"));
                     if (colliders.Length > 0)
                     {
-                        RPC_StuckOntoEnvironment(colliders[0].GetComponentInParent<NetworkObject>());
+                        HitEnvironment(colliders[0].GetComponentInParent<NetworkObject>());
                     }
                 }
             }
         }
-        FixStuck();
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
     public override void Render()
     {

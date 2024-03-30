@@ -110,9 +110,9 @@ public class LeafRanger : Champion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.ATTACK2)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowSpawnSpot, ArrowSpeed, AttackDamages[2], ArrowLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowSpawnSpot, ArrowSpeed, AttackDamages[2], 0, ArrowLifeTime);
         else if (statusNetworked == Status.AIR_ATTACK)
-            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowAirSpawnSpot, ArrowSpeed, AttackDamages[0], ArrowLifeTime);
+            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowAirSpawnSpot, ArrowSpeed, AttackDamages[0], 0, ArrowLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

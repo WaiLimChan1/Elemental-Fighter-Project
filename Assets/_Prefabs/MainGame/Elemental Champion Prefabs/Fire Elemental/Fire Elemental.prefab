@@ -313,6 +313,11 @@ MonoBehaviour:
   - 15
   attack3DashForce: 15
   attack3DashSpeed: 30
+  FireBallPrefab:
+    RawGuidValue: d06b2156284836d4e8e89c969d533cf9
+  FireBallSpawnPoint: {fileID: 1355959236689213157}
+  FireBallSpeed: 45
+  FireBallLifeTime: 5
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +519,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd8aa429cdea8a4f93e3cc52e5a3b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3561016651362001791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355959236689213157}
+  m_Layer: 0
+  m_Name: Fire Ball Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1355959236689213157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3561016651362001791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.6, y: 2.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6256216711447502986}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4292126272291263189
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +663,7 @@ Transform:
   - {fileID: 921078392087961659}
   - {fileID: 2260821690028684205}
   - {fileID: 3209778176617633054}
+  - {fileID: 1355959236689213157}
   m_Father: {fileID: 1826438594544848021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6661146326101529773

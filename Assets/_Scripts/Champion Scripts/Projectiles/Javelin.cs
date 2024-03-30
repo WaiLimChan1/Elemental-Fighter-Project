@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Javelin : Projectile
+public class Javelin : StickyProjectile
 {
 
 }
