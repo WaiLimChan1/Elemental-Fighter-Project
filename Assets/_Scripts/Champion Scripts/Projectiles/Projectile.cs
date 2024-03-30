@@ -41,14 +41,6 @@ public class Projectile : NetworkBehaviour
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Static Stuck Rotation Range
-    static Vector2 championStuckRotationRange = new Vector2(-30, 30);
-    static Vector2 environmentStuckRotationRange = new Vector2(-5, 5);
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Projectile Variables
     [SerializeField][Networked] protected Champion owner { get; set; }
     [SerializeField] protected BoxCollider2D HitBox;
@@ -68,6 +60,7 @@ public class Projectile : NetworkBehaviour
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Projectile Initialization
     public override void Spawned()
     {
         HitBox = GetComponent<BoxCollider2D>();
