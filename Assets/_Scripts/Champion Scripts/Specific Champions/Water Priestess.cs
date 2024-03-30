@@ -21,6 +21,11 @@ public class WaterPriestess : Champion
     //Status.UNIQUE2 : Meditation
     //Status.UNIQUE3 : Water_Slide
 
+    protected override bool LoopingAnimationStatus(Status status)
+    {
+        return base.LoopingAnimationStatus(status) || status == Status.UNIQUE2;
+    }
+
     protected override bool SingleAnimationStatus()
     {
         return (base.SingleAnimationStatus() ||

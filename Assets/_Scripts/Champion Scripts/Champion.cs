@@ -186,6 +186,13 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Different Types Of Statuses
+    protected virtual bool LoopingAnimationStatus(Status status)
+    {
+        return (status == Status.IDLE || status == Status.RUN || 
+            status == Status.JUMP_UP || status == Status.JUMP_DOWN || 
+            status == Status.DEFEND);
+    }
+
     protected virtual bool SingleAnimationStatus()
     {
         return (status == Status.ROLL ||
@@ -471,9 +478,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             if (tookHitNetworked) ChampionAnimationController.RestartAnimation(); //Restart take hit animation
             tookHitNetworked = false;
         }
-
-        if (ChampionAnimationController.AnimationFinished())
-            ChampionAnimationController.RestartAnimation();
     }
 
     protected virtual void UpdatePosition()
@@ -526,17 +530,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     public void LateUpdate()
     {
-        //Make sure animations don't loop
-        if (ChampionAnimationController.AnimationFinished())
+        //Make sure looping animations do not go over normalizedtime > 1. Because if that happens, Unity animator will fail to swap states (Unity Bug?).
+        if (LoopingAnimationStatus((Champion.Status)ChampionAnimationController.GetAnimatorStatus()) && ChampionAnimationController.AnimationFinished())
         {
-            Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
-            Status temp = status; 
-            status = lastStatus;
-            if (SingleAnimationStatus())
-            {
-                ChampionAnimationController.ChangeAnimation((int)Status.IDLE);
-            }
-            status = temp;
+            ChampionAnimationController.RestartAnimation();
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -555,5 +552,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     protected virtual void OnDrawGizmos()
     {
         OnDrawGizmosInAirRayCast();
+
+        if (LoopingAnimationStatus((Champion.Status)ChampionAnimationController.GetAnimatorStatus()) && ChampionAnimationController.AnimationFinished())
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, 0.5f);
+        }
     }
 }

@@ -42,7 +42,7 @@ public class WindElemental : ElementalChampion
             return;
         }
 
-        //Water Elemental does not have Defend
+        //Wind Elemental does not have Defend
         if (status == Status.BEGIN_DEFEND || status == Status.DEFEND) status = Status.IDLE;
 
         if (!inAir && InterruptableStatus())

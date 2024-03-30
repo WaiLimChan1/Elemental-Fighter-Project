@@ -9,13 +9,18 @@ public class GroundMonk : Champion
     [Header("Ground Monk Variables")]
     [SerializeField] protected BoxCollider2D SpecialAttackCrowdControlBox;
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    
-    
-    
+
+
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE1 : Begin_Meditation
     //Status.UNIQUE2 : Meditation
+    protected override bool LoopingAnimationStatus(Status status)
+    {
+        return base.LoopingAnimationStatus(status) || status == Status.UNIQUE2;
+    }
+
     protected override bool InterruptableStatus()
     {
         return (base.InterruptableStatus() ||
