@@ -76,7 +76,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] protected float rollMoveSpeed = 25;
 
     [SerializeField] private float blockPercentage = 0.8f;
-    [SerializeField] private float crowdControlBlockPercentage = 0f; 
+    [SerializeField] private float crowdControlBlockPercentage = 0f;
+
+
+     [SerializeField] private int roundKills = 0;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -312,7 +315,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     {
         if (healthNetworked <= 0)
         {
-            dead = true;
+            dead = true; 
+
+            //Check the last player that hit the Champion...?
 
             Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
             if (lastStatus != Status.BEGIN_DEATH && lastStatus != Status.FINISHED_DEATH) status = Status.BEGIN_DEATH;
@@ -392,8 +397,16 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     public virtual void DealDamageToVictim(Champion enemy, float damage)
     {
-        enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
-    }
+        enemy.TakeDamageNetworked(damage, isFacingLeftNetworked); 
+        //Debug.Log(roundKills);
+        if (enemy.healthNetworked <= 0)
+          {
+               roundKills += 1;
+               Debug.Log(roundKills);
+               //Increment stats in Playfab by 1 (WILL REWORK WHEN ROUNDS ARE WORKING)
+          }
+
+     }
 
     public virtual int GetAttackBoxIndex()
     {
