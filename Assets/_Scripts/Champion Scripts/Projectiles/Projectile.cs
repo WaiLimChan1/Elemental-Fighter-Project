@@ -70,6 +70,7 @@ public class Projectile : NetworkBehaviour
 
 
 
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     public override void Spawned()
     {
         HitBox = GetComponent<BoxCollider2D>();
@@ -86,7 +87,12 @@ public class Projectile : NetworkBehaviour
         this.lifeTime = lifeTime;
         remainingLifeTime = TickTimer.CreateFromSeconds(Runner, lifeTime);
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Stuck Logic
     [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
     public void RPC_StuckOntoChampion(Champion enemy)
     {
@@ -116,6 +122,31 @@ public class Projectile : NetworkBehaviour
         stuckZRotation = transform.rotation.eulerAngles.z + Random.Range(environmentStuckRotationRange.x, environmentStuckRotationRange.y);
         stuckLocalPosition = gameObject.transform.localPosition;
     }
+
+    public void FixStuck()
+    {
+        //Stopped flying but not properly stuck
+        if (!flying && gameObject.transform.parent == null)
+        {
+            //Stuck to a champion
+            if (StuckTarget.GetComponent<Champion>() != null)
+                gameObject.transform.parent = StuckTarget.GetComponent<Champion>().AttackBoxesParent;
+
+            //Stuck to a champion
+            if (StuckTarget.GetComponent<Environment>() != null)
+                gameObject.transform.parent = StuckTarget.transform;
+        }
+
+        //Move to stuck position
+        if (!flying)
+        {
+            gameObject.GetComponent<NetworkTransform>().enabled = false;
+            gameObject.transform.localPosition = stuckLocalPosition;
+            gameObject.transform.localRotation = Quaternion.Euler(0, stuckYRotation, stuckZRotation);
+            gameObject.GetComponent<NetworkTransform>().InterpolationTarget.transform.localPosition = new Vector3(0, 0, 0);
+        }
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
     public override void FixedUpdateNetwork()
     {
@@ -156,27 +187,7 @@ public class Projectile : NetworkBehaviour
                 }
             }
         }
-
-        //Stopped flying but not properly stuck
-        if (!flying && gameObject.transform.parent == null)
-        {
-            //Stuck to a champion
-            if (StuckTarget.GetComponent<Champion>() != null)
-                gameObject.transform.parent = StuckTarget.GetComponent<Champion>().AttackBoxesParent;
-
-            //Stuck to a champion
-            if (StuckTarget.GetComponent<Environment>() != null)
-                gameObject.transform.parent = StuckTarget.transform;
-        }
-
-        //Move to stuck position
-        if (!flying)
-        {
-            gameObject.GetComponent<NetworkTransform>().enabled = false;
-            gameObject.transform.localPosition = stuckLocalPosition;
-            gameObject.transform.localRotation = Quaternion.Euler(0, stuckYRotation, stuckZRotation);
-            gameObject.GetComponent<NetworkTransform>().InterpolationTarget.transform.localPosition = new Vector3(0, 0, 0);
-        }
+        FixStuck();
     }
 
     public override void Render()
