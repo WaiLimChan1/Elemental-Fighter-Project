@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class FireBall : Projectile
 {
-    public override void HitChampion(Champion enemy) 
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public override void RPC_HitChampion(Champion enemy) 
     {
-        base.HitChampion(enemy);
+        base.RPC_HitChampion(enemy);
         Animator.SetTrigger("Hit");
     }
-    public override void HitEnvironment(NetworkObject collided) 
+
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public override void RPC_HitEnvironment(NetworkObject collided) 
     {
-        base.HitEnvironment(collided);
+        base.RPC_HitEnvironment(collided);
         Animator.SetTrigger("Hit");
     }
 

@@ -92,13 +92,16 @@ public class Projectile : NetworkBehaviour
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Projectile Logic
-    public virtual void HitChampion(Champion enemy) 
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public virtual void RPC_HitChampion(Champion enemy) 
     {
         flying = false;
         enemy.TakeDamageNetworked(damage, isFacingLeft);
         ApplyCrowdControl(enemy, crowdControlStrength);
     }
-    public virtual void HitEnvironment(NetworkObject collided) 
+
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public virtual void RPC_HitEnvironment(NetworkObject collided) 
     { 
         flying = false; 
     }
@@ -135,7 +138,7 @@ public class Projectile : NetworkBehaviour
                     Champion enemy = collider.GetComponent<Champion>();
                     if (enemy != null && enemy != owner && enemy.healthNetworked > 0 && enemy.statusNetworked != Champion.Status.ROLL)
                     {
-                        HitChampion(enemy);
+                        RPC_HitChampion(enemy);
                         break;
                     }
                 }
@@ -146,7 +149,7 @@ public class Projectile : NetworkBehaviour
                     colliders = Physics2D.OverlapBoxAll(HitBox.bounds.center, HitBox.bounds.size, HitBox.transform.eulerAngles.z, LayerMask.GetMask("Ground"));
                     if (colliders.Length > 0)
                     {
-                        HitEnvironment(colliders[0].GetComponentInParent<NetworkObject>());
+                        RPC_HitEnvironment(colliders[0].GetComponentInParent<NetworkObject>());
                     }
                 }
             }

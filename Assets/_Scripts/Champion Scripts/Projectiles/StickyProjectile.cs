@@ -27,8 +27,7 @@ public class StickyProjectile : Projectile
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Stuck Logic
-    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
-    public void RPC_StuckOntoChampion(Champion enemy)
+    public void StuckOntoChampion(Champion enemy)
     {
         if (enemy == null) return;
 
@@ -41,8 +40,7 @@ public class StickyProjectile : Projectile
         stuckLocalPosition = gameObject.transform.localPosition;
     }
 
-    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
-    public void RPC_StuckOntoEnvironment(NetworkObject networkObject)
+    public void StuckOntoEnvironment(NetworkObject networkObject)
     {
         if (networkObject == null) return;
 
@@ -84,16 +82,18 @@ public class StickyProjectile : Projectile
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Projectile Logic
-    public override void HitChampion(Champion enemy)
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public override void RPC_HitChampion(Champion enemy)
     {
-        base.HitChampion(enemy);
-        RPC_StuckOntoChampion(enemy);
+        base.RPC_HitChampion(enemy);
+        StuckOntoChampion(enemy);
     }
 
-    public override void HitEnvironment(NetworkObject collided)
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public override void RPC_HitEnvironment(NetworkObject collided)
     {
-        base.HitEnvironment(collided);
-        RPC_StuckOntoEnvironment(collided);
+        base.RPC_HitEnvironment(collided);
+        StuckOntoEnvironment(collided);
     }
 
     public override void FixedUpdateNetwork()
