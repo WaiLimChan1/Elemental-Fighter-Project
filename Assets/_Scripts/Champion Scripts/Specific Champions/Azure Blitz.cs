@@ -16,6 +16,16 @@ public class AzureBlitz : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (base.UnstoppableStatusNetworked() || statusNetworked == Status.AIR_ATTACK);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {

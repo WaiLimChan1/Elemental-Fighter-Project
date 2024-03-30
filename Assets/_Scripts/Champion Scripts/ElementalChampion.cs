@@ -15,6 +15,10 @@ public class ElementalChampion : Champion
             status == Status.UNIQUE1);
     }
 
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE1);
+    }
 
     protected override void TakeInput()
     {

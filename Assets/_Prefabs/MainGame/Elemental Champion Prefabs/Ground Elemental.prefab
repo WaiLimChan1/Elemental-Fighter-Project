@@ -186,7 +186,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0488ff86598e515409981d9abb32164f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   airMoveSpeed: 10
   rollMoveSpeed: 25
   blockPercentage: 0.8
+  crowdControlBlockPercentage: 0.6
   jumpForce: 20
   WhatIsGround:
     serializedVersion: 2
@@ -298,20 +299,20 @@ MonoBehaviour:
   - {fileID: 6231907755583705766}
   AttackDamages:
   - 25
-  - 20
-  - 20
+  - 25
+  - 25
   - 15
-  - 40
+  - 20
   - 200
   CrowdControlStrength:
-  - 0
-  - 0
-  - 0
+  - 10
+  - 10
+  - 10
+  - 15
+  - 15
   - 25
-  - 5
-  - 50
   TransformPullCrowdControlBox: {fileID: 1490319553614816694}
-  TransformPullStrength: 4.5
+  TransformPullStrength: 10
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +379,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.24805403, y: 3.672431}
+  m_Offset: {x: 0.31888056, y: 3.672431}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -388,7 +389,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 18.86787, y: 12.634094}
+  m_Size: {x: 21.80029, y: 12.634094}
   m_EdgeRadius: 0
 --- !u!1 &2118379079027268337
 GameObject:
@@ -962,7 +963,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 7.3351974, y: 3.0402231}
+  m_Offset: {x: 5.1631875, y: 2.4491062}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -972,7 +973,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.108122, y: 4.9872646}
+  m_Size: {x: 13.177196, y: 3.530097}
   m_EdgeRadius: 0
 --- !u!1001 &1402819715383663719
 PrefabInstance:

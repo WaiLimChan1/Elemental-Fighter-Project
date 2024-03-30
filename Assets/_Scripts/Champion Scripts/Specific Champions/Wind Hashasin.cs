@@ -17,6 +17,16 @@ public class WindHashasin : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {

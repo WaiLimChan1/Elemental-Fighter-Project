@@ -8195,7 +8195,7 @@ TextureImporter:
         width: 288
         height: 128
       alignment: 9
-      pivot: {x: 0.5026997, y: 0.1689682}
+      pivot: {x: 0.080095924, y: 0.1689682}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8216,7 +8216,7 @@ TextureImporter:
         width: 288
         height: 128
       alignment: 9
-      pivot: {x: 0.5026997, y: 0.1689682}
+      pivot: {x: 0.07810296, y: 0.1689682}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8237,7 +8237,7 @@ TextureImporter:
         width: 288
         height: 128
       alignment: 9
-      pivot: {x: 0.5026997, y: 0.1689682}
+      pivot: {x: 0.32329306, y: 0.1689682}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8258,7 +8258,7 @@ TextureImporter:
         width: 288
         height: 128
       alignment: 9
-      pivot: {x: 0.5026997, y: 0.1689682}
+      pivot: {x: 0.7291192, y: 0.1689682}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8279,7 +8279,7 @@ TextureImporter:
         width: 288
         height: 128
       alignment: 9
-      pivot: {x: 0.5026997, y: 0.1689682}
+      pivot: {x: 0.712009, y: 0.1689682}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8300,7 +8300,7 @@ TextureImporter:
         width: 288
         height: 128
       alignment: 9
-      pivot: {x: 0.5026997, y: 0.1689682}
+      pivot: {x: 0.72994995, y: 0.1689682}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8321,7 +8321,7 @@ TextureImporter:
         width: 288
         height: 128
       alignment: 9
-      pivot: {x: 0.5026997, y: 0.1689682}
+      pivot: {x: 0.71998256, y: 0.1689682}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8342,7 +8342,7 @@ TextureImporter:
         width: 288
         height: 128
       alignment: 9
-      pivot: {x: 0.5026997, y: 0.1689682}
+      pivot: {x: 0.5924038, y: 0.1689682}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8358,7 +8358,7 @@ TextureImporter:
       name: Fire Elemental SpriteSheet_286
       rect:
         serializedVersion: 2
-        x: 6336
+        x: 6337
         y: 512
         width: 288
         height: 128

@@ -16,6 +16,13 @@ public class GroundElemental : ElementalChampion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return base.UnstoppableStatusNetworked() ||
+            statusNetworked == Status.AIR_ATTACK || statusNetworked == Status.ATTACK1 || 
+            statusNetworked == Status.ATTACK2 || statusNetworked == Status.ATTACK3;
+    }
+
     protected override void TakeInput()
     {
         base.TakeInput();
@@ -60,14 +67,17 @@ public class GroundElemental : ElementalChampion
         float direction = 1;
         if (isFacingLeftNetworked) direction *= -1;
 
-        if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
+        if (statusNetworked == Status.AIR_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength / 2));
+        else if (statusNetworked == Status.ATTACK1) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength / 2));
+        else if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
+        else if (statusNetworked == Status.ATTACK3) enemy.SetVelocity(new Vector2(0, crowdControlStrength));
         else if (statusNetworked == Status.SPECIAL_ATTACK)
         {
             BoxCollider2D crowdControlBox = AttackBoxes[4];
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
             Vector2 changeVector = new Vector2(center.x - enemy.transform.position.x, center.y - enemy.transform.position.y).normalized;
 
-            enemy.AddVelocity(changeVector * crowdControlStrength);
+            enemy.SetVelocity(changeVector * crowdControlStrength);
         }    
         else if (statusNetworked == Status.UNIQUE1)
         {
@@ -77,14 +87,15 @@ public class GroundElemental : ElementalChampion
                 Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
                 Vector2 changeVector = new Vector2(center.x - enemy.transform.position.x, center.y - enemy.transform.position.y).normalized;
 
-                enemy.AddVelocity(changeVector * crowdControlStrength);
+                enemy.SetVelocity(changeVector * crowdControlStrength);
             }
             else //Explosion
             {
                 BoxCollider2D crowdControlBox = AttackBoxes[5];
                 Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
-                Vector2 changeVector = new Vector2(enemy.transform.position.x - center.x, enemy.transform.position.y - center.y).normalized;
-                enemy.AddVelocity(changeVector * crowdControlStrength);
+
+                if (enemy.transform.position.x < transform.position.x) enemy.AddVelocity(new Vector2(-1 * crowdControlStrength, crowdControlStrength));
+                else enemy.AddVelocity(new Vector2(crowdControlStrength, crowdControlStrength));
             }
         }
     }

@@ -9,7 +9,7 @@ public class LeafElemental : ElementalChampion
     //Champion Variables
     [Header("Leaf Elemental Variables")]
     [SerializeField] protected BoxCollider2D SpecialAttackPullCrowdControlBox;
-    [SerializeField] protected float SpecialAttackPullStrength = 2.0f;
+    [SerializeField] protected float SpecialAttackPullStrength = 10f;
     private const float SpecialAttackPullCutOffTime = 27.0f / 35.0f;
 
     [SerializeField] protected BoxCollider2D TransformAttackCrowdControlBox;
@@ -62,7 +62,15 @@ public class LeafElemental : ElementalChampion
         float direction = 1;
         if (isFacingLeftNetworked) direction *= -1;
 
-        if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
+        if (statusNetworked == Status.AIR_ATTACK)
+        {
+            BoxCollider2D crowdControlBox = AttackBoxes[0];
+            Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
+
+            if (enemy.transform.position.x > center.x) enemy.SetVelocity(new Vector2(crowdControlStrength, crowdControlStrength));
+            else if (enemy.transform.position.x < center.x) enemy.SetVelocity(new Vector2(-1 * crowdControlStrength, crowdControlStrength));
+        }
+        else if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
         else if (statusNetworked == Status.SPECIAL_ATTACK)
         {
             //Special Attack Pull
@@ -71,8 +79,8 @@ public class LeafElemental : ElementalChampion
                 BoxCollider2D crowdControlBox = AttackBoxes[4];
                 Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
 
-                if (enemy.transform.position.x < center.x) enemy.AddVelocity(new Vector2(crowdControlStrength, 0));
-                else if (enemy.transform.position.x > center.x) enemy.AddVelocity(new Vector2(-1 * crowdControlStrength, 0));
+                if (enemy.transform.position.x < center.x) enemy.SetVelocity(new Vector2(crowdControlStrength, 0));
+                else if (enemy.transform.position.x > center.x) enemy.SetVelocity(new Vector2(-1 * crowdControlStrength, 0));
             }
             else //Explosion
             {

@@ -28,6 +28,11 @@ public class LightningRonin : Champion
             status == Status.UNIQUE1 || status == Status.UNIQUE2);
     }
 
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE2);
+    }
+
     protected override void TakeInput()
     {
         base.TakeInput();

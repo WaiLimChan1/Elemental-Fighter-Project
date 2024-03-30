@@ -28,6 +28,11 @@ public class WindElemental : ElementalChampion
             status == Status.UNIQUE2);
     }
 
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+    }
+
     protected override void TakeInput()
     {
         base.TakeInput();
@@ -91,8 +96,10 @@ public class WindElemental : ElementalChampion
         float direction = 1;
         if (isFacingLeftNetworked) direction *= -1;
 
-        if (statusNetworked == Status.ATTACK1) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
-        else if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
+        if (statusNetworked == Status.AIR_ATTACK) enemy.SetVelocity(new Vector2(0, crowdControlStrength));
+        else if (statusNetworked == Status.ATTACK1) enemy.SetVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength));
+        else if (statusNetworked == Status.ATTACK2) enemy.SetVelocity(new Vector2(direction * crowdControlStrength, 0));
+        else if (statusNetworked == Status.ATTACK3) enemy.SetVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength));
         else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
         else if (statusNetworked == Status.UNIQUE1)
         {

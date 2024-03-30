@@ -10,6 +10,7 @@ public class WaterPriestess : Champion
     [SerializeField] private float waterSlideSpeed = 25;
     [SerializeField] private BoxCollider2D waterSlideAttackBox;
     [SerializeField] private float waterSlideDashDamage = 5;
+    [SerializeField] private float waterSlideCCStrength = 15;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -30,6 +31,11 @@ public class WaterPriestess : Champion
     {
         return (base.InterruptableStatus() ||
             status == Status.UNIQUE1 || status == Status.UNIQUE2);
+    }
+
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE3);
     }
 
     protected override void TakeInput()
@@ -93,12 +99,27 @@ public class WaterPriestess : Champion
         }
     }
 
+    public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
+    {
+        if (statusNetworked == Status.UNIQUE3)
+        {
+            crowdControlBox = waterSlideAttackBox;
+            crowdControlStrength = waterSlideCCStrength;
+        }
+        else
+        {
+            crowdControlBox = AttackBoxes[index];
+            crowdControlStrength = CrowdControlStrength[index];
+        }
+    }
+
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {
         float direction = 1;
         if (isFacingLeftNetworked) direction *= -1;
 
-        if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
+        if (statusNetworked == Status.UNIQUE3) enemy.SetVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength));
+        else if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(0, crowdControlStrength));
         else if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength * 1 / 5, crowdControlStrength));
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------

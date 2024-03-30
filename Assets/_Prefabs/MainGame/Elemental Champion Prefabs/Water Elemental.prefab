@@ -186,7 +186,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0488ff86598e515409981d9abb32164f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -273,9 +273,10 @@ MonoBehaviour:
   tookHit: 0
   dead: 0
   moveSpeed: 30
-  airMoveSpeed: 15
+  airMoveSpeed: 20
   rollMoveSpeed: 25
   blockPercentage: 0.8
+  crowdControlBlockPercentage: 0
   jumpForce: 22
   WhatIsGround:
     serializedVersion: 2
@@ -307,9 +308,9 @@ MonoBehaviour:
   - 10
   - 10
   - 15
-  - 20
+  - 15
   - 0
-  - 35
+  - 25
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +882,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 10.349711, y: 2.20743}
+  m_Offset: {x: 10.075542, y: 2.20743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -891,7 +892,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.99494, y: 2.531147}
+  m_Size: {x: 6.5432773, y: 2.531147}
   m_EdgeRadius: 0
 --- !u!1001 &1402819715383663719
 PrefabInstance:

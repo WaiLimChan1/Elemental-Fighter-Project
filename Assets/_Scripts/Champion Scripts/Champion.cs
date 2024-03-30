@@ -1,14 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Fusion;
-using TMPro;
-using Unity.VisualScripting;
-using Unity.IO.LowLevel.Unsafe;
-using UnityEngine.UIElements;
-using System;
-using System.Reflection;
 
 public class Champion : NetworkBehaviour, IBeforeUpdate
 {
@@ -85,6 +76,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] protected float rollMoveSpeed = 25;
 
     [SerializeField] private float blockPercentage = 0.8f;
+    [SerializeField] private float crowdControlBlockPercentage = 0f; 
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -217,6 +209,12 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     protected bool InAirInterruptableStatus()
     {
         return (status == Status.JUMP_UP || status == Status.JUMP_DOWN) || InterruptableStatus();
+    }
+
+    protected virtual bool UnstoppableStatusNetworked()
+    {
+        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND ||
+            statusNetworked == Status.SPECIAL_ATTACK);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -367,7 +365,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             && ((isFacingLeftNetworked && transform.position.x > attackerPosition.x) || (!isFacingLeftNetworked && transform.position.x < attackerPosition.x)))
             damage -= damage * blockPercentage;
         else
-            tookHitNetworked = true;
+        {
+            if (!UnstoppableStatusNetworked()) tookHitNetworked = true;
+        }
 
         healthNetworked -= damage;
         if (healthNetworked < 0) healthNetworked = 0;
@@ -375,12 +375,12 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     public void AddVelocity(Vector2 velocity)
     {
-        Rigid.velocity += velocity;
+        Rigid.velocity += velocity * (1 - crowdControlBlockPercentage);
     }
 
     public void SetVelocity(Vector2 velocity)
     {
-        Rigid.velocity = velocity;
+        Rigid.velocity = velocity * (1 - crowdControlBlockPercentage);
     }
 
     public virtual void DealDamageToVictim(Champion enemy, float damage)
@@ -448,6 +448,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         }
     }
 
+    public virtual void AnimationTriggerAbilitySpawn() {}
     public virtual void AnimationTriggerProjectileSpawn() {}
     public virtual void AnimationTriggerMobility() {}
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -459,7 +460,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     private void UpdateChampionVisual()
     {
         ChampionAnimationController.Flip(isFacingLeftNetworked);
-        ChampionAnimationController.ChangeAnimation(statusNetworked);
+        ChampionAnimationController.ChangeAnimation((int)statusNetworked);
 
         //Attack Boxes And Crowd Control Boxes Flip
         if (isFacingLeftNetworked) AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
@@ -533,7 +534,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             status = lastStatus;
             if (SingleAnimationStatus())
             {
-                ChampionAnimationController.ChangeAnimation(Status.IDLE);
+                ChampionAnimationController.ChangeAnimation((int)Status.IDLE);
             }
             status = temp;
         }

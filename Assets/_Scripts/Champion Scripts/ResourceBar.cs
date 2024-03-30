@@ -29,6 +29,3 @@ public class ResourceBar : MonoBehaviour
         ManaAmountText.text = $"{(int)manaNetworked}/{(int)maxMana}";
     }
 }
-
-//Hi 
-// Hello!

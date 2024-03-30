@@ -28,7 +28,17 @@ public class LightningElemental : ElementalChampion
         float direction = 1;
         if (isFacingLeftNetworked) direction *= -1;
 
-        if (statusNetworked == Status.ATTACK3)
+        if (statusNetworked == Status.AIR_ATTACK)
+        {
+            BoxCollider2D crowdControlBox = AttackBoxes[0];
+            Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
+
+            if (enemy.transform.position.x < center.x) enemy.SetVelocity(new Vector2(crowdControlStrength, crowdControlStrength));
+            else if (enemy.transform.position.x > center.x) enemy.SetVelocity(new Vector2(-1 * crowdControlStrength, crowdControlStrength));
+        }
+        else if (statusNetworked == Status.ATTACK1) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
+        else if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
+        else if (statusNetworked == Status.ATTACK3)
         {
             BoxCollider2D crowdControlBox = AttackBoxes[3];
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);

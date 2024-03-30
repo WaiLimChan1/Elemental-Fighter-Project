@@ -47,6 +47,9 @@ TagManager:
   - name: Champion
     uniqueID: 1542498357
     locked: 0
+  - name: Ability
+    uniqueID: 986629793
+    locked: 0
   - name: WorldUI
     uniqueID: 1982850201
     locked: 0

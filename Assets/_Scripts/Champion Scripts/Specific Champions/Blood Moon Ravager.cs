@@ -23,6 +23,11 @@ public class BloodMoonRavager : Champion
             status == Status.UNIQUE1);
     }
 
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+    }
+
     protected override void TakeInput()
     {
         base.TakeInput();

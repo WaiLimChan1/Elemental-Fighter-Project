@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.0755458, y: 0.85706806}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.124669, y: 5.8685064}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &682288696465147284
 GameObject:
@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 2789567036588399956}
   - component: {fileID: 5570171773579088368}
   - component: {fileID: 7072337872795289832}
-  - component: {fileID: 594291684941566392}
+  - component: {fileID: 8503768386567768824}
   m_Layer: 6
-  m_Name: Crystal Mauler
+  m_Name: Leaf Ranger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,12 +135,12 @@ MonoBehaviour:
   AoiPositionSource: {fileID: 0}
   Flags: 2305
   NetworkGuid:
-    RawGuidValue: f00d098ff0f2f7b4abc23e146b2f622d
+    RawGuidValue: 16b359ead3f6c934db6b0a509fd825c0
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 7480972752838857159}
   - {fileID: 7072337872795289832}
-  - {fileID: 594291684941566392}
+  - {fileID: 8503768386567768824}
   SimulationBehaviours: []
 --- !u!114 &7480972752838857159
 MonoBehaviour:
@@ -186,7 +186,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0488ff86598e515409981d9abb32164f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -231,8 +231,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.042134166, y: -0.14746928}
-  m_Size: {x: 1.9606473, y: 3.8229823}
+  m_Offset: {x: -0.042134166, y: 0.13955164}
+  m_Size: {x: 1.9606473, y: 4.397024}
   m_Direction: 0
 --- !u!114 &7072337872795289832
 MonoBehaviour:
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   champion: {fileID: 0}
---- !u!114 &594291684941566392
+--- !u!114 &8503768386567768824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,10 +257,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 682288696465147284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e589e7bacd1b0e44aab2d4765d58157, type: 3}
+  m_Script: {fileID: 11500000, guid: fa39ef30aea34a246bcde717cb5f3cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  Collider: {fileID: 0}
   _healthNetworked: 0
   maxHealth: 500
   maxMana: 500
@@ -275,6 +276,7 @@ MonoBehaviour:
   airMoveSpeed: 10
   rollMoveSpeed: 25
   blockPercentage: 0.8
+  crowdControlBlockPercentage: 0
   jumpForce: 20
   WhatIsGround:
     serializedVersion: 2
@@ -294,17 +296,28 @@ MonoBehaviour:
   - {fileID: 8141121659428087383}
   - {fileID: 6531086310545977621}
   AttackDamages:
-  - 15
-  - 15
-  - 15
-  - 30
-  - 50
+  - 10
+  - 5
+  - 10
+  - 2
+  - 40
   CrowdControlStrength:
   - 0
+  - 10
   - 0
   - 0
-  - 15
-  - 20
+  - 10
+  slideMoveSpeed: 20
+  ArrowPrefab:
+    RawGuidValue: 15846bf2657c9fa468b1e3291d9fb728
+  ArrowSpawnSpot: {fileID: 8131791377776282540}
+  ArrowAirSpawnSpot: {fileID: 2031479940343930903}
+  ArrowSpeed: 35
+  ArrowLifeTime: 5
+  AbilityPrefab:
+    RawGuidValue: d060cafdcbe49c24e9ab1c3154598bdf
+  Attack3YOffSet: 4.2
+  Attack3Range: 20
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +384,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 8.205715, y: 1.6231186}
+  m_Offset: {x: 7.158382, y: 0.6928947}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -381,7 +394,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.44783, y: 7.4309735}
+  m_Size: {x: 14.649816, y: 1.8786645}
   m_EdgeRadius: 0
 --- !u!1 &2118379079027268337
 GameObject:
@@ -461,7 +474,7 @@ SpriteRenderer:
   m_SortingLayerID: 1542498357
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2526314861587594511, guid: 4fe7339bd57765644b381f4759bda31e, type: 3}
+  m_Sprite: {fileID: -3221618241789452811, guid: 02f39536432bdf94eaa3cc714b082fbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -482,7 +495,7 @@ Animator:
   m_GameObject: {fileID: 2118379079027268337}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 291ea9c376fe079419687dfb0e863234, type: 2}
+  m_Controller: {fileID: 9100000, guid: 462b5350d0a444a468cb1975dfa867f7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -506,6 +519,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd8aa429cdea8a4f93e3cc52e5a3b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3091158762347585242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8131791377776282540}
+  m_Layer: 0
+  m_Name: Arrow Spawn Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8131791377776282540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3091158762347585242}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.15, y: 1.22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6256216711447502986}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4286685427971202525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2031479940343930903}
+  m_Layer: 0
+  m_Name: Arrow Air Spawn Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2031479940343930903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286685427971202525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35, y: 1.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6256216711447502986}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4292126272291263189
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,12 +606,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4292126272291263189}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6256216711447502986}
+  m_Father: {fileID: 921078392087961659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &7436076005764617715
 BoxCollider2D:
@@ -572,7 +647,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.1628667, y: 0.75195265}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -582,7 +657,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.1921263, y: 4.803994}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &5434413564875323202
 GameObject:
@@ -615,9 +690,10 @@ Transform:
   m_Children:
   - {fileID: 7949121348061032830}
   - {fileID: 1712758300648512274}
-  - {fileID: 6208238972180383475}
   - {fileID: 921078392087961659}
   - {fileID: 2260821690028684205}
+  - {fileID: 8131791377776282540}
+  - {fileID: 2031479940343930903}
   m_Father: {fileID: 1826438594544848021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6661146326101529773
@@ -682,7 +758,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6208238972180383475}
   m_Father: {fileID: 6256216711447502986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8141121659428087383
@@ -719,7 +796,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 9.793076, y: 0.85811055}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -729,7 +806,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.210247, y: 5.865575}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &9179721838221270352
 GameObject:
@@ -797,7 +874,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.6397643, y: 0.5661757}
+  m_Offset: {x: 5.574254, y: 1.23318}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -807,7 +884,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.514582, y: 4.432442}
+  m_Size: {x: 5.1183414, y: 1.6093073}
   m_EdgeRadius: 0
 --- !u!1001 &1402819715383663719
 PrefabInstance:

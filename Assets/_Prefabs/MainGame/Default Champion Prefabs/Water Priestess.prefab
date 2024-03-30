@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 4.495674, y: 1.4511342}
+  m_Offset: {x: 5.3552985, y: 1.4711332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.5085945, y: 2.680605}
+  m_Size: {x: 6.2426443, y: 2.1097445}
   m_EdgeRadius: 0
 --- !u!1 &682288696465147284
 GameObject:
@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 2789567036588399956}
   - component: {fileID: 5570171773579088368}
   - component: {fileID: 7072337872795289832}
-  - component: {fileID: 4782808946691051009}
+  - component: {fileID: 3037965675212194689}
   m_Layer: 6
-  m_Name: Metal Bladekeeper
+  m_Name: Water Priestess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,12 +135,12 @@ MonoBehaviour:
   AoiPositionSource: {fileID: 0}
   Flags: 2305
   NetworkGuid:
-    RawGuidValue: 809dd7f53d007294daecd1143e3319cf
+    RawGuidValue: 19728e7d53f393141bdbc835d5330938
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 7480972752838857159}
   - {fileID: 7072337872795289832}
-  - {fileID: 4782808946691051009}
+  - {fileID: 3037965675212194689}
   SimulationBehaviours: []
 --- !u!114 &7480972752838857159
 MonoBehaviour:
@@ -186,7 +186,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0488ff86598e515409981d9abb32164f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   champion: {fileID: 0}
---- !u!114 &4782808946691051009
+--- !u!114 &3037965675212194689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,10 +257,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 682288696465147284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8fac58da7982c94dbfa261173dcf6be, type: 3}
+  m_Script: {fileID: 11500000, guid: f37e5c1f2ccb1c7488df9d916c446dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  Collider: {fileID: 0}
   _healthNetworked: 0
   maxHealth: 500
   maxMana: 500
@@ -275,6 +276,7 @@ MonoBehaviour:
   airMoveSpeed: 10
   rollMoveSpeed: 25
   blockPercentage: 0.8
+  crowdControlBlockPercentage: 0
   jumpForce: 20
   WhatIsGround:
     serializedVersion: 2
@@ -294,24 +296,21 @@ MonoBehaviour:
   - {fileID: 8141121659428087383}
   - {fileID: 6531086310545977621}
   AttackDamages:
-  - 5
-  - 15
-  - 15
-  - 5
+  - 10
+  - 10
+  - 20
   - 30
+  - 50
   CrowdControlStrength:
   - 0
   - 0
-  - 0
-  - 0
+  - 10
   - 15
-  SpecialHopForce: 18
-  DaggerPrefab:
-    RawGuidValue: c53b45376ff1ac04fae87ab568c07bd2
-  DaggerSpawnSpot: {fileID: 4981498851105260003}
-  DaggerSpeed: 30
-  DaggerDamage: 10
-  DaggerLifeTime: 5
+  - 0
+  waterSlideSpeed: 25
+  waterSlideAttackBox: {fileID: 6309117053327390016}
+  waterSlideDashDamage: 5
+  waterSlideCCStrength: 15
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +377,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.3716106, y: 0.9811566}
+  m_Offset: {x: 5.7658463, y: 0.78280663}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -388,7 +387,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 18.806896, y: 6.1470494}
+  m_Size: {x: 8.290091, y: 5.7503495}
   m_EdgeRadius: 0
 --- !u!1 &2118379079027268337
 GameObject:
@@ -468,7 +467,7 @@ SpriteRenderer:
   m_SortingLayerID: 1542498357
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8955097004722601947, guid: cf3ba71c0a0484340b98d2f68a558d9e, type: 3}
+  m_Sprite: {fileID: -4456827155652840800, guid: 96a76f2c46bcc054596a598aed02ada6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -489,7 +488,7 @@ Animator:
   m_GameObject: {fileID: 2118379079027268337}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 76456754f5b0d60439267ebaa5cdf45f, type: 2}
+  m_Controller: {fileID: 9100000, guid: b6cdc4097b474404b9c6e71fa8b2dd7b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -579,7 +578,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.588284, y: 0.13970923}
+  m_Offset: {x: 5.416836, y: 0.48204362}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -589,7 +588,85 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.1201773, y: 2.4955363}
+  m_Size: {x: 6.061617, y: 3.0303056}
+  m_EdgeRadius: 0
+--- !u!1 &5187793414927274810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8907817426208828663}
+  - component: {fileID: 6309117053327390016}
+  m_Layer: 0
+  m_Name: Water Slide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8907817426208828663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5187793414927274810}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6256216711447502986}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6309117053327390016
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5187793414927274810}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.08297956, y: -1.5883893}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.128497, y: 1.0079577}
   m_EdgeRadius: 0
 --- !u!1 &5434413564875323202
 GameObject:
@@ -625,7 +702,7 @@ Transform:
   - {fileID: 6208238972180383475}
   - {fileID: 921078392087961659}
   - {fileID: 2260821690028684205}
-  - {fileID: 4981498851105260003}
+  - {fileID: 8907817426208828663}
   m_Father: {fileID: 1826438594544848021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6661146326101529773
@@ -727,7 +804,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.0848308, y: 0.72763264}
+  m_Offset: {x: 7.3282094, y: 0.8581104}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -737,39 +814,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.4875994, y: 5.604619}
+  m_Size: {x: 6.4333296, y: 5.865575}
   m_EdgeRadius: 0
---- !u!1 &8968327129910914590
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4981498851105260003}
-  m_Layer: 0
-  m_Name: Dagger Spawn Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4981498851105260003
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8968327129910914590}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6256216711447502986}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9179721838221270352
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +882,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.2096903, y: 0.33533034}
+  m_Offset: {x: 3.5758412, y: 0.4247945}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -846,7 +892,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.9842925, y: 1.8830998}
+  m_Size: {x: 4.9095645, y: 1.3220555}
   m_EdgeRadius: 0
 --- !u!1001 &1402819715383663719
 PrefabInstance:

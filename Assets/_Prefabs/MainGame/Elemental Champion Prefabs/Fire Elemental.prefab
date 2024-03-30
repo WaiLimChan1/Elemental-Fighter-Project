@@ -186,7 +186,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0488ff86598e515409981d9abb32164f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   airMoveSpeed: 15
   rollMoveSpeed: 25
   blockPercentage: 0.8
+  crowdControlBlockPercentage: 0
   jumpForce: 22
   WhatIsGround:
     serializedVersion: 2
@@ -302,14 +303,16 @@ MonoBehaviour:
   - 35
   - 50
   - 250
-  - 50
+  - 100
   CrowdControlStrength:
-  - 0
-  - 0
+  - 10
+  - 5
+  - 15
   - 20
   - 30
-  - 50
-  - 0
+  - 15
+  attack3DashForce: 15
+  attack3DashSpeed: 30
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +728,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.9407282, y: 1.8661208}
+  m_Offset: {x: 3.2504296, y: 1.8661208}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -735,7 +738,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 26.894796, y: 2.4169025}
+  m_Size: {x: 11.872029, y: 2.4169025}
   m_EdgeRadius: 0
 --- !u!1 &8137452626998792347
 GameObject:

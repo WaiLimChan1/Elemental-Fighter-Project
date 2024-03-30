@@ -22,32 +22,32 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -2934703090448916443, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.1
+    - time: 0.07692308
       value: {fileID: 83003533700345641, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.2
+    - time: 0.15384616
       value: {fileID: 5727009933018400981, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.3
+    - time: 0.23076923
       value: {fileID: -6181005596461158503, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.4
+    - time: 0.30769232
       value: {fileID: -2451335395324791064, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.5
+    - time: 0.3846154
       value: {fileID: 7445345141145430528, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.6
+    - time: 0.46153846
       value: {fileID: 7102458106810079098, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.7
+    - time: 0.53846157
       value: {fileID: -404930173311363133, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.8
+    - time: 0.61538464
       value: {fileID: -5379663246367608857, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 0.9
+    - time: 0.6923077
       value: {fileID: 2868575389815830622, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
-    - time: 1
+    - time: 0.7692308
       value: {fileID: 6428443563348872779, guid: cc3c8cefd719adb4f88b182a20b52760, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 10
+  m_SampleRate: 13
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -80,7 +80,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1
+    m_StopTime: 0.84615386
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -100,14 +100,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.4
+  - time: 0.30769232
     functionName: AnimationTriggerCrowdControl
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.4
+  - time: 0.30769232
     functionName: AnimationTriggerAttack
     data: 
     objectReferenceParameter: {fileID: 0}

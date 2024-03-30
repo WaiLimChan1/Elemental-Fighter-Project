@@ -16,10 +16,15 @@ public class LeafRanger : Champion
     [SerializeField] private Transform ArrowAirSpawnSpot;
     [SerializeField] private float ArrowSpeed = 30;
     [SerializeField] private float ArrowLifeTime = 5;
+
+    [Header("Attack3 Variables")]
+    [SerializeField] private NetworkPrefabRef AbilityPrefab;
+    [SerializeField] float Attack3YOffSet = 4.2f;
+    [SerializeField] private float Attack3Range = 20f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    
-    
-    
+
+
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE1 : Slide
@@ -68,6 +73,38 @@ public class LeafRanger : Champion
         else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength/2));
     }
 
+    public override void AnimationTriggerAbilitySpawn()
+    {
+        if (!Runner.IsServer) return;
+
+        if (statusNetworked == Status.ATTACK3)
+        {
+            Vector2 SpawnPoint = new Vector2(transform.position.x, transform.position.y);
+
+            Champion championTarget = null;
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, Attack3Range, LayerMask.GetMask("Champion"));
+            foreach (Collider2D collider in colliders)
+            {
+                Champion enemy = collider.GetComponent<Champion>();
+                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
+                {
+                    championTarget = enemy;
+                    break;
+                }
+            }
+
+            if (championTarget != null)
+            {
+                SpawnPoint = new Vector2(championTarget.transform.position.x, championTarget.transform.position.y);
+            }
+
+            SpawnPoint = new Vector2(SpawnPoint.x, transform.position.y + Attack3YOffSet);
+
+            Ability.SpawnAbility(Runner, this, isFacingLeftNetworked, AbilityPrefab, SpawnPoint, AttackDamages[3], Ability.AbilityStatus.Leaf_Ranger_ATK3);
+
+        }
+    }
+
     public override void AnimationTriggerProjectileSpawn()
     {
         if (!Runner.IsServer) return;
@@ -94,4 +131,13 @@ public class LeafRanger : Champion
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireSphere(transform.position, Attack3Range);
+    }
 }
