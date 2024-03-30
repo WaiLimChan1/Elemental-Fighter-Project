@@ -552,11 +552,5 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     protected virtual void OnDrawGizmos()
     {
         OnDrawGizmosInAirRayCast();
-
-        if (LoopingAnimationStatus((Champion.Status)ChampionAnimationController.GetAnimatorStatus()) && ChampionAnimationController.AnimationFinished())
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, 0.5f);
-        }
     }
 }
