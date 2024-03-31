@@ -220,8 +220,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     protected virtual bool UnstoppableStatusNetworked()
     {
-        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND ||
-            statusNetworked == Status.SPECIAL_ATTACK);
+        return (statusNetworked == Status.SPECIAL_ATTACK);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -365,10 +364,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (healthNetworked <= 0) return;
 
         //Blocked
-        if (statusNetworked == Status.DEFEND && attackType == AttackType.BlockByFacingAttack
-            && isFacingLeftNetworked != attackerIsFacingLeft)
+        if ((statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND) 
+            && attackType == AttackType.BlockByFacingAttack && isFacingLeftNetworked != attackerIsFacingLeft)
             damage -= damage * blockPercentage;
-        else if (statusNetworked == Status.DEFEND && attackType == AttackType.BlockByFacingAttacker
+        else if ((statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND)
+            && attackType == AttackType.BlockByFacingAttacker
             && ((isFacingLeftNetworked && transform.position.x > attackerPosition.x) || (!isFacingLeftNetworked && transform.position.x < attackerPosition.x)))
             damage -= damage * blockPercentage;
         else
