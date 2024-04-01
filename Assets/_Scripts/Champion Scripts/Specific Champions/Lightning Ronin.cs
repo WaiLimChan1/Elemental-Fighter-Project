@@ -44,10 +44,10 @@ public class LightningRonin : Champion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE1;
+            if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE1;
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE2;
+                if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE2;
             }
         }
     }

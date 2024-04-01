@@ -47,7 +47,7 @@ public class WindElemental : ElementalChampion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE2;
+            if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE2;
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------

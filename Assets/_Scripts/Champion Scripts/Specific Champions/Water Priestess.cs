@@ -69,7 +69,7 @@ public class WaterPriestess : Champion
             }
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE3;
+                if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE3;
             }
         }
     }

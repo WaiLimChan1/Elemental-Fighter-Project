@@ -492,7 +492,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (statusNetworked == Status.JUMP_UP)
         {
             //Jumping up from the ground
-            if (!inAir && Rigid.velocity.y < 0.05)
+            if (!inAir && Rigid.velocity.y < 0.011)
             {
                 Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + jumpForce);
             }

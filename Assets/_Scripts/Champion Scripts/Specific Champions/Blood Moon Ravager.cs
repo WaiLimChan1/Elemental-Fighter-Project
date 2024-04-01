@@ -39,7 +39,7 @@ public class BloodMoonRavager : Champion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKey(KeyCode.Q)) status = Status.UNIQUE1;
+            if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE1;
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
