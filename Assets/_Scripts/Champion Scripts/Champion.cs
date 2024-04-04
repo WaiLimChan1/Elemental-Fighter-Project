@@ -403,7 +403,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
           {
                roundKills += 1;
                Debug.Log(roundKills);
-               //Increment stats in Playfab by 1 (WILL REWORK WHEN ROUNDS ARE WORKING)
+               //Increment stats in Playfab by 1 (WILL REWORK WHEN ROUNDS ARE WORKING) 
+
+               //Send update to Playfab leaderboards 
+               GlobalManagers.Instance.PlayfabManager.SendLeaderboard(roundKills);
           }
 
      }
