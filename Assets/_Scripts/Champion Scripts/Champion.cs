@@ -66,9 +66,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Networked] public Status statusNetworked { get; set; }
     public Status status;
 
-    [Networked] public bool tookHitNetworked { get; private set; }
-    public bool tookHit;
-
     [SerializeField] protected bool dead;
 
     [SerializeField] private float moveSpeed = 15;
@@ -173,7 +170,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
         healthNetworked = maxHealth;
         manaNetworked = maxMana;
-        tookHitNetworked = tookHit = false;
         isFacingLeftNetworked = isFacingLeft = false;
         statusNetworked = status = Status.IDLE;
         inAirHorizontalMovementNetworked = inAirHorizontalMovement = 0;
@@ -338,7 +334,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
         EndStatus();
         TakeInput();
-        if (tookHitNetworked) status = Status.TAKE_HIT;
         CheckDeath();
     }
 
@@ -358,6 +353,15 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public void RPC_BeginTakeHitAnimation()
+    {
+        if (Runner.LocalPlayer == Object.InputAuthority) status = Status.TAKE_HIT;
+        statusNetworked = Status.TAKE_HIT;
+        ChampionAnimationController.ChangeAnimation((int)statusNetworked);
+        ChampionAnimationController.RestartAnimation();
+    }
+
     public void TakeDamageNetworked(float damage, bool attackerIsFacingLeft, AttackType attackType = AttackType.BlockByFacingAttack, Vector2 attackerPosition = default(Vector2))
     {
         if (dead) return;
@@ -373,7 +377,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             damage -= damage * blockPercentage;
         else
         {
-            if (!UnstoppableStatusNetworked()) tookHitNetworked = true;
+            if (!UnstoppableStatusNetworked())
+            {
+                if (Runner.IsServer) RPC_BeginTakeHitAnimation();
+            }
         }
 
         healthNetworked -= damage;
@@ -472,12 +479,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         //Attack Boxes And Crowd Control Boxes Flip
         if (isFacingLeftNetworked) AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         else AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-
-        if (statusNetworked == Status.TAKE_HIT)
-        {
-            if (tookHitNetworked) ChampionAnimationController.RestartAnimation(); //Restart take hit animation
-            tookHitNetworked = false;
-        }
     }
 
     protected virtual void UpdatePosition()
