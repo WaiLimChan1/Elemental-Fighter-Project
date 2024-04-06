@@ -20,6 +20,8 @@ public class LeafRanger : Champion
     [Header("Attack3 Variables")]
     [SerializeField] private NetworkPrefabRef AbilityPrefab;
     [SerializeField] float Attack3YOffSet = 4.2f;
+
+    [SerializeField][Networked] private Champion Attack3Target { get; set; }
     [SerializeField] private float Attack3Range = 20f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -81,25 +83,13 @@ public class LeafRanger : Champion
         {
             Vector2 SpawnPoint = new Vector2(transform.position.x, transform.position.y);
 
-            Champion championTarget = null;
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, Attack3Range, LayerMask.GetMask("Champion"));
-            foreach (Collider2D collider in colliders)
+            if (Attack3Target == null) Attack3Target = MainGameUtils.FindClosestEnemyCircle(this, transform.position, Attack3Range);
+            if (Attack3Target != null)
             {
-                Champion enemy = collider.GetComponent<Champion>();
-                if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                {
-                    championTarget = enemy;
-                    break;
-                }
-            }
-
-            if (championTarget != null)
-            {
-                SpawnPoint = new Vector2(championTarget.transform.position.x, championTarget.transform.position.y);
+                SpawnPoint = new Vector2(Attack3Target.transform.position.x, Attack3Target.transform.position.y);
             }
 
             SpawnPoint = new Vector2(SpawnPoint.x, transform.position.y + Attack3YOffSet);
-
             Ability.SpawnAbility(Runner, this, isFacingLeftNetworked, AbilityPrefab, SpawnPoint, AttackDamages[3], Ability.AbilityStatus.Leaf_Ranger_ATK3);
 
         }
@@ -130,6 +120,12 @@ public class LeafRanger : Champion
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
     }
+
+    public override void FixedUpdateNetwork()
+    {
+        base.FixedUpdateNetwork();
+        Attack3Target = MainGameUtils.FindClosestEnemyCircle(this, transform.position, Attack3Range);
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -137,7 +133,8 @@ public class LeafRanger : Champion
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
-        Gizmos.color = Color.black;
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, Attack3Range);
+        MainGameUtils.OnDrawGizmos_TeleportTarget(this, Attack3Target, 1);
     }
 }

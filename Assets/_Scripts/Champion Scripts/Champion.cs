@@ -402,6 +402,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
     }
 
+    public virtual bool CanBeAttacked(Champion attacker)
+    {
+        return (this != attacker && this.healthNetworked > 0);
+    }
+
     public virtual int GetAttackBoxIndex()
     {
         if (statusNetworked == Status.AIR_ATTACK) return 0;
@@ -431,7 +436,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         foreach (Collider2D collider in colliders)
         {
             Champion enemy = collider.GetComponent<Champion>();
-            if (enemy != null && enemy != this && enemy.healthNetworked > 0)
+            if (enemy != null && enemy.CanBeAttacked(this))
                 DealDamageToVictim(enemy, damage);
         }
     }
@@ -457,7 +462,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         foreach (Collider2D collider in colliders)
         {
             Champion enemy = collider.GetComponent<Champion>();
-            if (enemy != null && enemy != this && enemy.healthNetworked > 0)
+            if (enemy != null && enemy.CanBeAttacked(this))
                 ApplyCrowdControl(enemy, crowdControlStrength);
         }
     }

@@ -10,8 +10,8 @@ public class WindHashasin : Champion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
     [Header("Special Attack Variables")]
-    [SerializeField] private float SpecialAttackRange = 20f;
-    [SerializeField] [Networked] private Champion championTarget { get; set; }
+    [SerializeField][Networked] private Champion specialAttackTarget { get; set; }
+    [SerializeField] private float specialAttackTeleportRange = 20f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -40,26 +40,20 @@ public class WindHashasin : Champion
     {
         if (statusNetworked == Status.SPECIAL_ATTACK)
         {
-            championTarget = null;
-            if (championTarget == null)
-            {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, SpecialAttackRange, LayerMask.GetMask("Champion"));
-                foreach (Collider2D collider in colliders)
-                {
-                    Champion enemy = collider.GetComponent<Champion>();
-                    if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    {
-                        championTarget = enemy;
-                        break;
-                    }
-                }
-            }
-
-            if (championTarget != null)
-            {
-                transform.position = championTarget.transform.position;
-            }
+            if (specialAttackTarget == null) specialAttackTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, specialAttackTeleportRange);
+            if (specialAttackTarget != null) transform.position = specialAttackTarget.transform.position;
         }
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
+    public override void FixedUpdateNetwork()
+    {
+        base.FixedUpdateNetwork();
+        specialAttackTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, specialAttackTeleportRange);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -68,7 +62,8 @@ public class WindHashasin : Champion
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(transform.position, SpecialAttackRange);
+        Gizmos.color = Color.grey;
+        Gizmos.DrawWireSphere(transform.position, specialAttackTeleportRange);
+        MainGameUtils.OnDrawGizmos_TeleportTarget(this, specialAttackTarget);
     }
 }

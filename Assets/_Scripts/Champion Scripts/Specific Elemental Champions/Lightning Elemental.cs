@@ -8,8 +8,8 @@ public class LightningElemental : ElementalChampion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
     [Header("Lightning Elemental Variables")]
-    [SerializeField] private float attack1DashRange = 15f;
-    [SerializeField][Networked] private Champion championTarget { get; set; }
+    [SerializeField] private float attack1TeleportRange = 15f;
+    [SerializeField][Networked] private Champion attack1Target { get; set; }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -52,25 +52,11 @@ public class LightningElemental : ElementalChampion
     {
         if (statusNetworked == Status.ATTACK1)
         {
-            championTarget = null;
-            if (championTarget == null)
-            {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attack1DashRange, LayerMask.GetMask("Champion"));
-                foreach (Collider2D collider in colliders)
-                {
-                    Champion enemy = collider.GetComponent<Champion>();
-                    if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    {
-                        championTarget = enemy;
-                        break;
-                    }
-                }
-            }
-
-            if (championTarget != null)
+            if (attack1Target == null) attack1Target = MainGameUtils.FindClosestEnemyCircle(this, transform.position, attack1TeleportRange);
+            if (attack1Target != null)
             {
                 Vector3 linkPoint = new Vector3(AttackBoxes[1].offset.x, Collider.offset.y);
-                Vector3 changeVector = championTarget.transform.TransformPoint(championTarget.Collider.offset) - AttackBoxesParent.TransformPoint(linkPoint);
+                Vector3 changeVector = attack1Target.transform.TransformPoint(attack1Target.Collider.offset) - AttackBoxesParent.TransformPoint(linkPoint);
                 transform.position = transform.position + changeVector;
             }
         }
@@ -79,10 +65,22 @@ public class LightningElemental : ElementalChampion
 
 
 
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
+    public override void FixedUpdateNetwork()
+    {
+        base.FixedUpdateNetwork();
+        attack1Target = MainGameUtils.FindClosestEnemyCircle(this, transform.position, attack1TeleportRange);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(transform.position, attack1DashRange);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, attack1TeleportRange);
+        MainGameUtils.OnDrawGizmos_TeleportTarget(this, attack1Target, 1);
     }
 }

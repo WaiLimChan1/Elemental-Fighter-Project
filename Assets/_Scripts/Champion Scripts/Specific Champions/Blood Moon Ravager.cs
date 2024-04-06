@@ -8,8 +8,8 @@ public class BloodMoonRavager : Champion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
     [Header("Blood Moon Ravager Variables")]
-    [SerializeField] private float SpecialAttackRange = 20f;
-    [SerializeField][Networked] private Champion championTarget { get; set; }
+    [SerializeField][Networked] private Champion specialAttackTarget { get; set; }
+    [SerializeField] private float specialAttackTeleportRange = 20f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
     
     
@@ -52,24 +52,10 @@ public class BloodMoonRavager : Champion
     {
         if (statusNetworked == Status.SPECIAL_ATTACK)
         {
-            championTarget = null;
-            if (championTarget == null)
+            if (specialAttackTarget == null) specialAttackTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, specialAttackTeleportRange);
+            if (specialAttackTarget != null)
             {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, SpecialAttackRange, LayerMask.GetMask("Champion"));
-                foreach (Collider2D collider in colliders)
-                {
-                    Champion enemy = collider.GetComponent<Champion>();
-                    if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    {
-                        championTarget = enemy;
-                        break;
-                    }
-                }
-            }
-
-            if (championTarget != null)
-            {
-                Vector3 changeVector = championTarget.transform.TransformPoint(championTarget.Collider.offset) - AttackBoxesParent.TransformPoint(AttackBoxes[4].offset);
+                Vector3 changeVector = specialAttackTarget.transform.TransformPoint(specialAttackTarget.Collider.offset) - AttackBoxesParent.TransformPoint(AttackBoxes[4].offset);
                 transform.position = transform.position + changeVector;
             }
         }
@@ -78,10 +64,22 @@ public class BloodMoonRavager : Champion
 
 
 
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
+    public override void FixedUpdateNetwork()
+    {
+        base.FixedUpdateNetwork();
+        specialAttackTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, specialAttackTeleportRange);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(transform.position, SpecialAttackRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, specialAttackTeleportRange);
+        MainGameUtils.OnDrawGizmos_TeleportTarget(this, specialAttackTarget);
     }
 }

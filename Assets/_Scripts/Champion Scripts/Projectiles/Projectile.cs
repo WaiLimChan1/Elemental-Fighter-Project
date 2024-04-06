@@ -124,12 +124,13 @@ public class Projectile : NetworkBehaviour
                 //Server updates the position
                 transform.position = new Vector3(transform.position.x + velocity.x * Runner.DeltaTime, transform.position.y + velocity.y * Runner.DeltaTime, 0);
 
-                //Server checks and handles collision
+                //Server checks and handles collision with champions
                 Collider2D[] colliders = Physics2D.OverlapBoxAll(HitBox.bounds.center, HitBox.bounds.size, HitBox.transform.eulerAngles.z, LayerMask.GetMask("Champion"));
                 foreach (Collider2D collider in colliders)
                 {
                     Champion enemy = collider.GetComponent<Champion>();
-                    if (enemy != null && enemy != owner && enemy.healthNetworked > 0 && enemy.statusNetworked != Champion.Status.ROLL)
+                    if (enemy != null && owner != null 
+                        && enemy.CanBeAttacked(owner) && enemy.statusNetworked != Champion.Status.ROLL)
                     {
                         RPC_HitChampion(enemy);
                         break;
@@ -138,7 +139,7 @@ public class Projectile : NetworkBehaviour
 
                 if (flying)
                 {
-                    //Server checks and handles collision
+                    //Server checks and handles collision with environment
                     colliders = Physics2D.OverlapBoxAll(HitBox.bounds.center, HitBox.bounds.size, HitBox.transform.eulerAngles.z, LayerMask.GetMask("Ground"));
                     if (colliders.Length > 0)
                     {

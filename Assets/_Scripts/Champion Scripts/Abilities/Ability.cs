@@ -97,7 +97,7 @@ public class Ability : NetworkBehaviour
         foreach (Collider2D collider in colliders)
         {
             Champion enemy = collider.GetComponent<Champion>();
-            if (enemy != null && owner != null && enemy != owner && enemy.healthNetworked > 0)
+            if (enemy != null && owner != null && enemy.CanBeAttacked(owner))
                 owner.DealDamageToVictim(enemy, damage);
         }
     }

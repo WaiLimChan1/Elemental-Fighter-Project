@@ -8,14 +8,14 @@ public class WindElemental : ElementalChampion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
     [Header("Wind Elemental Variables")]
-    [SerializeField] private float SpecialAttackRange = 25f;
+    [SerializeField][Networked] private Champion blinkTarget { get; set; }
+    [SerializeField] private float blinkRange = 20f;
+
+    [SerializeField][Networked] private Champion specialAttackTarget { get; set; }
+    [SerializeField] private float SpecialAttackTeleportRange = 25f;
     [SerializeField] private BoxCollider2D SpecialAttackPartII;
     [SerializeField] private float SpecialAttackPartIIDamageMultiplier = 5f;
     private const float SpecialPartIICutOffTime = 15.0f / 22.0f;
-
-    [SerializeField] private float BlinkRange = 20f;
-
-    [SerializeField][Networked] private Champion championTarget { get; set; }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -112,50 +112,34 @@ public class WindElemental : ElementalChampion
     {
         if (statusNetworked == Status.SPECIAL_ATTACK)
         {
-            championTarget = null;
-            if (championTarget == null)
-            {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, SpecialAttackRange, LayerMask.GetMask("Champion"));
-                foreach (Collider2D collider in colliders)
-                {
-                    Champion enemy = collider.GetComponent<Champion>();
-                    if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    {
-                        championTarget = enemy;
-                        break;
-                    }
-                }
-            }
-
-            if (championTarget != null)
+            if (specialAttackTarget == null) specialAttackTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, SpecialAttackTeleportRange);
+            if (specialAttackTarget != null)
             {
                 Vector3 linkPoint = new Vector3(AttackBoxes[4].offset.x, Collider.offset.y);
-                Vector3 changeVector = championTarget.transform.TransformPoint(championTarget.Collider.offset) - AttackBoxesParent.TransformPoint(linkPoint);
+                Vector3 changeVector = specialAttackTarget.transform.TransformPoint(specialAttackTarget.Collider.offset) - AttackBoxesParent.TransformPoint(linkPoint);
                 transform.position = transform.position + changeVector;
             }
         }
         else if (statusNetworked == Status.UNIQUE2)
         {
-            championTarget = null;
-            if (championTarget == null)
+            if (blinkTarget == null) blinkTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, blinkRange);
+            if (blinkTarget != null)
             {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, BlinkRange, LayerMask.GetMask("Champion"));
-                foreach (Collider2D collider in colliders)
-                {
-                    Champion enemy = collider.GetComponent<Champion>();
-                    if (enemy != null && enemy != this && enemy.healthNetworked > 0)
-                    {
-                        championTarget = enemy;
-                        break;
-                    }
-                }
-            }
-
-            if (championTarget != null)
-            {
-                transform.position = championTarget.transform.TransformPoint(championTarget.Collider.offset);
+                transform.position = blinkTarget.transform.TransformPoint(blinkTarget.Collider.offset);
             }
         }
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
+    public override void FixedUpdateNetwork()
+    {
+        base.FixedUpdateNetwork();
+        specialAttackTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, SpecialAttackTeleportRange);
+        blinkTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, blinkRange);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -165,9 +149,11 @@ public class WindElemental : ElementalChampion
     {
         base.OnDrawGizmos();
         Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(transform.position, SpecialAttackRange);
+        Gizmos.DrawWireSphere(transform.position, SpecialAttackTeleportRange);
+        MainGameUtils.OnDrawGizmos_TeleportTarget(this, specialAttackTarget);
 
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(transform.position, BlinkRange);
+        Gizmos.DrawWireSphere(transform.position, blinkRange);
+        MainGameUtils.OnDrawGizmos_TeleportTarget(this, blinkTarget, 1);
     }
 }
