@@ -23,7 +23,7 @@ public class MetalElemental : ElementalChampion
         else if(statusNetworked == Status.ATTACK3) enemy.SetVelocity(new Vector2(-1 * direction * crowdControlStrength, 0));
         else if (statusNetworked == Status.SPECIAL_ATTACK)
         {
-            BoxCollider2D crowdControlBox = AttackBoxes[4];
+            BoxCollider2D crowdControlBox = Attacks[4].hitBox;
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
 
             if (enemy.transform.position.x < center.x) enemy.SetVelocity(new Vector2(-1 * crowdControlStrength, crowdControlStrength));
@@ -31,7 +31,7 @@ public class MetalElemental : ElementalChampion
         }
         else if (statusNetworked == Status.UNIQUE1)
         {
-            BoxCollider2D crowdControlBox = AttackBoxes[5];
+            BoxCollider2D crowdControlBox = Attacks[5].hitBox;
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
 
             if (enemy.transform.position.x < center.x) enemy.AddVelocity(new Vector2(-1 * crowdControlStrength, crowdControlStrength));

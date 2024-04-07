@@ -68,12 +68,12 @@ public class WindElemental : ElementalChampion
         if (statusNetworked == Status.SPECIAL_ATTACK && ChampionAnimationController.GetNormalizedTime() >= SpecialPartIICutOffTime)
         {
             attackBox = SpecialAttackPartII;
-            damage = AttackDamages[index] * SpecialAttackPartIIDamageMultiplier;
+            damage = Attacks[index].damage * SpecialAttackPartIIDamageMultiplier;
         }
         else
         {
-            attackBox = AttackBoxes[index];
-            damage = AttackDamages[index];
+            attackBox = Attacks[index].hitBox;
+            damage = Attacks[index].damage;
         }
     }
 
@@ -82,12 +82,12 @@ public class WindElemental : ElementalChampion
         if (statusNetworked == Status.SPECIAL_ATTACK && ChampionAnimationController.GetNormalizedTime() >= SpecialPartIICutOffTime)
         {
             crowdControlBox = SpecialAttackPartII;
-            crowdControlStrength = CrowdControlStrength[index];
+            crowdControlStrength = Attacks[index].crowdControlStrength;
         }
         else
         {
-            crowdControlBox = AttackBoxes[index];
-            crowdControlStrength = CrowdControlStrength[index];
+            crowdControlBox = Attacks[index].hitBox;
+            crowdControlStrength = Attacks[index].crowdControlStrength;
         }
     }
 
@@ -115,7 +115,7 @@ public class WindElemental : ElementalChampion
             if (specialAttackTarget == null) specialAttackTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, SpecialAttackTeleportRange);
             if (specialAttackTarget != null)
             {
-                Vector3 linkPoint = new Vector3(AttackBoxes[4].offset.x, Collider.offset.y);
+                Vector3 linkPoint = new Vector3(Attacks[4].hitBox.offset.x, Collider.offset.y);
                 Vector3 changeVector = specialAttackTarget.transform.TransformPoint(specialAttackTarget.Collider.offset) - AttackBoxesParent.TransformPoint(linkPoint);
                 transform.position = transform.position + changeVector;
             }

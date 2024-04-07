@@ -43,7 +43,7 @@ public class CrystalElemental : ElementalChampion
         else if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
         else if (statusNetworked == Status.ATTACK3)
         {
-            BoxCollider2D SpecialAttackBox = AttackBoxes[4];
+            BoxCollider2D SpecialAttackBox = Attacks[4].hitBox;
             Vector2 center = AttackBoxesParent.TransformPoint(SpecialAttackBox.offset);
 
             float distance = Mathf.Abs(enemy.transform.position.x - center.x);
@@ -63,8 +63,8 @@ public class CrystalElemental : ElementalChampion
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
     {
         if (statusNetworked == Status.ATTACK3) crowdControlBox = Attack3CrowdControlBox;
-        else crowdControlBox = AttackBoxes[index];
-        crowdControlStrength = CrowdControlStrength[index];
+        else crowdControlBox = Attacks[index].hitBox;
+        crowdControlStrength = Attacks[index].crowdControlStrength;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

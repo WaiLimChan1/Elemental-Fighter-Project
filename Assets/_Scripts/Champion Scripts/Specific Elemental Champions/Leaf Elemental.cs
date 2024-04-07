@@ -26,7 +26,6 @@ public class LeafElemental : ElementalChampion
     [SerializeField] private NetworkPrefabRef JavelinPrefab;
     [SerializeField] private Transform JavelinSpawnPoint;
     [SerializeField] private float JavelinSpeed = 45;
-    [SerializeField] private float JavelinCCStrength = 15;
     [SerializeField] private float JavelinLifeTime = 5;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -49,12 +48,12 @@ public class LeafElemental : ElementalChampion
         else if (statusNetworked == Status.UNIQUE1 && ChampionAnimationController.GetNormalizedTime() < TransformAttackKnockUpCutOffTime)
         {
             crowdControlBox = TransformAttackCrowdControlBox;
-            crowdControlStrength = CrowdControlStrength[index];
+            crowdControlStrength = Attacks[index].crowdControlStrength;
         }
         else
         {
-            crowdControlBox = AttackBoxes[index];
-            crowdControlStrength = CrowdControlStrength[index];
+            crowdControlBox = Attacks[index].hitBox;
+            crowdControlStrength = Attacks[index].crowdControlStrength;
         }
     }
 
@@ -65,7 +64,7 @@ public class LeafElemental : ElementalChampion
 
         if (statusNetworked == Status.AIR_ATTACK)
         {
-            BoxCollider2D crowdControlBox = AttackBoxes[0];
+            BoxCollider2D crowdControlBox = Attacks[0].hitBox;
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
 
             if (enemy.transform.position.x > center.x) enemy.SetVelocity(new Vector2(crowdControlStrength, crowdControlStrength));
@@ -77,7 +76,7 @@ public class LeafElemental : ElementalChampion
             //Special Attack Pull
             if (statusNetworked == Status.SPECIAL_ATTACK && ChampionAnimationController.GetNormalizedTime() < SpecialAttackPullCutOffTime)
             {
-                BoxCollider2D crowdControlBox = AttackBoxes[4];
+                BoxCollider2D crowdControlBox = Attacks[4].hitBox;
                 Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
 
                 if (enemy.transform.position.x < center.x) enemy.SetVelocity(new Vector2(crowdControlStrength, 0));
@@ -102,9 +101,9 @@ public class LeafElemental : ElementalChampion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.ATTACK1)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DartPrefab, DartSpawnPoint, DartSpeed, AttackDamages[1], 0, DartLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DartPrefab, DartSpawnPoint, DartSpeed, Attacks[1].damage, Attacks[1].crowdControlStrength, DartLifeTime);
         else if (statusNetworked == Status.ATTACK2) 
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, JavelinPrefab, JavelinSpawnPoint, JavelinSpeed, AttackDamages[2], JavelinCCStrength, JavelinLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, JavelinPrefab, JavelinSpawnPoint, JavelinSpeed, Attacks[2].damage, Attacks[2].crowdControlStrength, JavelinLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using Fusion;
+using System;
 
 public class Champion : NetworkBehaviour, IBeforeUpdate
 {
@@ -141,12 +142,19 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //Champion Attack Variables
     [Header("Champion Attack Variables")]
     [SerializeField] public Transform AttackBoxesParent;
-    [SerializeField] protected string[] ListNames = { "Air Attack", "Attack1", "Attack2", "Attack3", "Special Attack" };
-    [SerializeField] protected BoxCollider2D[] AttackBoxes;
-    [SerializeField] protected float[] AttackDamages;
 
-    [Header("Champion Crowd Control Variables")]
-    [SerializeField] protected float[] CrowdControlStrength;
+    [Serializable]
+    public class Attack
+    {
+        public string attackName;
+        public BoxCollider2D hitBox;
+        public float damage;
+        public float crowdControlStrength;
+        public float manaCost;
+        public float coolDownDuration;
+    }
+
+    [SerializeField] protected Attack[] Attacks;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -419,8 +427,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     public virtual void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
     {
-        attackBox = AttackBoxes[index];
-        damage = AttackDamages[index];
+        attackBox = Attacks[index].hitBox;
+        damage = Attacks[index].damage;
     }
     public virtual void AnimationTriggerAttack()
     {
@@ -445,8 +453,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     public virtual void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
     {
-        crowdControlBox = AttackBoxes[index];
-        crowdControlStrength = CrowdControlStrength[index];
+        crowdControlBox = Attacks[index].hitBox;
+        crowdControlStrength = Attacks[index].crowdControlStrength;
     }
     public virtual void AnimationTriggerCrowdControl()
     {
@@ -528,10 +536,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             isFacingLeftNetworked = championData.isFacingLeft;
             inAirHorizontalMovementNetworked = championData.inAirHorizontalMovement;
         }
+        UpdatePosition();
 
         ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana);
         UpdateChampionVisual();
-        UpdatePosition();
     }
 
     public void LateUpdate()

@@ -269,8 +269,6 @@ MonoBehaviour:
   isFacingLeft: 0
   _statusNetworked: 0
   status: 0
-  _tookHitNetworked: 0
-  tookHit: 0
   dead: 0
   moveSpeed: 20
   airMoveSpeed: 15
@@ -307,6 +305,37 @@ MonoBehaviour:
   - 10
   - 0
   - 15
+  Attacks:
+  - attackName: Air Attack
+    hitBox: {fileID: 4211443420215479862}
+    damage: 5
+    crowdControlStrength: 15
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack1
+    hitBox: {fileID: 5196699418435723096}
+    damage: 15
+    crowdControlStrength: 0
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack2
+    hitBox: {fileID: 7436076005764617715}
+    damage: 20
+    crowdControlStrength: 10
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack3
+    hitBox: {fileID: 8141121659428087383}
+    damage: 20
+    crowdControlStrength: 0
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Special Attack
+    hitBox: {fileID: 6531086310545977621}
+    damage: 50
+    crowdControlStrength: 15
+    manaCost: 0
+    coolDownDuration: 0
   airAttackDashSpeed: 30
 --- !u!1 &1878230729937941712
 GameObject:

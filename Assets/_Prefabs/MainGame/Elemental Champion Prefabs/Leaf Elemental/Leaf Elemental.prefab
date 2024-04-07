@@ -269,8 +269,6 @@ MonoBehaviour:
   isFacingLeft: 0
   _statusNetworked: 0
   status: 0
-  _tookHitNetworked: 0
-  tookHit: 0
   dead: 0
   moveSpeed: 18
   airMoveSpeed: 15
@@ -311,6 +309,43 @@ MonoBehaviour:
   - 10
   - 20
   - 30
+  Attacks:
+  - attackName: Air Attack
+    hitBox: {fileID: 4211443420215479862}
+    damage: 15
+    crowdControlStrength: 5
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack1
+    hitBox: {fileID: 5196699418435723096}
+    damage: 40
+    crowdControlStrength: 0
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack2
+    hitBox: {fileID: 7436076005764617715}
+    damage: 100
+    crowdControlStrength: 15
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack3
+    hitBox: {fileID: 8141121659428087383}
+    damage: 30
+    crowdControlStrength: 10
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Special Attack
+    hitBox: {fileID: 6531086310545977621}
+    damage: 200
+    crowdControlStrength: 20
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Transform Attack
+    hitBox: {fileID: 667193806090640748}
+    damage: 200
+    crowdControlStrength: 30
+    manaCost: 0
+    coolDownDuration: 0
   SpecialAttackPullCrowdControlBox: {fileID: 8978341532830934788}
   SpecialAttackPullStrength: 10
   TransformAttackCrowdControlBox: {fileID: 323508932390006158}
@@ -324,6 +359,7 @@ MonoBehaviour:
     RawGuidValue: 120e178153891d145aeb022a410ffde3
   JavelinSpawnPoint: {fileID: 2031479940343930903}
   JavelinSpeed: 45
+  JavelinCCStrength: 15
   JavelinLifeTime: 5
 --- !u!1 &1557745043002585598
 GameObject:

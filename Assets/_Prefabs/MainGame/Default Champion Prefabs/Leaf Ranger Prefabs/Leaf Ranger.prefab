@@ -269,8 +269,6 @@ MonoBehaviour:
   isFacingLeft: 0
   _statusNetworked: 0
   status: 0
-  _tookHitNetworked: 0
-  tookHit: 0
   dead: 0
   moveSpeed: 15
   airMoveSpeed: 10
@@ -307,6 +305,37 @@ MonoBehaviour:
   - 0
   - 0
   - 10
+  Attacks:
+  - attackName: Air Attack
+    hitBox: {fileID: 4211443420215479862}
+    damage: 10
+    crowdControlStrength: 0
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack1
+    hitBox: {fileID: 5196699418435723096}
+    damage: 5
+    crowdControlStrength: 10
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack2
+    hitBox: {fileID: 7436076005764617715}
+    damage: 10
+    crowdControlStrength: 0
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Attack3
+    hitBox: {fileID: 8141121659428087383}
+    damage: 2
+    crowdControlStrength: 0
+    manaCost: 0
+    coolDownDuration: 0
+  - attackName: Special Attack
+    hitBox: {fileID: 6531086310545977621}
+    damage: 40
+    crowdControlStrength: 10
+    manaCost: 0
+    coolDownDuration: 0
   slideMoveSpeed: 20
   ArrowPrefab:
     RawGuidValue: 15846bf2657c9fa468b1e3291d9fb728
@@ -317,6 +346,7 @@ MonoBehaviour:
   AbilityPrefab:
     RawGuidValue: d060cafdcbe49c24e9ab1c3154598bdf
   Attack3YOffSet: 4.2
+  _Attack3Target: {fileID: 0}
   Attack3Range: 20
 --- !u!1 &1878230729937941712
 GameObject:
@@ -611,7 +641,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 921078392087961659}
+  m_Father: {fileID: 6256216711447502986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &7436076005764617715
 BoxCollider2D:
@@ -690,6 +720,7 @@ Transform:
   m_Children:
   - {fileID: 7949121348061032830}
   - {fileID: 1712758300648512274}
+  - {fileID: 6208238972180383475}
   - {fileID: 921078392087961659}
   - {fileID: 2260821690028684205}
   - {fileID: 8131791377776282540}
@@ -758,8 +789,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6208238972180383475}
+  m_Children: []
   m_Father: {fileID: 6256216711447502986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8141121659428087383

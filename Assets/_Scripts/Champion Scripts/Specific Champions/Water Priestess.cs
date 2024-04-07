@@ -99,8 +99,8 @@ public class WaterPriestess : Champion
         }
         else
         {
-            attackBox = AttackBoxes[index];
-            damage = AttackDamages[index];
+            attackBox = Attacks[index].hitBox;
+            damage = Attacks[index].damage;
         }
     }
 
@@ -113,8 +113,8 @@ public class WaterPriestess : Champion
         }
         else
         {
-            crowdControlBox = AttackBoxes[index];
-            crowdControlStrength = CrowdControlStrength[index];
+            crowdControlBox = Attacks[index].hitBox;
+            crowdControlStrength = Attacks[index].crowdControlStrength;
         }
     }
 

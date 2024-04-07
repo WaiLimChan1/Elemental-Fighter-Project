@@ -83,8 +83,8 @@ public class LightningRonin : Champion
         }
         else
         {
-            attackBox = AttackBoxes[index];
-            damage = AttackDamages[index];
+            attackBox = Attacks[index].hitBox;
+            damage = Attacks[index].damage;
         }
     }
 

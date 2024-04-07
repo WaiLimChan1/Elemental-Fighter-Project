@@ -55,7 +55,7 @@ public class BloodMoonRavager : Champion
             if (specialAttackTarget == null) specialAttackTarget = MainGameUtils.FindClosestEnemyCircle(this, transform.position, specialAttackTeleportRange);
             if (specialAttackTarget != null)
             {
-                Vector3 changeVector = specialAttackTarget.transform.TransformPoint(specialAttackTarget.Collider.offset) - AttackBoxesParent.TransformPoint(AttackBoxes[4].offset);
+                Vector3 changeVector = specialAttackTarget.transform.TransformPoint(specialAttackTarget.Collider.offset) - AttackBoxesParent.TransformPoint(Attacks[4].hitBox.offset);
                 transform.position = transform.position + changeVector;
             }
         }

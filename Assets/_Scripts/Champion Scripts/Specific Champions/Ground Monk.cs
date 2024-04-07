@@ -79,8 +79,8 @@ public class GroundMonk : Champion
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
     {
         if (statusNetworked == Status.SPECIAL_ATTACK) crowdControlBox = SpecialAttackCrowdControlBox;
-        else crowdControlBox = AttackBoxes[index];
-        crowdControlStrength = CrowdControlStrength[index];
+        else crowdControlBox = Attacks[index].hitBox;
+        crowdControlStrength = Attacks[index].crowdControlStrength;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

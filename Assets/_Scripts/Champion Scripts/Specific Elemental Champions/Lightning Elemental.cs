@@ -30,7 +30,7 @@ public class LightningElemental : ElementalChampion
 
         if (statusNetworked == Status.AIR_ATTACK)
         {
-            BoxCollider2D crowdControlBox = AttackBoxes[0];
+            BoxCollider2D crowdControlBox = Attacks[0].hitBox;
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
 
             if (enemy.transform.position.x < center.x) enemy.SetVelocity(new Vector2(crowdControlStrength, crowdControlStrength));
@@ -40,7 +40,7 @@ public class LightningElemental : ElementalChampion
         else if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
         else if (statusNetworked == Status.ATTACK3)
         {
-            BoxCollider2D crowdControlBox = AttackBoxes[3];
+            BoxCollider2D crowdControlBox = Attacks[3].hitBox;
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
             Vector2 changeVector = new Vector2(center.x - enemy.transform.position.x, center.y - enemy.transform.position.y).normalized;
 
@@ -55,7 +55,7 @@ public class LightningElemental : ElementalChampion
             if (attack1Target == null) attack1Target = MainGameUtils.FindClosestEnemyCircle(this, transform.position, attack1TeleportRange);
             if (attack1Target != null)
             {
-                Vector3 linkPoint = new Vector3(AttackBoxes[1].offset.x, Collider.offset.y);
+                Vector3 linkPoint = new Vector3(Attacks[1].hitBox.offset.x, Collider.offset.y);
                 Vector3 changeVector = attack1Target.transform.TransformPoint(attack1Target.Collider.offset) - AttackBoxesParent.TransformPoint(linkPoint);
                 transform.position = transform.position + changeVector;
             }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class GroundElemental : ElementalChampion
@@ -57,8 +59,8 @@ public class GroundElemental : ElementalChampion
         }
         else
         {
-            crowdControlBox = AttackBoxes[index];
-            crowdControlStrength = CrowdControlStrength[index];
+            crowdControlBox = Attacks[index].hitBox;
+            crowdControlStrength = Attacks[index].crowdControlStrength;
         }
     }
 
@@ -73,7 +75,7 @@ public class GroundElemental : ElementalChampion
         else if (statusNetworked == Status.ATTACK3) enemy.SetVelocity(new Vector2(0, crowdControlStrength));
         else if (statusNetworked == Status.SPECIAL_ATTACK)
         {
-            BoxCollider2D crowdControlBox = AttackBoxes[4];
+            BoxCollider2D crowdControlBox = Attacks[4].hitBox;
             Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
             Vector2 changeVector = new Vector2(center.x - enemy.transform.position.x, center.y - enemy.transform.position.y).normalized;
 
@@ -91,7 +93,7 @@ public class GroundElemental : ElementalChampion
             }
             else //Explosion
             {
-                BoxCollider2D crowdControlBox = AttackBoxes[5];
+                BoxCollider2D crowdControlBox = Attacks[5].hitBox;
                 Vector2 center = AttackBoxesParent.TransformPoint(crowdControlBox.offset);
 
                 if (enemy.transform.position.x < transform.position.x) enemy.AddVelocity(new Vector2(-1 * crowdControlStrength, crowdControlStrength));

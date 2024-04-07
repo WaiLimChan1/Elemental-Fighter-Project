@@ -90,7 +90,7 @@ public class LeafRanger : Champion
             }
 
             SpawnPoint = new Vector2(SpawnPoint.x, transform.position.y + Attack3YOffSet);
-            Ability.SpawnAbility(Runner, this, isFacingLeftNetworked, AbilityPrefab, SpawnPoint, AttackDamages[3], Ability.AbilityStatus.Leaf_Ranger_ATK3);
+            Ability.SpawnAbility(Runner, this, isFacingLeftNetworked, AbilityPrefab, SpawnPoint, Attacks[3].damage, Ability.AbilityStatus.Leaf_Ranger_ATK3);
 
         }
     }
@@ -100,9 +100,9 @@ public class LeafRanger : Champion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.ATTACK2)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowSpawnSpot, ArrowSpeed, AttackDamages[2], 0, ArrowLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowSpawnSpot, ArrowSpeed, Attacks[2].damage, Attacks[2].crowdControlStrength, ArrowLifeTime);
         else if (statusNetworked == Status.AIR_ATTACK)
-            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowAirSpawnSpot, ArrowSpeed, AttackDamages[0], 0, ArrowLifeTime);
+            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowAirSpawnSpot, ArrowSpeed, Attacks[0].damage, Attacks[0].crowdControlStrength, ArrowLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
