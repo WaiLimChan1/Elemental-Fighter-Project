@@ -120,7 +120,12 @@ public class PlayfabManager : MonoBehaviour
           Debug.Log(error.GenerateErrorReport());
      } 
 
-     public void SendLeaderboard(int score)
+     public void SendLeaderboard(string leaderboard, int score) //Specify the leaderboard and the score to send 
+     //Might need to edit to accept different number types later on 
+     /*
+      Current Leaderboard names: 
+     "Most Kills"
+      */
      {
           var request = new UpdatePlayerStatisticsRequest
           {
@@ -128,7 +133,7 @@ public class PlayfabManager : MonoBehaviour
                {
                     new StatisticUpdate
                     {
-                         StatisticName = "Most Kills", //specific name of leaderboard in Playfab 
+                         StatisticName = leaderboard, //specific name of leaderboard in Playfab 
                          Value = score
                     }
                }

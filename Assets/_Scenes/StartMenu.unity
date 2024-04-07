@@ -1902,7 +1902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObj: {fileID: 537273910}
   <NetworkRunnerController>k__BackingField: {fileID: 1629580994}
-  <PlayfabManager>k__BackingField: {fileID: 0}
+  <PlayfabManager>k__BackingField: {fileID: 2041424539}
 --- !u!1 &560587561
 GameObject:
   m_ObjectHideFlags: 0

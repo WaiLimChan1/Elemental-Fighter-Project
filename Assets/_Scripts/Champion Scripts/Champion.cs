@@ -406,7 +406,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
                //Increment stats in Playfab by 1 (WILL REWORK WHEN ROUNDS ARE WORKING) 
 
                //Send update to Playfab leaderboards 
-               GlobalManagers.Instance.PlayfabManager.SendLeaderboard(roundKills);
+               GlobalManagers.Instance.PlayfabManager.SendLeaderboard("Most Kills", roundKills);
           }
 
      }
