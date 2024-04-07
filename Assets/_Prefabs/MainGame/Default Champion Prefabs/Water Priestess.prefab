@@ -281,30 +281,6 @@ MonoBehaviour:
     m_Bits: 128
   inAirHorizontalMovement: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
-  ListNames:
-  - Air Attack
-  - Attack1
-  - Attack2
-  - Attack3
-  - Special Attack
-  AttackBoxes:
-  - {fileID: 4211443420215479862}
-  - {fileID: 5196699418435723096}
-  - {fileID: 7436076005764617715}
-  - {fileID: 8141121659428087383}
-  - {fileID: 6531086310545977621}
-  AttackDamages:
-  - 10
-  - 10
-  - 20
-  - 30
-  - 50
-  CrowdControlStrength:
-  - 0
-  - 0
-  - 10
-  - 15
-  - 0
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
@@ -322,24 +298,31 @@ MonoBehaviour:
     hitBox: {fileID: 7436076005764617715}
     damage: 20
     crowdControlStrength: 10
-    manaCost: 0
+    manaCost: 10
     coolDownDuration: 0
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 30
     crowdControlStrength: 15
-    manaCost: 0
+    manaCost: 50
     coolDownDuration: 0
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 50
     crowdControlStrength: 0
-    manaCost: 0
+    manaCost: 100
     coolDownDuration: 0
   waterSlideSpeed: 25
   waterSlideAttackBox: {fileID: 6309117053327390016}
   waterSlideDashDamage: 5
   waterSlideCCStrength: 15
+  waterSlideAttack:
+    attackName: Water Slide Attack
+    hitBox: {fileID: 6309117053327390016}
+    damage: 5
+    crowdControlStrength: 15
+    manaCost: 30
+    coolDownDuration: 0
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

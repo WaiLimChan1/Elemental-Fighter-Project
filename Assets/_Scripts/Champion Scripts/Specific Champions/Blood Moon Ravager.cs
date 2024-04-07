@@ -10,13 +10,22 @@ public class BloodMoonRavager : Champion
     [Header("Blood Moon Ravager Variables")]
     [SerializeField][Networked] private Champion specialAttackTarget { get; set; }
     [SerializeField] private float specialAttackTeleportRange = 20f;
+
+    [SerializeField] private float howlManaCost = 10f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    
-    
-    
+
+
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE1 : Howl
+    protected override float getManaCost(Status status)
+    {
+        float manaCost = base.getManaCost(status);
+        if (status == Status.UNIQUE1) manaCost = howlManaCost;
+        return manaCost;
+    }
+
     protected override bool SingleAnimationStatus()
     {
         return (base.SingleAnimationStatus() ||
@@ -37,7 +46,7 @@ public class BloodMoonRavager : Champion
             return;
         }
 
-        if (!inAir && InterruptableStatus())
+        if (!inAir && InterruptableStatus() && manaNetworked >= getManaCost(Status.UNIQUE1))
         {
             if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE1;
         }

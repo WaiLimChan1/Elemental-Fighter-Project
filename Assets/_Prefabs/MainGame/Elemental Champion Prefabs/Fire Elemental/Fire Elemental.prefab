@@ -281,34 +281,6 @@ MonoBehaviour:
     m_Bits: 128
   inAirHorizontalMovement: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
-  ListNames:
-  - Air Attack
-  - Attack1
-  - Attack2
-  - Attack3
-  - Special Attack
-  - Transform Attack
-  AttackBoxes:
-  - {fileID: 4211443420215479862}
-  - {fileID: 5196699418435723096}
-  - {fileID: 7436076005764617715}
-  - {fileID: 8141121659428087383}
-  - {fileID: 6531086310545977621}
-  - {fileID: 6423991634811619372}
-  AttackDamages:
-  - 30
-  - 20
-  - 35
-  - 50
-  - 250
-  - 100
-  CrowdControlStrength:
-  - 10
-  - 5
-  - 15
-  - 20
-  - 30
-  - 15
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
@@ -332,13 +304,13 @@ MonoBehaviour:
     hitBox: {fileID: 8141121659428087383}
     damage: 50
     crowdControlStrength: 20
-    manaCost: 0
+    manaCost: 50
     coolDownDuration: 0
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 250
     crowdControlStrength: 30
-    manaCost: 0
+    manaCost: 100
     coolDownDuration: 0
   - attackName: Transform Attack
     hitBox: {fileID: 6423991634811619372}
@@ -355,6 +327,13 @@ MonoBehaviour:
   FireBallDamage: 30
   FireBallCCStrength: 15
   FireBallLifeTime: 5
+  fireBallAttack:
+    attackName: Fire Ball Attack
+    hitBox: {fileID: 0}
+    damage: 30
+    crowdControlStrength: 15
+    manaCost: 25
+    coolDownDuration: 0
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

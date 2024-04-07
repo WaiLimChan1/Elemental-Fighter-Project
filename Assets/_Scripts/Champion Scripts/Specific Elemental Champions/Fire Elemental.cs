@@ -18,9 +18,9 @@ public class FireElemental : ElementalChampion
     [SerializeField] private NetworkPrefabRef FireBallPrefab;
     [SerializeField] private Transform FireBallSpawnPoint;
     [SerializeField] private float FireBallSpeed = 45;
-    [SerializeField] private float FireBallDamage = 30;
-    [SerializeField] private float FireBallCCStrength = 15;
     [SerializeField] private float FireBallLifeTime = 5;
+
+    [SerializeField] private Attack fireBallAttack;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -28,6 +28,13 @@ public class FireElemental : ElementalChampion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE2 : Throw_Fire_Ball
+    protected override float getManaCost(Status status)
+    {
+        float manaCost = base.getManaCost(status);
+        if (status == Status.UNIQUE2) manaCost = fireBallAttack.manaCost;
+        return manaCost;
+    }
+
     protected override bool SingleAnimationStatus()
     {
         return (base.SingleAnimationStatus() ||
@@ -50,7 +57,7 @@ public class FireElemental : ElementalChampion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE2))
             {
                 status = Status.UNIQUE2;
             }
@@ -98,7 +105,7 @@ public class FireElemental : ElementalChampion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE2)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, FireBallPrefab, FireBallSpawnPoint, FireBallSpeed, FireBallDamage, FireBallCCStrength, FireBallLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, FireBallPrefab, FireBallSpawnPoint, FireBallSpeed, fireBallAttack.damage, fireBallAttack.crowdControlStrength, FireBallLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

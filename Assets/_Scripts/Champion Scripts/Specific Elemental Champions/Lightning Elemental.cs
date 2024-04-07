@@ -8,8 +8,8 @@ public class LightningElemental : ElementalChampion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
     [Header("Lightning Elemental Variables")]
-    [SerializeField] private float attack1TeleportRange = 15f;
     [SerializeField][Networked] private Champion attack1Target { get; set; }
+    [SerializeField] private float attack1TeleportRange = 15f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 

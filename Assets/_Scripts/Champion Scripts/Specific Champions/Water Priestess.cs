@@ -8,9 +8,7 @@ public class WaterPriestess : Champion
     //Champion Variables
     [Header("Water Priestess Water Slide Variables")]
     [SerializeField] private float waterSlideSpeed = 25;
-    [SerializeField] private BoxCollider2D waterSlideAttackBox;
-    [SerializeField] private float waterSlideDashDamage = 5;
-    [SerializeField] private float waterSlideCCStrength = 15;
+    [SerializeField] private Attack waterSlideAttack;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -20,6 +18,12 @@ public class WaterPriestess : Champion
     //Status.UNIQUE1 : Begin_Meditation
     //Status.UNIQUE2 : Meditation
     //Status.UNIQUE3 : Water_Slide
+    protected override float getManaCost(Status status)
+    {
+        float manaCost = base.getManaCost(status);
+        if (status == Status.UNIQUE3) manaCost = waterSlideAttack.manaCost;
+        return manaCost;
+    }
 
     protected override bool LoopingAnimationStatus(Status status)
     {
@@ -69,7 +73,7 @@ public class WaterPriestess : Champion
             }
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE3;
+                if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE3)) status = Status.UNIQUE3;
             }
         }
     }
@@ -94,8 +98,8 @@ public class WaterPriestess : Champion
     {
         if (statusNetworked == Status.UNIQUE3)
         {
-            attackBox = waterSlideAttackBox;
-            damage = waterSlideDashDamage;
+            attackBox = waterSlideAttack.hitBox;
+            damage = waterSlideAttack.damage;
         }
         else
         {
@@ -108,8 +112,8 @@ public class WaterPriestess : Champion
     {
         if (statusNetworked == Status.UNIQUE3)
         {
-            crowdControlBox = waterSlideAttackBox;
-            crowdControlStrength = waterSlideCCStrength;
+            crowdControlBox = waterSlideAttack.hitBox;
+            crowdControlStrength = waterSlideAttack.crowdControlStrength;
         }
         else
         {

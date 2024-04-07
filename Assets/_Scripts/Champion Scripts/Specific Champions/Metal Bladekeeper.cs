@@ -1,6 +1,7 @@
 using Fusion;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MetalBladekeeper : Champion
@@ -14,8 +15,9 @@ public class MetalBladekeeper : Champion
     [SerializeField] private NetworkPrefabRef DaggerPrefab;
     [SerializeField] private Transform DaggerSpawnSpot;
     [SerializeField] private float DaggerSpeed = 30;
-    [SerializeField] private float DaggerDamage = 10;
     [SerializeField] private float DaggerLifeTime = 5;
+
+    [SerializeField] private Attack daggerAttack;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -24,6 +26,12 @@ public class MetalBladekeeper : Champion
     //Status Logic
     //Status.UNIQUE1 : Throw
     //Status.UNIQUE2 : Air_Throw
+    protected override float getManaCost(Status status)
+    {
+        float manaCost = base.getManaCost(status);
+        if (status == Status.UNIQUE1 || status == Status.UNIQUE2) manaCost = daggerAttack.manaCost;
+        return manaCost;
+    }
 
     protected override bool SingleAnimationStatus()
     {
@@ -42,7 +50,7 @@ public class MetalBladekeeper : Champion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE1))
             {
                 status = Status.UNIQUE1;
             }
@@ -50,7 +58,7 @@ public class MetalBladekeeper : Champion
 
         if (inAir && InAirInterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE2))
             {
                 status = Status.UNIQUE2;
             }
@@ -88,9 +96,9 @@ public class MetalBladekeeper : Champion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE1)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, DaggerDamage, 0, DaggerLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, daggerAttack.damage, daggerAttack.crowdControlStrength, DaggerLifeTime);
         else if (statusNetworked == Status.UNIQUE2)
-            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, DaggerDamage, 0,DaggerLifeTime);
+            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, daggerAttack.damage, daggerAttack.crowdControlStrength, DaggerLifeTime);
     }
 
     public override void AnimationTriggerMobility()

@@ -281,34 +281,6 @@ MonoBehaviour:
     m_Bits: 128
   inAirHorizontalMovement: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
-  ListNames:
-  - Air Attack
-  - Attack1
-  - Attack2
-  - Attack3
-  - Special Attack
-  - Transform Attack
-  AttackBoxes:
-  - {fileID: 4211443420215479862}
-  - {fileID: 5196699418435723096}
-  - {fileID: 7436076005764617715}
-  - {fileID: 8141121659428087383}
-  - {fileID: 6531086310545977621}
-  - {fileID: 667193806090640748}
-  AttackDamages:
-  - 15
-  - 40
-  - 100
-  - 30
-  - 200
-  - 200
-  CrowdControlStrength:
-  - 5
-  - 0
-  - 15
-  - 10
-  - 20
-  - 30
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
@@ -326,19 +298,19 @@ MonoBehaviour:
     hitBox: {fileID: 7436076005764617715}
     damage: 100
     crowdControlStrength: 15
-    manaCost: 0
+    manaCost: 50
     coolDownDuration: 0
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 30
     crowdControlStrength: 10
-    manaCost: 0
+    manaCost: 50
     coolDownDuration: 0
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 200
     crowdControlStrength: 20
-    manaCost: 0
+    manaCost: 100
     coolDownDuration: 0
   - attackName: Transform Attack
     hitBox: {fileID: 667193806090640748}
@@ -359,7 +331,6 @@ MonoBehaviour:
     RawGuidValue: 120e178153891d145aeb022a410ffde3
   JavelinSpawnPoint: {fileID: 2031479940343930903}
   JavelinSpeed: 45
-  JavelinCCStrength: 15
   JavelinLifeTime: 5
 --- !u!1 &1557745043002585598
 GameObject:

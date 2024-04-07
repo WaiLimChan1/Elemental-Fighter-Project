@@ -155,6 +155,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     }
 
     [SerializeField] protected Attack[] Attacks;
+
+    protected virtual float getManaCost(Status status)
+    {
+        float manaCost = 0;
+        if (status == Status.AIR_ATTACK) manaCost = Attacks[0].manaCost;
+        else if (status == Status.ATTACK1) manaCost = Attacks[1].manaCost;
+        else if (status == Status.ATTACK2) manaCost = Attacks[2].manaCost;
+        else if (status == Status.ATTACK3) manaCost = Attacks[3].manaCost;
+        else if (status == Status.SPECIAL_ATTACK) manaCost = Attacks[4].manaCost;
+        return manaCost;
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -271,10 +282,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             {
                 status = Status.JUMP_UP;
             }
-            if (Input.GetKeyDown(KeyCode.G)) status = Status.ATTACK1;
-            if (Input.GetKeyDown(KeyCode.H)) status = Status.ATTACK2;
-            if (Input.GetKeyDown(KeyCode.J)) status = Status.ATTACK3;
-            if (Input.GetKeyDown(KeyCode.K)) status = Status.SPECIAL_ATTACK;
+            if (Input.GetKeyDown(KeyCode.G) && manaNetworked >= getManaCost(Status.ATTACK1)) status = Status.ATTACK1;
+            if (Input.GetKeyDown(KeyCode.H) && manaNetworked >= getManaCost(Status.ATTACK2)) status = Status.ATTACK2;
+            if (Input.GetKeyDown(KeyCode.J) && manaNetworked >= getManaCost(Status.ATTACK3)) status = Status.ATTACK3;
+            if (Input.GetKeyDown(KeyCode.K) && manaNetworked >= getManaCost(Status.SPECIAL_ATTACK)) status = Status.SPECIAL_ATTACK;
             if (Input.GetKey(KeyCode.S))
             {
                 //Begin_Defend, then Begin_defend into Defend, then if already Defending, continue Defending
@@ -305,7 +316,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
                 else if (Rigid.velocity.y < 0) status = Status.JUMP_DOWN;
 
                 //In Air Attack
-                if (Input.GetKeyDown(KeyCode.G))
+                if (Input.GetKeyDown(KeyCode.G) && manaNetworked >= getManaCost(Status.AIR_ATTACK))
                     status = Status.AIR_ATTACK;
             }
         }
@@ -484,16 +495,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-    private void UpdateChampionVisual()
-    {
-        ChampionAnimationController.Flip(isFacingLeftNetworked);
-        ChampionAnimationController.ChangeAnimation((int)statusNetworked);
-
-        //Attack Boxes And Crowd Control Boxes Flip
-        if (isFacingLeftNetworked) AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-        else AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-    }
-
     protected virtual void UpdatePosition()
     {
         if (statusNetworked == Status.RUN)
@@ -528,6 +529,26 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         }
     }
 
+    private void ApplyManaCost()
+    {
+        if (!Runner.IsServer) return;
+
+        float manaCost = 0;
+        if (ChampionAnimationController.GetAnimatorStatus() != (int) statusNetworked) //Animation Changed
+            manaCost = getManaCost(statusNetworked);
+        manaNetworked -= manaCost;
+    }
+
+    private void UpdateChampionVisual()
+    {
+        ChampionAnimationController.Flip(isFacingLeftNetworked);
+        ChampionAnimationController.ChangeAnimation((int)statusNetworked);
+
+        //Attack Boxes And Crowd Control Boxes Flip
+        if (isFacingLeftNetworked) AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        else AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
     public override void FixedUpdateNetwork()
     {
         if (Runner.TryGetInputForPlayer<ChampionData>(Object.InputAuthority, out var championData))
@@ -537,6 +558,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             inAirHorizontalMovementNetworked = championData.inAirHorizontalMovement;
         }
         UpdatePosition();
+        ApplyManaCost();
 
         ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana);
         UpdateChampionVisual();

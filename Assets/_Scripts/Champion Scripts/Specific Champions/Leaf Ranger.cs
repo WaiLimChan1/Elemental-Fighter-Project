@@ -9,6 +9,7 @@ public class LeafRanger : Champion
     //Champion Variables
     [Header("Leaf Ranger Variables")]
     [SerializeField] protected float slideMoveSpeed = 20;
+    [SerializeField] protected float slideManaCost = 30;
 
     [Header("Arrow Variables")]
     [SerializeField] private NetworkPrefabRef ArrowPrefab;
@@ -30,6 +31,13 @@ public class LeafRanger : Champion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE1 : Slide
+    protected override float getManaCost(Status status)
+    {
+        float manaCost = base.getManaCost(status);
+        if (status == Status.UNIQUE1) manaCost = slideManaCost;
+        return manaCost;
+    }
+
     protected override bool SingleAnimationStatus()
     {
         return (base.SingleAnimationStatus() ||
@@ -48,9 +56,8 @@ public class LeafRanger : Champion
         if (!inAir && InterruptableStatus())
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-            {
-                if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE1;
-            }
+                if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE1)) 
+                    status = Status.UNIQUE1;
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------

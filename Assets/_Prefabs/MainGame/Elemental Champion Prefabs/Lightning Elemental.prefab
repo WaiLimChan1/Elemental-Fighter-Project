@@ -281,34 +281,6 @@ MonoBehaviour:
     m_Bits: 128
   inAirHorizontalMovement: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
-  ListNames:
-  - Air Attack
-  - Attack1
-  - Attack2
-  - Attack3
-  - Special Attack
-  - Transform Attack
-  AttackBoxes:
-  - {fileID: 4211443420215479862}
-  - {fileID: 5196699418435723096}
-  - {fileID: 7436076005764617715}
-  - {fileID: 8141121659428087383}
-  - {fileID: 6531086310545977621}
-  - {fileID: 1653282385256952350}
-  AttackDamages:
-  - 15
-  - 25
-  - 35
-  - 30
-  - 20
-  - 30
-  CrowdControlStrength:
-  - 10
-  - 10
-  - 15
-  - 5
-  - 0
-  - 0
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
@@ -320,7 +292,7 @@ MonoBehaviour:
     hitBox: {fileID: 5196699418435723096}
     damage: 25
     crowdControlStrength: 10
-    manaCost: 0
+    manaCost: 25
     coolDownDuration: 0
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
@@ -332,13 +304,13 @@ MonoBehaviour:
     hitBox: {fileID: 8141121659428087383}
     damage: 30
     crowdControlStrength: 5
-    manaCost: 0
+    manaCost: 50
     coolDownDuration: 0
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 20
     crowdControlStrength: 0
-    manaCost: 0
+    manaCost: 100
     coolDownDuration: 0
   - attackName: Transform Attack
     hitBox: {fileID: 1653282385256952350}
