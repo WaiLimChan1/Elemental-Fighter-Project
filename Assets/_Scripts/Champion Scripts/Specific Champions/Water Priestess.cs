@@ -7,8 +7,8 @@ public class WaterPriestess : Champion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
     [Header("Water Priestess Water Slide Variables")]
-    [SerializeField] private float waterSlideSpeed = 25;
     [SerializeField] private Attack waterSlideAttack;
+    [SerializeField] private float waterSlideSpeed = 25;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -18,11 +18,10 @@ public class WaterPriestess : Champion
     //Status.UNIQUE1 : Begin_Meditation
     //Status.UNIQUE2 : Meditation
     //Status.UNIQUE3 : Water_Slide
-    protected override float getManaCost(Status status)
+    protected override Attack getAttack(Status status)
     {
-        float manaCost = base.getManaCost(status);
-        if (status == Status.UNIQUE3) manaCost = waterSlideAttack.manaCost;
-        return manaCost;
+        if (status == Status.UNIQUE3) return waterSlideAttack;
+        return base.getAttack(status);
     }
 
     protected override bool LoopingAnimationStatus(Status status)
@@ -73,7 +72,7 @@ public class WaterPriestess : Champion
             }
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE3)) status = Status.UNIQUE3;
+                if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE3)) status = Status.UNIQUE3;
             }
         }
     }

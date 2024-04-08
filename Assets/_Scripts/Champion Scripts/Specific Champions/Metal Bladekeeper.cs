@@ -26,11 +26,10 @@ public class MetalBladekeeper : Champion
     //Status Logic
     //Status.UNIQUE1 : Throw
     //Status.UNIQUE2 : Air_Throw
-    protected override float getManaCost(Status status)
+    protected override Attack getAttack(Status status)
     {
-        float manaCost = base.getManaCost(status);
-        if (status == Status.UNIQUE1 || status == Status.UNIQUE2) manaCost = daggerAttack.manaCost;
-        return manaCost;
+        if (status == Status.UNIQUE1 || status == Status.UNIQUE2) return daggerAttack;
+        return base.getAttack(status);
     }
 
     protected override bool SingleAnimationStatus()
@@ -50,7 +49,7 @@ public class MetalBladekeeper : Champion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE1))
+            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE1))
             {
                 status = Status.UNIQUE1;
             }
@@ -58,7 +57,7 @@ public class MetalBladekeeper : Champion
 
         if (inAir && InAirInterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE2))
+            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE2))
             {
                 status = Status.UNIQUE2;
             }

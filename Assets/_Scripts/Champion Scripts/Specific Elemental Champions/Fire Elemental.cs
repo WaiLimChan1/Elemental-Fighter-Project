@@ -28,11 +28,10 @@ public class FireElemental : ElementalChampion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE2 : Throw_Fire_Ball
-    protected override float getManaCost(Status status)
+    protected override Attack getAttack(Status status)
     {
-        float manaCost = base.getManaCost(status);
-        if (status == Status.UNIQUE2) manaCost = fireBallAttack.manaCost;
-        return manaCost;
+        if (status == Status.UNIQUE2) return fireBallAttack;
+        return base.getAttack(status);
     }
 
     protected override bool SingleAnimationStatus()
@@ -57,7 +56,7 @@ public class FireElemental : ElementalChampion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE2))
+            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE2))
             {
                 status = Status.UNIQUE2;
             }

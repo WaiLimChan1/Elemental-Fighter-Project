@@ -11,7 +11,7 @@ public class BloodMoonRavager : Champion
     [SerializeField][Networked] private Champion specialAttackTarget { get; set; }
     [SerializeField] private float specialAttackTeleportRange = 20f;
 
-    [SerializeField] private float howlManaCost = 10f;
+    [SerializeField] private Attack howl;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -19,11 +19,10 @@ public class BloodMoonRavager : Champion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE1 : Howl
-    protected override float getManaCost(Status status)
+    protected override Attack getAttack(Status status)
     {
-        float manaCost = base.getManaCost(status);
-        if (status == Status.UNIQUE1) manaCost = howlManaCost;
-        return manaCost;
+        if (status == Status.UNIQUE1) return howl;
+        return base.getAttack(status);
     }
 
     protected override bool SingleAnimationStatus()
@@ -46,9 +45,10 @@ public class BloodMoonRavager : Champion
             return;
         }
 
-        if (!inAir && InterruptableStatus() && manaNetworked >= getManaCost(Status.UNIQUE1))
+        if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q)) status = Status.UNIQUE1;
+            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE1)) 
+                status = Status.UNIQUE1;
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------

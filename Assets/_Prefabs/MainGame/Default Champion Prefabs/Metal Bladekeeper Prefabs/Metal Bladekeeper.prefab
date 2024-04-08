@@ -305,28 +305,26 @@ MonoBehaviour:
     damage: 5
     crowdControlStrength: 0
     manaCost: 50
-    coolDownDuration: 0
+    coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 30
     crowdControlStrength: 15
     manaCost: 100
-    coolDownDuration: 0
+    coolDownDuration: 5
   SpecialHopForce: 18
   DaggerPrefab:
     RawGuidValue: c53b45376ff1ac04fae87ab568c07bd2
   DaggerSpawnSpot: {fileID: 4981498851105260003}
   DaggerSpeed: 30
-  DaggerDamage: 10
-  DaggerManaCost: 10
   DaggerLifeTime: 5
   daggerAttack:
     attackName: Dagger Attack
     hitBox: {fileID: 0}
-    damage: 10
+    damage: 20
     crowdControlStrength: 0
     manaCost: 10
-    coolDownDuration: 0
+    coolDownDuration: 1.5
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

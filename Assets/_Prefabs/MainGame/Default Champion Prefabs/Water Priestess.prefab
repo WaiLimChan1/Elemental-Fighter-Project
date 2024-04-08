@@ -299,30 +299,27 @@ MonoBehaviour:
     damage: 20
     crowdControlStrength: 10
     manaCost: 10
-    coolDownDuration: 0
+    coolDownDuration: 1
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 30
     crowdControlStrength: 15
     manaCost: 50
-    coolDownDuration: 0
+    coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 50
     crowdControlStrength: 0
     manaCost: 100
-    coolDownDuration: 0
-  waterSlideSpeed: 25
-  waterSlideAttackBox: {fileID: 6309117053327390016}
-  waterSlideDashDamage: 5
-  waterSlideCCStrength: 15
+    coolDownDuration: 5
   waterSlideAttack:
     attackName: Water Slide Attack
     hitBox: {fileID: 6309117053327390016}
     damage: 5
     crowdControlStrength: 15
     manaCost: 30
-    coolDownDuration: 0
+    coolDownDuration: 3
+  waterSlideSpeed: 25
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

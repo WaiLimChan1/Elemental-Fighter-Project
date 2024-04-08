@@ -305,16 +305,22 @@ MonoBehaviour:
     damage: 50
     crowdControlStrength: 0
     manaCost: 10
-    coolDownDuration: 0
+    coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 12
     crowdControlStrength: 0
     manaCost: 150
-    coolDownDuration: 0
+    coolDownDuration: 10
   _specialAttackTarget: {fileID: 0}
   specialAttackTeleportRange: 20
-  howlManaCost: 10
+  howl:
+    attackName: Howl
+    hitBox: {fileID: 0}
+    damage: 0
+    crowdControlStrength: 0
+    manaCost: 100
+    coolDownDuration: 10
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

@@ -139,12 +139,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Champion Attack Variables
-    [Header("Champion Attack Variables")]
-    [SerializeField] public Transform AttackBoxesParent;
-
-    [Serializable]
-    public class Attack
+    //Attack Class
+    [Serializable] public class Attack
     {
         public string attackName;
         public BoxCollider2D hitBox;
@@ -152,19 +148,54 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         public float crowdControlStrength;
         public float manaCost;
         public float coolDownDuration;
+        public TickTimer coolDownTimer;
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Attack Variables & Attack Functions
+    [Header("Champion Attack Variables")]
+    [SerializeField] public Transform AttackBoxesParent;
     [SerializeField] protected Attack[] Attacks;
+
+    protected virtual Attack getAttack(Status status)
+    {
+        if (status == Status.AIR_ATTACK) return Attacks[0];
+        else if (status == Status.ATTACK1) return Attacks[1];
+        else if (status == Status.ATTACK2) return Attacks[2];
+        else if (status == Status.ATTACK3) return Attacks[3];
+        else if (status == Status.SPECIAL_ATTACK) return Attacks[4];
+        return null;
+    }
 
     protected virtual float getManaCost(Status status)
     {
-        float manaCost = 0;
-        if (status == Status.AIR_ATTACK) manaCost = Attacks[0].manaCost;
-        else if (status == Status.ATTACK1) manaCost = Attacks[1].manaCost;
-        else if (status == Status.ATTACK2) manaCost = Attacks[2].manaCost;
-        else if (status == Status.ATTACK3) manaCost = Attacks[3].manaCost;
-        else if (status == Status.SPECIAL_ATTACK) manaCost = Attacks[4].manaCost;
-        return manaCost;
+        Attack attack = getAttack(status);
+        if (attack != null) return attack.manaCost;
+        else return 0;
+    }
+
+    protected float getCoolDownDuration(Status status)
+    {
+        Attack attack = getAttack(status);
+        if (attack != null) return attack.coolDownDuration;
+        else return 0;
+    }
+
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    protected void RPC_setCoolDownDuration(Status status)
+    {
+        Attack attack = getAttack(status);
+        if (attack != null) attack.coolDownTimer = TickTimer.CreateFromSeconds(Runner, attack.coolDownDuration);
+    }
+
+    protected bool canUseAttack(Status status)
+    {
+        Attack attack = getAttack(status);
+        if (attack != null) return manaNetworked >= attack.manaCost && attack.coolDownTimer.ExpiredOrNotRunning(Runner);
+        else return false;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -282,10 +313,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             {
                 status = Status.JUMP_UP;
             }
-            if (Input.GetKeyDown(KeyCode.G) && manaNetworked >= getManaCost(Status.ATTACK1)) status = Status.ATTACK1;
-            if (Input.GetKeyDown(KeyCode.H) && manaNetworked >= getManaCost(Status.ATTACK2)) status = Status.ATTACK2;
-            if (Input.GetKeyDown(KeyCode.J) && manaNetworked >= getManaCost(Status.ATTACK3)) status = Status.ATTACK3;
-            if (Input.GetKeyDown(KeyCode.K) && manaNetworked >= getManaCost(Status.SPECIAL_ATTACK)) status = Status.SPECIAL_ATTACK;
+            if (Input.GetKeyDown(KeyCode.G) && canUseAttack(Status.ATTACK1)) status = Status.ATTACK1;
+            if (Input.GetKeyDown(KeyCode.H) && canUseAttack(Status.ATTACK2)) status = Status.ATTACK2;
+            if (Input.GetKeyDown(KeyCode.J) && canUseAttack(Status.ATTACK3)) status = Status.ATTACK3;
+            if (Input.GetKeyDown(KeyCode.K) && canUseAttack(Status.SPECIAL_ATTACK)) status = Status.SPECIAL_ATTACK;
             if (Input.GetKey(KeyCode.S))
             {
                 //Begin_Defend, then Begin_defend into Defend, then if already Defending, continue Defending
@@ -316,7 +347,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
                 else if (Rigid.velocity.y < 0) status = Status.JUMP_DOWN;
 
                 //In Air Attack
-                if (Input.GetKeyDown(KeyCode.G) && manaNetworked >= getManaCost(Status.AIR_ATTACK))
+                if (Input.GetKeyDown(KeyCode.G) && canUseAttack(Status.AIR_ATTACK))
                     status = Status.AIR_ATTACK;
             }
         }
@@ -539,6 +570,16 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         manaNetworked -= manaCost;
     }
 
+    private void ApplyCoolDownDuration()
+    {
+        if (!Runner.IsServer) return;
+
+        if (ChampionAnimationController.GetAnimatorStatus() != (int)statusNetworked) //Animation Changed
+        {
+            RPC_setCoolDownDuration(statusNetworked);
+        }
+    }
+
     private void UpdateChampionVisual()
     {
         ChampionAnimationController.Flip(isFacingLeftNetworked);
@@ -559,6 +600,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         }
         UpdatePosition();
         ApplyManaCost();
+        ApplyCoolDownDuration();
 
         ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana);
         UpdateChampionVisual();

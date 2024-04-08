@@ -305,15 +305,21 @@ MonoBehaviour:
     damage: 2
     crowdControlStrength: 0
     manaCost: 50
-    coolDownDuration: 0
+    coolDownDuration: 4
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 40
     crowdControlStrength: 10
     manaCost: 100
-    coolDownDuration: 0
+    coolDownDuration: 5
   slideMoveSpeed: 20
-  slideManaCost: 30
+  slide:
+    attackName: Slide
+    hitBox: {fileID: 0}
+    damage: 0
+    crowdControlStrength: 0
+    manaCost: 30
+    coolDownDuration: 1.5
   ArrowPrefab:
     RawGuidValue: 15846bf2657c9fa468b1e3291d9fb728
   ArrowSpawnSpot: {fileID: 8131791377776282540}

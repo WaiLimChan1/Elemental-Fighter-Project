@@ -8,10 +8,9 @@ public class LightningRonin : Champion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
     [Header("Lightning Ronin Dash Variables")]
+    [SerializeField] private Attack lightningDashAttack;
     [SerializeField] private float dashSpeed = 25;
     [SerializeField] private float lightningDashSpeed = 30;
-
-    [SerializeField] private Attack lightningDashAttack;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -20,11 +19,10 @@ public class LightningRonin : Champion
     //Status Logic
     //Status.UNIQUE1 : Dash
     //Status.UNIQUE2 : Lightning Dash
-    protected override float getManaCost(Status status)
+    protected override Attack getAttack(Status status)
     {
-        float manaCost = base.getManaCost(status);
-        if (status == Status.UNIQUE1 || status == Status.UNIQUE2) manaCost = lightningDashAttack.manaCost;
-        return manaCost;
+        if (status == Status.UNIQUE1 || status == Status.UNIQUE2) return lightningDashAttack;
+        return base.getAttack(status);
     }
 
     protected override bool SingleAnimationStatus()
@@ -49,10 +47,10 @@ public class LightningRonin : Champion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE1)) status = Status.UNIQUE1;
+            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1;
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE2)) status = Status.UNIQUE2;
+                if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE2)) status = Status.UNIQUE2;
             }
         }
     }

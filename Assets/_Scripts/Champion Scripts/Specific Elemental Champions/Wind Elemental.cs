@@ -10,7 +10,7 @@ public class WindElemental : ElementalChampion
     [Header("Wind Elemental Variables")]
     [SerializeField][Networked] private Champion blinkTarget { get; set; }
     [SerializeField] private float blinkRange = 20f;
-    [SerializeField] private float blinkManaCost = 25f;
+    [SerializeField] private Attack blink;
 
     [SerializeField][Networked] private Champion specialAttackTarget { get; set; }
     [SerializeField] private float SpecialAttackTeleportRange = 25f;
@@ -24,11 +24,10 @@ public class WindElemental : ElementalChampion
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE2 : Blink
-    protected override float getManaCost(Status status)
+    protected override Attack getAttack(Status status)
     {
-        float manaCost = base.getManaCost(status);
-        if (status == Status.UNIQUE2) manaCost = blinkManaCost;
-        return manaCost;
+        if (status == Status.UNIQUE2) return blink;
+        return base.getAttack(status);
     }
 
     protected override bool SingleAnimationStatus()
@@ -56,7 +55,7 @@ public class WindElemental : ElementalChampion
 
         if (!inAir && InterruptableStatus())
         {
-            if (Input.GetKeyDown(KeyCode.Q) && manaNetworked >= getManaCost(Status.UNIQUE2)) status = Status.UNIQUE2;
+            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE2)) status = Status.UNIQUE2;
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------

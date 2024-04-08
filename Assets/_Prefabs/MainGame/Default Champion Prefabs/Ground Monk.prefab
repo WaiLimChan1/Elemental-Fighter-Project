@@ -305,13 +305,13 @@ MonoBehaviour:
     damage: 40
     crowdControlStrength: 15
     manaCost: 50
-    coolDownDuration: 0
+    coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 150
     crowdControlStrength: 10
     manaCost: 100
-    coolDownDuration: 0
+    coolDownDuration: 5
   SpecialAttackCrowdControlBox: {fileID: 1201067619810847347}
 --- !u!1 &1878230729937941712
 GameObject:

@@ -293,7 +293,7 @@ MonoBehaviour:
     damage: 5
     crowdControlStrength: 10
     manaCost: 25
-    coolDownDuration: 0
+    coolDownDuration: 2
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
     damage: 25
@@ -305,13 +305,13 @@ MonoBehaviour:
     damage: 20
     crowdControlStrength: 15
     manaCost: 50
-    coolDownDuration: 0
+    coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 20
     crowdControlStrength: 25
     manaCost: 100
-    coolDownDuration: 0
+    coolDownDuration: 5
   - attackName: Transform Attack
     hitBox: {fileID: 1670391504431013256}
     damage: 50
@@ -321,6 +321,13 @@ MonoBehaviour:
   _blinkTarget: {fileID: 0}
   blinkRange: 20
   blinkManaCost: 25
+  blink:
+    attackName: Blink
+    hitBox: {fileID: 0}
+    damage: 0
+    crowdControlStrength: 0
+    manaCost: 25
+    coolDownDuration: 3
   _specialAttackTarget: {fileID: 0}
   SpecialAttackTeleportRange: 25
   SpecialAttackPartII: {fileID: 4584966930537839527}
