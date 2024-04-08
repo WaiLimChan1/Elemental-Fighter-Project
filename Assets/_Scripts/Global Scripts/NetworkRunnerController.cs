@@ -16,7 +16,7 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
     public GameMode LocalGameMode;
 
     [SerializeField] private NetworkRunner networkRunnerPrefab;
-    private NetworkRunner networkRunnerInstance;
+    public NetworkRunner networkRunnerInstance;
 
     public void ShutDownRunner()
     {

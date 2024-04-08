@@ -149,6 +149,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         public float manaCost;
         public float coolDownDuration;
         public TickTimer coolDownTimer;
+
+        public float getCoolDownRemainingTime() { return coolDownTimer.RemainingTime(GlobalManagers.Instance.NetworkRunnerController.networkRunnerInstance) ?? 0.0f; }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -158,7 +160,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //Champion Attack Variables & Attack Functions
     [Header("Champion Attack Variables")]
     [SerializeField] public Transform AttackBoxesParent;
-    [SerializeField] protected Attack[] Attacks;
+    [SerializeField] public Attack[] Attacks;
 
     protected virtual Attack getAttack(Status status)
     {
