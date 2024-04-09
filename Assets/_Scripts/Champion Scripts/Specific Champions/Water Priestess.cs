@@ -9,6 +9,9 @@ public class WaterPriestess : Champion
     [Header("Water Priestess Water Slide Variables")]
     [SerializeField] private Attack waterSlideAttack;
     [SerializeField] private float waterSlideSpeed = 25;
+
+    [SerializeField] protected Attack meditate;
+    [SerializeField] protected float meditateRegenMultiplier = 3.0f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -23,11 +26,13 @@ public class WaterPriestess : Champion
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, waterSlideAttack, "A/D + Q");
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueA, meditate, "Hold Q");
     }
 
     protected override Attack getAttack(Status status)
     {
-        if (status == Status.UNIQUE3) return waterSlideAttack;
+        if (status == Status.UNIQUE1) return meditate;
+        else if (status == Status.UNIQUE3) return waterSlideAttack;
         return base.getAttack(status);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -77,7 +82,7 @@ public class WaterPriestess : Champion
             {
                 //Begin_Meditation, then Begin_Meditation into Meditation, then if already Meditation, continue Meditation
                 Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
-                if (lastStatus != Status.UNIQUE1 && lastStatus != Status.UNIQUE2) status = Status.UNIQUE1;
+                if (lastStatus != Status.UNIQUE1 && lastStatus != Status.UNIQUE2 && canUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1;
                 else if (lastStatus == Status.UNIQUE1)
                 {
                     if (ChampionAnimationController.AnimationFinished()) status = Status.UNIQUE2;
@@ -162,5 +167,22 @@ public class WaterPriestess : Champion
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
     }
+
+    protected override void ApplyEffects()
+    {
+        base.ApplyEffects();
+
+        if (!Runner.IsServer) return;
+
+        if (statusNetworked == Status.UNIQUE2) //Meditation Health & Mana Regen
+        {
+            if (healthNetworked > 0)
+            {
+                setHealthNetworked(healthNetworked + healthRegen * meditateRegenMultiplier * Runner.DeltaTime);
+                setManaNetworked(manaNetworked + manaRegen * meditateRegenMultiplier * Runner.DeltaTime);
+            }
+        }
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

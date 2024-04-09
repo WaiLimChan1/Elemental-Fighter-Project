@@ -8,6 +8,28 @@ public class GroundMonk : Champion
     //Champion Variables
     [Header("Ground Monk Variables")]
     [SerializeField] protected BoxCollider2D SpecialAttackCrowdControlBox;
+
+    [SerializeField] protected Attack meditate;
+    [SerializeField] protected float meditateRegenMultiplier = 3.0f;
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Attack Variables & Attack Functions
+    //Status.UNIQUE1 : Howl
+
+    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        base.SetAttack_ChampionUI(ChampionUI);
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, meditate, "Hold Q");
+    }
+
+    protected override Attack getAttack(Status status)
+    {
+        if (status == Status.UNIQUE1) return meditate;
+        return base.getAttack(status);
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -42,7 +64,7 @@ public class GroundMonk : Champion
             {
                 //Begin_Meditation, then Begin_Meditation into Meditation, then if already Meditation, continue Meditation
                 Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
-                if (lastStatus != Status.UNIQUE1 && lastStatus != Status.UNIQUE2) status = Status.UNIQUE1;
+                if (lastStatus != Status.UNIQUE1 && lastStatus != Status.UNIQUE2 && canUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1;
                 else if (lastStatus == Status.UNIQUE1)
                 {
                     if (ChampionAnimationController.AnimationFinished()) status = Status.UNIQUE2;
@@ -81,6 +103,27 @@ public class GroundMonk : Champion
         if (statusNetworked == Status.SPECIAL_ATTACK) crowdControlBox = SpecialAttackCrowdControlBox;
         else crowdControlBox = Attacks[index].hitBox;
         crowdControlStrength = Attacks[index].crowdControlStrength;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
+    protected override void ApplyEffects()
+    {
+        base.ApplyEffects();
+
+        if (!Runner.IsServer) return;
+
+        if (statusNetworked == Status.UNIQUE2) //Meditation Health & Mana Regen
+        {
+            if (healthNetworked > 0)
+            {
+                setHealthNetworked(healthNetworked + healthRegen * meditateRegenMultiplier * Runner.DeltaTime);
+                setManaNetworked(manaNetworked + manaRegen * meditateRegenMultiplier * Runner.DeltaTime);
+            }
+        }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

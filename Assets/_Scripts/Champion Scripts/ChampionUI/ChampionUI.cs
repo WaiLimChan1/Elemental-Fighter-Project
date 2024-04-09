@@ -18,6 +18,7 @@ public class ChampionUI : MonoBehaviour
     [SerializeField] public Attack_ChampionUI Attack2;
     [SerializeField] public Attack_ChampionUI Attack3;
     [SerializeField] public Attack_ChampionUI SpecialAttak;
+    [SerializeField] public Attack_ChampionUI Roll;
 
     private void Awake()
     {
@@ -55,5 +56,6 @@ public class ChampionUI : MonoBehaviour
         Attack2.gameObject.SetActive(active);
         Attack3.gameObject.SetActive(active);
         SpecialAttak.gameObject.SetActive(active);
+        Roll.gameObject.SetActive(active);
     }
 }

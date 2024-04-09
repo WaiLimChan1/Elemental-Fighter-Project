@@ -90,26 +90,28 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Stats
     [Header("Champion Defense Stats")]
-    [SerializeField] private float maxHealth = 500;
-    [SerializeField] private float maxMana = 500;
+    [SerializeField] protected float maxHealth = 500;
+    [SerializeField] protected float maxMana = 500;
 
-    [Tooltip("Health restored every second")] [SerializeField] private float healthRegen = 4;
-    [Tooltip("Mana restored every second")] [SerializeField] private float manaRegen = 8;
+    [Tooltip("Health restored every second")] [SerializeField] protected float healthRegen = 4;
+    [Tooltip("Mana restored every second")] [SerializeField] protected float manaRegen = 8;
 
-    [Tooltip("Percentage of damage to reduce (While Defending)")][SerializeField] private float blockPercentage = 0.8f;
-    [Tooltip("Percentage of Crowd Control to ignore (Always)")][SerializeField] private float crowdControlBlockPercentage = 0f;
+    [Tooltip("Percentage of damage to reduce (While Defending)")][SerializeField] protected float blockPercentage = 0.8f;
+    [Tooltip("Percentage of Crowd Control to ignore (Always)")][SerializeField] protected float crowdControlBlockPercentage = 0f;
 
 
 
     [Header("Champion Offense Stats")]
     [Tooltip("Percentage of any damage dealt returned as health")] [SerializeField] protected float omnivamp = 0f;
-    //[SerializeField] private float physicalDamage;
-    //[SerializeField] private float attackSpeed;
+    //[SerializeField] protected float physicalDamage;
+    //[SerializeField] protected float attackSpeed;
 
 
     [Header("Champion Movement Stats")]
-    [SerializeField] private float moveSpeed = 15;
-    [SerializeField] private float airMoveSpeed = 10;
+    [SerializeField] protected float moveSpeed = 15;
+    [SerializeField] protected float airMoveSpeed = 10;
+
+    [SerializeField] protected Attack roll;
     [SerializeField] protected float rollMoveSpeed = 25;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -198,6 +200,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         ChampionUI.SetAttack_ChampionUI(ChampionUI.Attack2, Attacks[2], "H");
         ChampionUI.SetAttack_ChampionUI(ChampionUI.Attack3, Attacks[3], "J");
         ChampionUI.SetAttack_ChampionUI(ChampionUI.SpecialAttak, Attacks[4], "K");
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.Roll, roll, "A/D + W");
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -216,6 +219,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         else if (status == Status.ATTACK2) return Attacks[2];
         else if (status == Status.ATTACK3) return Attacks[3];
         else if (status == Status.SPECIAL_ATTACK) return Attacks[4];
+        else if (status == Status.ROLL) return roll;
         return null;
     }
 
@@ -356,7 +360,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
                 status = Status.RUN;
-                if (Input.GetKeyDown(KeyCode.W)) status = Status.ROLL;
+                if (Input.GetKeyDown(KeyCode.W) && canUseAttack(Status.ROLL)) status = Status.ROLL;
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {

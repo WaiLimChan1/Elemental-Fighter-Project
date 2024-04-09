@@ -6,6 +6,19 @@ using UnityEngine;
 public class ElementalChampion : Champion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Attack Variables & Attack Functions
+    //Status.UNIQUE2 : Throw_Fire_Ball
+
+    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        base.SetAttack_ChampionUI(ChampionUI);
+        ChampionUI.Roll.gameObject.SetActive(false);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
     //Status.UNIQUE1 : Transform
 

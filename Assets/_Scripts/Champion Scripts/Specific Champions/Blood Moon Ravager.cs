@@ -87,7 +87,6 @@ public class BloodMoonRavager : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-
     protected override void ApplyEffects()
     {
         base.ApplyEffects();
