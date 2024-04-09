@@ -78,15 +78,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] private float blockPercentage = 0.8f;
     [SerializeField] private float crowdControlBlockPercentage = 0f;
 
-
+     //Round variables
      [SerializeField] private int roundKills = 0;
-    //---------------------------------------------------------------------------------------------------------------------------------------------
+     [SerializeField] private int roundGold = 0;
+     [SerializeField] private int roundDamage = 0; //Damage GIVEN, not taken
+     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Champion Air Variables
-    [Header("Champion Air Variables")]
+     //---------------------------------------------------------------------------------------------------------------------------------------------
+     //Champion Air Variables
+     [Header("Champion Air Variables")]
     [SerializeField] protected float jumpForce = 20;
     [SerializeField] private LayerMask WhatIsGround;
 
@@ -407,6 +409,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
                //Send update to Playfab leaderboards 
                GlobalManagers.Instance.PlayfabManager.SendLeaderboard("Most Kills", roundKills);
+               GlobalManagers.Instance.PlayfabManager.GetAllStatistics(); //Must run before uploading playerCache variables
+               GlobalManagers.Instance.PlayfabManager.playerCache.kills += roundKills;
+               
+                
+
+               int newKills = GlobalManagers.Instance.PlayfabManager.playerCache.kills;
+               //int newDamage = GlobalManagers.Instance.PlayfabManager.playerCache.damage; 
+               //int newGold = GlobalManagers.Instance.PlayfabManager.playerCache.gold;
+          
+               GlobalManagers.Instance.PlayfabManager.SaveAllStatistics(newKills.ToString(), "0", "0");
+
           }
 
      }

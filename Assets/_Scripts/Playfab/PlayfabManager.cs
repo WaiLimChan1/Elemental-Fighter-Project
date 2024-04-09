@@ -23,6 +23,8 @@ public class PlayfabManager : MonoBehaviour
      public GameObject loginMenu;
      public GameObject startMenu;
 
+     public StatisticsCache playerCache;
+
      void Start()
      {
           startMenu.SetActive(false);
@@ -62,6 +64,7 @@ public class PlayfabManager : MonoBehaviour
      {
           messageText.text = "Registered!";
           StartCoroutine(ActivateAfterDelay(1));
+          SaveAllStatistics("0", "0", "0"); //Creates data for new player
           LoginButton();
      }
 
@@ -151,4 +154,61 @@ public class PlayfabManager : MonoBehaviour
      {
           yield return new WaitForSeconds(delay);
      }
+
+     //General Purpose statistics method. May delete later
+     /*public void SaveStatistics(string key, string value) 
+     {
+          Dictionary<string, string> data = new Dictionary<string, string>();
+
+          // Add the key-value pair
+          data.Add(key, value);
+
+          // Prepare the request to update user data
+          var request = new UpdateUserDataRequest
+          {
+               Data = data
+          };
+          PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError);
+     }*/
+
+     //Used to update existing stats and create new stats for registered players
+     public void SaveAllStatistics(string kills, string damage, string gold)
+     {
+
+          var request = new UpdateUserDataRequest
+          {
+               Data = new Dictionary<string, string>
+               {
+                    {"Lifetime Kills", kills},
+                    {"Lifetime Damage", damage},
+                    {"Lifetime Gold", gold}
+               }
+          };
+          PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError); 
+     }
+
+     void OnDataSend(UpdateUserDataResult result)
+     {
+          Debug.Log("Successful user data send!");
+     }
+
+     //Writes into playerCache
+     public void GetAllStatistics()
+     {
+          PlayFabClientAPI.GetUserData(new GetUserDataRequest(), OnDataReceived, OnError);
+     }
+
+     void OnDataReceived(GetUserDataResult result)
+     {
+          Debug.Log("Received user data!");
+          playerCache.kills = int.Parse(result.Data["Lifetime Kills"].Value);
+          playerCache.damage = int.Parse(result.Data["Lifetime Damage"].Value);
+          playerCache.gold = int.Parse(result.Data["Lifetime Gold"].Value);
+     }
+
+
+
+     
+
+     
 }

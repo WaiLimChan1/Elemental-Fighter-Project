@@ -1842,6 +1842,7 @@ Transform:
   - {fileID: 558012311}
   - {fileID: 1629580993}
   - {fileID: 2041424538}
+  - {fileID: 2064621759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &537273912
@@ -6783,6 +6784,7 @@ MonoBehaviour:
   ResetPasswordClick: {fileID: 1567703439}
   loginMenu: {fileID: 1268332789}
   startMenu: {fileID: 50279617}
+  playerCache: {fileID: 2064621760}
 --- !u!1 &2046518048
 GameObject:
   m_ObjectHideFlags: 0
@@ -7078,6 +7080,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048125492}
   m_CullTransparentMesh: 1
+--- !u!1 &2064621758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2064621759}
+  - component: {fileID: 2064621760}
+  m_Layer: 0
+  m_Name: Statistics Cache
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2064621759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064621758}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 817.3294, y: 525.93243, z: -3.9802911}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 537273911}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2064621760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064621758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab7bb4465309974489b3d124d5e6507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kills: 0
+  damage: 0
+  gold: 0
 --- !u!1 &2093599075
 GameObject:
   m_ObjectHideFlags: 0
