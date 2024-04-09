@@ -1,7 +1,6 @@
 using UnityEngine;
 using Fusion;
 using System;
-using static Champion;
 
 public class Champion : NetworkBehaviour, IBeforeUpdate
 {
@@ -54,13 +53,12 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Champion Variables
-    [Header("Champion Variables")]
+    //Champion Dynamic Variables
+    [Header("Champion Dynamic Variables")]
+
     [Networked] public float healthNetworked { get; set; }
-    [SerializeField] private float maxHealth = 500;
 
     [Networked] public float manaNetworked { get; set; }
-    [SerializeField] private float maxMana = 500;
 
     [Networked] public bool isFacingLeftNetworked { get; set; }
     public bool isFacingLeft;
@@ -69,13 +67,50 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     public Status status;
 
     [SerializeField] protected bool dead;
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Dynamic Variable Functions
+    public void setHealthNetworked(float health)
+    {
+        healthNetworked = health;
+        if (healthNetworked > maxHealth) healthNetworked = maxHealth;
+        if (healthNetworked < 0) healthNetworked = 0;
+    }
+    public void setManaNetworked(float mana)
+    {
+        manaNetworked = mana;
+        if (manaNetworked > maxMana) manaNetworked = maxMana;
+        if (manaNetworked < 0) manaNetworked = 0;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Stats
+    [Header("Champion Defense Stats")]
+    [SerializeField] private float maxHealth = 500;
+    [SerializeField] private float maxMana = 500;
+
+    [Tooltip("Health restored every second")] [SerializeField] private float healthRegen = 4;
+    [Tooltip("Mana restored every second")] [SerializeField] private float manaRegen = 8;
+
+    [Tooltip("Percentage of damage to reduce (While Defending)")][SerializeField] private float blockPercentage = 0.8f;
+    [Tooltip("Percentage of Crowd Control to ignore (Always)")][SerializeField] private float crowdControlBlockPercentage = 0f;
+
+
+
+    [Header("Champion Offense Stats")]
+    [Tooltip("Percentage of any damage dealt returned as health")] [SerializeField] protected float omnivamp = 0f;
+    //[SerializeField] private float physicalDamage;
+    //[SerializeField] private float attackSpeed;
+
+
+    [Header("Champion Movement Stats")]
     [SerializeField] private float moveSpeed = 15;
     [SerializeField] private float airMoveSpeed = 10;
     [SerializeField] protected float rollMoveSpeed = 25;
-
-    [SerializeField] private float blockPercentage = 0.8f;
-    [SerializeField] private float crowdControlBlockPercentage = 0f; 
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -426,10 +461,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         ChampionAnimationController.RestartAnimation();
     }
 
-    public void TakeDamageNetworked(float damage, bool attackerIsFacingLeft, AttackType attackType = AttackType.BlockByFacingAttack, Vector2 attackerPosition = default(Vector2))
+    public float TakeDamageNetworked(Champion attacker, float damage, bool attackerIsFacingLeft, AttackType attackType = AttackType.BlockByFacingAttack, Vector2 attackerPosition = default(Vector2))
     {
-        if (dead) return;
-        if (healthNetworked <= 0) return;
+        if (dead) return 0;
+        if (healthNetworked <= 0) return 0;
 
         //Blocked
         if ((statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND) 
@@ -447,8 +482,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             }
         }
 
-        healthNetworked -= damage;
-        if (healthNetworked < 0) healthNetworked = 0;
+        setHealthNetworked(healthNetworked - damage);
+        if (attacker != null) attacker.setHealthNetworked(attacker.healthNetworked + damage * attacker.omnivamp);
+        return damage;
     }
 
     public void AddVelocity(Vector2 velocity)
@@ -463,7 +499,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     public virtual void DealDamageToVictim(Champion enemy, float damage)
     {
-        enemy.TakeDamageNetworked(damage, isFacingLeftNetworked);
+        enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked);
     }
 
     public virtual bool CanBeAttacked(Champion attacker)
@@ -581,7 +617,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         float manaCost = 0;
         if (ChampionAnimationController.GetAnimatorStatus() != (int) statusNetworked) //Animation Changed
             manaCost = getManaCost(statusNetworked);
-        manaNetworked -= manaCost;
+        setManaNetworked(manaNetworked - manaCost);
     }
 
     private void ApplyCoolDownDuration()
@@ -592,6 +628,22 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         {
             RPC_setCoolDownDuration(statusNetworked);
         }
+    }
+
+    private void ApplyHealthAndManaRegen()
+    { 
+        if (!Runner.IsServer) return;
+        if (healthNetworked <= 0) return;
+
+        setHealthNetworked(healthNetworked + healthRegen * Runner.DeltaTime);
+        setManaNetworked(manaNetworked + manaRegen * Runner.DeltaTime);
+    }
+
+    protected virtual void ApplyEffects()
+    {
+        ApplyManaCost();
+        ApplyCoolDownDuration();
+        ApplyHealthAndManaRegen();
     }
 
     private void UpdateChampionVisual()
@@ -613,8 +665,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             inAirHorizontalMovementNetworked = championData.inAirHorizontalMovement;
         }
         UpdatePosition();
-        ApplyManaCost();
-        ApplyCoolDownDuration();
+
+        ApplyEffects();
 
         ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana);
         UpdateChampionVisual();

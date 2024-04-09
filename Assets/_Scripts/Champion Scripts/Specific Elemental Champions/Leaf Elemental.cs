@@ -34,8 +34,8 @@ public class LeafElemental : ElementalChampion
     public override void DealDamageToVictim(Champion enemy, float damage)
     {
         if (statusNetworked == Status.AIR_ATTACK)
-            enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+            enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this,damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)

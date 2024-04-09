@@ -89,7 +89,7 @@ public class Projectile : NetworkBehaviour
     public virtual void RPC_HitChampion(Champion enemy) 
     {
         flying = false;
-        enemy.TakeDamageNetworked(damage, isFacingLeft);
+        enemy.TakeDamageNetworked(owner, damage, isFacingLeft);
         ApplyCrowdControl(enemy, crowdControlStrength);
     }
 

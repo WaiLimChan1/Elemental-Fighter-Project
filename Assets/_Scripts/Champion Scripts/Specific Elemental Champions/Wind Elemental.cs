@@ -81,8 +81,8 @@ public class WindElemental : ElementalChampion
     public override void DealDamageToVictim(Champion enemy, float damage)
     {
         if (statusNetworked == Status.AIR_ATTACK || statusNetworked == Status.UNIQUE1)
-            enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+            enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)

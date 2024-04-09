@@ -263,14 +263,16 @@ MonoBehaviour:
   _interpolationDataSource: 0
   Collider: {fileID: 0}
   _healthNetworked: 0
-  maxHealth: 1500
   _manaNetworked: 0
-  maxMana: 500
   _isFacingLeftNetworked: 0
   isFacingLeft: 0
   _statusNetworked: 0
   status: 0
   dead: 0
+  maxHealth: 1500
+  maxMana: 500
+  healthRegen: 5
+  manaRegen: 10
   moveSpeed: 25
   airMoveSpeed: 15
   rollMoveSpeed: 25

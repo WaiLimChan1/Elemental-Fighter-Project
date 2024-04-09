@@ -77,8 +77,8 @@ public class LightningRonin : Champion
     //Attack Logic
     public override void DealDamageToVictim(Champion enemy, float damage)
     {
-        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override int GetAttackBoxIndex()

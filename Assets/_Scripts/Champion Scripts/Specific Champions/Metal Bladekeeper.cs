@@ -86,8 +86,8 @@ public class MetalBladekeeper : Champion
     //Attack logic
     public override void DealDamageToVictim(Champion enemy, float damage)
     {
-        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)

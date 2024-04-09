@@ -1,6 +1,4 @@
 using Fusion;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BloodMoonRavager : Champion
@@ -12,6 +10,7 @@ public class BloodMoonRavager : Champion
     [SerializeField] private float specialAttackTeleportRange = 20f;
 
     [SerializeField] private Attack howl;
+    [SerializeField] private float howlOmnivampIncrease = 0.1f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -88,6 +87,22 @@ public class BloodMoonRavager : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
+
+    protected override void ApplyEffects()
+    {
+        base.ApplyEffects();
+
+        if (!Runner.IsServer) return;
+
+        if (ChampionAnimationController.GetAnimatorStatus() != (int)statusNetworked) //Animation Changed
+        {
+            if (statusNetworked == Status.UNIQUE1) //Howl Stats Buff Effect
+            {
+                omnivamp += howlOmnivampIncrease; 
+            }
+        }
+    }
+
     public override void FixedUpdateNetwork()
     {
         base.FixedUpdateNetwork();
