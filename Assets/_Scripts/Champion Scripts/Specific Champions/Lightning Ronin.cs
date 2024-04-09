@@ -16,14 +16,29 @@ public class LightningRonin : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Status Logic
+    //Champion Attack Variables & Attack Functions
     //Status.UNIQUE1 : Dash
     //Status.UNIQUE2 : Lightning Dash
+
+    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        base.SetAttack_ChampionUI(ChampionUI);
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, lightningDashAttack, "A/D + Q");
+    }
+
     protected override Attack getAttack(Status status)
     {
         if (status == Status.UNIQUE1 || status == Status.UNIQUE2) return lightningDashAttack;
         return base.getAttack(status);
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    //Status.UNIQUE1 : Dash
+    //Status.UNIQUE2 : Lightning Dash
 
     protected override bool SingleAnimationStatus()
     {

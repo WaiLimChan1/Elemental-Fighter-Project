@@ -22,13 +22,27 @@ public class WindElemental : ElementalChampion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Status Logic
+    //Champion Attack Variables & Attack Functions
     //Status.UNIQUE2 : Blink
+
+    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        base.SetAttack_ChampionUI(ChampionUI);
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, blink, "Q");
+    }
+
     protected override Attack getAttack(Status status)
     {
         if (status == Status.UNIQUE2) return blink;
         return base.getAttack(status);
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    //Status.UNIQUE2 : Blink
 
     protected override bool SingleAnimationStatus()
     {

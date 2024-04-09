@@ -147,7 +147,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1492933530}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &134093415
@@ -2212,14 +2213,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492933529}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 483447819}
   - {fileID: 1997287220}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 107545766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1492933531
 MonoBehaviour:
@@ -2234,8 +2235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Champion: {fileID: 0}
-  Unique1: {fileID: 476825918}
-  Unique2: {fileID: 1923072708}
+  UniqueA: {fileID: 476825918}
+  UniqueB: {fileID: 1923072708}
   AirAttack: {fileID: 1992412567}
   Attack1: {fileID: 406745752}
   Attack2: {fileID: 1310916198}
@@ -3493,4 +3494,3 @@ SceneRoots:
   - {fileID: 107545766}
   - {fileID: 763676249}
   - {fileID: 1814187467}
-  - {fileID: 1492933530}

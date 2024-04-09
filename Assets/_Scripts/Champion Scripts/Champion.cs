@@ -1,6 +1,7 @@
 using UnityEngine;
 using Fusion;
 using System;
+using static Champion;
 
 public class Champion : NetworkBehaviour, IBeforeUpdate
 {
@@ -58,7 +59,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Networked] public float healthNetworked { get; set; }
     [SerializeField] private float maxHealth = 500;
 
-    [Networked] protected float manaNetworked { get; set; }
+    [Networked] public float manaNetworked { get; set; }
     [SerializeField] private float maxMana = 500;
 
     [Networked] public bool isFacingLeftNetworked { get; set; }
@@ -152,6 +153,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
         public float getCoolDownRemainingTime() { return coolDownTimer.RemainingTime(GlobalManagers.Instance.NetworkRunnerController.networkRunnerInstance) ?? 0.0f; }
     }
+
+    //Attack UI
+    public virtual void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        ChampionUI.SetActiveAllAttack_ChampionUI(false);
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.AirAttack, Attacks[0], "Space + G");
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.Attack1, Attacks[1], "G");
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.Attack2, Attacks[2], "H");
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.Attack3, Attacks[3], "J");
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.SpecialAttak, Attacks[4], "K");
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -172,7 +184,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         return null;
     }
 
-    protected virtual float getManaCost(Status status)
+    protected float getManaCost(Status status)
     {
         Attack attack = getAttack(status);
         if (attack != null) return attack.manaCost;

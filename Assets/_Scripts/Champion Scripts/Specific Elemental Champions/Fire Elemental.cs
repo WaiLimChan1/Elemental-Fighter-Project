@@ -26,13 +26,27 @@ public class FireElemental : ElementalChampion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Status Logic
+    //Champion Attack Variables & Attack Functions
     //Status.UNIQUE2 : Throw_Fire_Ball
+
+    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        base.SetAttack_ChampionUI(ChampionUI);
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, fireBallAttack, "Q");
+    }
+
     protected override Attack getAttack(Status status)
     {
         if (status == Status.UNIQUE2) return fireBallAttack;
         return base.getAttack(status);
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    //Status.UNIQUE2 : Throw_Fire_Ball
 
     protected override bool SingleAnimationStatus()
     {

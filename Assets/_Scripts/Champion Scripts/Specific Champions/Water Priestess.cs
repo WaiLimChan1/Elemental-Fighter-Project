@@ -14,15 +14,31 @@ public class WaterPriestess : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Status Logic
+    //Champion Attack Variables & Attack Functions
     //Status.UNIQUE1 : Begin_Meditation
     //Status.UNIQUE2 : Meditation
     //Status.UNIQUE3 : Water_Slide
+
+    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        base.SetAttack_ChampionUI(ChampionUI);
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, waterSlideAttack, "A/D + Q");
+    }
+
     protected override Attack getAttack(Status status)
     {
         if (status == Status.UNIQUE3) return waterSlideAttack;
         return base.getAttack(status);
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    //Status.UNIQUE1 : Begin_Meditation
+    //Status.UNIQUE2 : Meditation
+    //Status.UNIQUE3 : Water_Slide
 
     protected override bool LoopingAnimationStatus(Status status)
     {

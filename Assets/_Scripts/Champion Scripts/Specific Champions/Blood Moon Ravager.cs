@@ -17,14 +17,27 @@ public class BloodMoonRavager : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Status Logic
+    //Champion Attack Variables & Attack Functions
     //Status.UNIQUE1 : Howl
+
+    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        base.SetAttack_ChampionUI(ChampionUI);
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, howl, "Q");
+    }
+
     protected override Attack getAttack(Status status)
     {
         if (status == Status.UNIQUE1) return howl;
         return base.getAttack(status);
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    //Status.UNIQUE1 : Howl
     protected override bool SingleAnimationStatus()
     {
         return (base.SingleAnimationStatus() ||

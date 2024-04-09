@@ -264,6 +264,7 @@ MonoBehaviour:
   Collider: {fileID: 0}
   _healthNetworked: 0
   maxHealth: 800
+  _manaNetworked: 0
   maxMana: 500
   _isFacingLeftNetworked: 0
   isFacingLeft: 0
@@ -287,19 +288,19 @@ MonoBehaviour:
     damage: 30
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0
+    coolDownDuration: 0.5
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
     damage: 20
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0
+    coolDownDuration: 0.5
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
     damage: 15
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0
+    coolDownDuration: 0.5
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 50

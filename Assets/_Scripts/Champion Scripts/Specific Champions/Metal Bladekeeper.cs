@@ -23,14 +23,29 @@ public class MetalBladekeeper : Champion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Status Logic
+    //Champion Attack Variables & Attack Functions
     //Status.UNIQUE1 : Throw
     //Status.UNIQUE2 : Air_Throw
+
+    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    {
+        base.SetAttack_ChampionUI(ChampionUI);
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, daggerAttack, "Q");
+    }
+
     protected override Attack getAttack(Status status)
     {
         if (status == Status.UNIQUE1 || status == Status.UNIQUE2) return daggerAttack;
         return base.getAttack(status);
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    //Status.UNIQUE1 : Throw
+    //Status.UNIQUE2 : Air_Throw
 
     protected override bool SingleAnimationStatus()
     {

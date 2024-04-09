@@ -264,6 +264,7 @@ MonoBehaviour:
   Collider: {fileID: 0}
   _healthNetworked: 0
   maxHealth: 500
+  _manaNetworked: 0
   maxMana: 500
   _isFacingLeftNetworked: 0
   isFacingLeft: 0
@@ -287,13 +288,13 @@ MonoBehaviour:
     damage: 10
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0
+    coolDownDuration: 0.5
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
     damage: 10
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0
+    coolDownDuration: 0.5
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
     damage: 20
@@ -313,7 +314,7 @@ MonoBehaviour:
     manaCost: 100
     coolDownDuration: 5
   waterSlideAttack:
-    attackName: Water Slide Attack
+    attackName: Water Slide
     hitBox: {fileID: 6309117053327390016}
     damage: 5
     crowdControlStrength: 15
