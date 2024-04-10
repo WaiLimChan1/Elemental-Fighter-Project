@@ -271,8 +271,8 @@ MonoBehaviour:
   dead: 0
   maxHealth: 500
   maxMana: 500
-  healthRegen: 4
-  manaRegen: 8
+  healthRegen: 1
+  manaRegen: 10
   blockPercentage: 0.8
   crowdControlBlockPercentage: 0
   omnivamp: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
     coolDownDuration: 0.5
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
-    damage: 30
+    damage: 35
     crowdControlStrength: 15
     manaCost: 25
     coolDownDuration: 3
@@ -322,7 +322,7 @@ MonoBehaviour:
     damage: 50
     crowdControlStrength: 20
     manaCost: 50
-    coolDownDuration: 5
+    coolDownDuration: 4
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

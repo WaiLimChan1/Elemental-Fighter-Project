@@ -269,15 +269,23 @@ MonoBehaviour:
   _statusNetworked: 0
   status: 0
   dead: 0
-  maxHealth: 3000
+  maxHealth: 2000
   maxMana: 500
   healthRegen: 5
   manaRegen: 10
-  moveSpeed: 15
-  airMoveSpeed: 10
-  rollMoveSpeed: 25
   blockPercentage: 0.8
   crowdControlBlockPercentage: 0.5
+  omnivamp: 0
+  moveSpeed: 15
+  airMoveSpeed: 10
+  roll:
+    attackName: 
+    hitBox: {fileID: 0}
+    damage: 0
+    crowdControlStrength: 0
+    manaCost: 0
+    coolDownDuration: 0
+  rollMoveSpeed: 25
   jumpForce: 20
   WhatIsGround:
     serializedVersion: 2
@@ -311,7 +319,7 @@ MonoBehaviour:
     coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
-    damage: 100
+    damage: 200
     crowdControlStrength: 30
     manaCost: 100
     coolDownDuration: 5

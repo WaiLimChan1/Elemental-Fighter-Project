@@ -271,7 +271,7 @@ MonoBehaviour:
   dead: 0
   maxHealth: 800
   maxMana: 500
-  healthRegen: 4
+  healthRegen: 1
   manaRegen: 8
   blockPercentage: 0.8
   crowdControlBlockPercentage: 0

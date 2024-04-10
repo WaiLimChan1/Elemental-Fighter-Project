@@ -271,7 +271,7 @@ MonoBehaviour:
   dead: 0
   maxHealth: 600
   maxMana: 500
-  healthRegen: 4
+  healthRegen: 1
   manaRegen: 8
   blockPercentage: 0.8
   crowdControlBlockPercentage: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
     damage: 12
     crowdControlStrength: 0
     manaCost: 250
-    coolDownDuration: 10
+    coolDownDuration: 30
   _specialAttackTarget: {fileID: 0}
   specialAttackTeleportRange: 20
   howl:
@@ -331,7 +331,7 @@ MonoBehaviour:
     damage: 0
     crowdControlStrength: 0
     manaCost: 100
-    coolDownDuration: 10
+    coolDownDuration: 25
   howlOmnivampIncrease: 0.1
 --- !u!1 &1878230729937941712
 GameObject:

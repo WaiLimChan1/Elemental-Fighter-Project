@@ -29,6 +29,18 @@ public class LeafElemental : ElementalChampion
     [SerializeField] private float JavelinLifeTime = 5;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (base.UnstoppableStatusNetworked() || statusNetworked == Status.ATTACK3);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
     public override void DealDamageToVictim(Champion enemy, float damage)

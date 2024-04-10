@@ -273,11 +273,19 @@ MonoBehaviour:
   maxMana: 500
   healthRegen: 5
   manaRegen: 10
-  moveSpeed: 25
-  airMoveSpeed: 15
-  rollMoveSpeed: 25
   blockPercentage: 0.8
   crowdControlBlockPercentage: 0
+  omnivamp: 0
+  moveSpeed: 25
+  airMoveSpeed: 15
+  roll:
+    attackName: 
+    hitBox: {fileID: 0}
+    damage: 0
+    crowdControlStrength: 0
+    manaCost: 0
+    coolDownDuration: 0
+  rollMoveSpeed: 25
   jumpForce: 22
   WhatIsGround:
     serializedVersion: 2
@@ -314,7 +322,7 @@ MonoBehaviour:
     damage: 20
     crowdControlStrength: 0
     manaCost: 100
-    coolDownDuration: 5
+    coolDownDuration: 10
   - attackName: Transform Attack
     hitBox: {fileID: 1653282385256952350}
     damage: 30

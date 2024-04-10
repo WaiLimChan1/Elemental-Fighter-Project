@@ -271,7 +271,7 @@ MonoBehaviour:
   dead: 0
   maxHealth: 500
   maxMana: 500
-  healthRegen: 4
+  healthRegen: 1
   manaRegen: 8
   blockPercentage: 0.8
   crowdControlBlockPercentage: 0
@@ -298,38 +298,38 @@ MonoBehaviour:
     damage: 5
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 1
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
     damage: 15
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 1
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
     damage: 15
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 1
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 40
     crowdControlStrength: 10
     manaCost: 30
-    coolDownDuration: 2
+    coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 15
     crowdControlStrength: 0
     manaCost: 100
-    coolDownDuration: 5
+    coolDownDuration: 10
   lightningDashAttack:
     attackName: Lightning Dash
     hitBox: {fileID: 8780988235657823475}
     damage: 5
     crowdControlStrength: 0
-    manaCost: 25
-    coolDownDuration: 3
+    manaCost: 50
+    coolDownDuration: 5
   dashSpeed: 30
   lightningDashSpeed: 45
 --- !u!1 &1878230729937941712

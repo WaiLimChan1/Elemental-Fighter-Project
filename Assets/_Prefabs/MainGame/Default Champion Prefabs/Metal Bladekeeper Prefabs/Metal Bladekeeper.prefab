@@ -271,7 +271,7 @@ MonoBehaviour:
   dead: 0
   maxHealth: 500
   maxMana: 500
-  healthRegen: 4
+  healthRegen: 1
   manaRegen: 8
   blockPercentage: 0.8
   crowdControlBlockPercentage: 0
@@ -295,22 +295,22 @@ MonoBehaviour:
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
-    damage: 5
+    damage: 10
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 1
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
     damage: 15
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 1
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
     damage: 15
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 1
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 5
@@ -322,7 +322,7 @@ MonoBehaviour:
     damage: 30
     crowdControlStrength: 15
     manaCost: 100
-    coolDownDuration: 5
+    coolDownDuration: 10
   SpecialHopForce: 18
   DaggerPrefab:
     RawGuidValue: c53b45376ff1ac04fae87ab568c07bd2
@@ -332,10 +332,10 @@ MonoBehaviour:
   daggerAttack:
     attackName: Dagger Throw
     hitBox: {fileID: 0}
-    damage: 20
+    damage: 25
     crowdControlStrength: 0
-    manaCost: 10
-    coolDownDuration: 1.5
+    manaCost: 50
+    coolDownDuration: 10
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

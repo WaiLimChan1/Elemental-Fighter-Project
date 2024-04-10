@@ -271,7 +271,7 @@ MonoBehaviour:
   dead: 0
   maxHealth: 500
   maxMana: 500
-  healthRegen: 4
+  healthRegen: 1
   manaRegen: 8
   blockPercentage: 0.8
   crowdControlBlockPercentage: 0
@@ -295,31 +295,31 @@ MonoBehaviour:
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
-    damage: 10
+    damage: 15
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 0.5
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
-    damage: 5
+    damage: 6
     crowdControlStrength: 10
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 1
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
-    damage: 10
+    damage: 15
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 0.5
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
-    damage: 2
+    damage: 3
     crowdControlStrength: 0
     manaCost: 50
     coolDownDuration: 4
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
-    damage: 40
+    damage: 50
     crowdControlStrength: 10
     manaCost: 100
     coolDownDuration: 5
