@@ -295,43 +295,43 @@ MonoBehaviour:
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
-    damage: 15
+    damage: 40
     crowdControlStrength: 0
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 3
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
-    damage: 20
+    damage: 25
     crowdControlStrength: 10
     manaCost: 0
     coolDownDuration: 0.5
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
-    damage: 15
+    damage: 20
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 0.5
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
-    damage: 40
+    damage: 50
     crowdControlStrength: 15
     manaCost: 50
-    coolDownDuration: 3
+    coolDownDuration: 4
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 150
     crowdControlStrength: 10
-    manaCost: 100
-    coolDownDuration: 5
+    manaCost: 150
+    coolDownDuration: 10
   SpecialAttackCrowdControlBox: {fileID: 1201067619810847347}
   meditate:
     attackName: Meditate
     hitBox: {fileID: 0}
     damage: 0
     crowdControlStrength: 0
-    manaCost: 150
-    coolDownDuration: 25
-  meditateRegenMultiplier: 3
+    manaCost: 200
+    coolDownDuration: 50
+  meditateRegenMultiplier: 5
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

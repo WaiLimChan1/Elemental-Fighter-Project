@@ -238,10 +238,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     }
 
     [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
-    protected void RPC_setCoolDownDuration(Status status)
+    protected void RPC_setCoolDownDuration(Status status, float cooldown)
     {
         Attack attack = getAttack(status);
-        if (attack != null) attack.coolDownTimer = TickTimer.CreateFromSeconds(Runner, attack.coolDownDuration);
+        //if (attack != null) attack.coolDownTimer = TickTimer.CreateFromSeconds(Runner, attack.coolDownDuration); //Use client data
+        if (attack != null) attack.coolDownTimer = TickTimer.CreateFromSeconds(Runner, cooldown); //Use host data
     }
 
     protected bool canUseAttack(Status status)
@@ -630,7 +631,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
         if (ChampionAnimationController.GetAnimatorStatus() != (int)statusNetworked) //Animation Changed
         {
-            RPC_setCoolDownDuration(statusNetworked);
+            Attack attack = getAttack(statusNetworked);
+            if (attack != null) RPC_setCoolDownDuration(statusNetworked, attack.coolDownDuration);
         }
     }
 

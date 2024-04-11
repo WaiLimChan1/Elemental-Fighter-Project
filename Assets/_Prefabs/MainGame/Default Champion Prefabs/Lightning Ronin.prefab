@@ -315,21 +315,21 @@ MonoBehaviour:
     hitBox: {fileID: 8141121659428087383}
     damage: 40
     crowdControlStrength: 10
-    manaCost: 30
-    coolDownDuration: 3
+    manaCost: 50
+    coolDownDuration: 4
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 15
     crowdControlStrength: 0
     manaCost: 100
-    coolDownDuration: 10
+    coolDownDuration: 15
   lightningDashAttack:
     attackName: Lightning Dash
     hitBox: {fileID: 8780988235657823475}
     damage: 5
     crowdControlStrength: 0
     manaCost: 50
-    coolDownDuration: 5
+    coolDownDuration: 10
   dashSpeed: 30
   lightningDashSpeed: 45
 --- !u!1 &1878230729937941712

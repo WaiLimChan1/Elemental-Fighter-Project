@@ -307,7 +307,7 @@ MonoBehaviour:
     coolDownDuration: 2
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
-    damage: 25
+    damage: 35
     crowdControlStrength: 5
     manaCost: 0
     coolDownDuration: 0.5
