@@ -81,7 +81,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
      //Round variables
      [SerializeField] private int roundKills = 0;
      [SerializeField] private int roundGold = 0;
-     [SerializeField] private int roundDamage = 0; //Damage GIVEN, not taken
+     [SerializeField] private float roundDamage = 0; //Damage GIVEN, not taken
      //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -399,7 +399,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     public virtual void DealDamageToVictim(Champion enemy, float damage)
     {
+
         enemy.TakeDamageNetworked(damage, isFacingLeftNetworked); 
+        roundDamage += damage;
         //Debug.Log(roundKills);
         if (enemy.healthNetworked <= 0)
           {
@@ -411,14 +413,16 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
                GlobalManagers.Instance.PlayfabManager.SendLeaderboard("Most Kills", roundKills);
                GlobalManagers.Instance.PlayfabManager.GetAllStatistics(); //Must run before uploading playerCache variables
                GlobalManagers.Instance.PlayfabManager.playerCache.kills += roundKills;
-               
-                
+               GlobalManagers.Instance.PlayfabManager.playerCache.damage = roundDamage;
 
+
+               //Could rework if these instantiations cause memory leaks
                int newKills = GlobalManagers.Instance.PlayfabManager.playerCache.kills;
-               //int newDamage = GlobalManagers.Instance.PlayfabManager.playerCache.damage; 
+               float newDamage = GlobalManagers.Instance.PlayfabManager.playerCache.damage; 
                //int newGold = GlobalManagers.Instance.PlayfabManager.playerCache.gold;
           
-               GlobalManagers.Instance.PlayfabManager.SaveAllStatistics(newKills.ToString(), "0", "0");
+               GlobalManagers.Instance.PlayfabManager.SaveLifetimeStatistics(newKills.ToString(), newDamage.ToString(), "0");
+               GlobalManagers.Instance.PlayfabManager.SaveLastMatch();
 
           }
 

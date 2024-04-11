@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
-using TMPro; 
-
+using TMPro;
 using UnityEngine.UI;
 
 
@@ -23,6 +22,7 @@ public class PlayfabManager : MonoBehaviour
      public GameObject loginMenu;
      public GameObject startMenu;
 
+     //Holds a copy of player data locally for use with Playfab apis
      public StatisticsCache playerCache;
 
      void Start()
@@ -64,7 +64,7 @@ public class PlayfabManager : MonoBehaviour
      {
           messageText.text = "Registered!";
           StartCoroutine(ActivateAfterDelay(1));
-          SaveAllStatistics("0", "0", "0"); //Creates data for new player
+          SaveLifetimeStatistics("0", "0", "0"); //Creates data for new player
           LoginButton();
      }
 
@@ -172,19 +172,35 @@ public class PlayfabManager : MonoBehaviour
      }*/
 
      //Used to update existing stats and create new stats for registered players
-     public void SaveAllStatistics(string kills, string damage, string gold)
+     public void SaveLifetimeStatistics(string kills, string damage, string gold)
      {
 
           var request = new UpdateUserDataRequest
           {
                Data = new Dictionary<string, string>
                {
+                    //Initializes the following key:value pairs
                     {"Lifetime Kills", kills},
                     {"Lifetime Damage", damage},
-                    {"Lifetime Gold", gold}
+                    {"Lifetime Gold", gold},
+                    {"Last Match", null}
                }
           };
           PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError); 
+     } 
+
+     public void SaveLastMatch()
+     {
+
+          Debug.Log(JsonUtility.ToJson(playerCache));
+          var request = new UpdateUserDataRequest
+          {
+               Data = new Dictionary<string, string>
+               {
+                    {"Last Match", JsonUtility.ToJson(playerCache) }
+               }
+          };
+          PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError);
      }
 
      void OnDataSend(UpdateUserDataResult result)

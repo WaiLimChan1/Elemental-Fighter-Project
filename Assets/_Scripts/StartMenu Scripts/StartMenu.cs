@@ -22,12 +22,14 @@ public class StartMenu : MonoBehaviour
     {
         NetworkRunnerController NRC = GlobalManagers.Instance.NetworkRunnerController;
         NRC.LocalPlayerName = EnterName.text;
+        GlobalManagers.Instance.PlayfabManager.playerCache.username = EnterName.text; //Save player name
         NRC.RoomCode = roomCode;
-        NRC.ChampionSelectionIndex = ChampionSelection.value;
+        NRC.ChampionSelectionIndex = ChampionSelection.value; 
         NRC.LocalGameMode = mode;
 
         Debug.Log($"---------------------{mode}---------------------");
         GlobalManagers.Instance.NetworkRunnerController.StartGame(mode, roomCode);
+          
     }
 
     private void Start()
