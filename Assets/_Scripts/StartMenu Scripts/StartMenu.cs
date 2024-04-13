@@ -2,6 +2,7 @@ using Fusion;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System; //Needed for DateTime
 
 public class StartMenu : MonoBehaviour
 {
@@ -24,13 +25,15 @@ public class StartMenu : MonoBehaviour
         NRC.LocalPlayerName = EnterName.text;
         GlobalManagers.Instance.PlayfabManager.playerCache.username = EnterName.text; //Save player name
         NRC.RoomCode = roomCode;
-        NRC.ChampionSelectionIndex = ChampionSelection.value; 
+        NRC.ChampionSelectionIndex = ChampionSelection.value;
         NRC.LocalGameMode = mode;
 
         Debug.Log($"---------------------{mode}---------------------");
         GlobalManagers.Instance.NetworkRunnerController.StartGame(mode, roomCode);
-          
-    }
+        GlobalManagers.Instance.PlayfabManager.playerCache.lastPlaytime = DateTime.Now.ToString(); //Update time last match BEGAN   
+        GlobalManagers.Instance.PlayfabManager.playerCache.champion = ChampionSelection.options[ChampionSelection.value].text; //Record champion name
+
+     }
 
     private void Start()
     {

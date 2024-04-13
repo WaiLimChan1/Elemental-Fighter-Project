@@ -7124,9 +7124,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab7bb4465309974489b3d124d5e6507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  username: 
   kills: 0
   damage: 0
   gold: 0
+  placement: 0
+  score: 0
+  items:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  champion: 
 --- !u!1 &2093599075
 GameObject:
   m_ObjectHideFlags: 0
