@@ -6,17 +6,10 @@ public class WaterElemental : ElementalChampion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
-    protected override void TakeInput()
+    protected override void CancelTakeInput()
     {
-        base.TakeInput();
-
-        if (dead)
-        {
-            return;
-        }
-
-        //Water Elemental does not have Defend
-        if (status == Status.BEGIN_DEFEND || status == Status.DEFEND) status = Status.IDLE;
+        base.CancelTakeInput();
+        if (status == Status.BEGIN_DEFEND || status == Status.DEFEND) status = Status.IDLE; //Water Elemental does not have Defend
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

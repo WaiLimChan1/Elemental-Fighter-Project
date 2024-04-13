@@ -42,18 +42,23 @@ public class AzureBlitz : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-    protected override void UpdatePosition()
+    private void AirAttackDashMovementLogic()
     {
-        base.UpdatePosition();
         if (statusNetworked == Status.AIR_ATTACK &&
-            ChampionAnimationController.GetNormalizedTime() >= airAttackDashStartTime &&
-            ChampionAnimationController.GetNormalizedTime() < airAttackDashEndTime)
+                ChampionAnimationController.GetNormalizedTime() >= airAttackDashStartTime &&
+                ChampionAnimationController.GetNormalizedTime() < airAttackDashEndTime)
         {
-            float xChange = airAttackDashSpeed * Time.fixedDeltaTime;
+            float xChange = airAttackDashSpeed * Runner.DeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
 
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
+    }
+
+    protected override void UpdatePosition()
+    {
+        base.UpdatePosition();
+        AirAttackDashMovementLogic();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

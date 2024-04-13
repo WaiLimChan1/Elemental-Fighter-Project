@@ -274,7 +274,8 @@ MonoBehaviour:
   healthRegen: 5
   manaRegen: 10
   blockPercentage: 0.8
-  crowdControlBlockPercentage: 0.6
+  crowdControlBlockPercentage: 0.5
+  crowdControlIgnorePercentage: 0.6
   omnivamp: 0
   moveSpeed: 15
   airMoveSpeed: 10

@@ -45,23 +45,13 @@ public class BloodMoonRavager : Champion
 
     protected override bool UnstoppableStatusNetworked()
     {
-        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+        return base.UnstoppableStatusNetworked() && statusNetworked != Status.SPECIAL_ATTACK;
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
-
-        if (dead)
-        {
-            return;
-        }
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE1)) 
-                status = Status.UNIQUE1;
-        }
+        base.OnGroundTakeInput();
+        if (Input.GetKeyDown(KeyCode.Q) && CanUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1; //Howl
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -87,19 +77,23 @@ public class BloodMoonRavager : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-    protected override void ApplyEffects()
+    private void ApplyHowlEffects()
     {
-        base.ApplyEffects();
-
         if (!Runner.IsServer) return;
 
         if (ChampionAnimationController.GetAnimatorStatus() != (int)statusNetworked) //Animation Changed
         {
             if (statusNetworked == Status.UNIQUE1) //Howl Stats Buff Effect
             {
-                omnivamp += howlOmnivampIncrease; 
+                omnivamp += howlOmnivampIncrease;
             }
         }
+    }
+
+    protected override void ApplyEffects()
+    {
+        base.ApplyEffects();
+        ApplyHowlEffects();
     }
 
     public override void FixedUpdateNetwork()

@@ -6,12 +6,14 @@ public class WaterPriestess : Champion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Variables
+    [Header("Water Priestess Mediate Variables")]
+    [SerializeField] protected Attack meditate;
+    [SerializeField] protected float meditateHealthRegen = 15.0f;
+    [SerializeField] protected float mediateManaRegen = 5.0f;
+
     [Header("Water Priestess Water Slide Variables")]
     [SerializeField] private Attack waterSlideAttack;
     [SerializeField] private float waterSlideSpeed = 25;
-
-    [SerializeField] protected Attack meditate;
-    [SerializeField] protected float meditateRegenMultiplier = 3.0f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -25,13 +27,13 @@ public class WaterPriestess : Champion
     public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
-        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, waterSlideAttack, "A/D + Q");
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueA, meditate, "Hold Q");
+        ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, waterSlideAttack, "A/D + Q");
     }
 
     protected override Attack getAttack(Status status)
     {
-        if (status == Status.UNIQUE1) return meditate;
+        if (status == Status.UNIQUE2) return meditate;
         else if (status == Status.UNIQUE3) return waterSlideAttack;
         return base.getAttack(status);
     }
@@ -67,34 +69,25 @@ public class WaterPriestess : Champion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE3);
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
-
-        if (dead)
+        base.OnGroundTakeInput();
+        if (Input.GetKey(KeyCode.Q))
         {
-            return;
+            //Begin_Meditation, then Begin_Meditation into Meditation, then if already Meditation, continue Meditation
+            Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
+            if (lastStatus != Status.UNIQUE1 && lastStatus != Status.UNIQUE2 && CanUseAttack(Status.UNIQUE2)) status = Status.UNIQUE1;
+            else if (lastStatus == Status.UNIQUE1)
+            {
+                if (ChampionAnimationController.AnimationFinished()) status = Status.UNIQUE2;
+                else status = Status.UNIQUE1;
+            }
+            else if (lastStatus == Status.UNIQUE2) status = Status.UNIQUE2;
+
         }
-
-        if (!inAir && InterruptableStatus())
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            if (Input.GetKey(KeyCode.Q))
-            {
-                //Begin_Meditation, then Begin_Meditation into Meditation, then if already Meditation, continue Meditation
-                Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
-                if (lastStatus != Status.UNIQUE1 && lastStatus != Status.UNIQUE2 && canUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1;
-                else if (lastStatus == Status.UNIQUE1)
-                {
-                    if (ChampionAnimationController.AnimationFinished()) status = Status.UNIQUE2;
-                    else status = Status.UNIQUE1;
-                }
-                else if (lastStatus == Status.UNIQUE2) status = Status.UNIQUE2;
-
-            }
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-            {
-                if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE3)) status = Status.UNIQUE3;
-            }
+            if (Input.GetKeyDown(KeyCode.Q) && CanUseAttack(Status.UNIQUE3)) status = Status.UNIQUE3; //Water Slide
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -157,32 +150,40 @@ public class WaterPriestess : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-    protected override void UpdatePosition()
+    private void WaterSlideMovementLogic()
     {
-        base.UpdatePosition();
         if (statusNetworked == Status.UNIQUE3)
         {
-            float xChange = waterSlideSpeed * Time.fixedDeltaTime;
+            float xChange = waterSlideSpeed * Runner.DeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
     }
 
-    protected override void ApplyEffects()
+    protected override void UpdatePosition()
     {
-        base.ApplyEffects();
+        base.UpdatePosition();
+        WaterSlideMovementLogic();
+    }
 
+    private void ApplyMeditationEffects()
+    {
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE2) //Meditation Health & Mana Regen
         {
             if (healthNetworked > 0)
             {
-                setHealthNetworked(healthNetworked + healthRegen * meditateRegenMultiplier * Runner.DeltaTime);
-                setManaNetworked(manaNetworked + manaRegen * meditateRegenMultiplier * Runner.DeltaTime);
+                setHealthNetworked(healthNetworked + meditateHealthRegen * Runner.DeltaTime);
+                setManaNetworked(manaNetworked + mediateManaRegen * Runner.DeltaTime);
             }
         }
     }
-    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+    protected override void ApplyEffects()
+    {
+        base.ApplyEffects();
+        ApplyMeditationEffects();
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

@@ -273,8 +273,9 @@ MonoBehaviour:
   maxMana: 500
   healthRegen: 5
   manaRegen: 10
-  blockPercentage: 0.8
-  crowdControlBlockPercentage: 0
+  blockPercentage: 1
+  crowdControlBlockPercentage: 0.5
+  crowdControlIgnorePercentage: 0
   omnivamp: 0
   moveSpeed: 18
   airMoveSpeed: 15
@@ -302,7 +303,7 @@ MonoBehaviour:
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
     damage: 50
-    crowdControlStrength: 0
+    crowdControlStrength: 5
     manaCost: 0
     coolDownDuration: 1
   - attackName: Attack2
@@ -325,7 +326,7 @@ MonoBehaviour:
     coolDownDuration: 15
   - attackName: Transform Attack
     hitBox: {fileID: 667193806090640748}
-    damage: 200
+    damage: 400
     crowdControlStrength: 30
     manaCost: 0
     coolDownDuration: 0
@@ -336,12 +337,12 @@ MonoBehaviour:
   DartPrefab:
     RawGuidValue: 40c2dbc389d8b39418feb2d54199005f
   DartSpawnPoint: {fileID: 8131791377776282540}
-  DartSpeed: 40
+  DartSpeed: 45
   DartLifeTime: 5
   JavelinPrefab:
     RawGuidValue: 120e178153891d145aeb022a410ffde3
   JavelinSpawnPoint: {fileID: 2031479940343930903}
-  JavelinSpeed: 45
+  JavelinSpeed: 50
   JavelinLifeTime: 5
 --- !u!1 &1557745043002585598
 GameObject:

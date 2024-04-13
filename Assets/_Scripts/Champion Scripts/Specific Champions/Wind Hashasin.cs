@@ -20,7 +20,7 @@ public class WindHashasin : Champion
     //Status Logic
     protected override bool UnstoppableStatusNetworked()
     {
-        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+        return base.UnstoppableStatusNetworked() && statusNetworked != Status.SPECIAL_ATTACK;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

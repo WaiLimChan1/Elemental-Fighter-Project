@@ -21,6 +21,7 @@ public class LeafRanger : Champion
     [Header("Attack3 Variables")]
     [SerializeField] private NetworkPrefabRef AbilityPrefab;
     [SerializeField] float Attack3YOffSet = 4.2f;
+    [SerializeField] float Attack3XOffSet = 10f;
 
     [SerializeField][Networked] private Champion Attack3Target { get; set; }
     [SerializeField] private float Attack3Range = 20f;
@@ -57,20 +58,12 @@ public class LeafRanger : Champion
             status == Status.UNIQUE1);
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
-
-        if (dead)
+        base.OnGroundTakeInput();
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            return;
-        }
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-                if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE1)) 
-                    status = Status.UNIQUE1;
+            if (Input.GetKeyDown(KeyCode.Q) && CanUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1; //Slide
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -101,17 +94,18 @@ public class LeafRanger : Champion
 
         if (statusNetworked == Status.ATTACK3)
         {
-            Vector2 SpawnPoint = new Vector2(transform.position.x, transform.position.y);
+            //Calculate SpawnPoint with no target
+            float direction = 1;
+            if (isFacingLeftNetworked) direction *= -1;
+            Vector2 SpawnPoint = new Vector2(transform.position.x + direction * Attack3XOffSet, transform.position.y + Attack3YOffSet);
 
+            //Find target 
             if (Attack3Target == null) Attack3Target = MainGameUtils.FindClosestEnemyCircle(this, transform.position, Attack3Range);
-            if (Attack3Target != null)
-            {
-                SpawnPoint = new Vector2(Attack3Target.transform.position.x, Attack3Target.transform.position.y);
-            }
 
-            SpawnPoint = new Vector2(SpawnPoint.x, transform.position.y + Attack3YOffSet);
-            Ability.SpawnAbility(Runner, this, isFacingLeftNetworked, AbilityPrefab, SpawnPoint, Attacks[3].damage, Ability.AbilityStatus.Leaf_Ranger_ATK3);
+            //If found a target, aim at target
+            if (Attack3Target != null) SpawnPoint = new Vector2(Attack3Target.transform.position.x, SpawnPoint.y);
 
+            Ability.SpawnAbility(Runner, this, isFacingLeftNetworked, AbilityPrefab, SpawnPoint, Attacks[3].damage, Ability.AbilityStatus.Leaf_Ranger_ATK3, AttackType.AlwaysBlockable);
         }
     }
 
@@ -130,15 +124,20 @@ public class LeafRanger : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-    protected override void UpdatePosition()
+    private void SlideMovementLogic()
     {
-        base.UpdatePosition();
         if (statusNetworked == Status.UNIQUE1)
         {
-            float xChange = slideMoveSpeed * Time.fixedDeltaTime;
+            float xChange = slideMoveSpeed * Runner.DeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
+    }
+
+    protected override void UpdatePosition()
+    {
+        base.UpdatePosition();
+        SlideMovementLogic();
     }
 
     public override void FixedUpdateNetwork()

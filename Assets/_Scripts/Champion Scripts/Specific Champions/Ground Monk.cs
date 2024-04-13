@@ -10,14 +10,16 @@ public class GroundMonk : Champion
     [SerializeField] protected BoxCollider2D SpecialAttackCrowdControlBox;
 
     [SerializeField] protected Attack meditate;
-    [SerializeField] protected float meditateRegenMultiplier = 3.0f;
+    [SerializeField] protected float meditateHealthRegen = 15.0f;
+    [SerializeField] protected float mediateManaRegen = 5.0f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Attack Variables & Attack Functions
-    //Status.UNIQUE1 : Howl
+    //Status.UNIQUE1 : Begin_Meditation
+    //Status.UNIQUE2 : Meditation
 
     public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
     {
@@ -27,7 +29,7 @@ public class GroundMonk : Champion
 
     protected override Attack getAttack(Status status)
     {
-        if (status == Status.UNIQUE1) return meditate;
+        if (status == Status.UNIQUE2) return meditate;
         return base.getAttack(status);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -49,30 +51,21 @@ public class GroundMonk : Champion
             status == Status.UNIQUE1 || status == Status.UNIQUE2);
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
-
-        if (dead)
+        base.OnGroundTakeInput();
+        if (Input.GetKey(KeyCode.Q))
         {
-            return;
-        }
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKey(KeyCode.Q))
+            //Begin_Meditation, then Begin_Meditation into Meditation, then if already Meditation, continue Meditation
+            Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
+            if (lastStatus != Status.UNIQUE1 && lastStatus != Status.UNIQUE2 && CanUseAttack(Status.UNIQUE2)) status = Status.UNIQUE1;
+            else if (lastStatus == Status.UNIQUE1)
             {
-                //Begin_Meditation, then Begin_Meditation into Meditation, then if already Meditation, continue Meditation
-                Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
-                if (lastStatus != Status.UNIQUE1 && lastStatus != Status.UNIQUE2 && canUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1;
-                else if (lastStatus == Status.UNIQUE1)
-                {
-                    if (ChampionAnimationController.AnimationFinished()) status = Status.UNIQUE2;
-                    else status = Status.UNIQUE1;
-                }
-                else if (lastStatus == Status.UNIQUE2) status = Status.UNIQUE2;
-
+                if (ChampionAnimationController.AnimationFinished()) status = Status.UNIQUE2;
+                else status = Status.UNIQUE1;
             }
+            else if (lastStatus == Status.UNIQUE2) status = Status.UNIQUE2;
+
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -110,20 +103,24 @@ public class GroundMonk : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-    protected override void ApplyEffects()
+    private void ApplyMeditationEffects()
     {
-        base.ApplyEffects();
-
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE2) //Meditation Health & Mana Regen
         {
             if (healthNetworked > 0)
             {
-                setHealthNetworked(healthNetworked + healthRegen * meditateRegenMultiplier * Runner.DeltaTime);
-                setManaNetworked(manaNetworked + manaRegen * meditateRegenMultiplier * Runner.DeltaTime);
+                setHealthNetworked(healthNetworked + meditateHealthRegen * Runner.DeltaTime);
+                setManaNetworked(manaNetworked + mediateManaRegen * Runner.DeltaTime);
             }
         }
+    }
+
+    protected override void ApplyEffects()
+    {
+        base.ApplyEffects();
+        ApplyMeditationEffects();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

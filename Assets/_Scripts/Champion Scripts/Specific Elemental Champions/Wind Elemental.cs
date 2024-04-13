@@ -52,25 +52,19 @@ public class WindElemental : ElementalChampion
 
     protected override bool UnstoppableStatusNetworked()
     {
-        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+        return base.UnstoppableStatusNetworked() && statusNetworked != Status.SPECIAL_ATTACK;
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
+        base.OnGroundTakeInput();
+        if (Input.GetKeyDown(KeyCode.Q) && CanUseAttack(Status.UNIQUE2)) status = Status.UNIQUE2; //Blink
+    }
 
-        if (dead)
-        {
-            return;
-        }
-
-        //Wind Elemental does not have Defend
-        if (status == Status.BEGIN_DEFEND || status == Status.DEFEND) status = Status.IDLE;
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE2)) status = Status.UNIQUE2;
-        }
+    protected override void CancelTakeInput()
+    {
+        base.CancelTakeInput();
+        if (status == Status.BEGIN_DEFEND || status == Status.DEFEND) status = Status.IDLE; //Wind Elemental does not have Defend
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

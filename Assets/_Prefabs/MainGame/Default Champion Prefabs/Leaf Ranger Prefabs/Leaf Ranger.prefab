@@ -274,7 +274,8 @@ MonoBehaviour:
   healthRegen: 1
   manaRegen: 8
   blockPercentage: 0.8
-  crowdControlBlockPercentage: 0
+  crowdControlBlockPercentage: 0.3
+  crowdControlIgnorePercentage: 0
   omnivamp: 0
   moveSpeed: 15
   airMoveSpeed: 10
@@ -304,12 +305,12 @@ MonoBehaviour:
     damage: 10
     crowdControlStrength: 10
     manaCost: 0
-    coolDownDuration: 1
+    coolDownDuration: 1.5
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
     damage: 20
     crowdControlStrength: 0
-    manaCost: 10
+    manaCost: 0
     coolDownDuration: 0.5
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
@@ -340,6 +341,7 @@ MonoBehaviour:
   AbilityPrefab:
     RawGuidValue: d060cafdcbe49c24e9ab1c3154598bdf
   Attack3YOffSet: 4.2
+  Attack3XOffSet: 10
   _Attack3Target: {fileID: 0}
   Attack3Range: 20
 --- !u!1 &1878230729937941712

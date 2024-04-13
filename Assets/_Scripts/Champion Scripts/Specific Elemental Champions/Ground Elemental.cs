@@ -25,17 +25,10 @@ public class GroundElemental : ElementalChampion
             statusNetworked == Status.ATTACK2 || statusNetworked == Status.ATTACK3;
     }
 
-    protected override void TakeInput()
+    protected override void CancelTakeInput()
     {
-        base.TakeInput();
-
-        if (dead)
-        {
-            return;
-        }
-
-        //Ground Elemental does not have Defend
-        if (status == Status.BEGIN_DEFEND || status == Status.DEFEND) status = Status.IDLE;
+        base.CancelTakeInput();
+        if (status == Status.BEGIN_DEFEND || status == Status.DEFEND) status = Status.IDLE; //Ground Elemental does not have Defend
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

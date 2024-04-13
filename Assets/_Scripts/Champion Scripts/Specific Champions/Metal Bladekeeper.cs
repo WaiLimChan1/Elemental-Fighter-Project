@@ -24,8 +24,8 @@ public class MetalBladekeeper : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Attack Variables & Attack Functions
-    //Status.UNIQUE1 : Throw
-    //Status.UNIQUE2 : Air_Throw
+    //Status.UNIQUE1 : Throw Dagger
+    //Status.UNIQUE2 : Air Throw Dagger
 
     public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
     {
@@ -44,8 +44,8 @@ public class MetalBladekeeper : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
-    //Status.UNIQUE1 : Throw
-    //Status.UNIQUE2 : Air_Throw
+    //Status.UNIQUE1 : Throw Dagger
+    //Status.UNIQUE2 : Air Throw Dagger
 
     protected override bool SingleAnimationStatus()
     {
@@ -53,30 +53,16 @@ public class MetalBladekeeper : Champion
             status == Status.UNIQUE1 || status == Status.UNIQUE2);
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
+        base.OnGroundTakeInput();
+        if (Input.GetKeyDown(KeyCode.Q) && CanUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1; //Throw Dagger
+    }
 
-        if (dead)
-        {
-            return;
-        }
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE1))
-            {
-                status = Status.UNIQUE1;
-            }
-        }
-
-        if (inAir && InAirInterruptableStatus())
-        {
-            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE2))
-            {
-                status = Status.UNIQUE2;
-            }
-        }
+    protected override void InAirTakeInput()
+    {
+        base.InAirTakeInput();
+        if (Input.GetKeyDown(KeyCode.Q) && CanUseAttack(Status.UNIQUE2)) status = Status.UNIQUE2; //Air Throw Dagger
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

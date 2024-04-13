@@ -274,7 +274,8 @@ MonoBehaviour:
   healthRegen: 1
   manaRegen: 10
   blockPercentage: 0.8
-  crowdControlBlockPercentage: 0
+  crowdControlBlockPercentage: 0.3
+  crowdControlIgnorePercentage: 0
   omnivamp: 0
   moveSpeed: 15
   airMoveSpeed: 10
@@ -319,10 +320,10 @@ MonoBehaviour:
     coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
-    damage: 60
+    damage: 100
     crowdControlStrength: 20
-    manaCost: 100
-    coolDownDuration: 4
+    manaCost: 150
+    coolDownDuration: 5
 --- !u!1 &1878230729937941712
 GameObject:
   m_ObjectHideFlags: 0

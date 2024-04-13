@@ -33,25 +33,16 @@ public class ElementalChampion : Champion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE1);
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
+        base.OnGroundTakeInput();
+        if (Input.GetKeyDown(KeyCode.E)) status = Status.UNIQUE1; //Transform
+    }
 
-        if (dead)
-        {
-            return;
-        }
-
-        //Elemental Champions do not have Roll.
-        if (status == Status.ROLL) status = Status.RUN;
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                status = Status.UNIQUE1;
-            }
-        }
+    protected override void CancelTakeInput()
+    {
+        base.CancelTakeInput();
+        if (status == Status.ROLL) status = Status.RUN; //Elemental Champions do not have Roll.
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

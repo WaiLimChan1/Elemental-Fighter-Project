@@ -59,22 +59,10 @@ public class FireElemental : ElementalChampion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.ATTACK3);
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
-
-        if (dead)
-        {
-            return;
-        }
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE2))
-            {
-                status = Status.UNIQUE2;
-            }
-        }
+        base.OnGroundTakeInput();
+        if (Input.GetKeyDown(KeyCode.Q) && CanUseAttack(Status.UNIQUE2)) status = Status.UNIQUE2; //Throw Fire Ball
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -97,7 +85,7 @@ public class FireElemental : ElementalChampion
         if (statusNetworked == Status.AIR_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength));
         else if (statusNetworked == Status.ATTACK1) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
         else if (statusNetworked == Status.ATTACK2) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, 0));
-        else if (statusNetworked == Status.ATTACK3) enemy.AddVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength / 2));
+        else if (statusNetworked == Status.ATTACK3) enemy.SetVelocity(new Vector2(direction * crowdControlStrength, crowdControlStrength / 2));
         else if (statusNetworked == Status.SPECIAL_ATTACK) enemy.AddVelocity(new Vector2(direction * crowdControlStrength / 2, crowdControlStrength));
         else if (statusNetworked == Status.UNIQUE1) enemy.SetVelocity(new Vector2(0, crowdControlStrength));
     }
@@ -126,18 +114,23 @@ public class FireElemental : ElementalChampion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-    protected override void UpdatePosition()
+    private void Attack3DashMovementLogic()
     {
-        base.UpdatePosition();
         if (statusNetworked == Status.ATTACK3 &&
             ChampionAnimationController.GetNormalizedTime() >= attack3DashStartTime &&
             ChampionAnimationController.GetNormalizedTime() < attack3DashEndTime)
         {
-            float xChange = attack3DashSpeed * Time.fixedDeltaTime;
+            float xChange = attack3DashSpeed * Runner.DeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
 
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
+    }
+
+    protected override void UpdatePosition()
+    {
+        base.UpdatePosition();
+        Attack3DashMovementLogic();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

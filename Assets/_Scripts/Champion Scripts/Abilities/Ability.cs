@@ -7,10 +7,10 @@ public class Ability : NetworkBehaviour
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Static Projectile Spawn Functions
     public static void SpawnAbility(NetworkRunner Runner, Champion owner, bool isFacingLeft,
-                                        NetworkPrefabRef AbilityPrefab, Vector2 SpawnPoint, float damage, AbilityStatus abilityStatus)
+                                        NetworkPrefabRef AbilityPrefab, Vector2 SpawnPoint, float damage, AbilityStatus abilityStatus, Champion.AttackType attackType)
     {
         var Ability = Runner.Spawn(AbilityPrefab, SpawnPoint, Quaternion.identity);
-        Ability.GetComponent<Ability>().SetUp(owner, damage, isFacingLeft, abilityStatus);
+        Ability.GetComponent<Ability>().SetUp(owner, damage, isFacingLeft, abilityStatus, attackType);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -42,6 +42,7 @@ public class Ability : NetworkBehaviour
     [SerializeField][Networked] private float damage { get; set; }
     [SerializeField][Networked] private bool isFacingLeft { get; set; }
     [SerializeField][Networked] private int abilityStatusNum { get; set; }
+    [SerializeField][Networked] private int attackTypeNum { get; set; }
 
     [Header("Ability Attack Variables")]
     [SerializeField] public Transform AttackBoxesParent;
@@ -57,12 +58,13 @@ public class Ability : NetworkBehaviour
         AbilityAnimationController = GetComponentInChildren<AbilityAnimationController>();
     }
 
-    public void SetUp(Champion owner, float damage, bool isFacingLeft, AbilityStatus abilityStatus)
+    public void SetUp(Champion owner, float damage, bool isFacingLeft, AbilityStatus abilityStatus, Champion.AttackType attackType)
     {
         this.owner = owner;
         this.damage = damage;
         this.isFacingLeft = isFacingLeft;
         this.abilityStatusNum = (int)abilityStatus;
+        this.attackTypeNum = (int)attackType;
 
         AbilityAnimationController.Flip(this.isFacingLeft);
         AbilityAnimationController.ChangeAnimation(abilityStatusNum);
@@ -83,6 +85,12 @@ public class Ability : NetworkBehaviour
         attackBox = AttackBoxes[index];
         damage = this.damage;
     }
+
+    public virtual void DealDamageToVictim(Champion enemy)
+    {
+        enemy.TakeDamageNetworked(owner, damage, isFacingLeft, (Champion.AttackType) attackTypeNum);
+    }
+
     public virtual void AnimationTriggerAttack()
     {
         int index = GetAttackBoxIndex();
@@ -98,7 +106,7 @@ public class Ability : NetworkBehaviour
         {
             Champion enemy = collider.GetComponent<Champion>();
             if (enemy != null && owner != null && enemy.CanBeAttacked(owner))
-                owner.DealDamageToVictim(enemy, damage);
+                DealDamageToVictim(enemy);
         }
     }
 

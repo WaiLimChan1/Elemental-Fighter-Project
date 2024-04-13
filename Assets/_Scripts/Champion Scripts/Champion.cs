@@ -21,6 +21,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     public enum AttackType
     {
+        AlwaysBlockable, //Block by blocking. Direction does not matter
         BlockByFacingAttack, //Block by facing in the opposite direction of the attacker
         BlockByFacingAttacker, //Block by facing towards the attack's direction
         Unblockable //Can't Block
@@ -97,7 +98,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Tooltip("Mana restored every second")] [SerializeField] protected float manaRegen = 8;
 
     [Tooltip("Percentage of damage to reduce (While Defending)")][SerializeField] protected float blockPercentage = 0.8f;
-    [Tooltip("Percentage of Crowd Control to ignore (Always)")][SerializeField] protected float crowdControlBlockPercentage = 0f;
+    [Tooltip("Percentage of Crowd Control to reduce (While Defending OR Unstoppable)")][SerializeField] protected float crowdControlBlockPercentage = 0.3f;
+    [Tooltip("Percentage of Crowd Control to ignore (Always)")][SerializeField] protected float crowdControlIgnorePercentage = 0f;
 
 
 
@@ -241,11 +243,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     protected void RPC_setCoolDownDuration(Status status, float cooldown)
     {
         Attack attack = getAttack(status);
-        //if (attack != null) attack.coolDownTimer = TickTimer.CreateFromSeconds(Runner, attack.coolDownDuration); //Use client data
         if (attack != null) attack.coolDownTimer = TickTimer.CreateFromSeconds(Runner, cooldown); //Use host data
     }
 
-    protected bool canUseAttack(Status status)
+    protected bool CanUseAttack(Status status)
     {
         Attack attack = getAttack(status);
         if (attack != null) return manaNetworked >= attack.manaCost && attack.coolDownTimer.ExpiredOrNotRunning(Runner);
@@ -322,6 +323,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     {
         return (statusNetworked == Status.SPECIAL_ATTACK);
     }
+
+    protected virtual bool DefensiveStatusNetworked()
+    {
+        return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -340,6 +346,43 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (status == Status.JUMP_DOWN) if (!inAir) status = Status.IDLE;
     }
 
+    protected virtual void OnGroundTakeInput()
+    {
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            status = Status.RUN;
+            if (Input.GetKeyDown(KeyCode.W) && CanUseAttack(Status.ROLL)) status = Status.ROLL;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            status = Status.JUMP_UP;
+        }
+        if (Input.GetKeyDown(KeyCode.G) && CanUseAttack(Status.ATTACK1)) status = Status.ATTACK1;
+        if (Input.GetKeyDown(KeyCode.H) && CanUseAttack(Status.ATTACK2)) status = Status.ATTACK2;
+        if (Input.GetKeyDown(KeyCode.J) && CanUseAttack(Status.ATTACK3)) status = Status.ATTACK3;
+        if (Input.GetKeyDown(KeyCode.K) && CanUseAttack(Status.SPECIAL_ATTACK)) status = Status.SPECIAL_ATTACK;
+        if (Input.GetKey(KeyCode.S))
+        {
+            //Begin_Defend, then Begin_defend into Defend, then if already Defending, continue Defending
+            Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
+            if (lastStatus != Status.BEGIN_DEFEND && lastStatus != Status.DEFEND) status = Status.BEGIN_DEFEND;
+            else if (lastStatus == Status.BEGIN_DEFEND)
+            {
+                if (ChampionAnimationController.AnimationFinished()) status = Status.DEFEND;
+                else status = Status.BEGIN_DEFEND;
+            }
+            else if (lastStatus == Status.DEFEND) status = Status.DEFEND;
+
+        }
+    }
+
+    protected virtual void InAirTakeInput()
+    {
+        if (Input.GetKeyDown(KeyCode.G) && CanUseAttack(Status.AIR_ATTACK)) status = Status.AIR_ATTACK;
+    }
+
+    protected virtual void CancelTakeInput() { }
+
     protected virtual void TakeInput()
     {
         if (dead)
@@ -355,35 +398,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         }
 
         //If Character is in an interruptable status
-        if (InterruptableStatus())
+        if (!inAir && InterruptableStatus())
         {
             status = Status.IDLE;
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-            {
-                status = Status.RUN;
-                if (Input.GetKeyDown(KeyCode.W) && canUseAttack(Status.ROLL)) status = Status.ROLL;
-            }
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                status = Status.JUMP_UP;
-            }
-            if (Input.GetKeyDown(KeyCode.G) && canUseAttack(Status.ATTACK1)) status = Status.ATTACK1;
-            if (Input.GetKeyDown(KeyCode.H) && canUseAttack(Status.ATTACK2)) status = Status.ATTACK2;
-            if (Input.GetKeyDown(KeyCode.J) && canUseAttack(Status.ATTACK3)) status = Status.ATTACK3;
-            if (Input.GetKeyDown(KeyCode.K) && canUseAttack(Status.SPECIAL_ATTACK)) status = Status.SPECIAL_ATTACK;
-            if (Input.GetKey(KeyCode.S))
-            {
-                //Begin_Defend, then Begin_defend into Defend, then if already Defending, continue Defending
-                Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
-                if (lastStatus != Status.BEGIN_DEFEND && lastStatus != Status.DEFEND) status = Status.BEGIN_DEFEND;
-                else if (lastStatus == Status.BEGIN_DEFEND)
-                {
-                    if (ChampionAnimationController.AnimationFinished()) status = Status.DEFEND;
-                    else status = Status.BEGIN_DEFEND;
-                }
-                else if (lastStatus == Status.DEFEND) status = Status.DEFEND;
-
-            }
+            OnGroundTakeInput();
         }
 
         //In Air Input
@@ -400,11 +418,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
                 if (Rigid.velocity.y > 0) status = Status.JUMP_UP;
                 else if (Rigid.velocity.y < 0) status = Status.JUMP_DOWN;
 
-                //In Air Attack
-                if (Input.GetKeyDown(KeyCode.G) && canUseAttack(Status.AIR_ATTACK))
-                    status = Status.AIR_ATTACK;
+                InAirTakeInput();
             }
         }
+
+        CancelTakeInput();
     }
 
     private void CheckDeath()
@@ -472,10 +490,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (healthNetworked <= 0) return 0;
 
         //Blocked
-        if ((statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND) 
-            && attackType == AttackType.BlockByFacingAttack && isFacingLeftNetworked != attackerIsFacingLeft)
+        if (DefensiveStatusNetworked() && attackType == AttackType.AlwaysBlockable)
             damage -= damage * blockPercentage;
-        else if ((statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND)
+        else if (DefensiveStatusNetworked() && attackType == AttackType.BlockByFacingAttack && isFacingLeftNetworked != attackerIsFacingLeft)
+            damage -= damage * blockPercentage;
+        else if (DefensiveStatusNetworked()
             && attackType == AttackType.BlockByFacingAttacker
             && ((isFacingLeftNetworked && transform.position.x > attackerPosition.x) || (!isFacingLeftNetworked && transform.position.x < attackerPosition.x)))
             damage -= damage * blockPercentage;
@@ -492,14 +511,22 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         return damage;
     }
 
+    public Vector2 CalculateVelocity(Vector2 velocity)
+    {
+        float totalCCReductionPercentage = crowdControlIgnorePercentage;
+        if (DefensiveStatusNetworked() || UnstoppableStatusNetworked()) totalCCReductionPercentage += crowdControlBlockPercentage;
+
+        return velocity * Mathf.Clamp01(1 - totalCCReductionPercentage);
+    }
+
     public void AddVelocity(Vector2 velocity)
     {
-        Rigid.velocity += velocity * (1 - crowdControlBlockPercentage);
+        Rigid.velocity += CalculateVelocity(velocity);
     }
 
     public void SetVelocity(Vector2 velocity)
     {
-        Rigid.velocity = velocity * (1 - crowdControlBlockPercentage);
+        Rigid.velocity = CalculateVelocity(velocity);
     }
 
     public virtual void DealDamageToVictim(Champion enemy, float damage)
@@ -615,6 +642,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         }
     }
 
+    //-------------------------------------------------------------------
+    //Apply Effects Logic
     private void ApplyManaCost()
     {
         if (!Runner.IsServer) return;
@@ -651,6 +680,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         ApplyCoolDownDuration();
         ApplyHealthAndManaRegen();
     }
+    //-------------------------------------------------------------------
 
     private void UpdateChampionVisual()
     {

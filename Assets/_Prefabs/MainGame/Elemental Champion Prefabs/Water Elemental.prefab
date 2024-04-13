@@ -274,7 +274,8 @@ MonoBehaviour:
   healthRegen: 5
   manaRegen: 10
   blockPercentage: 0.8
-  crowdControlBlockPercentage: 0
+  crowdControlBlockPercentage: 0.5
+  crowdControlIgnorePercentage: 0
   omnivamp: 0
   moveSpeed: 30
   airMoveSpeed: 20
@@ -325,7 +326,7 @@ MonoBehaviour:
     coolDownDuration: 5
   - attackName: Transform Attack
     hitBox: {fileID: 6309117053327390016}
-    damage: 100
+    damage: 500
     crowdControlStrength: 25
     manaCost: 0
     coolDownDuration: 0
@@ -900,7 +901,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 10.075542, y: 2.20743}
+  m_Offset: {x: 7.8837023, y: 2.20743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -910,7 +911,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.5432773, y: 2.531147}
+  m_Size: {x: 10.926958, y: 2.531147}
   m_EdgeRadius: 0
 --- !u!1001 &1402819715383663719
 PrefabInstance:

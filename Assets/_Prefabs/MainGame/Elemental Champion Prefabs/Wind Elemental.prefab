@@ -274,7 +274,8 @@ MonoBehaviour:
   healthRegen: 5
   manaRegen: 10
   blockPercentage: 0.8
-  crowdControlBlockPercentage: 0
+  crowdControlBlockPercentage: 0.5
+  crowdControlIgnorePercentage: 0
   omnivamp: 0
   moveSpeed: 25
   airMoveSpeed: 15
@@ -295,7 +296,7 @@ MonoBehaviour:
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
-    damage: 15
+    damage: 20
     crowdControlStrength: 10
     manaCost: 0
     coolDownDuration: 0.5
@@ -310,7 +311,7 @@ MonoBehaviour:
     damage: 35
     crowdControlStrength: 5
     manaCost: 0
-    coolDownDuration: 0.5
+    coolDownDuration: 1
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 20
@@ -325,7 +326,7 @@ MonoBehaviour:
     coolDownDuration: 30
   - attackName: Transform Attack
     hitBox: {fileID: 1670391504431013256}
-    damage: 50
+    damage: 150
     crowdControlStrength: 20
     manaCost: 0
     coolDownDuration: 0

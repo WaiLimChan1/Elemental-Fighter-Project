@@ -274,7 +274,8 @@ MonoBehaviour:
   healthRegen: 1
   manaRegen: 8
   blockPercentage: 0.8
-  crowdControlBlockPercentage: 0
+  crowdControlBlockPercentage: 0.3
+  crowdControlIgnorePercentage: 0
   omnivamp: 0
   moveSpeed: 15
   airMoveSpeed: 10
@@ -301,13 +302,13 @@ MonoBehaviour:
     coolDownDuration: 0.5
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
-    damage: 20
+    damage: 25
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 0.5
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
-    damage: 10
+    damage: 15
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 0.5
@@ -319,10 +320,10 @@ MonoBehaviour:
     coolDownDuration: 5
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
-    damage: 50
+    damage: 75
     crowdControlStrength: 0
     manaCost: 100
-    coolDownDuration: 15
+    coolDownDuration: 35
   _specialAttackTarget: {fileID: 0}
   specialAttackTeleportRange: 20
 --- !u!1 &1878230729937941712

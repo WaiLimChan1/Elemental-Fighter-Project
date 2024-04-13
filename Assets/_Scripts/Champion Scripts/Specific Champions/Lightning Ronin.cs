@@ -51,22 +51,13 @@ public class LightningRonin : Champion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE2);
     }
 
-    protected override void TakeInput()
+    protected override void OnGroundTakeInput()
     {
-        base.TakeInput();
-
-        if (dead)
+        base.OnGroundTakeInput();
+        //if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1; //Dash
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            return;
-        }
-
-        if (!inAir && InterruptableStatus())
-        {
-            if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE1)) status = Status.UNIQUE1;
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-            {
-                if (Input.GetKeyDown(KeyCode.Q) && canUseAttack(Status.UNIQUE2)) status = Status.UNIQUE2;
-            }
+            if (Input.GetKeyDown(KeyCode.Q) && CanUseAttack(Status.UNIQUE2)) status = Status.UNIQUE2; //Lightning Dash
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -119,22 +110,26 @@ public class LightningRonin : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Logic
-    protected override void UpdatePosition()
+    private void LightningDashMovementLogic()
     {
-        base.UpdatePosition();
         if ((statusNetworked == Status.UNIQUE1 || statusNetworked == Status.UNIQUE2) &&
-            ChampionAnimationController.GetNormalizedTime() <= 8.0f/11.0f)
+            ChampionAnimationController.GetNormalizedTime() <= 8.0f / 11.0f)
         {
             float xChange = 0;
 
-            if (statusNetworked == Status.UNIQUE1)
-                xChange = dashSpeed * Time.fixedDeltaTime;
-            else if (statusNetworked == Status.UNIQUE2)
-                xChange = lightningDashSpeed * Time.fixedDeltaTime;
+            if (statusNetworked == Status.UNIQUE1) xChange = dashSpeed * Runner.DeltaTime;
+            else if (statusNetworked == Status.UNIQUE2) xChange = lightningDashSpeed * Runner.DeltaTime;
 
             if (isFacingLeftNetworked) xChange *= -1;
+
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }
+    }
+
+    protected override void UpdatePosition()
+    {
+        base.UpdatePosition();
+        LightningDashMovementLogic();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }
