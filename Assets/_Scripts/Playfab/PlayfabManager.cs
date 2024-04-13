@@ -19,6 +19,7 @@ public class PlayfabManager : MonoBehaviour
      public Button RegisterClick;
      public Button ResetPasswordClick;
 
+     //Menu Objects
      public GameObject loginMenu;
      public GameObject startMenu;
 
@@ -27,6 +28,7 @@ public class PlayfabManager : MonoBehaviour
 
      void Start()
      {
+          //Login must occur before match set up
           startMenu.SetActive(false);
           loginMenu.SetActive(true);
           LoginClick.onClick.AddListener(() => LoginButton());
@@ -60,11 +62,12 @@ public class PlayfabManager : MonoBehaviour
           PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError); 
      } 
 
+     //Makes new user account
      void OnRegisterSuccess(RegisterPlayFabUserResult result)
      {
           messageText.text = "Registered!";
           StartCoroutine(ActivateAfterDelay(1));
-          SaveLifetimeStatistics("0", "0", "0"); //Creates data for new player
+          SaveLifetimeStatistics("0", "0", "0"); //Creates empty data for new player
           LoginButton();
      }
 
@@ -117,13 +120,15 @@ public class PlayfabManager : MonoBehaviour
           Debug.Log("Successful login/account create!");
      }
 
+     //Display errors on login and in console
      void OnError(PlayFabError error)
      {
           messageText.text = error.GenerateErrorReport();
           Debug.Log(error.GenerateErrorReport());
-     } 
+     }
 
-     public void SendLeaderboard(string leaderboard, int score) //Specify the leaderboard and the score to send 
+     //Specify the leaderboard and the score to send 
+     public void SendLeaderboard(string leaderboard, int score) 
      //Might need to edit to accept different number types later on 
      /*
       Current Leaderboard names: 
@@ -150,6 +155,7 @@ public class PlayfabManager : MonoBehaviour
           Debug.Log("Successful leaderboard update");
      }
 
+     //Creates delay between menu transitions
      IEnumerator ActivateAfterDelay(float delay)
      {
           yield return new WaitForSeconds(delay);
@@ -189,6 +195,7 @@ public class PlayfabManager : MonoBehaviour
           PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError); 
      } 
 
+     //Saves all player data from previous match
      public void SaveLastMatch()
      {
 
@@ -197,7 +204,7 @@ public class PlayfabManager : MonoBehaviour
           {
                Data = new Dictionary<string, string>
                {
-                    {"Last Match", JsonUtility.ToJson(playerCache) }
+                    {"Last Match", JsonUtility.ToJson(playerCache) } //Interprets playerCach data as JSON object
                }
           };
           PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError);
@@ -208,7 +215,7 @@ public class PlayfabManager : MonoBehaviour
           Debug.Log("Successful user data send!");
      }
 
-     //Writes into playerCache
+     //Retrieves latest user data and writes into playerCache
      public void GetAllStatistics()
      {
           PlayFabClientAPI.GetUserData(new GetUserDataRequest(), OnDataReceived, OnError);

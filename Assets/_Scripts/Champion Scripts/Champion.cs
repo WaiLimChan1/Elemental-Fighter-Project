@@ -407,14 +407,14 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
           {
                roundKills += 1;
                Debug.Log(roundKills);
-               //Increment stats in Playfab by 1 (WILL REWORK WHEN ROUNDS ARE WORKING) 
+               
 
                //Send update to Playfab leaderboards 
                GlobalManagers.Instance.PlayfabManager.SendLeaderboard("Most Kills", roundKills);
                GlobalManagers.Instance.PlayfabManager.GetAllStatistics(); //Must run before uploading playerCache variables
                GlobalManagers.Instance.PlayfabManager.playerCache.kills += roundKills;
                GlobalManagers.Instance.PlayfabManager.playerCache.damage = roundDamage;
-
+               //GlobalManagers.Instance.PlayfabManager.playerCache.gold = roundGold;
 
                //Could rework if these instantiations cause memory leaks
                int newKills = GlobalManagers.Instance.PlayfabManager.playerCache.kills;
