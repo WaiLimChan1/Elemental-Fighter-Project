@@ -49,11 +49,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] protected float TransformHealthGainAmount = 1000;
     [SerializeField] protected float TransformManaGainAmount = 500;
 
+    private bool CanUseTransform()
+    {
+        return ultimateMeterNetworked >= ultimateMeterCost;
+    }
+
     //Elemental to Default
-    protected virtual void HostSetUpTransformChampion(float healthRatio, float manaRatio)
+    protected virtual void HostSetUpTransformChampion(float healthRatio, float manaRatio, float ultimateMeter)
     {
         setHealthNetworked(0);
         setManaNetworked(0);
+        setUltimateMeterNetworked(0);
     }
 
     //Elemental to Default
@@ -63,6 +69,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         this.isFacingLeft = isFacingLeft;
     }
 
+    //Default to Elemental
     private void SpawnTransformChampion(PlayerRef playerRef)
     {
         if (!Runner.IsServer) return;
@@ -72,7 +79,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         Champion transformChampion = transformChampionObject.GetComponent<Champion>();
 
         transformChampion.NetworkedPlayer = NetworkedPlayer;
-        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, manaNetworked / maxMana);
+        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, manaNetworked / maxMana, ultimateMeterNetworked - ultimateMeterCost);
         transformChampion.RPC_ClientSetUpTransformChampion(isFacingLeftNetworked);
 
         Runner.Despawn(this.Object);
@@ -124,18 +131,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     public void setHealthNetworked(float health)
     {
         healthNetworked = health;
-        if (healthNetworked > maxHealth) healthNetworked = maxHealth;
-        if (healthNetworked < 0) healthNetworked = 0;
+        healthNetworked = Mathf.Clamp(healthNetworked, 0.0f, maxHealth);
     }
     public void setManaNetworked(float mana)
     {
         manaNetworked = mana;
-        if (manaNetworked > maxMana) manaNetworked = maxMana;
-        if (manaNetworked < 0) manaNetworked = 0;
+        manaNetworked = Mathf.Clamp(manaNetworked, 0.0f, maxMana);
     }
     public void setUltimateMeterNetworked(float ultimateMeter)
     {
-        ultimateMeterNetworked = ultimateMeter; 
+        ultimateMeterNetworked = ultimateMeter;
+        ultimateMeterNetworked = Mathf.Clamp(ultimateMeterNetworked, 0.0f, ultimateMeterCost);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -146,7 +152,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Header("Champion Defense Stats")]
     [SerializeField] protected float maxHealth = 500;
     [SerializeField] protected float maxMana = 500;
+
     [SerializeField] protected float ultimateMeterCost = 1000;
+    [SerializeField] protected float ultimateMeterKillBonus = 100;
 
     [Tooltip("Health restored every second")] [SerializeField] protected float healthRegen = 4;
     [Tooltip("Mana restored every second")] [SerializeField] protected float manaRegen = 8;
@@ -401,7 +409,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     protected virtual void TransformTakeInput()
     {
-        if (Input.GetKeyDown(KeyCode.E)) RPC_SpawnTransformChampion(Runner.LocalPlayer);
+        if (Input.GetKeyDown(KeyCode.E) && CanUseTransform()) RPC_SpawnTransformChampion(Runner.LocalPlayer);
     }
 
     protected virtual void OnGroundTakeInput()
@@ -548,6 +556,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (dead) return 0;
         if (healthNetworked <= 0) return 0;
 
+        float originalDamage = damage;
+
         //Blocked
         if (DefensiveStatusNetworked() && attackType == AttackType.AlwaysBlockable)
             damage -= damage * blockPercentage;
@@ -565,13 +575,16 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             }
         }
 
+        //Defender Effects
         setHealthNetworked(healthNetworked - damage);
+        setUltimateMeterNetworked(ultimateMeterNetworked + originalDamage); //Defender gain UltimateMeter for taking and blocking damage
 
         //Attacker Deal Damage Effects
         if (attacker != null)
         {
             attacker.setHealthNetworked(attacker.healthNetworked + damage * attacker.omnivamp); //Omnivamp
-            attacker.setUltimateMeterNetworked(attacker.ultimateMeterNetworked + damage);
+            attacker.setUltimateMeterNetworked(attacker.ultimateMeterNetworked + damage); //Attack gain UltimateMeter for dealing damage
+            if (healthNetworked <= 0) attacker.setUltimateMeterNetworked(attacker.ultimateMeterNetworked + ultimateMeterKillBonus); //Attack gain UltimateMeter for killing enemy
         }
 
         return damage;

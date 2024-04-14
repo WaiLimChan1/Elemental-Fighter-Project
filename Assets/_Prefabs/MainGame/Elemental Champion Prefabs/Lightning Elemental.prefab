@@ -265,8 +265,11 @@ MonoBehaviour:
   Collider: {fileID: 0}
   TransformChampion:
     RawGuidValue: b7c97749d7ad32f46b74db58d7e45248
+  TransformHealthGainAmount: 1000
+  TransformManaGainAmount: 500
   _healthNetworked: 0
   _manaNetworked: 0
+  _ultimateMeterNetworked: 0
   _isFacingLeftNetworked: 0
   isFacingLeft: 0
   _statusNetworked: 0
@@ -274,6 +277,7 @@ MonoBehaviour:
   dead: 0
   maxHealth: 1500
   maxMana: 500
+  ultimateMeterCost: 0
   healthRegen: 5
   manaRegen: 10
   blockPercentage: 0.8

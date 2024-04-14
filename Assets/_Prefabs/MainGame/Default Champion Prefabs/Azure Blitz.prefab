@@ -261,9 +261,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  NetworkedPlayer: {fileID: 0}
   Collider: {fileID: 0}
+  TransformChampion:
+    RawGuidValue: 00000000000000000000000000000000
+  TransformHealthGainAmount: 1000
+  TransformManaGainAmount: 500
   _healthNetworked: 0
   _manaNetworked: 0
+  _ultimateMeterNetworked: 0
   _isFacingLeftNetworked: 0
   isFacingLeft: 0
   _statusNetworked: 0
@@ -271,6 +277,7 @@ MonoBehaviour:
   dead: 0
   maxHealth: 800
   maxMana: 500
+  ultimateMeterCost: 0
   healthRegen: 1
   manaRegen: 8
   blockPercentage: 0.8

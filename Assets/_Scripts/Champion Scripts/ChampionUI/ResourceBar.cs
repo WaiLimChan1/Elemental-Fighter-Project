@@ -1,4 +1,6 @@
+using Fusion;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +13,7 @@ public class ResourceBar : MonoBehaviour
     [SerializeField] private TextMeshProUGUI HealthAmountText;
     [SerializeField] private Image ManaBar;
     [SerializeField] private TextMeshProUGUI ManaAmountText;
+    [SerializeField] private GameObject UltimateMeterFrame;
     [SerializeField] private Image UltimateMeterBar;
     [SerializeField] private TextMeshProUGUI UltimateMeterAmountText;
 
@@ -35,7 +38,24 @@ public class ResourceBar : MonoBehaviour
         ManaBar.fillAmount = manaNetworked / maxMana;
         ManaAmountText.text = $"{(int)manaNetworked}/{(int)maxMana}";
 
-        UltimateMeterBar.fillAmount = Mathf.Clamp01(ultimateMeterNetworked / ultimateMeterCost);
-        UltimateMeterAmountText.text = "" + ((int) ultimateMeterNetworked) / ((int) ultimateMeterCost);
+        if (ultimateMeterCost <= 0)
+        {
+            UltimateMeterFrame.SetActive(false);
+        }
+        else
+        {
+            UltimateMeterFrame.SetActive(true);
+            UltimateMeterBar.fillAmount = Mathf.Clamp01(ultimateMeterNetworked / ultimateMeterCost);
+
+            if (ultimateMeterNetworked >= ultimateMeterCost)
+            {
+                UltimateMeterAmountText.text = "Transform (E)";
+            }
+            else
+            {
+                int round = 2;
+                UltimateMeterAmountText.text = (int)(ultimateMeterNetworked / ultimateMeterCost * 100 * Mathf.Pow(10, round)) / Mathf.Pow(10, round) + "%";
+            }
+        }
     }
 }

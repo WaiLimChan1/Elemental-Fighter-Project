@@ -269,6 +269,7 @@ MonoBehaviour:
   TransformManaGainAmount: 500
   _healthNetworked: 0
   _manaNetworked: 0
+  _ultimateMeterNetworked: 0
   _isFacingLeftNetworked: 0
   isFacingLeft: 0
   _statusNetworked: 0
@@ -276,6 +277,7 @@ MonoBehaviour:
   dead: 0
   maxHealth: 2000
   maxMana: 500
+  ultimateMeterCost: 0
   healthRegen: 5
   manaRegen: 10
   blockPercentage: 0.8
