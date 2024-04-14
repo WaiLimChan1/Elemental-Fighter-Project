@@ -261,7 +261,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  NetworkedPlayer: {fileID: 0}
   Collider: {fileID: 0}
+  TransformChampion:
+    RawGuidValue: ffa86f3e7206fe74795287698cd5839b
+  TransformHealthGainAmount: 1000
+  TransformManaGainAmount: 500
   _healthNetworked: 0
   _manaNetworked: 0
   _isFacingLeftNetworked: 0
@@ -1072,7 +1077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926615267833035457, guid: 775b14e4e119a054abce369f1aff547d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926615267833035457, guid: 775b14e4e119a054abce369f1aff547d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

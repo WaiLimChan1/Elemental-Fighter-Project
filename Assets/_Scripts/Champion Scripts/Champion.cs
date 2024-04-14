@@ -32,7 +32,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Componets
-    [Header("Components")]
+    [Header("Champion Components")]
+    public NetworkedPlayer NetworkedPlayer;
     private ResourceBar ResourceBar;
     protected ChampionAnimationController ChampionAnimationController;
     protected Rigidbody2D Rigid;
@@ -42,13 +43,59 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Player Name
-    [Networked(OnChanged = nameof(OnNicknameChanged))] private NetworkString<_8> playerName { get; set; }
-    private static void OnNicknameChanged(Changed<Champion> changed) { changed.Behaviour.SetPlayerNickName(changed.Behaviour.playerName); }
-    private void SetPlayerNickName(NetworkString<_8> nickName) { ResourceBar.SetPlayerNameText(nickName + " " + Object.InputAuthority.PlayerId); }
+    //Champion Transform Variables & Functions
+    [Header("Champion Transform Variables")]
+    [SerializeField] private NetworkPrefabRef TransformChampion;
+    [SerializeField] protected float TransformHealthGainAmount = 1000;
+    [SerializeField] protected float TransformManaGainAmount = 500;
+
+    //Elemental to Default
+    protected virtual void HostSetUpTransformChampion(float healthRatio, float manaRatio)
+    {
+        setHealthNetworked(0);
+        setManaNetworked(0);
+    }
+
+    //Elemental to Default
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.InputAuthority)]
+    protected virtual void RPC_ClientSetUpTransformChampion(bool isFacingLeft)
+    {
+        this.isFacingLeft = isFacingLeft;
+    }
+
+    private void SpawnTransformChampion(PlayerRef playerRef)
+    {
+        if (!Runner.IsServer) return;
+
+        var transformChampionObject = Runner.Spawn(TransformChampion, transform.position, Quaternion.identity, playerRef);
+        NetworkedPlayer.OwnedChampion = transformChampionObject;
+        Champion transformChampion = transformChampionObject.GetComponent<Champion>();
+
+        transformChampion.NetworkedPlayer = NetworkedPlayer;
+        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, manaNetworked / maxMana);
+        transformChampion.RPC_ClientSetUpTransformChampion(isFacingLeftNetworked);
+
+        Runner.Despawn(this.Object);
+    }
+
 
     [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
-    private void RpcSetNickName(NetworkString<_8> nickName) { playerName = nickName; }
+    private void RPC_SpawnTransformChampion(PlayerRef playerRef)
+    {
+        SpawnTransformChampion(playerRef);
+    }
+
+    public virtual void AnimationTriggerTransform()
+    {
+        SpawnTransformChampion(Object.InputAuthority);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Player Name
+    public void SetPlayerNickName(NetworkString<_8> nickName) { ResourceBar.SetPlayerNameText(nickName + " " + Object.InputAuthority.PlayerId); }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -60,6 +107,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Networked] public float healthNetworked { get; set; }
 
     [Networked] public float manaNetworked { get; set; }
+
+    [Networked] public float ultimateMeterNetworked { get; set; }
 
     [Networked] public bool isFacingLeftNetworked { get; set; }
     public bool isFacingLeft;
@@ -84,6 +133,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (manaNetworked > maxMana) manaNetworked = maxMana;
         if (manaNetworked < 0) manaNetworked = 0;
     }
+    public void setUltimateMeterNetworked(float ultimateMeter)
+    {
+        ultimateMeterNetworked = ultimateMeter; 
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -93,6 +146,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Header("Champion Defense Stats")]
     [SerializeField] protected float maxHealth = 500;
     [SerializeField] protected float maxMana = 500;
+    [SerializeField] protected float ultimateMeterCost = 1000;
 
     [Tooltip("Health restored every second")] [SerializeField] protected float healthRegen = 4;
     [Tooltip("Mana restored every second")] [SerializeField] protected float manaRegen = 8;
@@ -258,14 +312,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Initialization
-    private void SetLocalObjects()
-    {
-        if (Runner.LocalPlayer == Object.InputAuthority)
-        {
-            RpcSetNickName(GlobalManagers.Instance.NetworkRunnerController.LocalPlayerName);
-        }
-    }
-
     public override void Spawned()
     {
         ResourceBar = GetComponentInChildren<ResourceBar>();
@@ -273,13 +319,20 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         Rigid = GetComponent<Rigidbody2D>();
         Collider = GetComponent<CapsuleCollider2D>();
 
-        healthNetworked = maxHealth;
-        manaNetworked = maxMana;
-        isFacingLeftNetworked = isFacingLeft = false;
-        statusNetworked = status = Status.IDLE;
-        inAirHorizontalMovementNetworked = inAirHorizontalMovement = 0;
+        isFacingLeft = false;
+        status = Status.IDLE;
+        inAirHorizontalMovement = 0;
 
-        SetLocalObjects();
+        if (Runner.IsServer)
+        {
+            healthNetworked = maxHealth;
+            manaNetworked = maxMana;
+            ultimateMeterNetworked = 0;
+
+            isFacingLeftNetworked = isFacingLeft;
+            statusNetworked = status;
+            inAirHorizontalMovementNetworked = 0;
+        }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -346,6 +399,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (status == Status.JUMP_DOWN) if (!inAir) status = Status.IDLE;
     }
 
+    protected virtual void TransformTakeInput()
+    {
+        if (Input.GetKeyDown(KeyCode.E)) RPC_SpawnTransformChampion(Runner.LocalPlayer);
+    }
+
     protected virtual void OnGroundTakeInput()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
@@ -372,8 +430,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
                 else status = Status.BEGIN_DEFEND;
             }
             else if (lastStatus == Status.DEFEND) status = Status.DEFEND;
-
         }
+        TransformTakeInput();
     }
 
     protected virtual void InAirTakeInput()
@@ -427,6 +485,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     private void CheckDeath()
     {
+        if (Object == default) return;
         if (healthNetworked <= 0)
         {
             dead = true;
@@ -507,7 +566,14 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         }
 
         setHealthNetworked(healthNetworked - damage);
-        if (attacker != null) attacker.setHealthNetworked(attacker.healthNetworked + damage * attacker.omnivamp);
+
+        //Attacker Deal Damage Effects
+        if (attacker != null)
+        {
+            attacker.setHealthNetworked(attacker.healthNetworked + damage * attacker.omnivamp); //Omnivamp
+            attacker.setUltimateMeterNetworked(attacker.ultimateMeterNetworked + damage);
+        }
+
         return damage;
     }
 
@@ -649,8 +715,12 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (!Runner.IsServer) return;
 
         float manaCost = 0;
-        if (ChampionAnimationController.GetAnimatorStatus() != (int) statusNetworked) //Animation Changed
-            manaCost = getManaCost(statusNetworked);
+        if (ChampionAnimationController.GetAnimatorStatus() != (int)statusNetworked) //Animation Changed
+        {
+            //The if statement fixes mana cost being taken multiple times after having an animation cancelled by another attack
+            if (getAttack(statusNetworked) != null && getAttack(statusNetworked).getCoolDownRemainingTime() == 0)
+                manaCost = getManaCost(statusNetworked);
+        }
         setManaNetworked(manaNetworked - manaCost);
     }
 
@@ -704,7 +774,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
         ApplyEffects();
 
-        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana);
+        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana, ultimateMeterNetworked, ultimateMeterCost);
         UpdateChampionVisual();
     }
 

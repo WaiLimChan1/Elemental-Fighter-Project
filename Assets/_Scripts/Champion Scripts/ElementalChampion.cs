@@ -1,3 +1,4 @@
+using Fusion;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,8 +7,29 @@ using UnityEngine;
 public class ElementalChampion : Champion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Transform Variables & Functions
+
+    //Default to Elemental
+    protected override void HostSetUpTransformChampion(float healthRatio, float manaRatio)
+    {
+        setHealthNetworked(maxHealth * healthRatio + TransformHealthGainAmount);
+        setManaNetworked(maxMana * manaRatio + TransformManaGainAmount);
+    }
+
+    //Default to Elemental
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.InputAuthority)]
+    protected override void RPC_ClientSetUpTransformChampion(bool isFacingLeft)
+    {
+        this.isFacingLeft = isFacingLeft;
+        status = Status.UNIQUE1;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Attack Variables & Attack Functions
-    //Status.UNIQUE2 : Throw_Fire_Ball
+    //Status.UNIQUE1 : Transform
 
     public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
     {
@@ -33,10 +55,12 @@ public class ElementalChampion : Champion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE1);
     }
 
+    protected override void TransformTakeInput() {}
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();
-        if (Input.GetKeyDown(KeyCode.E)) status = Status.UNIQUE1; //Transform
+        //if (Input.GetKeyDown(KeyCode.E)) status = Status.UNIQUE1; //Transform
     }
 
     protected override void CancelTakeInput()

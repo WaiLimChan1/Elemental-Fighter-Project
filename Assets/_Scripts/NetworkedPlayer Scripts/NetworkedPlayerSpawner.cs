@@ -18,7 +18,6 @@ public class NetworkedPlayerSpawner : NetworkBehaviour, IPlayerJoined, IPlayerLe
         {
             var playerObject = Runner.Spawn(playerNetworkPrefab, new Vector3(0, 0, 0), Quaternion.identity, playerRef);
             Runner.SetPlayerObject(playerRef, playerObject);
-            playerObject.gameObject.name = "NetworkedPlayer " + playerRef.PlayerId;
         }
     }
 

@@ -13,5 +13,6 @@ public class ChampionSpawner : NetworkBehaviour
         ChampionSelectionIndex = Mathf.Clamp(ChampionSelectionIndex, 0, championPrefabs.Length - 1);
         var champion = Runner.Spawn(championPrefabs[ChampionSelectionIndex], spawnPoint, Quaternion.identity, playerRef);
         NetworkedPlayer.OwnedChampion = champion;
+        champion.GetComponent<Champion>().NetworkedPlayer = NetworkedPlayer;
     }
 }

@@ -39,7 +39,7 @@ public class Attack_ChampionUI : MonoBehaviour
             CoolDownCoverImage.fillAmount = coolDownRemainingTime / Attack.coolDownDuration;
         }
 
-        if (ChampionUI.Instance.Champion != null)
+        if (ChampionUI.Instance.Champion != null && ChampionUI.Instance.Champion.Object != default)
         {
             if (ChampionUI.Instance.Champion.manaNetworked < Attack.manaCost) InsufficientManaCoverImage.gameObject.SetActive(true);
             else InsufficientManaCoverImage.gameObject.SetActive(false);

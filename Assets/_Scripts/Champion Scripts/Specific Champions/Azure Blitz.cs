@@ -21,6 +21,8 @@ public class AzureBlitz : Champion
     {
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.AIR_ATTACK);
     }
+
+    protected override void TransformTakeInput() {}
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 

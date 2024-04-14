@@ -2202,30 +2202,6 @@ MonoBehaviour:
     - m_Text: Wind Hashashin
       m_Image: {fileID: 21300000, guid: 4afe0bd40d4299844a1b8cbacaea2118, type: 3}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Crystal Elemental
-      m_Image: {fileID: 21300000, guid: 646bafec763dc2945a9d46ae62465a96, type: 3}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Fire Elemental
-      m_Image: {fileID: 21300000, guid: 1265f6dd48222cf4a836a91fae9bb25c, type: 3}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Ground Elemental
-      m_Image: {fileID: 21300000, guid: e59801351e8681f4084aaf930fd379eb, type: 3}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Leaf Elemental
-      m_Image: {fileID: 21300000, guid: 680099db5084324489d3af3a1bd91502, type: 3}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Lightning Elemental
-      m_Image: {fileID: 21300000, guid: 0bb50610635028b42b4339974231a856, type: 3}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Metal Elemental
-      m_Image: {fileID: 21300000, guid: 0e2988a51a3ca9940ae00538f76c09ff, type: 3}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Water Elemental
-      m_Image: {fileID: 21300000, guid: 86f8ac1f7a15fdd4597aac61ff11bbee, type: 3}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Wind Elemental
-      m_Image: {fileID: 21300000, guid: 04d19e817e7b9eb44af624f85ee417e3, type: 3}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3799,6 +3775,7 @@ MonoBehaviour:
   ChampionSelectionIndex: 0
   LocalGameMode: 0
   networkRunnerPrefab: {fileID: 8190557030341931370, guid: 39b3e63a1bd1ced4084b9ba27694e44f, type: 3}
+  networkRunnerInstance: {fileID: 0}
 --- !u!1 &1695431208
 GameObject:
   m_ObjectHideFlags: 0

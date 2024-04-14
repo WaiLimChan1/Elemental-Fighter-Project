@@ -261,7 +261,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  NetworkedPlayer: {fileID: 0}
   Collider: {fileID: 0}
+  TransformChampion:
+    RawGuidValue: f00d098ff0f2f7b4abc23e146b2f622d
+  TransformHealthGainAmount: 1000
+  TransformManaGainAmount: 500
   _healthNetworked: 0
   _manaNetworked: 0
   _isFacingLeftNetworked: 0
@@ -326,7 +331,7 @@ MonoBehaviour:
     coolDownDuration: 5
   - attackName: Transform Attack
     hitBox: {fileID: 5910274765280752411}
-    damage: 50
+    damage: 150
     crowdControlStrength: 25
     manaCost: 0
     coolDownDuration: 0
@@ -1071,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926615267833035457, guid: 775b14e4e119a054abce369f1aff547d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7926615267833035457, guid: 775b14e4e119a054abce369f1aff547d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

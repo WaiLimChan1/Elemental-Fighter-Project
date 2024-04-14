@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2877025589976648831}
   m_Layer: 0
-  m_Name: ResourceBar
+  m_Name: ResourceBarContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1230,6 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2092b5f90161f4e8b558c36712be58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResourceBarContent: {fileID: 1736032092681799212}
   PlayerNameText: {fileID: 775244807184540406}
   HealthBar: {fileID: 3309258063239642732}
   HealthAmountText: {fileID: 1457607753302765959}

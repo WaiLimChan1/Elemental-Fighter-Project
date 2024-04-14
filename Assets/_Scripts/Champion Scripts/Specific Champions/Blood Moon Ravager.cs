@@ -48,6 +48,8 @@ public class BloodMoonRavager : Champion
         return base.UnstoppableStatusNetworked() && statusNetworked != Status.SPECIAL_ATTACK;
     }
 
+    protected override void TransformTakeInput() {}
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();

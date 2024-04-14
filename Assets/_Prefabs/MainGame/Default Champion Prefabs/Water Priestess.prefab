@@ -261,6 +261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  TransformChampion:
+    RawGuidValue: f7926dae9ae408c4fa432c8e7ef11a7c
   Collider: {fileID: 0}
   _healthNetworked: 0
   _manaNetworked: 0

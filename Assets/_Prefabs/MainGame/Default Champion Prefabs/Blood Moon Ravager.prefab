@@ -322,8 +322,8 @@ MonoBehaviour:
     hitBox: {fileID: 6531086310545977621}
     damage: 12
     crowdControlStrength: 0
-    manaCost: 250
-    coolDownDuration: 30
+    manaCost: 200
+    coolDownDuration: 35
   _specialAttackTarget: {fileID: 0}
   specialAttackTeleportRange: 20
   howl:

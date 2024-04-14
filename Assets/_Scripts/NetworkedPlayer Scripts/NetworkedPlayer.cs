@@ -5,10 +5,23 @@ using UnityEngine;
 
 public class NetworkedPlayer : NetworkBehaviour
 {
-    [SerializeField] private LocalCamera LocalCamera;
-    [SerializeField] private ChampionUI ChampionUI;
-
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Components
+    private LocalCamera LocalCamera;
+    private ChampionUI ChampionUI;
     private ChampionSpawner ChampionSpawner;
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Player Name
+    [Networked] private NetworkString<_8> playerName { get; set; }
+
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)] 
+    private void RpcSetNickName(NetworkString<_8> nickName) { playerName = nickName; }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
     [Networked] public NetworkObject OwnedChampion { get; set; }
 
     public override void Spawned()
@@ -21,17 +34,24 @@ public class NetworkedPlayer : NetworkBehaviour
 
             ChampionUI = ChampionUI.Instance;
 
+            RpcSetNickName(GlobalManagers.Instance.NetworkRunnerController.LocalPlayerName);
+
             ChampionSpawner.Rpc_SpawnChampion(Runner.LocalPlayer, GlobalManagers.Instance.NetworkRunnerController.ChampionSelectionIndex);
         }
     }
 
     public void Update()
     {
+        gameObject.name = "NetworkedPlayer: " + playerName + " " + Object.InputAuthority; //Object Name
+
         if (Runner.LocalPlayer == Object.InputAuthority)
         {
             if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
                 ChampionUI.Champion = OwnedChampion.GetComponent<Champion>();
         }
+
+        if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
+            OwnedChampion.GetComponent<Champion>().SetPlayerNickName(playerName);
     }
 
     public void DespawnOwnedChampion()

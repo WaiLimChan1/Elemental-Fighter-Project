@@ -261,7 +261,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  NetworkedPlayer: {fileID: 0}
   Collider: {fileID: 0}
+  TransformChampion:
+    RawGuidValue: b7c97749d7ad32f46b74db58d7e45248
   _healthNetworked: 0
   _manaNetworked: 0
   _isFacingLeftNetworked: 0
@@ -320,7 +323,7 @@ MonoBehaviour:
     coolDownDuration: 5
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
-    damage: 20
+    damage: 30
     crowdControlStrength: 0
     manaCost: 100
     coolDownDuration: 10
