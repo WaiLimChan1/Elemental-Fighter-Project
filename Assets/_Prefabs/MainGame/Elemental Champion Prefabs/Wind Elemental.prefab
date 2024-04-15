@@ -278,6 +278,7 @@ MonoBehaviour:
   maxHealth: 1500
   maxMana: 500
   ultimateMeterCost: 0
+  ultimateMeterKillBonus: 100
   healthRegen: 5
   manaRegen: 10
   blockPercentage: 0.8
@@ -333,7 +334,7 @@ MonoBehaviour:
     coolDownDuration: 30
   - attackName: Transform Attack
     hitBox: {fileID: 1670391504431013256}
-    damage: 150
+    damage: 100
     crowdControlStrength: 20
     manaCost: 0
     coolDownDuration: 0
