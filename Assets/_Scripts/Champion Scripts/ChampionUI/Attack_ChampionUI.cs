@@ -24,7 +24,7 @@ public class Attack_ChampionUI : MonoBehaviour
 
         AttackNameText.text = Attack.attackName;
         AttackManaCostText.text = "" + Attack.manaCost;
-        AttackCoolDownDurationText.text = "" + ChampionUI.Instance.Champion.getCoolDownDuration(Attack) + "s";
+        AttackCoolDownDurationText.text = "" + Mathf.Round(ChampionUI.Instance.Champion.getCoolDownDuration(Attack) * 10) / 10f + "s";
 
         float coolDownRemainingTime = Attack.getCoolDownRemainingTime();
         if (coolDownRemainingTime == 0)
