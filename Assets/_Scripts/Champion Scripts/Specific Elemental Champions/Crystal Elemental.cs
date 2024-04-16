@@ -20,6 +20,11 @@ public class CrystalElemental : ElementalChampion
             statusNetworked == Status.AIR_ATTACK || statusNetworked == Status.ATTACK1 || 
             statusNetworked == Status.ATTACK2 || statusNetworked == Status.ATTACK3;
     }
+
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.AIR_ATTACK || status == Status.ATTACK1 || status == Status.ATTACK2 || status == Status.ATTACK3 || status == Status.SPECIAL_ATTACK);
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 

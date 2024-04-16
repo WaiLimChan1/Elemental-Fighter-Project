@@ -55,6 +55,11 @@ public class WindElemental : ElementalChampion
         return base.UnstoppableStatusNetworked() && statusNetworked != Status.SPECIAL_ATTACK;
     }
 
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.AIR_ATTACK || status == Status.ATTACK1 || status == Status.ATTACK2 || status == Status.ATTACK3 || status == Status.SPECIAL_ATTACK);
+    }
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();

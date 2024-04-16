@@ -15,6 +15,16 @@ public class LightningElemental : ElementalChampion
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.ATTACK1 || status == Status.ATTACK2);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
     public override void DealDamageToVictim(Champion enemy, float damage)
     {

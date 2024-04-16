@@ -27,6 +27,11 @@ public class AzureBlitz : Champion
         return (base.MobilityStatus(status) || status == Status.AIR_ATTACK);
     }
 
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.ATTACK1 || status == Status.ATTACK2 || status == Status.ATTACK3 || status == Status.SPECIAL_ATTACK);
+    }
+
     protected override void TransformTakeInput() {}
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

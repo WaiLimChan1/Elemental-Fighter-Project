@@ -37,6 +37,11 @@ public class LeafElemental : ElementalChampion
     {
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.ATTACK3);
     }
+
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.ATTACK1 || status == Status.ATTACK2 || status == Status.ATTACK3);
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 

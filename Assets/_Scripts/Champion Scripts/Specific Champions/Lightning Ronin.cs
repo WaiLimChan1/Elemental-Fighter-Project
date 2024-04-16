@@ -57,6 +57,11 @@ public class LightningRonin : Champion
             status == Status.UNIQUE1 || status == Status.UNIQUE2);
     }
 
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.AIR_ATTACK || status == Status.ATTACK1 || status == Status.ATTACK2 || status == Status.ATTACK3);
+    }
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();

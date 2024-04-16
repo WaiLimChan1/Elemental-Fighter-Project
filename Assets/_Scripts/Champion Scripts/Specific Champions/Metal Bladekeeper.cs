@@ -53,6 +53,11 @@ public class MetalBladekeeper : Champion
             status == Status.UNIQUE1 || status == Status.UNIQUE2);
     }
 
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (base.AttackSpeedStatus(status) || status == Status.ATTACK3 || status == Status.UNIQUE1 || status == Status.UNIQUE2);
+    }
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();

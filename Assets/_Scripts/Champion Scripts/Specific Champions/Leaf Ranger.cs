@@ -63,6 +63,11 @@ public class LeafRanger : Champion
         return (base.MobilityStatus(status) || status == Status.UNIQUE1);
     }
 
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.AIR_ATTACK || status == Status.ATTACK1 || status == Status.ATTACK2 || status == Status.ATTACK3 || status == Status.SPECIAL_ATTACK);
+    }
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();

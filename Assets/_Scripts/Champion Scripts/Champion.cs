@@ -187,6 +187,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] protected float baseCrowdControlBlockPercentage = 0.3f;
 
     [SerializeField] protected float basePhysicalDamage = 0;
+    [SerializeField] protected float baseAttackSpeed = 1;
     [SerializeField] protected float baseCoolDownReduction = 0;
     [SerializeField] protected float baseOmnivamp = 0;
 
@@ -213,10 +214,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Networked] [SerializeField] protected float blockPercentage { get; set; }
     [Networked] [SerializeField] protected float crowdControlBlockPercentage { get; set; }
 
-    [Networked][SerializeField] protected float physicalDamage { get; set; }
-    [Networked][SerializeField] protected float coolDownReduction { get; set; }
+    [Networked] [SerializeField] protected float physicalDamage { get; set; }
+    [Networked][SerializeField] protected float attackSpeed { get; set; }
+    [Networked] [SerializeField] protected float coolDownReduction { get; set; }
     [Networked] [SerializeField] protected float omnivamp { get; set; }
-
 
     [Networked] [SerializeField] protected float mobilityModifier { get; set; } //0.5 to 1.5
 
@@ -245,6 +246,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         crowdControlBlockPercentage = baseCrowdControlBlockPercentage;
 
         physicalDamage = basePhysicalDamage;
+        attackSpeed = baseAttackSpeed;
         coolDownReduction = baseCoolDownReduction;
         omnivamp = baseOmnivamp;
 
@@ -475,6 +477,12 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     protected virtual bool DefensiveStatusNetworked()
     {
         return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+    }
+
+    //Statuses that are influenced by AttackSpeed
+    protected virtual bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.AIR_ATTACK || status == Status.ATTACK1 || status == Status.ATTACK2);
     }
 
     //Statuses that are influenced by MobilityModifier
@@ -869,6 +877,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     private void ChangeAnimationSpeed()
     {
         if (MobilityStatus(statusNetworked)) ChampionAnimationController.SetSpeed(mobilityModifier);
+        else if (AttackSpeedStatus(statusNetworked)) ChampionAnimationController.SetSpeed(attackSpeed);
         else ChampionAnimationController.SetSpeed(1);
     }
 

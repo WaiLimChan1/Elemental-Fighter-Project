@@ -22,6 +22,11 @@ public class WindHashasin : Champion
     {
         return base.UnstoppableStatusNetworked() && statusNetworked != Status.SPECIAL_ATTACK;
     }
+
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (base.AttackSpeedStatus(status) || status == Status.ATTACK3);
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
