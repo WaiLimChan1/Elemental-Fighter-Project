@@ -187,6 +187,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] protected float baseCrowdControlBlockPercentage = 0.3f;
 
     [SerializeField] protected float basePhysicalDamage = 0;
+    [SerializeField] protected float baseCoolDownReduction = 0;
     [SerializeField] protected float baseOmnivamp = 0;
 
     [SerializeField] protected float baseMobilityModifer = 1f;
@@ -213,12 +214,16 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Networked] [SerializeField] protected float crowdControlBlockPercentage { get; set; }
 
     [Networked][SerializeField] protected float physicalDamage { get; set; }
+    [Networked][SerializeField] protected float coolDownReduction { get; set; }
     [Networked] [SerializeField] protected float omnivamp { get; set; }
-    //[SerializeField] protected float physicalDamage;
-    //[SerializeField] protected float attackSpeed;
 
 
     [Networked] [SerializeField] protected float mobilityModifier { get; set; } //0.5 to 1.5
+
+    private void HandleStatsRange()
+    {
+        coolDownReduction = Mathf.Clamp01(coolDownReduction);
+    }
 
     private void CalculateStats()
     {
@@ -240,9 +245,12 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         crowdControlBlockPercentage = baseCrowdControlBlockPercentage;
 
         physicalDamage = basePhysicalDamage;
+        coolDownReduction = baseCoolDownReduction;
         omnivamp = baseOmnivamp;
 
         mobilityModifier = baseMobilityModifer;
+
+        HandleStatsRange();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -308,11 +316,15 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         else return 0;
     }
 
+    public float getCoolDownDuration(Attack attack)
+    {
+        if (attack != null) return attack.coolDownDuration - (attack.coolDownDuration * coolDownReduction);
+        else return 0;
+    }
+
     protected float getCoolDownDuration(Status status)
     {
-        Attack attack = getAttack(status);
-        if (attack != null) return attack.coolDownDuration;
-        else return 0;
+        return getCoolDownDuration(getAttack(status));
     }
 
     [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
@@ -794,8 +806,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
         if (ChampionAnimationController.GetAnimatorStatus() != (int)statusNetworked) //Animation Changed
         {
-            Attack attack = getAttack(statusNetworked);
-            if (attack != null) RPC_setCoolDownDuration(statusNetworked, attack.coolDownDuration);
+            if (getAttack(statusNetworked) != null) RPC_setCoolDownDuration(statusNetworked, getCoolDownDuration(statusNetworked));
         }
     }
 
