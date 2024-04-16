@@ -66,7 +66,7 @@ public class FireElemental : ElementalChampion
 
     protected override bool AttackSpeedStatus(Status status)
     {
-        return (base.AttackSpeedStatus(status) || status == Status.SPECIAL_ATTACK || status == Status.UNIQUE2 );
+        return (base.AttackSpeedStatus(status) || status == Status.SPECIAL_ATTACK || status == Status.UNIQUE2);
     }
 
     protected override void OnGroundTakeInput()
