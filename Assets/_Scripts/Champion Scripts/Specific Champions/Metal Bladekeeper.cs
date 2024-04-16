@@ -96,16 +96,16 @@ public class MetalBladekeeper : Champion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE1)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, daggerAttack.damage, daggerAttack.crowdControlStrength, DaggerLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, getCalculatedDamage(daggerAttack), daggerAttack.crowdControlStrength, DaggerLifeTime);
         else if (statusNetworked == Status.UNIQUE2)
-            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, daggerAttack.damage, daggerAttack.crowdControlStrength, DaggerLifeTime);
+            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, getCalculatedDamage(daggerAttack), daggerAttack.crowdControlStrength, DaggerLifeTime);
     }
 
     public override void AnimationTriggerMobility()
     {
         if (statusNetworked == Status.UNIQUE2)
         {
-            Rigid.velocity = new Vector3(Rigid.velocity.x, SpecialHopForce, 0);
+            Rigid.velocity = new Vector3(Rigid.velocity.x, Mathf.Clamp(SpecialHopForce * mobilityModifier, 0, maxJumpForce), 0);
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------

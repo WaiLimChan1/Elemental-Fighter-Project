@@ -43,64 +43,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Champion Transform Variables & Functions
-    [Header("Champion Transform Variables")]
-    [SerializeField] private NetworkPrefabRef TransformChampion;
-    [SerializeField] protected float TransformHealthGainAmount = 1000;
-    [SerializeField] protected float TransformManaGainAmount = 500;
-
-    private bool CanUseTransform()
-    {
-        return ultimateMeterNetworked >= ultimateMeterCost;
-    }
-
-    //Elemental to Default
-    protected virtual void HostSetUpTransformChampion(float healthRatio, float manaRatio, float ultimateMeter)
-    {
-        setHealthNetworked(0);
-        setManaNetworked(0);
-        setUltimateMeterNetworked(0);
-    }
-
-    //Elemental to Default
-    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.InputAuthority)]
-    protected virtual void RPC_ClientSetUpTransformChampion(bool isFacingLeft)
-    {
-        this.isFacingLeft = isFacingLeft;
-    }
-
-    //Default to Elemental
-    private void SpawnTransformChampion(PlayerRef playerRef)
-    {
-        if (!Runner.IsServer) return;
-
-        var transformChampionObject = Runner.Spawn(TransformChampion, transform.position, Quaternion.identity, playerRef);
-        NetworkedPlayer.OwnedChampion = transformChampionObject;
-        Champion transformChampion = transformChampionObject.GetComponent<Champion>();
-
-        transformChampion.NetworkedPlayer = NetworkedPlayer;
-        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, manaNetworked / maxMana, ultimateMeterNetworked - ultimateMeterCost);
-        transformChampion.RPC_ClientSetUpTransformChampion(isFacingLeftNetworked);
-
-        Runner.Despawn(this.Object);
-    }
-
-
-    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
-    private void RPC_SpawnTransformChampion(PlayerRef playerRef)
-    {
-        SpawnTransformChampion(playerRef);
-    }
-
-    public virtual void AnimationTriggerTransform()
-    {
-        SpawnTransformChampion(Object.InputAuthority);
-    }
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Player Name
     public void SetPlayerNickName(NetworkString<_8> nickName) { ResourceBar.SetPlayerNameText(nickName + " " + Object.InputAuthority.PlayerId); }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -140,6 +82,13 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     }
     public void setUltimateMeterNetworked(float ultimateMeter)
     {
+        //If gaining ultimateMeter value, increase the gain by ultimateMeterGainMutliplier
+        if (ultimateMeter > ultimateMeterNetworked)
+        {
+            float ultimateMeterGain = (ultimateMeter - ultimateMeterNetworked) * ultimateMeterGainMultipier;
+            ultimateMeter = ultimateMeterNetworked + ultimateMeterGain;
+        }
+
         ultimateMeterNetworked = ultimateMeter;
         ultimateMeterNetworked = Mathf.Clamp(ultimateMeterNetworked, 0.0f, ultimateMeterCost);
     }
@@ -148,43 +97,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Champion Stats
-    [Header("Champion Defense Stats")]
-    [SerializeField] protected float maxHealth = 500;
-    [SerializeField] protected float maxMana = 500;
-
-    [SerializeField] protected float ultimateMeterCost = 1000;
-    [SerializeField] protected float ultimateMeterKillBonus = 100;
-
-    [Tooltip("Health restored every second")] [SerializeField] protected float healthRegen = 4;
-    [Tooltip("Mana restored every second")] [SerializeField] protected float manaRegen = 8;
-
-    [Tooltip("Percentage of damage to reduce (While Defending)")][SerializeField] protected float blockPercentage = 0.8f;
-    [Tooltip("Percentage of Crowd Control to reduce (While Defending OR Unstoppable)")][SerializeField] protected float crowdControlBlockPercentage = 0.3f;
-    [Tooltip("Percentage of Crowd Control to ignore (Always)")][SerializeField] protected float crowdControlIgnorePercentage = 0f;
-
-
-
-    [Header("Champion Offense Stats")]
-    [Tooltip("Percentage of any damage dealt returned as health")] [SerializeField] protected float omnivamp = 0f;
-    //[SerializeField] protected float physicalDamage;
-    //[SerializeField] protected float attackSpeed;
-
-
-    [Header("Champion Movement Stats")]
-    [SerializeField] protected float moveSpeed = 15;
-    [SerializeField] protected float airMoveSpeed = 10;
-
-    [SerializeField] protected Attack roll;
-    [SerializeField] protected float rollMoveSpeed = 25;
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Champion Air Variables
+    //Champion Air Variables & Functions
     [Header("Champion Air Variables")]
-    [SerializeField] protected float jumpForce = 20;
     [SerializeField] private LayerMask WhatIsGround;
 
     [Networked] private float inAirHorizontalMovementNetworked { get; set; }
@@ -192,8 +106,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     private const float inAirRayCastBuffer = 0.01f;
-    private const float sideRayCastOffSetModifier = 1f/4f;
-    [SerializeField] protected bool inAir 
+    private const float sideRayCastOffSetModifier = 1f / 4f;
+    [SerializeField]
+    protected bool inAir
     {
         get
         {
@@ -205,10 +120,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             Vector2 rightPosition = new Vector2(transform.position.x + sideRayCastOffSet, transform.position.y) + Collider.offset;
 
 
-            return !Physics2D.Raycast(centerPosition, Vector2.down, rayCastDistance, WhatIsGround) && 
+            return !Physics2D.Raycast(centerPosition, Vector2.down, rayCastDistance, WhatIsGround) &&
                    !Physics2D.Raycast(leftPosition, Vector2.down, rayCastDistance, WhatIsGround) &&
-                   !Physics2D.Raycast(rightPosition, Vector2.down, rayCastDistance, WhatIsGround); 
-        } 
+                   !Physics2D.Raycast(rightPosition, Vector2.down, rayCastDistance, WhatIsGround);
+        }
     }
 
     private void OnDrawGizmosInAirRayCast()
@@ -241,18 +156,117 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Base Stats
+    [Header("Champion Static Stats")]
+    [SerializeField] protected float baseMoveSpeed = 15f;
+    [SerializeField] protected Attack roll;
+    [SerializeField] protected float baseRollMoveSpeed = 25f;
+    [SerializeField] protected float baseJumpForce = 20f;
+    [SerializeField] protected float maxJumpForce = 25f;
+    [SerializeField] protected float baseAirMoveSpeed = 10f;
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Base Stats
+    [Header("Champion Base Stats")]
+    [SerializeField] protected float baseMaxHealth = 500;
+    [SerializeField] protected float baseMaxMana = 500;
+
+    [SerializeField] protected float baseHealthRegen = 1;
+    [SerializeField] protected float baseManaRegen = 8;
+
+    [SerializeField] protected float baseUltimateMeterRegen = 0;
+    [SerializeField] protected float baseUltimateMeterGainMultipier = 1;
+
+    [SerializeField] protected float baseArmor = 0;
+    [SerializeField] protected float baseCrowdControlIgnorePercentage = 0;
+
+    [SerializeField] protected float baseBlockPercentage = 0.5f;
+    [SerializeField] protected float baseCrowdControlBlockPercentage = 0.3f;
+
+    [SerializeField] protected float basePhysicalDamage = 0;
+    [SerializeField] protected float baseOmnivamp = 0;
+
+    [SerializeField] protected float baseMobilityModifer = 1f;
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Stats
+    [Header("Champion Stats")]
+    [Networked] [SerializeField] protected float maxHealth { get; set; }
+    [Networked] [SerializeField] protected float maxMana { get; set; }
+
+    [Networked] [SerializeField] protected float healthRegen { get; set; }
+    [Networked] [SerializeField] protected float manaRegen { get; set; }
+
+    [Networked] [SerializeField] protected float ultimateMeterRegen { get; set; }
+    [Networked] [SerializeField] protected float ultimateMeterGainMultipier { get; set; }
+
+    [Networked] [SerializeField] protected float armor { get; set; }
+    [Networked] [SerializeField] protected float crowdControlIgnorePercentage { get; set; }
+
+    [Networked] [SerializeField] protected float blockPercentage { get; set; }
+    [Networked] [SerializeField] protected float crowdControlBlockPercentage { get; set; }
+
+    [Networked][SerializeField] protected float physicalDamage { get; set; }
+    [Networked] [SerializeField] protected float omnivamp { get; set; }
+    //[SerializeField] protected float physicalDamage;
+    //[SerializeField] protected float attackSpeed;
+
+
+    [Networked] [SerializeField] protected float mobilityModifier { get; set; } //0.5 to 1.5
+
+    private void CalculateStats()
+    {
+        if (Object == default) return;
+
+        maxHealth = baseMaxHealth;
+        maxMana = baseMaxMana;
+
+        healthRegen = baseHealthRegen;
+        manaRegen = baseManaRegen;
+
+        ultimateMeterRegen = baseUltimateMeterRegen;
+        ultimateMeterGainMultipier = baseUltimateMeterGainMultipier;
+
+        armor = baseArmor;
+        crowdControlIgnorePercentage = baseCrowdControlIgnorePercentage;
+
+        blockPercentage = baseBlockPercentage;
+        crowdControlBlockPercentage = baseCrowdControlBlockPercentage;
+
+        physicalDamage = basePhysicalDamage;
+        omnivamp = baseOmnivamp;
+
+        mobilityModifier = baseMobilityModifer;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Class
     [Serializable] public class Attack
     {
         public string attackName;
         public BoxCollider2D hitBox;
         public float damage;
+        public float physicalDamageScaling;
         public float crowdControlStrength;
         public float manaCost;
         public float coolDownDuration;
         public TickTimer coolDownTimer;
 
         public float getCoolDownRemainingTime() { return coolDownTimer.RemainingTime(GlobalManagers.Instance.NetworkRunnerController.networkRunnerInstance) ?? 0.0f; }
+    }
+
+    protected float getCalculatedDamage(Attack attack)
+    {
+        return attack.damage + physicalDamage * attack.physicalDamageScaling;
     }
 
     //Attack UI
@@ -319,6 +333,66 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Transform Variables & Functions
+    [Header("Champion Transform Variables")]
+    [SerializeField] private NetworkPrefabRef TransformChampion;
+    [SerializeField] protected float TransformHealthGainAmount = 1000;
+    [SerializeField] protected float TransformManaGainAmount = 500;
+    [SerializeField] protected float ultimateMeterCost = 1000;
+    [SerializeField] protected float ultimateMeterKillBonus = 100;
+
+    private bool CanUseTransform()
+    {
+        return ultimateMeterNetworked >= ultimateMeterCost;
+    }
+
+    //Elemental to Default
+    protected virtual void HostSetUpTransformChampion(float healthRatio, float manaRatio, float ultimateMeter)
+    {
+        setHealthNetworked(0);
+        setManaNetworked(0);
+        setUltimateMeterNetworked(0);
+    }
+
+    //Elemental to Default
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.InputAuthority)]
+    protected virtual void RPC_ClientSetUpTransformChampion(bool isFacingLeft)
+    {
+        this.isFacingLeft = isFacingLeft;
+    }
+
+    //Default to Elemental
+    private void SpawnTransformChampion(PlayerRef playerRef)
+    {
+        if (!Runner.IsServer) return;
+
+        var transformChampionObject = Runner.Spawn(TransformChampion, transform.position, Quaternion.identity, playerRef);
+        NetworkedPlayer.OwnedChampion = transformChampionObject;
+        Champion transformChampion = transformChampionObject.GetComponent<Champion>();
+
+        transformChampion.NetworkedPlayer = NetworkedPlayer;
+        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, manaNetworked / maxMana, ultimateMeterNetworked - ultimateMeterCost);
+        transformChampion.RPC_ClientSetUpTransformChampion(isFacingLeftNetworked);
+
+        Runner.Despawn(this.Object);
+    }
+
+
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    private void RPC_SpawnTransformChampion(PlayerRef playerRef)
+    {
+        SpawnTransformChampion(playerRef);
+    }
+
+    public virtual void AnimationTriggerTransform()
+    {
+        SpawnTransformChampion(Object.InputAuthority);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Initialization
     public override void Spawned()
     {
@@ -331,6 +405,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         status = Status.IDLE;
         inAirHorizontalMovement = 0;
 
+        CalculateStats();
         if (Runner.IsServer)
         {
             healthNetworked = maxHealth;
@@ -388,6 +463,13 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     protected virtual bool DefensiveStatusNetworked()
     {
         return (statusNetworked == Status.BEGIN_DEFEND || statusNetworked == Status.DEFEND);
+    }
+
+    //Statuses that are influenced by MobilityModifier
+    protected virtual bool MobilityStatus(Status status)
+    {
+        return (status == Status.RUN || status == Status.ROLL ||
+            status == Status.JUMP_UP || status == Status.JUMP_DOWN);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -535,6 +617,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         {
             Rigid.velocity = new Vector2(0, 0.01f);
         }
+
+        CalculateStats();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -557,6 +641,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (healthNetworked <= 0) return 0;
 
         float originalDamage = damage;
+        damage -= armor;
+        if (damage < 1) damage = 1;
 
         //Blocked
         if (DefensiveStatusNetworked() && attackType == AttackType.AlwaysBlockable)
@@ -631,8 +717,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     public virtual void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
     {
         attackBox = Attacks[index].hitBox;
-        damage = Attacks[index].damage;
+        damage = getCalculatedDamage(Attacks[index]);
     }
+
     public virtual void AnimationTriggerAttack()
     {
         int index = GetAttackBoxIndex();
@@ -686,42 +773,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Champion Logic
-    protected virtual void UpdatePosition()
-    {
-        if (statusNetworked == Status.RUN)
-        {
-            float xChange = moveSpeed * Runner.DeltaTime;
-            if (isFacingLeftNetworked) xChange *= -1;
-            Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
-        }
-
-        if (statusNetworked == Status.JUMP_UP)
-        {
-            //Jumping up from the ground
-            if (!inAir && Rigid.velocity.y < 0.011)
-            {
-                Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + jumpForce);
-            }
-        }
-
-        if (statusNetworked == Status.ROLL)
-        {
-            float xChange = rollMoveSpeed * Runner.DeltaTime;
-            if (isFacingLeftNetworked) xChange *= -1;
-            Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
-        }
-
-        //Moving Left or Right In Air
-        if (inAir &&
-            statusNetworked != Status.TAKE_HIT && statusNetworked != Status.BEGIN_DEATH && statusNetworked != Status.FINISHED_DEATH)
-        {
-            float xChange = inAirHorizontalMovementNetworked * airMoveSpeed * Runner.DeltaTime;
-            Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
-        }
-    }
-
-    //-------------------------------------------------------------------
     //Apply Effects Logic
     private void ApplyManaCost()
     {
@@ -748,27 +799,73 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         }
     }
 
-    private void ApplyHealthAndManaRegen()
-    { 
+    private void ApplyResourceRegen()
+    {
         if (!Runner.IsServer) return;
         if (healthNetworked <= 0) return;
 
         setHealthNetworked(healthNetworked + healthRegen * Runner.DeltaTime);
         setManaNetworked(manaNetworked + manaRegen * Runner.DeltaTime);
+        setUltimateMeterNetworked(ultimateMeterNetworked + ultimateMeterRegen * Runner.DeltaTime);
     }
 
     protected virtual void ApplyEffects()
     {
         ApplyManaCost();
         ApplyCoolDownDuration();
-        ApplyHealthAndManaRegen();
+        ApplyResourceRegen();
     }
-    //-------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
+    protected virtual void UpdatePosition()
+    {
+        if (statusNetworked == Status.RUN)
+        {
+            float xChange = baseMoveSpeed * mobilityModifier * Runner.DeltaTime;
+            if (isFacingLeftNetworked) xChange *= -1;
+            Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
+        }
+
+        if (statusNetworked == Status.JUMP_UP)
+        {
+            //Jumping up from the ground
+            if (!inAir && Rigid.velocity.y < 0.011)
+            {
+                Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + Mathf.Clamp(baseJumpForce * mobilityModifier, 0, maxJumpForce));
+            }
+        }
+
+        if (statusNetworked == Status.ROLL)
+        {
+            float xChange = baseRollMoveSpeed * mobilityModifier * Runner.DeltaTime;
+            if (isFacingLeftNetworked) xChange *= -1;
+            Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
+        }
+
+        //Moving Left or Right In Air
+        if (inAir &&
+            statusNetworked != Status.TAKE_HIT && statusNetworked != Status.BEGIN_DEATH && statusNetworked != Status.FINISHED_DEATH)
+        {
+            float xChange = inAirHorizontalMovementNetworked * baseAirMoveSpeed * mobilityModifier * Runner.DeltaTime;
+            Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
+        }
+    }
+
+    private void ChangeAnimationSpeed()
+    {
+        if (MobilityStatus(statusNetworked)) ChampionAnimationController.SetSpeed(mobilityModifier);
+        else ChampionAnimationController.SetSpeed(1);
+    }
 
     private void UpdateChampionVisual()
     {
         ChampionAnimationController.Flip(isFacingLeftNetworked);
         ChampionAnimationController.ChangeAnimation((int)statusNetworked);
+        ChangeAnimationSpeed();
 
         //Attack Boxes And Crowd Control Boxes Flip
         if (isFacingLeftNetworked) AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 180f, 0f);

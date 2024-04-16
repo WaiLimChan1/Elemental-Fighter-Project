@@ -261,75 +261,107 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  TransformChampion:
-    RawGuidValue: bdca3b12d829853409062d9d838438e0
+  NetworkedPlayer: {fileID: 0}
   Collider: {fileID: 0}
   _healthNetworked: 0
   _manaNetworked: 0
+  _ultimateMeterNetworked: 0
   _isFacingLeftNetworked: 0
   isFacingLeft: 0
   _statusNetworked: 0
   status: 0
   dead: 0
-  maxHealth: 500
-  maxMana: 500
-  healthRegen: 1
-  manaRegen: 8
-  blockPercentage: 0.8
-  crowdControlBlockPercentage: 0.3
-  crowdControlIgnorePercentage: 0
-  omnivamp: 0
-  moveSpeed: 15
-  airMoveSpeed: 10
-  roll:
-    attackName: Roll
-    hitBox: {fileID: 0}
-    damage: 0
-    crowdControlStrength: 0
-    manaCost: 50
-    coolDownDuration: 3
-  rollMoveSpeed: 25
-  jumpForce: 20
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 128
   inAirHorizontalMovement: 0
+  baseMoveSpeed: 15
+  roll:
+    attackName: Roll
+    hitBox: {fileID: 0}
+    damage: 0
+    physicalDamageScaling: 0
+    crowdControlStrength: 0
+    manaCost: 50
+    coolDownDuration: 3
+  baseRollMoveSpeed: 25
+  baseJumpForce: 20
+  maxJumpForce: 25
+  baseAirMoveSpeed: 10
+  baseMaxHealth: 500
+  baseMaxMana: 500
+  baseHealthRegen: 1
+  baseManaRegen: 8
+  baseUltimateMeterRegen: 0
+  baseUltimateMeterGainMultipier: 1
+  baseArmor: 0
+  baseCrowdControlIgnorePercentage: 0
+  baseBlockPercentage: 0.5
+  baseCrowdControlBlockPercentage: 0.3
+  basePhysicalDamage: 0
+  baseOmnivamp: 0
+  baseMobilityModifer: 1
+  _maxHealth: 0
+  _maxMana: 0
+  _healthRegen: 0
+  _manaRegen: 0
+  _ultimateMeterRegen: 0
+  _ultimateMeterGainMultipier: 0
+  _armor: 0
+  _crowdControlIgnorePercentage: 0
+  _blockPercentage: 0
+  _crowdControlBlockPercentage: 0
+  _physicalDamage: 0
+  _omnivamp: 0
+  _mobilityModifier: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
     damage: 5
+    physicalDamageScaling: 1
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 1
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
     damage: 15
+    physicalDamageScaling: 1
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 1
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
     damage: 15
+    physicalDamageScaling: 1
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 1
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 40
+    physicalDamageScaling: 1
     crowdControlStrength: 10
     manaCost: 50
     coolDownDuration: 4
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 15
+    physicalDamageScaling: 0.15
     crowdControlStrength: 0
     manaCost: 100
     coolDownDuration: 15
+  TransformChampion:
+    RawGuidValue: bdca3b12d829853409062d9d838438e0
+  TransformHealthGainAmount: 1000
+  TransformManaGainAmount: 500
+  ultimateMeterCost: 1000
+  ultimateMeterKillBonus: 100
   lightningDashAttack:
     attackName: Lightning Dash
     hitBox: {fileID: 8780988235657823475}
     damage: 5
+    physicalDamageScaling: 0.2
     crowdControlStrength: 0
     manaCost: 50
     coolDownDuration: 10

@@ -51,6 +51,12 @@ public class LightningRonin : Champion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE2);
     }
 
+    protected override bool MobilityStatus(Status status)
+    {
+        return (base.MobilityStatus(status) ||
+            status == Status.UNIQUE1 || status == Status.UNIQUE2);
+    }
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();
@@ -88,13 +94,9 @@ public class LightningRonin : Champion
         if (statusNetworked == Status.UNIQUE2)
         {
             attackBox = lightningDashAttack.hitBox;
-            damage = lightningDashAttack.damage;
+            damage = getCalculatedDamage(lightningDashAttack);
         }
-        else
-        {
-            attackBox = Attacks[index].hitBox;
-            damage = Attacks[index].damage;
-        }
+        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, index);
     }
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
@@ -117,8 +119,8 @@ public class LightningRonin : Champion
         {
             float xChange = 0;
 
-            if (statusNetworked == Status.UNIQUE1) xChange = dashSpeed * Runner.DeltaTime;
-            else if (statusNetworked == Status.UNIQUE2) xChange = lightningDashSpeed * Runner.DeltaTime;
+            if (statusNetworked == Status.UNIQUE1) xChange = dashSpeed * mobilityModifier * Runner.DeltaTime;
+            else if (statusNetworked == Status.UNIQUE2) xChange = lightningDashSpeed * mobilityModifier * Runner.DeltaTime;
 
             if (isFacingLeftNetworked) xChange *= -1;
 

@@ -59,6 +59,11 @@ public class FireElemental : ElementalChampion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.ATTACK3);
     }
 
+    protected override bool MobilityStatus(Status status)
+    {
+        return (base.MobilityStatus(status) || status == Status.ATTACK3);
+    }
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();
@@ -97,7 +102,7 @@ public class FireElemental : ElementalChampion
             float direction = 1;
             if (isFacingLeftNetworked) direction *= -1;
 
-            Rigid.velocity = new Vector3(direction * attack3DashForce, 0, 0);
+            Rigid.velocity = new Vector3(direction * attack3DashForce * mobilityModifier, 0, 0);
         }
     }
 
@@ -106,7 +111,7 @@ public class FireElemental : ElementalChampion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE2)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, FireBallPrefab, FireBallSpawnPoint, FireBallSpeed, fireBallAttack.damage, fireBallAttack.crowdControlStrength, FireBallLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, FireBallPrefab, FireBallSpawnPoint, FireBallSpeed, getCalculatedDamage(fireBallAttack), fireBallAttack.crowdControlStrength, FireBallLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -120,7 +125,7 @@ public class FireElemental : ElementalChampion
             ChampionAnimationController.GetNormalizedTime() >= attack3DashStartTime &&
             ChampionAnimationController.GetNormalizedTime() < attack3DashEndTime)
         {
-            float xChange = attack3DashSpeed * Runner.DeltaTime;
+            float xChange = attack3DashSpeed * mobilityModifier * Runner.DeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
 
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);

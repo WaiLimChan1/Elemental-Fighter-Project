@@ -113,9 +113,9 @@ public class LeafElemental : ElementalChampion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.ATTACK1)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DartPrefab, DartSpawnPoint, DartSpeed, Attacks[1].damage, Attacks[1].crowdControlStrength, DartLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DartPrefab, DartSpawnPoint, DartSpeed, getCalculatedDamage(Attacks[1]), Attacks[1].crowdControlStrength, DartLifeTime);
         else if (statusNetworked == Status.ATTACK2) 
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, JavelinPrefab, JavelinSpawnPoint, JavelinSpeed, Attacks[2].damage, Attacks[2].crowdControlStrength, JavelinLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, JavelinPrefab, JavelinSpawnPoint, JavelinSpeed, getCalculatedDamage(Attacks[2]), Attacks[2].crowdControlStrength, JavelinLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

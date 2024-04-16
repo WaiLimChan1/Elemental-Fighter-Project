@@ -69,6 +69,11 @@ public class WaterPriestess : Champion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE3);
     }
 
+    protected override bool MobilityStatus(Status status)
+    {
+        return (base.MobilityStatus(status) || status == Status.UNIQUE3);
+    }
+
     protected override void OnGroundTakeInput()
     {
         base.OnGroundTakeInput();
@@ -112,13 +117,9 @@ public class WaterPriestess : Champion
         if (statusNetworked == Status.UNIQUE3)
         {
             attackBox = waterSlideAttack.hitBox;
-            damage = waterSlideAttack.damage;
+            damage = getCalculatedDamage(waterSlideAttack);
         }
-        else
-        {
-            attackBox = Attacks[index].hitBox;
-            damage = Attacks[index].damage;
-        }
+        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, index);
     }
 
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
@@ -154,7 +155,7 @@ public class WaterPriestess : Champion
     {
         if (statusNetworked == Status.UNIQUE3)
         {
-            float xChange = waterSlideSpeed * Runner.DeltaTime;
+            float xChange = waterSlideSpeed * mobilityModifier * Runner.DeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }

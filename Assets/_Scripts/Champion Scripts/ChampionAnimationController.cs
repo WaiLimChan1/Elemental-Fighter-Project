@@ -11,11 +11,10 @@ public class ChampionAnimationController : AnimationController
         Champion = GetComponentInParent<Champion>();
     }
 
-    private void AnimationTriggerTransform() { Champion.AnimationTriggerTransform(); }
-
     private void AnimationTriggerAttack() { Champion.AnimationTriggerAttack(); }
     private void AnimationTriggerCrowdControl() { Champion.AnimationTriggerCrowdControl(); }
     private void AnimationTriggerAbilitySpawn() { Champion.AnimationTriggerAbilitySpawn(); }
     private void AnimationTriggerProjectileSpawn() { Champion.AnimationTriggerProjectileSpawn(); }
     private void AnimationTriggerMobility() { Champion.AnimationTriggerMobility(); }
+    private void AnimationTriggerTransform() { Champion.AnimationTriggerTransform(); }
 }

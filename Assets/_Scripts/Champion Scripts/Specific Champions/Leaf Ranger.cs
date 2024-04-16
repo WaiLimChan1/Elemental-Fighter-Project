@@ -1,4 +1,5 @@
 using Fusion;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,8 +55,12 @@ public class LeafRanger : Champion
 
     protected override bool SingleAnimationStatus()
     {
-        return (base.SingleAnimationStatus() ||
-            status == Status.UNIQUE1);
+        return (base.SingleAnimationStatus() || status == Status.UNIQUE1);
+    }
+
+    protected override bool MobilityStatus(Status status)
+    {
+        return (base.MobilityStatus(status) || status == Status.UNIQUE1);
     }
 
     protected override void OnGroundTakeInput()
@@ -105,7 +110,7 @@ public class LeafRanger : Champion
             //If found a target, aim at target
             if (Attack3Target != null) SpawnPoint = new Vector2(Attack3Target.transform.position.x, SpawnPoint.y);
 
-            Ability.SpawnAbility(Runner, this, isFacingLeftNetworked, AbilityPrefab, SpawnPoint, Attacks[3].damage, Ability.AbilityStatus.Leaf_Ranger_ATK3, AttackType.AlwaysBlockable);
+            Ability.SpawnAbility(Runner, this, isFacingLeftNetworked, AbilityPrefab, SpawnPoint, getCalculatedDamage(Attacks[3]), Ability.AbilityStatus.Leaf_Ranger_ATK3, AttackType.AlwaysBlockable);
         }
     }
 
@@ -114,9 +119,9 @@ public class LeafRanger : Champion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.ATTACK2)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowSpawnSpot, ArrowSpeed, Attacks[2].damage, Attacks[2].crowdControlStrength, ArrowLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowSpawnSpot, ArrowSpeed, getCalculatedDamage(Attacks[2]), Attacks[2].crowdControlStrength, ArrowLifeTime);
         else if (statusNetworked == Status.AIR_ATTACK)
-            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowAirSpawnSpot, ArrowSpeed, Attacks[0].damage, Attacks[0].crowdControlStrength, ArrowLifeTime);
+            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, ArrowPrefab, ArrowAirSpawnSpot, ArrowSpeed, getCalculatedDamage(Attacks[0]), Attacks[0].crowdControlStrength, ArrowLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -128,7 +133,7 @@ public class LeafRanger : Champion
     {
         if (statusNetworked == Status.UNIQUE1)
         {
-            float xChange = slideMoveSpeed * Runner.DeltaTime;
+            float xChange = slideMoveSpeed * mobilityModifier * Runner.DeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);
         }

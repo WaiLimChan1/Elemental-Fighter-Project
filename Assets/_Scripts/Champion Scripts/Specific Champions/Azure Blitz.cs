@@ -22,6 +22,11 @@ public class AzureBlitz : Champion
         return (base.UnstoppableStatusNetworked() || statusNetworked == Status.AIR_ATTACK);
     }
 
+    protected override bool MobilityStatus(Status status)
+    {
+        return (base.MobilityStatus(status) || status == Status.AIR_ATTACK);
+    }
+
     protected override void TransformTakeInput() {}
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -50,7 +55,7 @@ public class AzureBlitz : Champion
                 ChampionAnimationController.GetNormalizedTime() >= airAttackDashStartTime &&
                 ChampionAnimationController.GetNormalizedTime() < airAttackDashEndTime)
         {
-            float xChange = airAttackDashSpeed * Runner.DeltaTime;
+            float xChange = airAttackDashSpeed * mobilityModifier * Runner.DeltaTime;
             if (isFacingLeftNetworked) xChange *= -1;
 
             Rigid.position = new Vector2(Rigid.position.x + xChange, Rigid.position.y);

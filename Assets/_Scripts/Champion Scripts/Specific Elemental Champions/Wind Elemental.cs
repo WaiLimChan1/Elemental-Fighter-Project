@@ -84,13 +84,9 @@ public class WindElemental : ElementalChampion
         if (statusNetworked == Status.SPECIAL_ATTACK && ChampionAnimationController.GetNormalizedTime() >= SpecialPartIICutOffTime)
         {
             attackBox = SpecialAttackPartII;
-            damage = Attacks[index].damage * SpecialAttackPartIIDamageMultiplier;
+            damage = getCalculatedDamage(Attacks[index]) * SpecialAttackPartIIDamageMultiplier;
         }
-        else
-        {
-            attackBox = Attacks[index].hitBox;
-            damage = Attacks[index].damage;
-        }
+        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, index);
     }
 
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)

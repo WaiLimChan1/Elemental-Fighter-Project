@@ -17,6 +17,9 @@ public class AnimationController : MonoBehaviour
     public float GetNormalizedTime() { return Animator.GetCurrentAnimatorStateInfo(0).normalizedTime; }
     public void SetNormalizedTime(float normalizedTime) { Animator.Play(Animator.GetCurrentAnimatorStateInfo(0).fullPathHash, 0, normalizedTime);  }
 
+    public float GetSpeed() { return Animator.speed; }
+    public void SetSpeed(float speed) { Animator.speed = speed; }
+
     public bool AnimationFinished() { return Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f; }
     public void Flip(bool isFacingLeft) { GetComponent<SpriteRenderer>().flipX = isFacingLeft; }
     public void RestartAnimation() { Animator.Play(Animator.GetCurrentAnimatorStateInfo(0).fullPathHash, 0, 0); }
