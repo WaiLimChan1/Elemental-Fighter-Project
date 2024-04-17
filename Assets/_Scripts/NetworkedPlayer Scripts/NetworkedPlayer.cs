@@ -1,6 +1,7 @@
 using Fusion;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class NetworkedPlayer : NetworkBehaviour
@@ -22,8 +23,37 @@ public class NetworkedPlayer : NetworkBehaviour
     private void RpcSetNickName(NetworkString<_8> nickName) { playerName = nickName; }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
-    [Networked] public NetworkObject OwnedChampion { get; set; }
 
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Items
+    const int MAX_ITEM_COUNT = 6;
+
+    [Networked, Capacity(MAX_ITEM_COUNT)] public NetworkArray<int> ItemsNetworked => default;
+    public List<int> ItemsHostRecord = new List<int>();
+
+    public void UpdateItemsNetworked()
+    {
+        if (!Runner.IsServer) return;
+        List<int> emptyList = Enumerable.Repeat(-1, MAX_ITEM_COUNT).ToList();
+        ItemsNetworked.CopyFrom(emptyList, 0, emptyList.Count);
+        ItemsNetworked.CopyFrom(ItemsHostRecord, 0, Mathf.Clamp(ItemsHostRecord.Count, 0, MAX_ITEM_COUNT));
+    }
+
+    public ItemManager.Item GetCombinedItemStats()
+    {
+        ItemManager.Item combinedItem = new ItemManager.Item();
+        for (int i = 0; i < ItemsNetworked.Length; i++)
+        {
+            if (ItemsNetworked[i] > -1 && ItemsNetworked[i] < ItemManager.Instance.Items.Length) 
+                combinedItem.CombineWithItem(ItemManager.Instance.Items[ItemsNetworked[i]]);
+        }
+        return combinedItem;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    [Networked] public NetworkObject OwnedChampion { get; set; }
     public override void Spawned()
     {
         ChampionSpawner = GetComponent<ChampionSpawner>();
@@ -52,6 +82,8 @@ public class NetworkedPlayer : NetworkBehaviour
 
         if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
             OwnedChampion.GetComponent<Champion>().SetPlayerNickName(playerName);
+
+        UpdateItemsNetworked();
     }
 
     public void DespawnOwnedChampion()

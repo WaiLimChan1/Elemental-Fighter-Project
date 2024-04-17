@@ -33,7 +33,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Componets
     [Header("Champion Components")]
-    public NetworkedPlayer NetworkedPlayer;
+    [Networked] public NetworkedPlayer NetworkedPlayer { get; set; }
     private ResourceBar ResourceBar;
     protected ChampionAnimationController ChampionAnimationController;
     protected Rigidbody2D Rigid;
@@ -163,8 +163,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] protected float baseMoveSpeed = 15f;
     [SerializeField] protected Attack roll;
     [SerializeField] protected float baseRollMoveSpeed = 25f;
+
     [SerializeField] protected float baseJumpForce = 20f;
     [SerializeField] protected float maxJumpForce = 25f;
+    //[SerializeField] protected float jumpMobilityModifierScale
+
     [SerializeField] protected float baseAirMoveSpeed = 10f;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -194,7 +197,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] protected float baseOmnivamp = 0;
 
     [SerializeField] protected float baseMobilityModifer = 1f;
-
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -223,15 +225,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     [Networked] [SerializeField] protected float mobilityModifier { get; set; } //0.5 to 1.5
 
-    private void HandleStatsRange()
+    private void CalculateBaseStats()
     {
-        coolDownReduction = Mathf.Clamp01(coolDownReduction);
-    }
-
-    private void CalculateStats()
-    {
-        if (Object == default) return;
-
         maxHealth = baseMaxHealth;
         maxMana = baseMaxMana;
 
@@ -253,7 +248,48 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         omnivamp = baseOmnivamp;
 
         mobilityModifier = baseMobilityModifer;
+    }
 
+    private void CalculateItemStats()
+    {
+        if (NetworkedPlayer == null) return;
+        ItemManager.Item combinedItem = NetworkedPlayer.GetCombinedItemStats();
+
+        maxHealth += combinedItem.maxHealthBonus;
+        maxMana += combinedItem.maxManaBonus;
+
+        healthRegen += combinedItem.healthRegenBonus;
+        manaRegen += combinedItem.manaRegenBonus;
+
+        ultimateMeterRegen += combinedItem.ultimateMeterRegenBonus;
+        ultimateMeterGainMultipier += combinedItem.ultimateMeterGainMultipierBonus;
+
+        armor += combinedItem.armorBonus;
+        crowdControlIgnorePercentage += combinedItem.crowdControlIgnorePercentageBonus;
+
+        blockPercentage += combinedItem.blockPercentageBonus;
+        crowdControlBlockPercentage += combinedItem.crowdControlBlockPercentageBonus;
+
+        physicalDamage += combinedItem.physicalDamageBonus;
+        attackSpeed += combinedItem.attackSpeedBonus;
+        coolDownReduction += combinedItem.coolDownReductionBonus;
+        omnivamp += combinedItem.omnivampBonus;
+
+        mobilityModifier += combinedItem.mobilityModifierBonus;
+    }
+
+    private void HandleStatsRange()
+    {
+        coolDownReduction = Mathf.Clamp01(coolDownReduction);
+    }
+
+    protected void CalculateStats()
+    {
+        if (Object == default) return;
+        //if (!Runner.IsServer) return;   
+
+        CalculateBaseStats();
+        CalculateItemStats();
         HandleStatsRange();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -352,8 +388,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //Champion Transform Variables & Functions
     [Header("Champion Transform Variables")]
     [SerializeField] private NetworkPrefabRef TransformChampion;
-    [SerializeField] protected float TransformHealthGainAmount = 1000;
-    [SerializeField] protected float TransformManaGainAmount = 500;
+    [SerializeField] protected float TransformHealthGainPercentage = 0.5f;
+    [SerializeField] protected float TransformManaGainPercentage = 0.5f;
     [SerializeField] protected float ultimateMeterCost = 1000;
     [SerializeField] protected float ultimateMeterKillBonus = 100;
 
@@ -387,7 +423,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         Champion transformChampion = transformChampionObject.GetComponent<Champion>();
 
         transformChampion.NetworkedPlayer = NetworkedPlayer;
-        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, TransformHealthGainAmount, manaNetworked / maxMana, TransformManaGainAmount, ultimateMeterNetworked - ultimateMeterCost);
+        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, TransformHealthGainPercentage, manaNetworked / maxMana, TransformManaGainPercentage, ultimateMeterNetworked - ultimateMeterCost);
         transformChampion.RPC_ClientSetUpTransformChampion(isFacingLeftNetworked);
 
         Runner.Despawn(this.Object);
@@ -863,7 +899,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             //Jumping up from the ground
             if (!inAir && Rigid.velocity.y < 0.011)
             {
-                Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + Mathf.Clamp(baseJumpForce * mobilityModifier, 0, maxJumpForce));
+                float jumpForce = baseJumpForce * (1 + (mobilityModifier - 1) * 0.5f);
+                Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + Mathf.Clamp(jumpForce, 0, maxJumpForce));
+                //Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + Mathf.Clamp(baseJumpForce * mobilityModifier, 0, maxJumpForce));
             }
         }
 

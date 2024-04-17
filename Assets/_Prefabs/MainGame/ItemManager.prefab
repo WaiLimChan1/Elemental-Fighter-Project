@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - itemName: None
-    maxHealthBonus: 0
+  - itemName: Test
+    maxHealthBonus: 1000
     maxManaBonus: 0
     healthRegenBonus: 0
     manaRegenBonus: 0
@@ -61,9 +61,9 @@ MonoBehaviour:
     coolDownReductionBonus: 0
     omnivampBonus: 0
     mobilityModifierBonus: 0
-  - itemName: Testing
-    maxHealthBonus: 500
-    maxManaBonus: 500
+  - itemName: Test
+    maxHealthBonus: 0
+    maxManaBonus: 1000
     healthRegenBonus: 0
     manaRegenBonus: 0
     ultimateMeterRegenBonus: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 0
-    attackSpeedBonus: 1
+    attackSpeedBonus: 0
     coolDownReductionBonus: 0
     omnivampBonus: 0
     mobilityModifierBonus: 0

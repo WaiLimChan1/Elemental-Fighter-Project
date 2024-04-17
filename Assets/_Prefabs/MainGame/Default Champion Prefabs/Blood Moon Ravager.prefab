@@ -275,6 +275,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   inAirHorizontalMovement: 0
+  ultimateMeterDefendCost: 1
   baseMoveSpeed: 15
   roll:
     attackName: Roll
@@ -303,6 +304,23 @@ MonoBehaviour:
   baseCoolDownReduction: 0
   baseOmnivamp: 0.3
   baseMobilityModifer: 1.2
+  BaseStats:
+    itemName: Base Stats
+    maxHealthBonus: 500
+    maxManaBonus: 500
+    healthRegenBonus: 2
+    manaRegenBonus: 8
+    ultimateMeterRegenBonus: 0
+    ultimateMeterGainMultipierBonus: 1
+    armorBonus: 0
+    crowdControlIgnorePercentageBonus: 0
+    blockPercentageBonus: 0.5
+    crowdControlBlockPercentageBonus: 0.3
+    physicalDamageBonus: 0
+    attackSpeedBonus: 1.1
+    coolDownReductionBonus: 0
+    omnivampBonus: 0.3
+    mobilityModifierBonus: 1.1
   _maxHealth: 0
   _maxMana: 0
   _healthRegen: 0

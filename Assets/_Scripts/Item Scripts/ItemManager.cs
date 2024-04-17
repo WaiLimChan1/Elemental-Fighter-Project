@@ -35,6 +35,31 @@ public class ItemManager : MonoBehaviour
         public float omnivampBonus;
 
         public float mobilityModifierBonus;
+
+        public void CombineWithItem(Item item)
+        {
+            maxHealthBonus += item.maxHealthBonus;
+            maxManaBonus += item.maxManaBonus;
+
+            healthRegenBonus += item.healthRegenBonus;
+            manaRegenBonus += item.manaRegenBonus;
+
+            ultimateMeterRegenBonus += item.ultimateMeterRegenBonus;
+            ultimateMeterGainMultipierBonus += item.ultimateMeterGainMultipierBonus;
+
+            armorBonus += item.armorBonus;
+            crowdControlIgnorePercentageBonus += item.crowdControlIgnorePercentageBonus;
+
+            blockPercentageBonus += item.blockPercentageBonus;
+            crowdControlBlockPercentageBonus += item.crowdControlBlockPercentageBonus;
+
+            physicalDamageBonus += item.physicalDamageBonus;
+            attackSpeedBonus += item.attackSpeedBonus;
+            coolDownReductionBonus += item.coolDownReductionBonus;
+            omnivampBonus += item.omnivampBonus;
+
+            mobilityModifierBonus += item.mobilityModifierBonus;
+        }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
