@@ -45,15 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - itemName: Helm
-    sprite: {fileID: 5774581190672780694, guid: eb59a7439675df347ae4668a0e4a28db, type: 3}
-    maxHealthBonus: 500
+  - itemName: Leather Armor
+    sprite: {fileID: 1129180862686864470, guid: a43c2518f4e8b1d4b8f19ad6fd34da57, type: 3}
+    maxHealthBonus: 0
     maxManaBonus: 0
-    healthRegenPercentageBonus: 0.01
+    healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
-    armorBonus: 20
+    armorBonus: 10
     crowdControlIgnorePercentageBonus: 0.1
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
@@ -62,8 +62,42 @@ MonoBehaviour:
     coolDownReductionBonus: 0
     omnivampBonus: 0
     mobilityModifierBonus: 0
-  - itemName: Iron Amror
-    sprite: {fileID: 4096317323302285961, guid: 8ab1bb6e548bc8f4da4202c9c611611f, type: 3}
+  - itemName: Leather Boot
+    sprite: {fileID: -8175696775481873888, guid: 3bf426112569da94d8f33d9acd122d1f, type: 3}
+    maxHealthBonus: 0
+    maxManaBonus: 0
+    healthRegenPercentageBonus: 0
+    manaRegenPercentageBonus: 0
+    ultimateMeterRegenBonus: 0
+    ultimateMeterGainMultipierBonus: 0
+    armorBonus: 5
+    crowdControlIgnorePercentageBonus: 0.2
+    blockPercentageBonus: 0
+    crowdControlBlockPercentageBonus: 0
+    physicalDamageBonus: 0
+    attackSpeedBonus: 0
+    coolDownReductionBonus: 0
+    omnivampBonus: 0
+    mobilityModifierBonus: 0.5
+  - itemName: Leather Helmet
+    sprite: {fileID: 441089014527989284, guid: 0aab15a1224635847b9779547bf2128c, type: 3}
+    maxHealthBonus: 100
+    maxManaBonus: 0
+    healthRegenPercentageBonus: 0
+    manaRegenPercentageBonus: 0
+    ultimateMeterRegenBonus: 0
+    ultimateMeterGainMultipierBonus: 0
+    armorBonus: 5
+    crowdControlIgnorePercentageBonus: 0.1
+    blockPercentageBonus: 0
+    crowdControlBlockPercentageBonus: 0
+    physicalDamageBonus: 0
+    attackSpeedBonus: 0
+    coolDownReductionBonus: 0
+    omnivampBonus: 0
+    mobilityModifierBonus: 0.5
+  - itemName: Arrow
+    sprite: {fileID: -4346244404228752641, guid: 2e52c039314ccb54da561756ffaa7687, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -75,7 +109,24 @@ MonoBehaviour:
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 0
-    attackSpeedBonus: 0
-    coolDownReductionBonus: 0
+    attackSpeedBonus: 1
+    coolDownReductionBonus: 0.1
+    omnivampBonus: 0
+    mobilityModifierBonus: 0
+  - itemName: Bow
+    sprite: {fileID: -7856493677412862020, guid: b39e44a5c7316d04a8928918a11115d0, type: 3}
+    maxHealthBonus: 0
+    maxManaBonus: 0
+    healthRegenPercentageBonus: 0
+    manaRegenPercentageBonus: 0
+    ultimateMeterRegenBonus: 0
+    ultimateMeterGainMultipierBonus: 0
+    armorBonus: 0
+    crowdControlIgnorePercentageBonus: 0
+    blockPercentageBonus: 0
+    crowdControlBlockPercentageBonus: 0
+    physicalDamageBonus: 10
+    attackSpeedBonus: 0.5
+    coolDownReductionBonus: 0.1
     omnivampBonus: 0
     mobilityModifierBonus: 0
