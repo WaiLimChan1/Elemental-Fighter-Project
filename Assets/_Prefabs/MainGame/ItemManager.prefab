@@ -45,15 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - itemName: Test
-    maxHealthBonus: 1000
+  - itemName: Helm
+    sprite: {fileID: 5774581190672780694, guid: eb59a7439675df347ae4668a0e4a28db, type: 3}
+    maxHealthBonus: 500
     maxManaBonus: 0
-    healthRegenBonus: 0
-    manaRegenBonus: 0
+    healthRegenPercentageBonus: 0.01
+    manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
-    armorBonus: 0
-    crowdControlIgnorePercentageBonus: 0
+    armorBonus: 20
+    crowdControlIgnorePercentageBonus: 0.1
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 0
@@ -61,11 +62,12 @@ MonoBehaviour:
     coolDownReductionBonus: 0
     omnivampBonus: 0
     mobilityModifierBonus: 0
-  - itemName: Test
+  - itemName: Iron Amror
+    sprite: {fileID: 4096317323302285961, guid: 8ab1bb6e548bc8f4da4202c9c611611f, type: 3}
     maxHealthBonus: 0
-    maxManaBonus: 1000
-    healthRegenBonus: 0
-    manaRegenBonus: 0
+    maxManaBonus: 0
+    healthRegenPercentageBonus: 0
+    manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
     armorBonus: 0

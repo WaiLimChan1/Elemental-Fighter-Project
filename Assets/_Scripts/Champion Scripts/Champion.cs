@@ -179,8 +179,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [SerializeField] protected float baseMaxHealth = 500;
     [SerializeField] protected float baseMaxMana = 500;
 
-    [SerializeField] protected float baseHealthRegen = 1;
-    [SerializeField] protected float baseManaRegen = 8;
+    [SerializeField] protected float baseHealthRegenPercentage = 0.005f;
+    [SerializeField] protected float baseManaRegenPercentage = 0.01f;
 
     [SerializeField] protected float baseUltimateMeterRegen = 0;
     [SerializeField] protected float baseUltimateMeterGainMultipier = 1;
@@ -206,8 +206,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Networked] [SerializeField] protected float maxHealth { get; set; }
     [Networked] [SerializeField] protected float maxMana { get; set; }
 
-    [Networked] [SerializeField] protected float healthRegen { get; set; }
-    [Networked] [SerializeField] protected float manaRegen { get; set; }
+    [Networked] [SerializeField] protected float healthRegenPercentage { get; set; }
+    [Networked] [SerializeField] protected float manaRegenPercentage { get; set; }
 
     [Networked] [SerializeField] protected float ultimateMeterRegen { get; set; }
     [Networked] [SerializeField] protected float ultimateMeterGainMultipier { get; set; }
@@ -230,8 +230,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         maxHealth = baseMaxHealth;
         maxMana = baseMaxMana;
 
-        healthRegen = baseHealthRegen;
-        manaRegen = baseManaRegen;
+        healthRegenPercentage = baseHealthRegenPercentage;
+        manaRegenPercentage = baseManaRegenPercentage;
 
         ultimateMeterRegen = baseUltimateMeterRegen;
         ultimateMeterGainMultipier = baseUltimateMeterGainMultipier;
@@ -258,8 +258,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         maxHealth += combinedItem.maxHealthBonus;
         maxMana += combinedItem.maxManaBonus;
 
-        healthRegen += combinedItem.healthRegenBonus;
-        manaRegen += combinedItem.manaRegenBonus;
+        healthRegenPercentage += combinedItem.healthRegenPercentageBonus;
+        manaRegenPercentage += combinedItem.manaRegenPercentageBonus;
 
         ultimateMeterRegen += combinedItem.ultimateMeterRegenBonus;
         ultimateMeterGainMultipier += combinedItem.ultimateMeterGainMultipierBonus;
@@ -861,8 +861,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (!Runner.IsServer) return;
         if (healthNetworked <= 0) return;
 
-        setHealthNetworked(healthNetworked + healthRegen * Runner.DeltaTime);
-        setManaNetworked(manaNetworked + manaRegen * Runner.DeltaTime);
+        setHealthNetworked(healthNetworked + maxHealth * healthRegenPercentage * Runner.DeltaTime);
+        setManaNetworked(manaNetworked + maxMana * manaRegenPercentage * Runner.DeltaTime);
         setUltimateMeterNetworked(ultimateMeterNetworked + ultimateMeterRegen * Runner.DeltaTime);
     }
 

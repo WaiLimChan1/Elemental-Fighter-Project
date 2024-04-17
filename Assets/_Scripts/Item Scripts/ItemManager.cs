@@ -13,12 +13,13 @@ public class ItemManager : MonoBehaviour
     public class Item
     {
         public string itemName;
+        public Sprite sprite;
 
         public float maxHealthBonus;
         public float maxManaBonus;
 
-        public float healthRegenBonus;
-        public float manaRegenBonus;
+        public float healthRegenPercentageBonus;
+        public float manaRegenPercentageBonus;
 
         public float ultimateMeterRegenBonus;
         public float ultimateMeterGainMultipierBonus;
@@ -41,8 +42,8 @@ public class ItemManager : MonoBehaviour
             maxHealthBonus += item.maxHealthBonus;
             maxManaBonus += item.maxManaBonus;
 
-            healthRegenBonus += item.healthRegenBonus;
-            manaRegenBonus += item.manaRegenBonus;
+            healthRegenPercentageBonus += item.healthRegenPercentageBonus;
+            manaRegenPercentageBonus += item.manaRegenPercentageBonus;
 
             ultimateMeterRegenBonus += item.ultimateMeterRegenBonus;
             ultimateMeterGainMultipierBonus += item.ultimateMeterGainMultipierBonus;

@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  NetworkedPlayer: {fileID: 0}
+  _NetworkedPlayer: {fileID: 0}
   Collider: {fileID: 0}
   _healthNetworked: 0
   _manaNetworked: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   inAirHorizontalMovement: 0
+  ultimateMeterDefendCost: 1
   baseMoveSpeed: 15
   roll:
     attackName: 
@@ -290,8 +291,8 @@ MonoBehaviour:
   baseAirMoveSpeed: 10
   baseMaxHealth: 1000
   baseMaxMana: 500
-  baseHealthRegen: 5
-  baseManaRegen: 10
+  baseHealthRegenPercentage: 0.01
+  baseManaRegenPercentage: 0.02
   baseUltimateMeterRegen: 0
   baseUltimateMeterGainMultipier: 1
   baseArmor: 0
@@ -305,8 +306,8 @@ MonoBehaviour:
   baseMobilityModifer: 1.3
   _maxHealth: 0
   _maxMana: 0
-  _healthRegen: 0
-  _manaRegen: 0
+  _healthRegenPercentage: 0
+  _manaRegenPercentage: 0
   _ultimateMeterRegen: 0
   _ultimateMeterGainMultipier: 0
   _armor: 0
@@ -364,8 +365,8 @@ MonoBehaviour:
     coolDownDuration: 0
   TransformChampion:
     RawGuidValue: b7c97749d7ad32f46b74db58d7e45248
-  TransformHealthGainAmount: 1000
-  TransformManaGainAmount: 500
+  TransformHealthGainPercentage: 0.5
+  TransformManaGainPercentage: 0.5
   ultimateMeterCost: 0
   ultimateMeterKillBonus: 100
   _attack1Target: {fileID: 0}
