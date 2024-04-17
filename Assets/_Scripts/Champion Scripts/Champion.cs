@@ -158,6 +158,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Base Stats
     [Header("Champion Static Stats")]
+    [SerializeField] protected float ultimateMeterDefendCost = 1f;
+
     [SerializeField] protected float baseMoveSpeed = 15f;
     [SerializeField] protected Attack roll;
     [SerializeField] protected float baseRollMoveSpeed = 25f;
@@ -361,7 +363,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     }
 
     //Elemental to Default
-    protected virtual void HostSetUpTransformChampion(float healthRatio, float manaRatio, float ultimateMeter)
+    protected virtual void HostSetUpTransformChampion(float healthRatio, float TransformHealthGainAmount, float manaRatio, float TransformManaGainAmount, float ultimateMeter)
     {
         setHealthNetworked(0);
         setManaNetworked(0);
@@ -385,7 +387,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         Champion transformChampion = transformChampionObject.GetComponent<Champion>();
 
         transformChampion.NetworkedPlayer = NetworkedPlayer;
-        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, manaNetworked / maxMana, ultimateMeterNetworked - ultimateMeterCost);
+        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, TransformHealthGainAmount, manaNetworked / maxMana, TransformManaGainAmount, ultimateMeterNetworked - ultimateMeterCost);
         transformChampion.RPC_ClientSetUpTransformChampion(isFacingLeftNetworked);
 
         Runner.Despawn(this.Object);
@@ -828,11 +830,18 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         setUltimateMeterNetworked(ultimateMeterNetworked + ultimateMeterRegen * Runner.DeltaTime);
     }
 
+    private void ApplyDefendCost()
+    {
+        if (!Runner.IsServer) return;
+        if (statusNetworked == Status.DEFEND) ultimateMeterNetworked -= ultimateMeterDefendCost * Runner.DeltaTime;
+    }
+
     protected virtual void ApplyEffects()
     {
         ApplyManaCost();
         ApplyCoolDownDuration();
         ApplyResourceRegen();
+        ApplyDefendCost();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

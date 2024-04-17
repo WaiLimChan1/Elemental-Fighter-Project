@@ -10,7 +10,7 @@ public class ElementalChampion : Champion
     //Champion Transform Variables & Functions
 
     //Default to Elemental
-    protected override void HostSetUpTransformChampion(float healthRatio, float manaRatio, float ultimateMeter)
+    protected override void HostSetUpTransformChampion(float healthRatio, float TransformHealthGainAmount, float manaRatio, float TransformManaGainAmount, float ultimateMeter)
     {
         setHealthNetworked(maxHealth * healthRatio + TransformHealthGainAmount);
         setManaNetworked(maxMana * manaRatio + TransformManaGainAmount);

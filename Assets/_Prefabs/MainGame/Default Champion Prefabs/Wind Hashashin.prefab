@@ -357,8 +357,8 @@ MonoBehaviour:
     coolDownDuration: 35
   TransformChampion:
     RawGuidValue: f594198a057d5624b86a27ba17ae0542
-  TransformHealthGainAmount: 1000
-  TransformManaGainAmount: 500
+  TransformHealthGainAmount: 500
+  TransformManaGainAmount: 250
   ultimateMeterCost: 1000
   ultimateMeterKillBonus: 100
   _specialAttackTarget: {fileID: 0}

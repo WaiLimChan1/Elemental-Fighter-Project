@@ -299,6 +299,8 @@ MonoBehaviour:
   baseBlockPercentage: 0.5
   baseCrowdControlBlockPercentage: 0.3
   basePhysicalDamage: 0
+  baseAttackSpeed: 1
+  baseCoolDownReduction: 0
   baseOmnivamp: 0
   baseMobilityModifer: 1
   _maxHealth: 0
@@ -312,6 +314,8 @@ MonoBehaviour:
   _blockPercentage: 0
   _crowdControlBlockPercentage: 0
   _physicalDamage: 0
+  _attackSpeed: 0
+  _coolDownReduction: 0
   _omnivamp: 0
   _mobilityModifier: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
@@ -353,8 +357,8 @@ MonoBehaviour:
     coolDownDuration: 15
   TransformChampion:
     RawGuidValue: bdca3b12d829853409062d9d838438e0
-  TransformHealthGainAmount: 1000
-  TransformManaGainAmount: 500
+  TransformHealthGainAmount: 500
+  TransformManaGainAmount: 250
   ultimateMeterCost: 1000
   ultimateMeterKillBonus: 100
   lightningDashAttack:
