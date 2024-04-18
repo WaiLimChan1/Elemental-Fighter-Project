@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   _ItemsNetworked: 
-  ItemsHostRecord: 01000000
+  ItemsHostRecord: 
   _OwnedChampion: {fileID: 0}
 --- !u!114 &1639971222970611916
 MonoBehaviour:

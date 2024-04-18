@@ -286,7 +286,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     protected void CalculateStats()
     {
         if (Object == default) return;
-        //if (!Runner.IsServer) return;   
+        if (!Runner.IsServer) return;   
 
         CalculateBaseStats();
         CalculateItemStats();
