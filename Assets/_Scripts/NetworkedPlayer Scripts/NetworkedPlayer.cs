@@ -83,6 +83,13 @@ public class NetworkedPlayer : NetworkBehaviour
         if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
             OwnedChampion.GetComponent<Champion>().SetPlayerNickName(playerName);
 
+        if (Runner.LocalPlayer == Object.InputAuthority)
+            for (int i = 0; i < ItemsNetworked.Length; i++)
+            {
+                if (ItemsNetworked[i] > -1 && ItemsNetworked[i] < ItemManager.Instance.Items.Length)
+                    Debug.Log(ItemManager.Instance.Items[i].itemName);
+            }
+
         UpdateItemsNetworked();
     }
 
