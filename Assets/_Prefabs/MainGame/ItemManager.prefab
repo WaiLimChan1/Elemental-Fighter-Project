@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a0255556d756f446bc8ab350427115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EmptyItemSprite: {fileID: 0}
   Items:
   - itemName: Leather Armor
-    sprite: {fileID: 1129180862686864470, guid: a43c2518f4e8b1d4b8f19ad6fd34da57, type: 3}
+    itemSprite: {fileID: 21300000, guid: a43c2518f4e8b1d4b8f19ad6fd34da57, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -63,7 +64,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Leather Boot
-    sprite: {fileID: -8175696775481873888, guid: 3bf426112569da94d8f33d9acd122d1f, type: 3}
+    itemSprite: {fileID: 21300000, guid: 3bf426112569da94d8f33d9acd122d1f, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -80,7 +81,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0.5
   - itemName: Leather Helmet
-    sprite: {fileID: 441089014527989284, guid: 0aab15a1224635847b9779547bf2128c, type: 3}
+    itemSprite: {fileID: 21300000, guid: 0aab15a1224635847b9779547bf2128c, type: 3}
     maxHealthBonus: 100
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Iron Armor
-    sprite: {fileID: 4096317323302285961, guid: 8ab1bb6e548bc8f4da4202c9c611611f, type: 3}
+    itemSprite: {fileID: 21300000, guid: 8ab1bb6e548bc8f4da4202c9c611611f, type: 3}
     maxHealthBonus: 50
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -114,7 +115,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Iron Boot
-    sprite: {fileID: 3758843196150832687, guid: 1072ab04df1c7c74f8f7c0ee03d7c594, type: 3}
+    itemSprite: {fileID: 21300000, guid: 1072ab04df1c7c74f8f7c0ee03d7c594, type: 3}
     maxHealthBonus: 50
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -131,7 +132,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0.5
   - itemName: Iron Helmet
-    sprite: {fileID: 3115673437530464183, guid: 7520a0e681c3354458db1b780777cf10, type: 3}
+    itemSprite: {fileID: 21300000, guid: 7520a0e681c3354458db1b780777cf10, type: 3}
     maxHealthBonus: 100
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -148,7 +149,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Wooden Armor
-    sprite: {fileID: -1077155908674367464, guid: 2c7b84ca284376d4c98889fa4174d7f7, type: 3}
+    itemSprite: {fileID: 21300000, guid: 2c7b84ca284376d4c98889fa4174d7f7, type: 3}
     maxHealthBonus: 50
     maxManaBonus: 0
     healthRegenPercentageBonus: 0.005
@@ -165,7 +166,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Helm
-    sprite: {fileID: 5774581190672780694, guid: eb59a7439675df347ae4668a0e4a28db, type: 3}
+    itemSprite: {fileID: 21300000, guid: eb59a7439675df347ae4668a0e4a28db, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -182,7 +183,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Beer
-    sprite: {fileID: 7795085465242543974, guid: 6c657c025402ef1468549d6fb2c04845, type: 3}
+    itemSprite: {fileID: 21300000, guid: 6c657c025402ef1468549d6fb2c04845, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -199,7 +200,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Mushroom
-    sprite: {fileID: 4315506946141470425, guid: cef4365bafc02ab449dc0b60a6c8dd20, type: 3}
+    itemSprite: {fileID: 21300000, guid: cef4365bafc02ab449dc0b60a6c8dd20, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -216,7 +217,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Red Potion
-    sprite: {fileID: 8306414610740238925, guid: fe12cd0b267009e4e9cf841761ce2258, type: 3}
+    itemSprite: {fileID: 21300000, guid: fe12cd0b267009e4e9cf841761ce2258, type: 3}
     maxHealthBonus: 200
     maxManaBonus: 0
     healthRegenPercentageBonus: 0.01
@@ -233,7 +234,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Blue Potion
-    sprite: {fileID: -5986515906401079315, guid: 17cdccdf4dd5e2643b2b32a6c5fac7b3, type: 3}
+    itemSprite: {fileID: 21300000, guid: 17cdccdf4dd5e2643b2b32a6c5fac7b3, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 200
     healthRegenPercentageBonus: 0
@@ -250,7 +251,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Wooden Shield
-    sprite: {fileID: -7170581808290123246, guid: 67eb7baa28549324b9c79eef224030b2, type: 3}
+    itemSprite: {fileID: 21300000, guid: 67eb7baa28549324b9c79eef224030b2, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -267,7 +268,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Iron Shield
-    sprite: {fileID: 3223180940824772514, guid: 35fda49a991732c408f0045af80f6d32, type: 3}
+    itemSprite: {fileID: 21300000, guid: 35fda49a991732c408f0045af80f6d32, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -284,7 +285,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Arrow
-    sprite: {fileID: -4346244404228752641, guid: 2e52c039314ccb54da561756ffaa7687, type: 3}
+    itemSprite: {fileID: 21300000, guid: 2e52c039314ccb54da561756ffaa7687, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -301,7 +302,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Bow
-    sprite: {fileID: -7856493677412862020, guid: b39e44a5c7316d04a8928918a11115d0, type: 3}
+    itemSprite: {fileID: 21300000, guid: b39e44a5c7316d04a8928918a11115d0, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -318,7 +319,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Golden Sword
-    sprite: {fileID: -2995627434062683977, guid: 7c9479583c36c664ca278a5c5a4db574, type: 3}
+    itemSprite: {fileID: 21300000, guid: 7c9479583c36c664ca278a5c5a4db574, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -335,7 +336,7 @@ MonoBehaviour:
     omnivampBonus: 0.2
     mobilityModifierBonus: 0
   - itemName: Iron Sword
-    sprite: {fileID: 6380105564640697137, guid: 7ba8852ed3bde244faeb2db0481903b9, type: 3}
+    itemSprite: {fileID: 21300000, guid: 7ba8852ed3bde244faeb2db0481903b9, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -352,7 +353,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Ruby Staff
-    sprite: {fileID: -4973289320988195577, guid: b5c177e38d651224fb4f1f009dd7a084, type: 3}
+    itemSprite: {fileID: 21300000, guid: b5c177e38d651224fb4f1f009dd7a084, type: 3}
     maxHealthBonus: 100
     maxManaBonus: 0
     healthRegenPercentageBonus: 0.01
@@ -369,7 +370,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Sapphire Staff
-    sprite: {fileID: -4106305270986625221, guid: 8a10fbeac38cda0459f7fc3b1649df55, type: 3}
+    itemSprite: {fileID: 21300000, guid: 8a10fbeac38cda0459f7fc3b1649df55, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 100
     healthRegenPercentageBonus: 0
@@ -386,7 +387,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Axe
-    sprite: {fileID: -5825250732961213246, guid: 84de82d3a4d792a4d9171a5bffb72952, type: 3}
+    itemSprite: {fileID: 21300000, guid: 84de82d3a4d792a4d9171a5bffb72952, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -403,7 +404,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Pickaxe
-    sprite: {fileID: 5807921338739458136, guid: a8fd08911f241b04b8465d94081e1f5c, type: 3}
+    itemSprite: {fileID: 21300000, guid: a8fd08911f241b04b8465d94081e1f5c, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -420,7 +421,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Silver Sword
-    sprite: {fileID: 4664467146931753940, guid: 70d0ef0d89a87904888444b64e40aa44, type: 3}
+    itemSprite: {fileID: 21300000, guid: 70d0ef0d89a87904888444b64e40aa44, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
@@ -437,7 +438,7 @@ MonoBehaviour:
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Knife
-    sprite: {fileID: 6764707825347140516, guid: 270e789609c92ab498c16c10866d23e5, type: 3}
+    itemSprite: {fileID: 21300000, guid: 270e789609c92ab498c16c10866d23e5, type: 3}
     maxHealthBonus: 0
     maxManaBonus: 0
     healthRegenPercentageBonus: 0

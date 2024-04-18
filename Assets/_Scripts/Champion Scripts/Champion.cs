@@ -980,4 +980,22 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     {
         OnDrawGizmosInAirRayCast();
     }
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Testing
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    public void RPC_RestoreHealthAndMana()
+    {
+        setHealthNetworked(maxHealth);
+        setManaNetworked(maxMana);
+    }
+
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    public void RPC_FillUltimateMeter()
+    {
+        setUltimateMeterNetworked(ultimateMeterCost);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 }

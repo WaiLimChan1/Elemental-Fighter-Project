@@ -7,13 +7,15 @@ public class ItemManager : MonoBehaviour
 {
     public static ItemManager Instance { get; private set; }
 
+    public Sprite EmptyItemSprite;
+
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Item Class
     [Serializable]
     public class Item
     {
         public string itemName;
-        public Sprite sprite;
+        public Sprite itemSprite;
 
         public float maxHealthBonus;
         public float maxManaBonus;

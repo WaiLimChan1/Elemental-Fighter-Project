@@ -10,6 +10,7 @@ public class NetworkedPlayer : NetworkBehaviour
     //Components
     private LocalCamera LocalCamera;
     private ChampionUI ChampionUI;
+    private Item_UI ItemUI;
     private ChampionSpawner ChampionSpawner;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -27,7 +28,7 @@ public class NetworkedPlayer : NetworkBehaviour
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Items
-    const int MAX_ITEM_COUNT = 6;
+    public const int MAX_ITEM_COUNT = 6;
 
     [Networked, Capacity(MAX_ITEM_COUNT)] public NetworkArray<int> ItemsNetworked => default;
     public List<int> ItemsHostRecord = new List<int>();
@@ -50,6 +51,16 @@ public class NetworkedPlayer : NetworkBehaviour
         }
         return combinedItem;
     }
+
+    public void UpdateItemUI()
+    {
+        if (Runner.LocalPlayer != Object.InputAuthority) return;
+
+        for (int i = 0; i < ItemsNetworked.Length; i++)
+        {
+            ItemUI.SetIndividualItemImage(i, ItemsNetworked[i]);
+        }
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -63,6 +74,9 @@ public class NetworkedPlayer : NetworkBehaviour
             LocalCamera.NetworkedPlayer = this;
 
             ChampionUI = ChampionUI.Instance;
+            ItemUI = Item_UI.Instance;
+
+            Testing_UI.Instance.NetworkedPlayer = this;
 
             RpcSetNickName(GlobalManagers.Instance.NetworkRunnerController.LocalPlayerName);
 
@@ -74,27 +88,41 @@ public class NetworkedPlayer : NetworkBehaviour
     {
         gameObject.name = "NetworkedPlayer: " + playerName + " " + Object.InputAuthority; //Object Name
 
+        //ChampionUI
         if (Runner.LocalPlayer == Object.InputAuthority)
         {
             if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
                 ChampionUI.Champion = OwnedChampion.GetComponent<Champion>();
         }
 
+        //Player Name
         if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
             OwnedChampion.GetComponent<Champion>().SetPlayerNickName(playerName);
 
-        if (Runner.LocalPlayer == Object.InputAuthority)
-            for (int i = 0; i < ItemsNetworked.Length; i++)
-            {
-                if (ItemsNetworked[i] > -1 && ItemsNetworked[i] < ItemManager.Instance.Items.Length)
-                    Debug.Log(ItemManager.Instance.Items[i].itemName);
-            }
-
+        //Update Items
         UpdateItemsNetworked();
+
+        //Update Item UI locally
+        UpdateItemUI();
     }
 
     public void DespawnOwnedChampion()
     {
         Runner.Despawn(OwnedChampion);
     }
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Testing
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    public void RPC_AddItem(int itemIndex)
+    {
+        ItemsHostRecord.Add(itemIndex);
+    }
+
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    public void RPC_RemoveAllItems()
+    {
+        ItemsHostRecord.Clear();
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 }
