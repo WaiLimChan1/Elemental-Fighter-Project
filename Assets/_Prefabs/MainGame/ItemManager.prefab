@@ -298,7 +298,7 @@ MonoBehaviour:
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 0
     attackSpeedBonus: 0.5
-    coolDownReductionBonus: 0.5
+    coolDownReductionBonus: 0.2
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Bow
@@ -315,7 +315,7 @@ MonoBehaviour:
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 10
     attackSpeedBonus: 0.3
-    coolDownReductionBonus: 0.3
+    coolDownReductionBonus: 0.1
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Golden Sword
@@ -331,9 +331,9 @@ MonoBehaviour:
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 5
-    attackSpeedBonus: 0.2
-    coolDownReductionBonus: 0.2
-    omnivampBonus: 0.2
+    attackSpeedBonus: 0.1
+    coolDownReductionBonus: 0.1
+    omnivampBonus: 0.5
     mobilityModifierBonus: 0
   - itemName: Iron Sword
     itemSprite: {fileID: 21300000, guid: 7ba8852ed3bde244faeb2db0481903b9, type: 3}
@@ -347,8 +347,8 @@ MonoBehaviour:
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 5
-    attackSpeedBonus: 0.5
+    physicalDamageBonus: 15
+    attackSpeedBonus: 0.2
     coolDownReductionBonus: 0
     omnivampBonus: 0
     mobilityModifierBonus: 0
@@ -398,8 +398,8 @@ MonoBehaviour:
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 10
-    attackSpeedBonus: 0.2
+    physicalDamageBonus: 15
+    attackSpeedBonus: 0.1
     coolDownReductionBonus: 0
     omnivampBonus: 0
     mobilityModifierBonus: 0
@@ -415,8 +415,8 @@ MonoBehaviour:
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 5
-    attackSpeedBonus: 0.5
+    physicalDamageBonus: 10
+    attackSpeedBonus: 0.3
     coolDownReductionBonus: 0
     omnivampBonus: 0
     mobilityModifierBonus: 0
@@ -432,9 +432,9 @@ MonoBehaviour:
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 5
+    physicalDamageBonus: 10
     attackSpeedBonus: 0.3
-    coolDownReductionBonus: 0.3
+    coolDownReductionBonus: 0.1
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Knife
@@ -449,8 +449,8 @@ MonoBehaviour:
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 0
+    physicalDamageBonus: 10
     attackSpeedBonus: 0
     coolDownReductionBonus: 0
-    omnivampBonus: 0.5
+    omnivampBonus: 1
     mobilityModifierBonus: 0
