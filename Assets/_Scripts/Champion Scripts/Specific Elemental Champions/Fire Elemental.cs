@@ -80,11 +80,11 @@ public class FireElemental : ElementalChampion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
-    public override void DealDamageToVictim(Champion enemy, float damage)
+    public override void DealDamageToVictim(Champion enemy, float damage, float numOfAttacks)
     {
         if (statusNetworked == Status.UNIQUE1) 
-            enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+            enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
@@ -116,7 +116,7 @@ public class FireElemental : ElementalChampion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE2)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, FireBallPrefab, FireBallSpawnPoint, FireBallSpeed, getCalculatedDamage(fireBallAttack), fireBallAttack.crowdControlStrength, FireBallLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, FireBallPrefab, FireBallSpawnPoint, FireBallSpeed, getCalculatedDamage(fireBallAttack), fireBallAttack.numOfAttacks, fireBallAttack.crowdControlStrength, FireBallLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

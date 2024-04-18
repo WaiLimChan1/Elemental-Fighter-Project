@@ -48,11 +48,11 @@ public class LeafElemental : ElementalChampion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
-    public override void DealDamageToVictim(Champion enemy, float damage)
+    public override void DealDamageToVictim(Champion enemy, float damage, float numOfAttacks)
     {
         if (statusNetworked == Status.AIR_ATTACK)
-            enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(this,damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+            enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this,damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
@@ -118,9 +118,9 @@ public class LeafElemental : ElementalChampion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.ATTACK1)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DartPrefab, DartSpawnPoint, DartSpeed, getCalculatedDamage(Attacks[1]), Attacks[1].crowdControlStrength, DartLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DartPrefab, DartSpawnPoint, DartSpeed, getCalculatedDamage(Attacks[1]), Attacks[1].numOfAttacks, Attacks[1].crowdControlStrength, DartLifeTime);
         else if (statusNetworked == Status.ATTACK2) 
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, JavelinPrefab, JavelinSpawnPoint, JavelinSpeed, getCalculatedDamage(Attacks[2]), Attacks[2].crowdControlStrength, JavelinLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, JavelinPrefab, JavelinSpawnPoint, JavelinSpeed, getCalculatedDamage(Attacks[2]), Attacks[2].numOfAttacks, Attacks[2].crowdControlStrength, JavelinLifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

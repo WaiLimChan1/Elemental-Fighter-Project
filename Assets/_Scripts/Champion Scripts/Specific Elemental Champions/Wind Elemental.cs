@@ -77,21 +77,22 @@ public class WindElemental : ElementalChampion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
-    public override void DealDamageToVictim(Champion enemy, float damage)
+    public override void DealDamageToVictim(Champion enemy, float damage, float numOfAttacks)
     {
         if (statusNetworked == Status.AIR_ATTACK || statusNetworked == Status.UNIQUE1)
-            enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+            enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
-    public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
+    public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, ref float numOfAttacks, int index)
     {
         if (statusNetworked == Status.SPECIAL_ATTACK && ChampionAnimationController.GetNormalizedTime() >= SpecialPartIICutOffTime)
         {
             attackBox = SpecialAttackPartII;
             damage = getCalculatedDamage(Attacks[index]) * SpecialAttackPartIIDamageMultiplier;
+            numOfAttacks = 1;
         }
-        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, index);
+        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, ref numOfAttacks, index);
     }
 
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)

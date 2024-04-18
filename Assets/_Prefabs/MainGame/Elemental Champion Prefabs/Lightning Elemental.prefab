@@ -282,6 +282,7 @@ MonoBehaviour:
     hitBox: {fileID: 0}
     damage: 0
     physicalDamageScaling: 0
+    numOfAttacks: 1
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 0
@@ -323,8 +324,9 @@ MonoBehaviour:
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
-    damage: 15
-    physicalDamageScaling: 0.33333334
+    damage: 45
+    physicalDamageScaling: 1
+    numOfAttacks: 3
     crowdControlStrength: 10
     manaCost: 0
     coolDownDuration: 0.5
@@ -332,6 +334,7 @@ MonoBehaviour:
     hitBox: {fileID: 5196699418435723096}
     damage: 35
     physicalDamageScaling: 1
+    numOfAttacks: 1
     crowdControlStrength: 10
     manaCost: 25
     coolDownDuration: 3
@@ -339,27 +342,31 @@ MonoBehaviour:
     hitBox: {fileID: 7436076005764617715}
     damage: 45
     physicalDamageScaling: 1
+    numOfAttacks: 1
     crowdControlStrength: 15
     manaCost: 0
     coolDownDuration: 0.5
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
-    damage: 40
-    physicalDamageScaling: 0.25
+    damage: 150
+    physicalDamageScaling: 1
+    numOfAttacks: 4
     crowdControlStrength: 5
     manaCost: 50
     coolDownDuration: 5
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
-    damage: 20
-    physicalDamageScaling: 0.1
+    damage: 250
+    physicalDamageScaling: 1
+    numOfAttacks: 12
     crowdControlStrength: 0
     manaCost: 100
     coolDownDuration: 10
   - attackName: Transform Attack
     hitBox: {fileID: 1653282385256952350}
-    damage: 25
-    physicalDamageScaling: 0.15
+    damage: 200
+    physicalDamageScaling: 1
+    numOfAttacks: 7
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 0

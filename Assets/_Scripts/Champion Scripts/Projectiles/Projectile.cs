@@ -10,7 +10,7 @@ public class Projectile : NetworkBehaviour
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Static Projectile Spawn Functions
     public static void SpawnProjectileHorizontal(NetworkRunner Runner, Champion owner, bool isFacingLeft,
-                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float ccStrength, float lifeTime)
+                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float numOfAttacks, float ccStrength, float lifeTime)
     {
         var Projectile = Runner.Spawn(projectilePrefab, SpawnPoint.position, Quaternion.identity);
 
@@ -18,11 +18,11 @@ public class Projectile : NetworkBehaviour
         if (isFacingLeft) velocity = new Vector2(-1 * speed, 0);
         else velocity = new Vector2(1 * speed, 0);
 
-        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, ccStrength, lifeTime);
+        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, numOfAttacks, ccStrength, lifeTime);
     }
 
     public static void SpawnProjectileDiagonal(NetworkRunner Runner, Champion owner, bool isFacingLeft,
-                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float ccStrength, float lifeTime)
+                                        NetworkPrefabRef projectilePrefab, Transform SpawnPoint, float speed, float damage, float numOfAttacks, float ccStrength, float lifeTime)
     {
         NetworkObject Projectile;
 
@@ -34,7 +34,7 @@ public class Projectile : NetworkBehaviour
         else velocity = new Vector2(Mathf.Cos(-45 * Mathf.Deg2Rad), Mathf.Sin(-45 * Mathf.Deg2Rad));
         velocity = velocity.normalized * speed;
 
-        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, ccStrength, lifeTime);
+        Projectile.GetComponent<Projectile>().SetUp(owner, velocity, damage, numOfAttacks, ccStrength, lifeTime);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -51,6 +51,7 @@ public class Projectile : NetworkBehaviour
     [SerializeField][Networked] protected bool isFacingLeft { get; set; }
     [SerializeField][Networked] protected Vector2 velocity { get; set; }
     [SerializeField] protected float damage;
+    [SerializeField][Networked] protected float numOfAttacks { get; set; }
     [SerializeField] protected float crowdControlStrength;
 
     [SerializeField][Networked] protected float lifeTime { get; set; }
@@ -68,13 +69,14 @@ public class Projectile : NetworkBehaviour
         Animator = GetComponentInChildren<Animator>();
     }
 
-    public void SetUp(Champion owner, Vector2 velocity, float damage, float ccStrength, float lifeTime)
+    public void SetUp(Champion owner, Vector2 velocity, float damage, float numOfAttacks, float ccStrength, float lifeTime)
     {
         flying = true;
         this.owner = owner;
         this.velocity = velocity;
         this.isFacingLeft = owner.isFacingLeftNetworked;
         this.damage = damage;
+        this.numOfAttacks = numOfAttacks;
         this.crowdControlStrength = ccStrength;
         this.lifeTime = lifeTime;
         remainingLifeTime = TickTimer.CreateFromSeconds(Runner, lifeTime);
@@ -89,7 +91,7 @@ public class Projectile : NetworkBehaviour
     public virtual void RPC_HitChampion(Champion enemy) 
     {
         flying = false;
-        enemy.TakeDamageNetworked(owner, damage, isFacingLeft);
+        enemy.TakeDamageNetworked(owner, damage, numOfAttacks, isFacingLeft);
         ApplyCrowdControl(enemy, crowdControlStrength);
     }
 

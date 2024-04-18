@@ -77,10 +77,10 @@ public class LightningRonin : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
-    public override void DealDamageToVictim(Champion enemy, float damage)
+    public override void DealDamageToVictim(Champion enemy, float damage, float numOfAttacks)
     {
-        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override int GetAttackBoxIndex()
@@ -94,14 +94,15 @@ public class LightningRonin : Champion
         else return -1;
     }
 
-    public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
+    public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, ref float numOfAttacks, int index)
     {
         if (statusNetworked == Status.UNIQUE2)
         {
             attackBox = lightningDashAttack.hitBox;
             damage = getCalculatedDamage(lightningDashAttack);
+            numOfAttacks = lightningDashAttack.numOfAttacks;
         }
-        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, index);
+        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, ref numOfAttacks, index);
     }
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)

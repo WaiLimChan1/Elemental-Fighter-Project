@@ -75,10 +75,10 @@ public class MetalBladekeeper : Champion
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack logic
-    public override void DealDamageToVictim(Champion enemy, float damage)
+    public override void DealDamageToVictim(Champion enemy, float damage, float numOfAttacks)
     {
-        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+        if (statusNetworked == Status.SPECIAL_ATTACK) enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
@@ -101,9 +101,9 @@ public class MetalBladekeeper : Champion
         if (!Runner.IsServer) return;
 
         if (statusNetworked == Status.UNIQUE1)
-            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, getCalculatedDamage(daggerAttack), daggerAttack.crowdControlStrength, DaggerLifeTime);
+            Projectile.SpawnProjectileHorizontal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, getCalculatedDamage(daggerAttack), daggerAttack.numOfAttacks, daggerAttack.crowdControlStrength, DaggerLifeTime);
         else if (statusNetworked == Status.UNIQUE2)
-            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, getCalculatedDamage(daggerAttack), daggerAttack.crowdControlStrength, DaggerLifeTime);
+            Projectile.SpawnProjectileDiagonal(Runner, this, isFacingLeftNetworked, DaggerPrefab, DaggerSpawnSpot, DaggerSpeed, getCalculatedDamage(daggerAttack), daggerAttack.numOfAttacks, daggerAttack.crowdControlStrength, DaggerLifeTime);
     }
 
     public override void AnimationTriggerMobility()

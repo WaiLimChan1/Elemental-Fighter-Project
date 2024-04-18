@@ -6,10 +6,10 @@ public class FireKnight : Champion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
-    public override void DealDamageToVictim(Champion enemy, float damage)
+    public override void DealDamageToVictim(Champion enemy, float damage, float numOfAttacks)
     {
-        if (statusNetworked == Status.ATTACK2) enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
-        else enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
+        if (statusNetworked == Status.ATTACK2) enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttacker, transform.position);
+        else enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked, AttackType.BlockByFacingAttack);
     }
 
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)

@@ -7,10 +7,10 @@ public class Ability : NetworkBehaviour
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Static Projectile Spawn Functions
     public static void SpawnAbility(NetworkRunner Runner, Champion owner, bool isFacingLeft,
-                                        NetworkPrefabRef AbilityPrefab, Vector2 SpawnPoint, float damage, AbilityStatus abilityStatus, Champion.AttackType attackType)
+                                        NetworkPrefabRef AbilityPrefab, Vector2 SpawnPoint, float damage, float numOfAttacks, AbilityStatus abilityStatus, Champion.AttackType attackType)
     {
         var Ability = Runner.Spawn(AbilityPrefab, SpawnPoint, Quaternion.identity);
-        Ability.GetComponent<Ability>().SetUp(owner, damage, isFacingLeft, abilityStatus, attackType);
+        Ability.GetComponent<Ability>().SetUp(owner, damage, numOfAttacks, isFacingLeft, abilityStatus, attackType);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -40,6 +40,7 @@ public class Ability : NetworkBehaviour
     [Header("Ability Variables")]
     [SerializeField][Networked] private Champion owner { get; set; }
     [SerializeField][Networked] private float damage { get; set; }
+    [SerializeField][Networked] private float numOfAttacks { get; set; }
     [SerializeField][Networked] private bool isFacingLeft { get; set; }
     [SerializeField][Networked] private int abilityStatusNum { get; set; }
     [SerializeField][Networked] private int attackTypeNum { get; set; }
@@ -58,10 +59,11 @@ public class Ability : NetworkBehaviour
         AbilityAnimationController = GetComponentInChildren<AbilityAnimationController>();
     }
 
-    public void SetUp(Champion owner, float damage, bool isFacingLeft, AbilityStatus abilityStatus, Champion.AttackType attackType)
+    public void SetUp(Champion owner, float damage, float numOfAttacks, bool isFacingLeft, AbilityStatus abilityStatus, Champion.AttackType attackType)
     {
         this.owner = owner;
         this.damage = damage;
+        this.numOfAttacks = numOfAttacks;
         this.isFacingLeft = isFacingLeft;
         this.abilityStatusNum = (int)abilityStatus;
         this.attackTypeNum = (int)attackType;
@@ -88,7 +90,7 @@ public class Ability : NetworkBehaviour
 
     public virtual void DealDamageToVictim(Champion enemy)
     {
-        enemy.TakeDamageNetworked(owner, damage, isFacingLeft, (Champion.AttackType) attackTypeNum);
+        enemy.TakeDamageNetworked(owner, damage, numOfAttacks, isFacingLeft, (Champion.AttackType) attackTypeNum);
     }
 
     public virtual void AnimationTriggerAttack()

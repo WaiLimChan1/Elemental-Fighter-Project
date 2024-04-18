@@ -304,6 +304,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         public BoxCollider2D hitBox;
         public float damage;
         public float physicalDamageScaling;
+        public float numOfAttacks;
         public float crowdControlStrength;
         public float manaCost;
         public float coolDownDuration;
@@ -314,7 +315,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     protected float getCalculatedDamage(Attack attack)
     {
-        return attack.damage + physicalDamage * attack.physicalDamageScaling;
+        return (attack.damage + (physicalDamage * attack.physicalDamageScaling)) / attack.numOfAttacks;
     }
 
     //Attack UI
@@ -693,13 +694,13 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         ChampionAnimationController.RestartAnimation();
     }
 
-    public float TakeDamageNetworked(Champion attacker, float damage, bool attackerIsFacingLeft, AttackType attackType = AttackType.BlockByFacingAttack, Vector2 attackerPosition = default(Vector2))
+    public float TakeDamageNetworked(Champion attacker, float damage, float numOfAttacks, bool attackerIsFacingLeft, AttackType attackType = AttackType.BlockByFacingAttack, Vector2 attackerPosition = default(Vector2))
     {
         if (dead) return 0;
         if (healthNetworked <= 0) return 0;
 
         float originalDamage = damage;
-        damage -= armor;
+        damage -= armor / numOfAttacks;
         if (damage < 1) damage = 1;
 
         //Blocked
@@ -752,9 +753,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         Rigid.velocity = CalculateVelocity(velocity);
     }
 
-    public virtual void DealDamageToVictim(Champion enemy, float damage)
+    public virtual void DealDamageToVictim(Champion enemy, float damage, float numOfAttacks)
     {
-        enemy.TakeDamageNetworked(this, damage, isFacingLeftNetworked);
+        enemy.TakeDamageNetworked(this, damage, numOfAttacks, isFacingLeftNetworked);
     }
 
     public virtual bool CanBeAttacked(Champion attacker)
@@ -772,10 +773,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         else return -1;
     }
 
-    public virtual void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
+    public virtual void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, ref float numOfAttacks, int index)
     {
         attackBox = Attacks[index].hitBox;
         damage = getCalculatedDamage(Attacks[index]);
+        numOfAttacks = Attacks[index].numOfAttacks;
     }
 
     public virtual void AnimationTriggerAttack()
@@ -785,15 +787,16 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
         BoxCollider2D attackBox = default;
         float damage = 0;
+        float numOfAttacks = 0;
 
-        GetAttackBoxAndDamage(ref attackBox, ref damage, index);
+        GetAttackBoxAndDamage(ref attackBox, ref damage, ref numOfAttacks, index);
 
         Collider2D[] colliders = Physics2D.OverlapBoxAll(attackBox.bounds.center, attackBox.bounds.size, 0, LayerMask.GetMask("Champion"));
         foreach (Collider2D collider in colliders)
         {
             Champion enemy = collider.GetComponent<Champion>();
             if (enemy != null && enemy.CanBeAttacked(this))
-                DealDamageToVictim(enemy, damage);
+                DealDamageToVictim(enemy, damage, numOfAttacks);
         }
     }
 

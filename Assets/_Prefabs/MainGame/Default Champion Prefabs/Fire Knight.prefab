@@ -282,6 +282,7 @@ MonoBehaviour:
     hitBox: {fileID: 0}
     damage: 0
     physicalDamageScaling: 0
+    numOfAttacks: 1
     crowdControlStrength: 0
     manaCost: 50
     coolDownDuration: 3
@@ -325,6 +326,7 @@ MonoBehaviour:
     hitBox: {fileID: 4211443420215479862}
     damage: 30
     physicalDamageScaling: 1
+    numOfAttacks: 1
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 1
@@ -332,13 +334,15 @@ MonoBehaviour:
     hitBox: {fileID: 5196699418435723096}
     damage: 20
     physicalDamageScaling: 1
+    numOfAttacks: 1
     crowdControlStrength: 0
     manaCost: 0
     coolDownDuration: 1
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
-    damage: 5
-    physicalDamageScaling: 0.2
+    damage: 25
+    physicalDamageScaling: 1
+    numOfAttacks: 5
     crowdControlStrength: 0
     manaCost: 10
     coolDownDuration: 2
@@ -346,6 +350,7 @@ MonoBehaviour:
     hitBox: {fileID: 8141121659428087383}
     damage: 40
     physicalDamageScaling: 1
+    numOfAttacks: 1
     crowdControlStrength: 15
     manaCost: 50
     coolDownDuration: 3
@@ -353,6 +358,7 @@ MonoBehaviour:
     hitBox: {fileID: 6531086310545977621}
     damage: 100
     physicalDamageScaling: 1
+    numOfAttacks: 1
     crowdControlStrength: 25
     manaCost: 100
     coolDownDuration: 10

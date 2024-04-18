@@ -112,14 +112,15 @@ public class WaterPriestess : Champion
         else return -1;
     }
 
-    public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, int index)
+    public override void GetAttackBoxAndDamage(ref BoxCollider2D attackBox, ref float damage, ref float numOfAttacks, int index)
     {
         if (statusNetworked == Status.UNIQUE3)
         {
             attackBox = waterSlideAttack.hitBox;
             damage = getCalculatedDamage(waterSlideAttack);
+            numOfAttacks = waterSlideAttack.numOfAttacks;
         }
-        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, index);
+        else base.GetAttackBoxAndDamage(ref attackBox, ref damage, ref numOfAttacks, index);
     }
 
     public override void GetControlBoxAndStrength(ref BoxCollider2D crowdControlBox, ref float crowdControlStrength, int index)
