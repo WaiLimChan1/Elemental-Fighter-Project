@@ -356,9 +356,9 @@ MonoBehaviour:
     coolDownDuration: 3
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
-    damage: 100
+    damage: 150
     physicalDamageScaling: 1
-    numOfAttacks: 1
+    numOfAttacks: 2
     crowdControlStrength: 30
     manaCost: 100
     coolDownDuration: 5
