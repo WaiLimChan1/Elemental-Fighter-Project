@@ -79,7 +79,7 @@ MonoBehaviour:
     attackSpeedBonus: 0
     coolDownReductionBonus: 0
     omnivampBonus: 0
-    mobilityModifierBonus: 0.5
+    mobilityModifierBonus: 0.2
   - itemName: Leather Helmet
     itemSprite: {fileID: 21300000, guid: 0aab15a1224635847b9779547bf2128c, type: 3}
     maxHealthBonus: 100
@@ -130,7 +130,7 @@ MonoBehaviour:
     attackSpeedBonus: 0
     coolDownReductionBonus: 0
     omnivampBonus: 0
-    mobilityModifierBonus: 0.5
+    mobilityModifierBonus: 0.2
   - itemName: Iron Helmet
     itemSprite: {fileID: 21300000, guid: 7520a0e681c3354458db1b780777cf10, type: 3}
     maxHealthBonus: 100
@@ -452,5 +452,5 @@ MonoBehaviour:
     physicalDamageBonus: 10
     attackSpeedBonus: 0
     coolDownReductionBonus: 0
-    omnivampBonus: 1
+    omnivampBonus: 0.2
     mobilityModifierBonus: 0

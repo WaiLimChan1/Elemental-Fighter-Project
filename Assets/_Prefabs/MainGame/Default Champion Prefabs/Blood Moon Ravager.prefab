@@ -292,7 +292,7 @@ MonoBehaviour:
   baseAirMoveSpeed: 10
   baseMaxHealth: 500
   baseMaxMana: 500
-  baseHealthRegenPercentage: 0.01
+  baseHealthRegenPercentage: 0.005
   baseManaRegenPercentage: 0.02
   baseUltimateMeterRegen: 0
   baseUltimateMeterGainMultipier: 1
