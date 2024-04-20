@@ -290,8 +290,8 @@ MonoBehaviour:
   baseJumpForce: 20
   maxJumpForce: 25
   baseAirMoveSpeed: 10
-  baseMaxHealth: 500
-  baseMaxMana: 500
+  baseMaxHealth: 600
+  baseMaxMana: 600
   baseHealthRegenPercentage: 0.005
   baseManaRegenPercentage: 0.02
   baseUltimateMeterRegen: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
-    damage: 20
+    damage: 25
     physicalDamageScaling: 1
     numOfAttacks: 4
     crowdControlStrength: 15
@@ -332,7 +332,7 @@ MonoBehaviour:
     coolDownDuration: 5
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
-    damage: 15
+    damage: 20
     physicalDamageScaling: 1
     numOfAttacks: 1
     crowdControlStrength: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
     coolDownDuration: 0.5
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
-    damage: 20
+    damage: 25
     physicalDamageScaling: 1
     numOfAttacks: 1
     crowdControlStrength: 10
@@ -356,7 +356,7 @@ MonoBehaviour:
     coolDownDuration: 2
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
-    damage: 55
+    damage: 60
     physicalDamageScaling: 1
     numOfAttacks: 1
     crowdControlStrength: 15

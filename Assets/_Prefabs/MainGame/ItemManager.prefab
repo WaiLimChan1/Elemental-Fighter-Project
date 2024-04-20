@@ -152,7 +152,7 @@ MonoBehaviour:
     itemSprite: {fileID: 21300000, guid: 2c7b84ca284376d4c98889fa4174d7f7, type: 3}
     maxHealthBonus: 50
     maxManaBonus: 0
-    healthRegenPercentageBonus: 0.005
+    healthRegenPercentageBonus: 0.001
     manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
     manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
-    armorBonus: 20
+    armorBonus: 17
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
@@ -218,9 +218,9 @@ MonoBehaviour:
     mobilityModifierBonus: 0
   - itemName: Red Potion
     itemSprite: {fileID: 21300000, guid: fe12cd0b267009e4e9cf841761ce2258, type: 3}
-    maxHealthBonus: 100
+    maxHealthBonus: 50
     maxManaBonus: 0
-    healthRegenPercentageBonus: 0.005
+    healthRegenPercentageBonus: 0.0035
     manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   - itemName: Blue Potion
     itemSprite: {fileID: 21300000, guid: 17cdccdf4dd5e2643b2b32a6c5fac7b3, type: 3}
     maxHealthBonus: 0
-    maxManaBonus: 200
+    maxManaBonus: 250
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0.01
     ultimateMeterRegenBonus: 0
@@ -247,12 +247,12 @@ MonoBehaviour:
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 0
     attackSpeedBonus: 0
-    coolDownReductionBonus: 0
+    coolDownReductionBonus: 0.2
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Wooden Shield
     itemSprite: {fileID: 21300000, guid: 67eb7baa28549324b9c79eef224030b2, type: 3}
-    maxHealthBonus: 0
+    maxHealthBonus: 50
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
     mobilityModifierBonus: 0
   - itemName: Iron Shield
     itemSprite: {fileID: 21300000, guid: 35fda49a991732c408f0045af80f6d32, type: 3}
-    maxHealthBonus: 0
+    maxHealthBonus: 50
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
