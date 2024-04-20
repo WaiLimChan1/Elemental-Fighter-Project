@@ -318,23 +318,6 @@ MonoBehaviour:
     coolDownReductionBonus: 0.1
     omnivampBonus: 0
     mobilityModifierBonus: 0
-  - itemName: Golden Sword
-    itemSprite: {fileID: 21300000, guid: 7c9479583c36c664ca278a5c5a4db574, type: 3}
-    maxHealthBonus: 0
-    maxManaBonus: 0
-    healthRegenPercentageBonus: 0
-    manaRegenPercentageBonus: 0
-    ultimateMeterRegenBonus: 0
-    ultimateMeterGainMultipierBonus: 0
-    armorBonus: 0
-    crowdControlIgnorePercentageBonus: 0
-    blockPercentageBonus: 0
-    crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 5
-    attackSpeedBonus: 0.1
-    coolDownReductionBonus: 0.1
-    omnivampBonus: 0.1
-    mobilityModifierBonus: 0
   - itemName: Iron Sword
     itemSprite: {fileID: 21300000, guid: 7ba8852ed3bde244faeb2db0481903b9, type: 3}
     maxHealthBonus: 0
@@ -351,6 +334,40 @@ MonoBehaviour:
     attackSpeedBonus: 0.2
     coolDownReductionBonus: 0
     omnivampBonus: 0
+    mobilityModifierBonus: 0
+  - itemName: Silver Sword
+    itemSprite: {fileID: 21300000, guid: 70d0ef0d89a87904888444b64e40aa44, type: 3}
+    maxHealthBonus: 0
+    maxManaBonus: 0
+    healthRegenPercentageBonus: 0
+    manaRegenPercentageBonus: 0
+    ultimateMeterRegenBonus: 0
+    ultimateMeterGainMultipierBonus: 0
+    armorBonus: 0
+    crowdControlIgnorePercentageBonus: 0
+    blockPercentageBonus: 0
+    crowdControlBlockPercentageBonus: 0
+    physicalDamageBonus: 5
+    attackSpeedBonus: 0.3
+    coolDownReductionBonus: 0.1
+    omnivampBonus: 0
+    mobilityModifierBonus: 0
+  - itemName: Golden Sword
+    itemSprite: {fileID: 21300000, guid: 7c9479583c36c664ca278a5c5a4db574, type: 3}
+    maxHealthBonus: 0
+    maxManaBonus: 0
+    healthRegenPercentageBonus: 0
+    manaRegenPercentageBonus: 0
+    ultimateMeterRegenBonus: 0
+    ultimateMeterGainMultipierBonus: 0
+    armorBonus: 0
+    crowdControlIgnorePercentageBonus: 0
+    blockPercentageBonus: 0
+    crowdControlBlockPercentageBonus: 0
+    physicalDamageBonus: 5
+    attackSpeedBonus: 0.1
+    coolDownReductionBonus: 0.1
+    omnivampBonus: 0.1
     mobilityModifierBonus: 0
   - itemName: Ruby Staff
     itemSprite: {fileID: 21300000, guid: b5c177e38d651224fb4f1f009dd7a084, type: 3}
@@ -399,7 +416,7 @@ MonoBehaviour:
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 15
-    attackSpeedBonus: 0.1
+    attackSpeedBonus: 0.15
     coolDownReductionBonus: 0
     omnivampBonus: 0
     mobilityModifierBonus: 0
@@ -418,23 +435,6 @@ MonoBehaviour:
     physicalDamageBonus: 10
     attackSpeedBonus: 0.3
     coolDownReductionBonus: 0
-    omnivampBonus: 0
-    mobilityModifierBonus: 0
-  - itemName: Silver Sword
-    itemSprite: {fileID: 21300000, guid: 70d0ef0d89a87904888444b64e40aa44, type: 3}
-    maxHealthBonus: 0
-    maxManaBonus: 0
-    healthRegenPercentageBonus: 0
-    manaRegenPercentageBonus: 0
-    ultimateMeterRegenBonus: 0
-    ultimateMeterGainMultipierBonus: 0
-    armorBonus: 0
-    crowdControlIgnorePercentageBonus: 0
-    blockPercentageBonus: 0
-    crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 5
-    attackSpeedBonus: 0.3
-    coolDownReductionBonus: 0.1
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Knife
