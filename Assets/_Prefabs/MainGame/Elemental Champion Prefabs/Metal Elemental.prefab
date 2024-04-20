@@ -344,8 +344,8 @@ MonoBehaviour:
     physicalDamageScaling: 1
     numOfAttacks: 2
     crowdControlStrength: 10
-    manaCost: 15
-    coolDownDuration: 0.5
+    manaCost: 20
+    coolDownDuration: 2
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 100

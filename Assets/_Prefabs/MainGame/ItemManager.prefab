@@ -72,7 +72,7 @@ MonoBehaviour:
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
     armorBonus: 5
-    crowdControlIgnorePercentageBonus: 0.2
+    crowdControlIgnorePercentageBonus: 0.1
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 0

@@ -510,7 +510,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     protected virtual bool UnstoppableStatusNetworked()
     {
-        return (statusNetworked == Status.SPECIAL_ATTACK);
+        return (statusNetworked == Status.SPECIAL_ATTACK && statusNetworked == Status.ROLL);
     }
 
     protected virtual bool DefensiveStatusNetworked()
