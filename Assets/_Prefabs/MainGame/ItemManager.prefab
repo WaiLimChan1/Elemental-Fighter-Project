@@ -48,14 +48,14 @@ MonoBehaviour:
   Items:
   - itemName: Leather Armor
     itemSprite: {fileID: 21300000, guid: a43c2518f4e8b1d4b8f19ad6fd34da57, type: 3}
-    maxHealthBonus: 0
+    maxHealthBonus: 150
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
     armorBonus: 10
-    crowdControlIgnorePercentageBonus: 0.3
+    crowdControlIgnorePercentageBonus: 0.1
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
     mobilityModifierBonus: 0
   - itemName: Leather Boot
     itemSprite: {fileID: 21300000, guid: 3bf426112569da94d8f33d9acd122d1f, type: 3}
-    maxHealthBonus: 0
+    maxHealthBonus: 50
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     mobilityModifierBonus: 0.2
   - itemName: Leather Helmet
     itemSprite: {fileID: 21300000, guid: 0aab15a1224635847b9779547bf2128c, type: 3}
-    maxHealthBonus: 100
+    maxHealthBonus: 200
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
     mobilityModifierBonus: 0
   - itemName: Iron Boot
     itemSprite: {fileID: 21300000, guid: 1072ab04df1c7c74f8f7c0ee03d7c594, type: 3}
-    maxHealthBonus: 50
+    maxHealthBonus: 25
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
@@ -218,9 +218,9 @@ MonoBehaviour:
     mobilityModifierBonus: 0
   - itemName: Red Potion
     itemSprite: {fileID: 21300000, guid: fe12cd0b267009e4e9cf841761ce2258, type: 3}
-    maxHealthBonus: 200
+    maxHealthBonus: 100
     maxManaBonus: 0
-    healthRegenPercentageBonus: 0.01
+    healthRegenPercentageBonus: 0.005
     manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
@@ -313,8 +313,8 @@ MonoBehaviour:
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 10
-    attackSpeedBonus: 0.3
+    physicalDamageBonus: 8
+    attackSpeedBonus: 0.2
     coolDownReductionBonus: 0.1
     omnivampBonus: 0
     mobilityModifierBonus: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
     physicalDamageBonus: 5
     attackSpeedBonus: 0.1
     coolDownReductionBonus: 0.1
-    omnivampBonus: 0.5
+    omnivampBonus: 0.1
     mobilityModifierBonus: 0
   - itemName: Iron Sword
     itemSprite: {fileID: 21300000, guid: 7ba8852ed3bde244faeb2db0481903b9, type: 3}
@@ -356,7 +356,7 @@ MonoBehaviour:
     itemSprite: {fileID: 21300000, guid: b5c177e38d651224fb4f1f009dd7a084, type: 3}
     maxHealthBonus: 100
     maxManaBonus: 0
-    healthRegenPercentageBonus: 0.01
+    healthRegenPercentageBonus: 0.003
     manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0
     ultimateMeterGainMultipierBonus: 0
@@ -366,13 +366,13 @@ MonoBehaviour:
     crowdControlBlockPercentageBonus: 0
     physicalDamageBonus: 0
     attackSpeedBonus: 0
-    coolDownReductionBonus: 0.2
+    coolDownReductionBonus: 0.15
     omnivampBonus: 0
     mobilityModifierBonus: 0
   - itemName: Sapphire Staff
     itemSprite: {fileID: 21300000, guid: 8a10fbeac38cda0459f7fc3b1649df55, type: 3}
     maxHealthBonus: 0
-    maxManaBonus: 100
+    maxManaBonus: 300
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0.01
     ultimateMeterRegenBonus: 0
@@ -432,7 +432,7 @@ MonoBehaviour:
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 10
+    physicalDamageBonus: 5
     attackSpeedBonus: 0.3
     coolDownReductionBonus: 0.1
     omnivampBonus: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0
     crowdControlBlockPercentageBonus: 0
-    physicalDamageBonus: 10
+    physicalDamageBonus: 7.5
     attackSpeedBonus: 0
     coolDownReductionBonus: 0
     omnivampBonus: 0.2
