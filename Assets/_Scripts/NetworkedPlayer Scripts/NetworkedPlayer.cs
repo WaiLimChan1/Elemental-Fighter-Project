@@ -9,8 +9,8 @@ public class NetworkedPlayer : NetworkBehaviour
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Components
     private LocalCamera LocalCamera;
-    private ChampionUI ChampionUI;
-    private Item_UI ItemUI;
+    private AllAttacks_ChampionUI AllAttacks_ChampionUI;
+    private ItemInventory_ChampionUI ItemInventory_ChampionUI;
     private ChampionSpawner ChampionSpawner;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -58,7 +58,7 @@ public class NetworkedPlayer : NetworkBehaviour
 
         for (int i = 0; i < ItemsNetworked.Length; i++)
         {
-            ItemUI.SetIndividualItemImage(i, ItemsNetworked[i]);
+            ItemInventory_ChampionUI.SetIndividualItemImage(i, ItemsNetworked[i]);
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -73,10 +73,10 @@ public class NetworkedPlayer : NetworkBehaviour
             LocalCamera = Camera.main.GetComponent<LocalCamera>();
             LocalCamera.NetworkedPlayer = this;
 
-            ChampionUI = ChampionUI.Instance;
-            ItemUI = Item_UI.Instance;
+            AllAttacks_ChampionUI = AllAttacks_ChampionUI.Instance;
+            ItemInventory_ChampionUI = ItemInventory_ChampionUI.Instance;
 
-            Testing_UI.Instance.NetworkedPlayer = this;
+            Testing_ChampionUI.Instance.NetworkedPlayer = this;
 
             RpcSetNickName(GlobalManagers.Instance.NetworkRunnerController.LocalPlayerName);
 
@@ -92,7 +92,7 @@ public class NetworkedPlayer : NetworkBehaviour
         if (Runner.LocalPlayer == Object.InputAuthority)
         {
             if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
-                ChampionUI.Champion = OwnedChampion.GetComponent<Champion>();
+                AllAttacks_ChampionUI.Champion = OwnedChampion.GetComponent<Champion>();
         }
 
         //Player Name

@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.Collections.Unicode;
 
 public class ResourceBar : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ResourceBar : MonoBehaviour
     [SerializeField] private GameObject UltimateMeterFrame;
     [SerializeField] private Image UltimateMeterBar;
     [SerializeField] private TextMeshProUGUI UltimateMeterAmountText;
+    [SerializeField] private GameObject CanTransform;
 
     public void SetPlayerNameText(string name)
     {
@@ -27,7 +29,7 @@ public class ResourceBar : MonoBehaviour
         ResourceBarContent.SetActive(false);
     }
 
-    public void UpdateResourceBarVisuals(float healthNetworked, float maxHealth, float manaNetworked, float maxMana, float ultimateMeterNetworked, float ultimateMeterCost)
+    public void UpdateResourceBarVisuals(float healthNetworked, float maxHealth, float manaNetworked, float maxMana, float ultimateMeterNetworked, float ultimateMeterCost, bool defaultForm = true)
     {
         if (healthNetworked <= 0) ResourceBarContent.SetActive(false);
         else ResourceBarContent.SetActive(true);
@@ -41,21 +43,23 @@ public class ResourceBar : MonoBehaviour
         if (ultimateMeterCost <= 0)
         {
             UltimateMeterFrame.SetActive(false);
+            CanTransform.SetActive(false);
         }
         else
         {
             UltimateMeterFrame.SetActive(true);
             UltimateMeterBar.fillAmount = Mathf.Clamp01(ultimateMeterNetworked / ultimateMeterCost);
 
-            if (ultimateMeterNetworked >= ultimateMeterCost)
-            {
-                UltimateMeterAmountText.text = "Transform (E)";
-            }
-            else
-            {
-                int round = 2;
-                UltimateMeterAmountText.text = (int)(ultimateMeterNetworked / ultimateMeterCost * 100 * Mathf.Pow(10, round)) / Mathf.Pow(10, round) + "%";
-            }
+            int round;
+            if (defaultForm) round = 2;
+            else round = 0;
+
+            string percent = (int)(ultimateMeterNetworked / ultimateMeterCost * 100 * Mathf.Pow(10, round)) / Mathf.Pow(10, round) + "%";
+
+            if (ultimateMeterNetworked >= ultimateMeterCost && defaultForm) CanTransform.SetActive(true);
+            else CanTransform.SetActive(false);
+
+            UltimateMeterAmountText.text = percent;
         }
     }
 }

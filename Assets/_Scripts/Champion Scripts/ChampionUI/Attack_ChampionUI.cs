@@ -20,11 +20,11 @@ public class Attack_ChampionUI : MonoBehaviour
 
     public void LateUpdate()
     {
-        if (ChampionUI.Instance.Champion == null || ChampionUI.Instance.Champion.Object == default) return;
+        if (AllAttacks_ChampionUI.Instance.Champion == null || AllAttacks_ChampionUI.Instance.Champion.Object == default) return;
 
         AttackNameText.text = Attack.attackName;
         AttackManaCostText.text = "" + Attack.manaCost;
-        AttackCoolDownDurationText.text = "" + Mathf.Round(ChampionUI.Instance.Champion.getCoolDownDuration(Attack) * 10) / 10f + "s";
+        AttackCoolDownDurationText.text = "" + Mathf.Round(AllAttacks_ChampionUI.Instance.Champion.getCoolDownDuration(Attack) * 10) / 10f + "s";
 
         float coolDownRemainingTime = Attack.getCoolDownRemainingTime();
         if (coolDownRemainingTime == 0)
@@ -38,12 +38,12 @@ public class Attack_ChampionUI : MonoBehaviour
             AttackNameText.gameObject.SetActive(false);
             AttackCoolDownTimerText.gameObject.SetActive(true);
             AttackCoolDownTimerText.text = "" + Mathf.Round(coolDownRemainingTime * 10) / 10f + "s";
-            CoolDownCoverImage.fillAmount = coolDownRemainingTime / ChampionUI.Instance.Champion.getCoolDownDuration(Attack);
+            CoolDownCoverImage.fillAmount = coolDownRemainingTime / AllAttacks_ChampionUI.Instance.Champion.getCoolDownDuration(Attack);
         }
 
-        if (ChampionUI.Instance.Champion != null && ChampionUI.Instance.Champion.Object != default)
+        if (AllAttacks_ChampionUI.Instance.Champion != null && AllAttacks_ChampionUI.Instance.Champion.Object != default)
         {
-            if (ChampionUI.Instance.Champion.manaNetworked < Attack.manaCost) InsufficientManaCoverImage.gameObject.SetActive(true);
+            if (AllAttacks_ChampionUI.Instance.Champion.manaNetworked < Attack.manaCost) InsufficientManaCoverImage.gameObject.SetActive(true);
             else InsufficientManaCoverImage.gameObject.SetActive(false);
         }
     }

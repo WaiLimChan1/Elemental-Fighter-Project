@@ -8,14 +8,18 @@ public class ElementalChampion : Champion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Transform Variables & Functions
+    private float CostToStayInElementalForm = 100;
 
     //Default to Elemental
-    protected override void HostSetUpTransformChampion(float healthRatio, float TransformHealthGainAmount, float manaRatio, float TransformManaGainAmount, float ultimateMeter)
+    protected override void HostSetUpTransformChampion(float healthRatio, float TransformHealthGainAmount, float manaRatio, float TransformManaGainAmount, float ultimateMeter, float ultimateMeterCost)
     {
-        CalculateStats();
-        setHealthNetworked(maxHealth * healthRatio + maxHealth * TransformHealthGainAmount);
-        setManaNetworked(maxMana * manaRatio + maxMana * TransformManaGainAmount);
-        setUltimateMeterNetworked(ultimateMeter);
+        base.HostSetUpTransformChampion(healthRatio, TransformHealthGainAmount, manaRatio, TransformManaGainAmount, ultimateMeter, ultimateMeterCost);
+        setUltimateMeterNetworked(ultimateMeter - ultimateMeterCost);
+
+        //Add a buffer for Ultimate Meter so that the Elemental doesn't automatically transform back
+        setUltimateMeterNetworked(ultimateMeterNetworked + CostToStayInElementalForm);
+
+        statusNetworked = Status.UNIQUE1;
     }
 
     //Default to Elemental
@@ -25,6 +29,21 @@ public class ElementalChampion : Champion
         this.isFacingLeft = isFacingLeft;
         status = Status.UNIQUE1;
     }
+
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    protected void RPC_BeginTransformAnimation()
+    {
+        if (Runner.LocalPlayer == Object.InputAuthority) status = Status.BEGIN_DEATH;
+        statusNetworked = Status.BEGIN_DEATH;
+        ChampionAnimationController.ChangeAnimation((int)statusNetworked);
+        ChampionAnimationController.RestartAnimation();
+    }
+
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    protected void RPC_ClientTriggerBeginTransformAnimation()
+    {
+        RPC_BeginTransformAnimation();
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -33,7 +52,7 @@ public class ElementalChampion : Champion
     //Champion Attack Variables & Attack Functions
     //Status.UNIQUE1 : Transform
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.Roll.gameObject.SetActive(false);
@@ -54,16 +73,28 @@ public class ElementalChampion : Champion
 
     protected override bool UnstoppableStatusNetworked()
     {
-        return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE1);
+        return (base.UnstoppableStatusNetworked() || statusNetworked == Status.UNIQUE1 ||
+            statusNetworked == Status.BEGIN_DEATH || statusNetworked == Status.FINISHED_DEATH);
     }
 
-    protected override void TransformTakeInput() {}
-
-    protected override void OnGroundTakeInput()
+    protected override void EndStatus()
     {
-        base.OnGroundTakeInput();
-        //if (Input.GetKeyDown(KeyCode.E)) status = Status.UNIQUE1; //Transform
+        base.EndStatus();
+
+        Status lastStatus = (Status)ChampionAnimationController.GetAnimatorStatus();
+        if (lastStatus == Status.BEGIN_DEATH)
+        {
+            if (ChampionAnimationController.AnimationFinished()) status = Status.FINISHED_DEATH;
+            else status = Status.BEGIN_DEATH;
+        }
+        else if (lastStatus == Status.FINISHED_DEATH) status = Status.FINISHED_DEATH;
     }
+
+    protected override void TransformTakeInput() 
+    {
+        if (Input.GetKeyDown(KeyCode.E)) RPC_ClientTriggerBeginTransformAnimation();
+    }
+
 
     protected override void CancelTakeInput()
     {
@@ -85,6 +116,39 @@ public class ElementalChampion : Champion
         else if (statusNetworked == Status.SPECIAL_ATTACK) return 4;
         else if (statusNetworked == Status.UNIQUE1) return 5;
         else return -1;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Logic
+    protected void ApplyUltimateMeterCost()
+    {
+        if (!Runner.IsServer) return;
+        setUltimateMeterNetworked(ultimateMeterNetworked - CostToStayInElementalForm * Runner.DeltaTime);
+    }
+
+    protected void RanOutOfUltimateMeter()
+    {
+        if (!Runner.IsServer) return;
+        if (ultimateMeterNetworked <= 0)
+        {
+            if (!UnstoppableStatusNetworked()) 
+                RPC_BeginTransformAnimation();
+        }
+    }
+
+    protected override void ApplyEffects()
+    {
+        base.ApplyEffects();
+        ApplyUltimateMeterCost();
+        RanOutOfUltimateMeter();
+    }
+
+    protected override void UpdateResourceBarVisuals()
+    {
+        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana, ultimateMeterNetworked, ultimateMeterCost, false);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

@@ -366,8 +366,6 @@ MonoBehaviour:
     RawGuidValue: f7926dae9ae408c4fa432c8e7ef11a7c
   TransformHealthGainPercentage: 0.5
   TransformManaGainPercentage: 0.5
-  ultimateMeterCost: 1000
-  ultimateMeterKillBonus: 100
   meditate:
     attackName: Meditate
     hitBox: {fileID: 0}

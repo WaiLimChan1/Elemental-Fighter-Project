@@ -20,7 +20,7 @@ public class LightningRonin : Champion
     //Status.UNIQUE1 : Dash
     //Status.UNIQUE2 : Lightning Dash
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, lightningDashAttack, "A/D + Q");

@@ -29,7 +29,7 @@ public class FireElemental : ElementalChampion
     //Champion Attack Variables & Attack Functions
     //Status.UNIQUE2 : Throw_Fire_Ball
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, fireBallAttack, "Q");

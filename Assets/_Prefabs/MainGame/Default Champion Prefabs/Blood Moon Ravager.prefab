@@ -290,8 +290,8 @@ MonoBehaviour:
   baseJumpForce: 20
   maxJumpForce: 25
   baseAirMoveSpeed: 10
-  baseMaxHealth: 500
-  baseMaxMana: 500
+  baseMaxHealth: 600
+  baseMaxMana: 600
   baseHealthRegenPercentage: 0.005
   baseManaRegenPercentage: 0.02
   baseUltimateMeterRegen: 0
@@ -305,27 +305,12 @@ MonoBehaviour:
   baseCoolDownReduction: 0
   baseOmnivamp: 0.3
   baseMobilityModifer: 1.2
-  _maxHealth: 0
-  _maxMana: 0
-  _healthRegenPercentage: 0
-  _manaRegenPercentage: 0
-  _ultimateMeterRegen: 0
-  _ultimateMeterGainMultipier: 0
-  _armor: 0
-  _crowdControlIgnorePercentage: 0
-  _blockPercentage: 0
-  _crowdControlBlockPercentage: 0
-  _physicalDamage: 0
-  _attackSpeed: 0
-  _coolDownReduction: 0
-  _omnivamp: 0
-  _mobilityModifier: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
   Attacks:
   - attackName: Air Attack
     hitBox: {fileID: 4211443420215479862}
     damage: 30
-    physicalDamageScaling: 1
+    physicalDamageScaling: 2
     numOfAttacks: 1
     crowdControlStrength: 0
     manaCost: 0
@@ -333,7 +318,7 @@ MonoBehaviour:
   - attackName: Attack1
     hitBox: {fileID: 5196699418435723096}
     damage: 20
-    physicalDamageScaling: 1
+    physicalDamageScaling: 2
     numOfAttacks: 1
     crowdControlStrength: 0
     manaCost: 0
@@ -341,7 +326,7 @@ MonoBehaviour:
   - attackName: Attack2
     hitBox: {fileID: 7436076005764617715}
     damage: 30
-    physicalDamageScaling: 1
+    physicalDamageScaling: 2
     numOfAttacks: 2
     crowdControlStrength: 0
     manaCost: 0
@@ -349,7 +334,7 @@ MonoBehaviour:
   - attackName: Attack3
     hitBox: {fileID: 8141121659428087383}
     damage: 50
-    physicalDamageScaling: 1
+    physicalDamageScaling: 2
     numOfAttacks: 2
     crowdControlStrength: 0
     manaCost: 10
@@ -357,7 +342,7 @@ MonoBehaviour:
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 125
-    physicalDamageScaling: 1
+    physicalDamageScaling: 2
     numOfAttacks: 13
     crowdControlStrength: 0
     manaCost: 200
@@ -367,7 +352,7 @@ MonoBehaviour:
   TransformHealthGainPercentage: 0.5
   TransformManaGainPercentage: 0.5
   ultimateMeterCost: 0
-  ultimateMeterKillBonus: 100
+  ultimateMeterKillBonus: 0
   _specialAttackTarget: {fileID: 0}
   specialAttackTeleportRange: 20
   howl:

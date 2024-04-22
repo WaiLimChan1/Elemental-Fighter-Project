@@ -305,21 +305,6 @@ MonoBehaviour:
   baseCoolDownReduction: 0
   baseOmnivamp: 0
   baseMobilityModifer: 1
-  _maxHealth: 0
-  _maxMana: 0
-  _healthRegenPercentage: 0
-  _manaRegenPercentage: 0
-  _ultimateMeterRegen: 0
-  _ultimateMeterGainMultipier: 0
-  _armor: 0
-  _crowdControlIgnorePercentage: 0
-  _blockPercentage: 0
-  _crowdControlBlockPercentage: 0
-  _physicalDamage: 0
-  _attackSpeed: 0
-  _coolDownReduction: 0
-  _omnivamp: 0
-  _mobilityModifier: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
   Attacks:
   - attackName: Air Attack
@@ -372,10 +357,10 @@ MonoBehaviour:
     coolDownDuration: 0
   TransformChampion:
     RawGuidValue: ffa86f3e7206fe74795287698cd5839b
-  TransformHealthGainPercentage: 0.5
-  TransformManaGainPercentage: 0.5
-  ultimateMeterCost: 0
-  ultimateMeterKillBonus: 100
+  TransformHealthGainPercentage: 0
+  TransformManaGainPercentage: 0
+  ultimateMeterCost: 1000
+  ultimateMeterKillBonus: 300
   TransformPullCrowdControlBox: {fileID: 1490319553614816694}
   TransformPullStrength: 10
 --- !u!1 &1878230729937941712

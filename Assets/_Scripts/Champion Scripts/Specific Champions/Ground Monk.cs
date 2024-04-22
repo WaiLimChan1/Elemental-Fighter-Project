@@ -21,7 +21,7 @@ public class GroundMonk : Champion
     //Status.UNIQUE1 : Begin_Meditation
     //Status.UNIQUE2 : Meditation
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, meditate, "Hold Q");

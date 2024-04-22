@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Champion;
 
-public class ChampionUI : MonoBehaviour
+public class AllAttacks_ChampionUI : MonoBehaviour
 {
-    public static ChampionUI Instance { get; private set; }
+    public static AllAttacks_ChampionUI Instance { get; private set; }
 
     [SerializeField] public Champion Champion;
 

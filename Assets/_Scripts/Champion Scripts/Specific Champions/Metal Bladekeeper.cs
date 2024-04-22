@@ -27,7 +27,7 @@ public class MetalBladekeeper : Champion
     //Status.UNIQUE1 : Throw Dagger
     //Status.UNIQUE2 : Air Throw Dagger
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, daggerAttack, "Q");

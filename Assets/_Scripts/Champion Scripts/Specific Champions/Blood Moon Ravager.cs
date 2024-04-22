@@ -19,7 +19,7 @@ public class BloodMoonRavager : Champion
     //Champion Attack Variables & Attack Functions
     //Status.UNIQUE1 : Howl
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, howl, "Q");
@@ -92,7 +92,7 @@ public class BloodMoonRavager : Champion
         {
             if (statusNetworked == Status.UNIQUE1) //Howl Stats Buff Effect
             {
-                omnivamp += howlOmnivampIncrease;
+                baseOmnivamp += howlOmnivampIncrease;
             }
         }
     }

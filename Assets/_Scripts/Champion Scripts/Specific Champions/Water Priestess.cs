@@ -24,7 +24,7 @@ public class WaterPriestess : Champion
     //Status.UNIQUE2 : Meditation
     //Status.UNIQUE3 : Water_Slide
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueA, meditate, "Hold Q");

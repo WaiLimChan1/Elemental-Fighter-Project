@@ -34,7 +34,7 @@ public class LeafRanger : Champion
     //Champion Attack Variables & Attack Functions
     //Status.UNIQUE1 : Slide
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, slide, "A/D + Q");
@@ -56,6 +56,11 @@ public class LeafRanger : Champion
     protected override bool SingleAnimationStatus()
     {
         return (base.SingleAnimationStatus() || status == Status.UNIQUE1);
+    }
+
+    protected override bool UnstoppableStatusNetworked()
+    {
+        return (base.UnstoppableStatusNetworked() || status == Status.UNIQUE1);
     }
 
     protected override bool MobilityStatus(Status status)

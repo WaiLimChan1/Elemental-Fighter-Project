@@ -34,7 +34,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //Champion Componets
     [Header("Champion Components")]
     [Networked] public NetworkedPlayer NetworkedPlayer { get; set; }
-    private ResourceBar ResourceBar;
+    protected ResourceBar ResourceBar;
     protected ChampionAnimationController ChampionAnimationController;
     protected Rigidbody2D Rigid;
     public CapsuleCollider2D Collider;
@@ -90,7 +90,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         }
 
         ultimateMeterNetworked = ultimateMeter;
-        ultimateMeterNetworked = Mathf.Clamp(ultimateMeterNetworked, 0.0f, ultimateMeterCost);
+        if (ultimateMeterNetworked < 0) ultimateMeterNetworked = 0;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -103,7 +103,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     [Networked] private float inAirHorizontalMovementNetworked { get; set; }
     [SerializeField] private float inAirHorizontalMovement;
-
 
     private const float inAirRayCastBuffer = 0.01f;
     private const float sideRayCastOffSetModifier = 1f / 4f;
@@ -219,7 +218,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Networked] [SerializeField] protected float crowdControlBlockPercentage { get; set; }
 
     [Networked] [SerializeField] protected float physicalDamage { get; set; }
-    [Networked][SerializeField] protected float attackSpeed { get; set; }
+    [Networked] [SerializeField] protected float attackSpeed { get; set; }
     [Networked] [SerializeField] protected float coolDownReduction { get; set; }
     [Networked] [SerializeField] protected float omnivamp { get; set; }
 
@@ -319,7 +318,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     }
 
     //Attack UI
-    public virtual void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public virtual void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         ChampionUI.SetActiveAllAttack_ChampionUI(false);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.AirAttack, Attacks[0], "Space + G");
@@ -388,11 +387,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Transform Variables & Functions
     [Header("Champion Transform Variables")]
-    [SerializeField] private NetworkPrefabRef TransformChampion;
+    [SerializeField] protected NetworkPrefabRef TransformChampion;
     [SerializeField] protected float TransformHealthGainPercentage = 0.5f;
     [SerializeField] protected float TransformManaGainPercentage = 0.5f;
     [SerializeField] protected float ultimateMeterCost = 1000;
-    [SerializeField] protected float ultimateMeterKillBonus = 100;
+    [SerializeField] protected float ultimateMeterKillBonus = 300;
 
     private bool CanUseTransform()
     {
@@ -400,11 +399,12 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     }
 
     //Elemental to Default
-    protected virtual void HostSetUpTransformChampion(float healthRatio, float TransformHealthGainAmount, float manaRatio, float TransformManaGainAmount, float ultimateMeter)
+    protected virtual void HostSetUpTransformChampion(float healthRatio, float TransformHealthGainAmount, float manaRatio, float TransformManaGainAmount, float ultimateMeter, float ultimateMeterCost)
     {
-        setHealthNetworked(0);
-        setManaNetworked(0);
-        setUltimateMeterNetworked(0);
+        CalculateStats();
+        setHealthNetworked(maxHealth * healthRatio + maxHealth * TransformHealthGainAmount);
+        setManaNetworked(maxMana * manaRatio + maxMana * TransformManaGainAmount);
+        setUltimateMeterNetworked(ultimateMeter);
     }
 
     //Elemental to Default
@@ -415,7 +415,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     }
 
     //Default to Elemental
-    private void SpawnTransformChampion(PlayerRef playerRef)
+    protected virtual void SpawnTransformChampion(PlayerRef playerRef)
     {
         if (!Runner.IsServer) return;
 
@@ -424,7 +424,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         Champion transformChampion = transformChampionObject.GetComponent<Champion>();
 
         transformChampion.NetworkedPlayer = NetworkedPlayer;
-        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, TransformHealthGainPercentage, manaNetworked / maxMana, TransformManaGainPercentage, ultimateMeterNetworked - ultimateMeterCost);
+        transformChampion.HostSetUpTransformChampion(healthNetworked / maxHealth, TransformHealthGainPercentage, manaNetworked / maxMana, TransformManaGainPercentage, ultimateMeterNetworked, ultimateMeterCost);
         transformChampion.RPC_ClientSetUpTransformChampion(isFacingLeftNetworked);
 
         Runner.Despawn(this.Object);
@@ -510,7 +510,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     protected virtual bool UnstoppableStatusNetworked()
     {
-        return (statusNetworked == Status.SPECIAL_ATTACK || statusNetworked == Status.ROLL);
+        return (statusNetworked == Status.ROLL || statusNetworked == Status.SPECIAL_ATTACK);
     }
 
     protected virtual bool DefensiveStatusNetworked()
@@ -536,7 +536,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Status Logic
-    private void EndStatus()
+    protected virtual void EndStatus()
     {
         //End single animation status
         if (SingleAnimationStatus())
@@ -614,7 +614,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         //In Air Input
         if (inAir)
         {
-            //In Air Movement
+            //In Air Horizontal Movement
             inAirHorizontalMovement = 0;
             if (Input.GetKey(KeyCode.A)) inAirHorizontalMovement += -1;
             if (Input.GetKey(KeyCode.D)) inAirHorizontalMovement += 1;
@@ -904,7 +904,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             {
                 float jumpForce = baseJumpForce * (1 + (mobilityModifier - 1) * 0.5f);
                 Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + Mathf.Clamp(jumpForce, 0, maxJumpForce));
-                //Rigid.velocity = new Vector2(Rigid.velocity.x, Rigid.velocity.y + Mathf.Clamp(baseJumpForce * mobilityModifier, 0, maxJumpForce));
             }
         }
 
@@ -931,6 +930,11 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         else ChampionAnimationController.SetSpeed(1);
     }
 
+    protected virtual void UpdateResourceBarVisuals()
+    {
+        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana, ultimateMeterNetworked, ultimateMeterCost);
+    }
+
     private void UpdateChampionVisual()
     {
         ChampionAnimationController.Flip(isFacingLeftNetworked);
@@ -951,10 +955,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             inAirHorizontalMovementNetworked = championData.inAirHorizontalMovement;
         }
         UpdatePosition();
-
         ApplyEffects();
-
-        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana, ultimateMeterNetworked, ultimateMeterCost);
+        UpdateResourceBarVisuals();
         UpdateChampionVisual();
     }
 
@@ -996,9 +998,22 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     }
 
     [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    public void RPC_ClearHealthAndMana()
+    {
+        setHealthNetworked(0);
+        setManaNetworked(0);
+    }
+
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
     public void RPC_FillUltimateMeter()
     {
         setUltimateMeterNetworked(ultimateMeterCost);
+    }
+
+    [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    public void RPC_ClearUltimateMeter()
+    {
+        setUltimateMeterNetworked(0);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }

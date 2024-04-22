@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Individual_Item_UI : MonoBehaviour
+public class Item_ChampionUI : MonoBehaviour
 {
-    [Header("Individual_Item_UI Components")]
+    [Header("Item_ChampionUI Components")]
     [SerializeField] private GameObject Content;
     [SerializeField] private Image ItemImage;
 

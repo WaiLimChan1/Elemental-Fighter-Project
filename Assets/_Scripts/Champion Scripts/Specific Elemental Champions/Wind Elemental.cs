@@ -25,7 +25,7 @@ public class WindElemental : ElementalChampion
     //Champion Attack Variables & Attack Functions
     //Status.UNIQUE2 : Blink
 
-    public override void SetAttack_ChampionUI(ChampionUI ChampionUI)
+    public override void SetAttack_ChampionUI(AllAttacks_ChampionUI ChampionUI)
     {
         base.SetAttack_ChampionUI(ChampionUI);
         ChampionUI.SetAttack_ChampionUI(ChampionUI.UniqueB, blink, "Q");

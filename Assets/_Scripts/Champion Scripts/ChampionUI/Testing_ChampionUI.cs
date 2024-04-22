@@ -4,15 +4,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Testing_UI : MonoBehaviour
+public class Testing_ChampionUI : MonoBehaviour
 {
-    public static Testing_UI Instance { get; private set; }
+    public static Testing_ChampionUI Instance { get; private set; }
     public NetworkedPlayer NetworkedPlayer;
 
-    [Header("Testing_UI Components")]
-    [SerializeField] private Button RestoreHealthAndManaButton;
-    [SerializeField] private Button FillUltimateMeterButton;
+    [SerializeField] private GameObject Content;
 
+    [Header("Testing_UI Resource Components")]
+    [SerializeField] private Button RestoreHealthAndManaButton;
+    [SerializeField] private Button ClearHealthAndManaButton;
+
+    [SerializeField] private Button FillUltimateMeterButton;
+    [SerializeField] private Button ClearUltimateMeterButton;
+
+    [Header("Testing_UI Item Components")]
     [SerializeField] private TMP_Dropdown ItemSelection;
     [SerializeField] private Button AddItemButton;
     [SerializeField] private Button RemoveAllItemsButton;
@@ -48,40 +54,54 @@ public class Testing_UI : MonoBehaviour
         InitializeItemSelection();
 
         RestoreHealthAndManaButton.onClick.AddListener(() => RestoreHealthAndMana());
+        ClearHealthAndManaButton.onClick.AddListener(() => ClearHealthAndMana());
         FillUltimateMeterButton.onClick.AddListener(() => FillUltimateMeter());
+        ClearUltimateMeterButton.onClick.AddListener(() => ClearUltimateMeter());
         AddItemButton.onClick.AddListener(() => AddItem());
         RemoveAllItemsButton.onClick.AddListener(() => RemoveAllItems());
     }
 
+    private bool NetworkedPlayerHasChampion()
+    {
+        if (NetworkedPlayer == null) return false;
+        if (NetworkedPlayer.OwnedChampion == null) return false;
+        if (NetworkedPlayer.OwnedChampion.GetComponent<Champion>() == null) return false;
+        return true;
+    }
+
     private void RestoreHealthAndMana()
     {
-        if (NetworkedPlayer == null) return;
-        if (NetworkedPlayer.OwnedChampion == null) return;
-        if (NetworkedPlayer.OwnedChampion.GetComponent<Champion>() == null) return;
-
+        if (!NetworkedPlayerHasChampion()) return;
         NetworkedPlayer.OwnedChampion.GetComponent<Champion>().RPC_RestoreHealthAndMana();
+    }
+
+    private void ClearHealthAndMana()
+    {
+        if (!NetworkedPlayerHasChampion()) return;
+        NetworkedPlayer.OwnedChampion.GetComponent<Champion>().RPC_ClearHealthAndMana();
     }
 
     private void FillUltimateMeter()
     {
-        if (NetworkedPlayer == null) return;
-        if (NetworkedPlayer.OwnedChampion == null) return;
-        if (NetworkedPlayer.OwnedChampion.GetComponent<Champion>() == null) return;
-
+        if (!NetworkedPlayerHasChampion()) return;
         NetworkedPlayer.OwnedChampion.GetComponent<Champion>().RPC_FillUltimateMeter();
+    }
+
+    private void ClearUltimateMeter()
+    {
+        if (!NetworkedPlayerHasChampion()) return;
+        NetworkedPlayer.OwnedChampion.GetComponent<Champion>().RPC_ClearUltimateMeter();
     }
 
     private void AddItem()
     {
         if (NetworkedPlayer == null) return;
-
         NetworkedPlayer.RPC_AddItem(ItemSelection.value);
     }
 
     private void RemoveAllItems()
     {
         if (NetworkedPlayer == null) return;
-
         NetworkedPlayer.RPC_RemoveAllItems();
     }
 }
