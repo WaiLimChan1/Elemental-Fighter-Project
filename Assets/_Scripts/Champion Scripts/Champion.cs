@@ -155,6 +155,34 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Champion Take Hit Recovery
+    [Header("Champion Take Hit Recovery")]
+    [Networked] [SerializeField] protected float TakeHitRecoveryPercentage { get; set; }
+    private float TakeHitRecoveryPercentageGain = 0.1f;
+    private float TakeHitRecoveryPercentageDecay = 0.25f;
+    private float SkipTakeHitAnimationCutOff = 0.9f;
+
+    private Vector2 TakeHitAnimationSpeedRange = new Vector2(1, 10);
+
+    private void SetTakeHitRecoveryValue(float value)
+    {
+        TakeHitRecoveryPercentage = Mathf.Clamp01(value);
+    }
+
+    private void IncreaseTakeHitRecoveryPercentage()
+    {
+        SetTakeHitRecoveryValue(TakeHitRecoveryPercentage + TakeHitRecoveryPercentageGain + TakeHitRecoveryPercentageDecay * Runner.DeltaTime);
+    }
+
+    private void SetTakeHitAnimationSpeed()
+    {
+        ChampionAnimationController.SetSpeed(Mathf.Lerp(TakeHitAnimationSpeedRange.x, TakeHitAnimationSpeedRange.y, TakeHitRecoveryPercentage));
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Champion Base Stats
     [Header("Champion Static Stats")]
     [SerializeField] protected float ultimateMeterDefendCost = 1f;
@@ -716,7 +744,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         {
             if (!UnstoppableStatusNetworked())
             {
-                if (Runner.IsServer) RPC_BeginTakeHitAnimation();
+                if (Runner.IsServer) 
+                    if (TakeHitRecoveryPercentage < SkipTakeHitAnimationCutOff)
+                        RPC_BeginTakeHitAnimation();
+                IncreaseTakeHitRecoveryPercentage();
             }
         }
 
@@ -875,12 +906,19 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         if (statusNetworked == Status.DEFEND) ultimateMeterNetworked -= ultimateMeterDefendCost * Runner.DeltaTime;
     }
 
+    private void ApplyTakeHitRecoveryPercentageDecay()
+    {
+        if (!Runner.IsServer) return;
+        SetTakeHitRecoveryValue(TakeHitRecoveryPercentage - TakeHitRecoveryPercentageDecay * Runner.DeltaTime);
+    }
+
     protected virtual void ApplyEffects()
     {
         ApplyManaCost();
         ApplyCoolDownDuration();
         ApplyResourceRegen();
         ApplyDefendCost();
+        ApplyTakeHitRecoveryPercentageDecay();
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -927,12 +965,13 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     {
         if (MobilityStatus(statusNetworked)) ChampionAnimationController.SetSpeed(mobilityModifier);
         else if (AttackSpeedStatus(statusNetworked)) ChampionAnimationController.SetSpeed(attackSpeed);
+        else if (statusNetworked == Status.TAKE_HIT) SetTakeHitAnimationSpeed();
         else ChampionAnimationController.SetSpeed(1);
     }
 
     protected virtual void UpdateResourceBarVisuals()
     {
-        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana, ultimateMeterNetworked, ultimateMeterCost);
+        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana, TakeHitRecoveryPercentage, ultimateMeterNetworked, ultimateMeterCost);
     }
 
     private void UpdateChampionVisual()

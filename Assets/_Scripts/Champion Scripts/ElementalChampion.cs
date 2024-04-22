@@ -150,7 +150,7 @@ public class ElementalChampion : Champion
 
     protected override void UpdateResourceBarVisuals()
     {
-        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana, ultimateMeterNetworked, ultimateMeterCost, false);
+        ResourceBar.UpdateResourceBarVisuals(healthNetworked, maxHealth, manaNetworked, maxMana, TakeHitRecoveryPercentage, ultimateMeterNetworked, ultimateMeterCost, false);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }
