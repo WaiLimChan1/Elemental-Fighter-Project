@@ -51,7 +51,7 @@ public class ResourceBar : MonoBehaviour
             UltimateMeterBar.fillAmount = Mathf.Clamp01(ultimateMeterNetworked / ultimateMeterCost);
 
             int round;
-            if (defaultForm) round = 2;
+            if (defaultForm) round = 0;
             else round = 0;
 
             string percent = (int)(ultimateMeterNetworked / ultimateMeterCost * 100 * Mathf.Pow(10, round)) / Mathf.Pow(10, round) + "%";

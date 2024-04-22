@@ -1007,7 +1007,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
     public void RPC_FillUltimateMeter()
     {
-        setUltimateMeterNetworked(ultimateMeterCost);
+        setUltimateMeterNetworked(ultimateMeterCost * 3.0f);
     }
 
     [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
