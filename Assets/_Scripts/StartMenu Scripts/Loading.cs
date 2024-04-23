@@ -13,7 +13,7 @@ public class Loading : MonoBehaviour
     [SerializeField] TMP_Text LoadingText;
     [SerializeField] Button CancelButton;
     private NetworkRunnerController networkRunnerController;
-    private float MaxWaitTime = 100;
+    private float MaxWaitTime = 15;
     private float timeCounter;
 
     void DetermineDescriptionText()
