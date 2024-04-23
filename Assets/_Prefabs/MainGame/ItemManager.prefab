@@ -188,7 +188,7 @@ MonoBehaviour:
     maxManaBonus: 0
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
-    ultimateMeterRegenBonus: 10
+    ultimateMeterRegenBonus: 5
     ultimateMeterGainMultipierBonus: 0.1
     armorBonus: 0
     crowdControlIgnorePercentageBonus: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
     healthRegenPercentageBonus: 0
     manaRegenPercentageBonus: 0
     ultimateMeterRegenBonus: 0.1
-    ultimateMeterGainMultipierBonus: 1
+    ultimateMeterGainMultipierBonus: 0.25
     armorBonus: 0
     crowdControlIgnorePercentageBonus: 0
     blockPercentageBonus: 0

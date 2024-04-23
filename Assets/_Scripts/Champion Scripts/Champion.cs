@@ -80,12 +80,14 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         manaNetworked = mana;
         manaNetworked = Mathf.Clamp(manaNetworked, 0.0f, maxMana);
     }
-    public void setUltimateMeterNetworked(float ultimateMeter)
+    public void setUltimateMeterNetworked(float ultimateMeter, bool applyGainMultiplier = true)
     {
         //If gaining ultimateMeter value, increase the gain by ultimateMeterGainMutliplier
         if (ultimateMeter > ultimateMeterNetworked)
         {
-            float ultimateMeterGain = (ultimateMeter - ultimateMeterNetworked) * ultimateMeterGainMultipier;
+            float ultimateMeterGain = (ultimateMeter - ultimateMeterNetworked);
+            if (applyGainMultiplier) ultimateMeterGain *= ultimateMeterGainMultipier;
+
             ultimateMeter = ultimateMeterNetworked + ultimateMeterGain;
         }
 
@@ -432,7 +434,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         CalculateStats();
         setHealthNetworked(maxHealth * healthRatio + maxHealth * TransformHealthGainAmount);
         setManaNetworked(maxMana * manaRatio + maxMana * TransformManaGainAmount);
-        setUltimateMeterNetworked(ultimateMeter);
+        setUltimateMeterNetworked(ultimateMeter, false);
     }
 
     //Elemental to Default
@@ -729,7 +731,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
         float originalDamage = damage;
         damage -= armor / numOfAttacks;
-        if (damage < 1) damage = 1;
 
         //Blocked
         if (DefensiveStatusNetworked() && attackType == AttackType.AlwaysBlockable)
@@ -750,6 +751,8 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
                 IncreaseTakeHitRecoveryPercentage();
             }
         }
+
+        if (damage < 1) damage = 1;
 
         //Defender Effects
         setHealthNetworked(healthNetworked - damage);

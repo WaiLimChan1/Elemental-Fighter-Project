@@ -14,10 +14,10 @@ public class ElementalChampion : Champion
     protected override void HostSetUpTransformChampion(float healthRatio, float TransformHealthGainAmount, float manaRatio, float TransformManaGainAmount, float ultimateMeter, float ultimateMeterCost)
     {
         base.HostSetUpTransformChampion(healthRatio, TransformHealthGainAmount, manaRatio, TransformManaGainAmount, ultimateMeter, ultimateMeterCost);
-        setUltimateMeterNetworked(ultimateMeter - ultimateMeterCost);
+        setUltimateMeterNetworked(ultimateMeter - ultimateMeterCost, false);
 
         //Add a buffer for Ultimate Meter so that the Elemental doesn't automatically transform back
-        setUltimateMeterNetworked(ultimateMeterNetworked + CostToStayInElementalForm);
+        setUltimateMeterNetworked(ultimateMeterNetworked + CostToStayInElementalForm, false);
 
         statusNetworked = Status.UNIQUE1;
     }
