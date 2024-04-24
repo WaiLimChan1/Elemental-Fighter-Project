@@ -309,6 +309,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     private void HandleStatsRange()
     {
+        blockPercentage = Mathf.Clamp01(blockPercentage);
         coolDownReduction = Mathf.Clamp01(coolDownReduction);
     }
 
@@ -320,6 +321,37 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         CalculateBaseStats();
         CalculateItemStats();
         HandleStatsRange();
+    }
+
+    public ItemManager.Item GetCalculatedStatsAsAnItem()
+    {
+        ItemManager.Item calculatedStats = new ItemManager.Item();
+
+        CalculateStats();
+
+        calculatedStats.maxHealthBonus = maxHealth;
+        calculatedStats.maxManaBonus = maxMana;
+
+        calculatedStats.healthRegenPercentageBonus = healthRegenPercentage;
+        calculatedStats.manaRegenPercentageBonus = manaRegenPercentage;
+
+        calculatedStats.ultimateMeterRegenBonus = ultimateMeterRegen;
+        calculatedStats.ultimateMeterGainMultipierBonus = ultimateMeterGainMultipier;
+
+        calculatedStats.armorBonus = armor;
+        calculatedStats.crowdControlIgnorePercentageBonus = crowdControlIgnorePercentage;
+
+        calculatedStats.blockPercentageBonus = blockPercentage;
+        calculatedStats.crowdControlBlockPercentageBonus = crowdControlBlockPercentage;
+
+        calculatedStats.physicalDamageBonus = physicalDamage;
+        calculatedStats.attackSpeedBonus = attackSpeed;
+        calculatedStats.coolDownReductionBonus = coolDownReduction;
+        calculatedStats.omnivampBonus = omnivamp;
+
+        calculatedStats.mobilityModifierBonus = mobilityModifier;
+
+        return calculatedStats;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 

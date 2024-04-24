@@ -11,6 +11,7 @@ public class NetworkedPlayer : NetworkBehaviour
     private LocalCamera LocalCamera;
     private AllAttacks_ChampionUI AllAttacks_ChampionUI;
     private ItemInventory_ChampionUI ItemInventory_ChampionUI;
+    private ChampionStats_ChampionUI Stats_ChampionUI;
     private ChampionSpawner ChampionSpawner;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -58,7 +59,7 @@ public class NetworkedPlayer : NetworkBehaviour
 
         for (int i = 0; i < ItemsNetworked.Length; i++)
         {
-            ItemInventory_ChampionUI.SetIndividualItemImage(i, ItemsNetworked[i]);
+            ItemInventory_ChampionUI.SetIndividualItem_ChampionUI(i, ItemsNetworked[i]);
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -75,6 +76,7 @@ public class NetworkedPlayer : NetworkBehaviour
 
             AllAttacks_ChampionUI = AllAttacks_ChampionUI.Instance;
             ItemInventory_ChampionUI = ItemInventory_ChampionUI.Instance;
+            Stats_ChampionUI = ChampionStats_ChampionUI.Instance;
 
             Testing_ChampionUI.Instance.NetworkedPlayer = this;
 
@@ -88,11 +90,14 @@ public class NetworkedPlayer : NetworkBehaviour
     {
         gameObject.name = "NetworkedPlayer: " + playerName + " " + Object.InputAuthority; //Object Name
 
-        //ChampionUI
+        //UI Update For Direct Champion Info
         if (Runner.LocalPlayer == Object.InputAuthority)
         {
             if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
+            {
                 AllAttacks_ChampionUI.Champion = OwnedChampion.GetComponent<Champion>();
+                Stats_ChampionUI.Champion = OwnedChampion.GetComponent<Champion>();
+            }
         }
 
         //Player Name
