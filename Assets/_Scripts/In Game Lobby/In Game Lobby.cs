@@ -62,7 +62,7 @@ public class InGameLobby : NetworkBehaviour, IPlayerJoined, IPlayerLeft
     [Rpc(sources: RpcSources.All, RpcTargets.StateAuthority)]
     protected void RPC_SendName(int playerID, NetworkString<_8> playerName)
     {
-        PlayerNameListNetworked.Set(playerID, playerName.ToString() + playerID);
+        PlayerNameListNetworked.Set(playerID, playerName.ToString() + " " + playerID);
         PlayerStausListNetworked.Set(playerID, 1);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
