@@ -38,7 +38,8 @@ public class RoomListItemUI : MonoBehaviour
         PlayersText.text = $"{sessionInfo.PlayerCount}/{sessionInfo.MaxPlayers}";
 
         //Status
-        if (sessionInfo.IsOpen) StatusText.text = "Open";
+        if (sessionInfo.PlayerCount == sessionInfo.MaxPlayers) StatusText.text = "Full";
+        else if (sessionInfo.IsOpen) StatusText.text = "Open";
         else StatusText.text = "Closed";
 
         bool isJoinButtonActive = true;

@@ -81,7 +81,6 @@ public class NetworkedPlayer : NetworkBehaviour
             Testing_ChampionUI.Instance.NetworkedPlayer = this;
 
             RpcSetNickName(GlobalManagers.Instance.NetworkRunnerController.LocalPlayerName);
-
             ChampionSpawner.Rpc_SpawnChampion(Runner.LocalPlayer, GlobalManagers.Instance.NetworkRunnerController.ChampionSelectionIndex);
         }
     }

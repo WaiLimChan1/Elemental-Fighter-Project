@@ -34,4 +34,22 @@ public class NetworkedPlayerSpawner : NetworkBehaviour, IPlayerJoined, IPlayerLe
             Runner.SetPlayerObject(playerRef, null);
         }
     }
+
+    public void SpawnMissedNetworkedPlayers()
+    {
+        if (!Runner.IsServer) return;
+        foreach (PlayerRef playerRef in Runner.ActivePlayers)
+        {
+            Runner.TryGetPlayerObject(playerRef, out var playerNetworkObject);
+            if (playerNetworkObject == null)
+            {
+                PlayerJoined(playerRef);
+            }
+        }
+    }
+
+    public override void FixedUpdateNetwork()
+    {
+        SpawnMissedNetworkedPlayers();
+    }
 }

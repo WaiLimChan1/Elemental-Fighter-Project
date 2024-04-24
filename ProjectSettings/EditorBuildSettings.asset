@@ -9,13 +9,16 @@ EditorBuildSettings:
     path: Assets/_Scenes/StartMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/_Scenes/1v1.unity
+    path: Assets/_Scenes/In Game Lobby.unity
+    guid: 05b14c00765f09b4890b43e4388450ed
+  - enabled: 1
+    path: Assets/_Scenes/EF Game Modes/1v1.unity
     guid: b29ad659b04eceb4389abc12f76699fc
   - enabled: 1
-    path: Assets/_Scenes/Arena.unity
+    path: Assets/_Scenes/EF Game Modes/Arena.unity
     guid: 590e8220667214f4a9731d1a3f8a19b2
   - enabled: 1
-    path: Assets/_Scenes/DevTest.unity
+    path: Assets/_Scenes/EF Game Modes/DevTest.unity
     guid: 888c23bca34b2f84e86f8777d2fc2b9b
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -42,6 +42,11 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
         networkRunnerInstance.Shutdown();
     }
 
+    public void SetActiveScene(string SceneName)
+    {
+        networkRunnerInstance.SetActiveScene(SceneName);
+    }
+
     public async void StartGame(GameMode mode, string roomCode, EF_GAME_MODE EFGameMode = EF_GAME_MODE.DEV_TEST)
     {
         OnStartedGameRunnerConnection?.Invoke();
@@ -55,15 +60,21 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
         networkRunnerInstance.AddCallbacks(this);
         networkRunnerInstance.ProvideInput = true;
 
+        //Session Properties
         Dictionary<string, SessionProperty> sessionProperties = new Dictionary<string, SessionProperty>();
         SessionProperty SessionPropertyEFGameMode = (int) EFGameMode;
         sessionProperties.Add("EfGameMode", SessionPropertyEFGameMode);
+
+        int EFGameModePlayerCount = 1;
+        if (EFGameMode == EF_GAME_MODE._1V1) EFGameModePlayerCount = 2;
+        else if (EFGameMode == EF_GAME_MODE.ARENA) EFGameModePlayerCount = 8;
+        else if (EFGameMode == EF_GAME_MODE.DEV_TEST) EFGameModePlayerCount = 8;
 
         var startGameArgs = new StartGameArgs()
         {
             GameMode = mode,
             SessionName = roomCode,
-            PlayerCount = 8,
+            PlayerCount = EFGameModePlayerCount,
             SessionProperties = sessionProperties,
             SceneManager = networkRunnerInstance.GetComponent<INetworkSceneManager>()
         };
@@ -75,6 +86,9 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
         {
             //great
             string SCENE_NAME = GetEFGameModeString(EFGameMode);
+            if (EFGameMode == EF_GAME_MODE._1V1) SCENE_NAME = "In Game Lobby";
+            else if (EFGameMode == EF_GAME_MODE.ARENA) SCENE_NAME = "In Game Lobby";
+            else if (EFGameMode == EF_GAME_MODE.DEV_TEST) SCENE_NAME = GetEFGameModeString(EFGameMode);
             networkRunnerInstance.SetActiveScene(SCENE_NAME);
         }
         else
