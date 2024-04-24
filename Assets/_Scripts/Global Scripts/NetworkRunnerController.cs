@@ -1,19 +1,38 @@
 using Fusion;
 using Fusion.Sockets;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Unity.Collections.Unicode;
 
 public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
 {
-    public event Action OnStartedRunnerConnection;
-    public event Action OnPlayerJoinedSuccessfully;
+    public enum EF_GAME_MODE
+    {
+        _1V1,
+        ARENA,
+        DEV_TEST
+    }
+
+    public static String GetEFGameModeString(EF_GAME_MODE EFGameMode)
+    {
+        if (EFGameMode == EF_GAME_MODE._1V1) return "1v1";
+        else if (EFGameMode == EF_GAME_MODE.ARENA) return "Arena";
+        else if (EFGameMode == EF_GAME_MODE.DEV_TEST) return "DevTest";
+        return "";
+    }
+
+    public event Action OnStartedGameRunnerConnection;
+    public event Action OnPlayerJoinedGameSuccessfully;
 
     public string LocalPlayerName;
-    public string RoomCode;
     public int ChampionSelectionIndex;
+
     public GameMode LocalGameMode;
+    public string RoomCode;
 
     [SerializeField] private NetworkRunner networkRunnerPrefab;
     public NetworkRunner networkRunnerInstance;
@@ -23,9 +42,9 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
         networkRunnerInstance.Shutdown();
     }
 
-    public async void StartGame(GameMode mode, string rooomCode)
+    public async void StartGame(GameMode mode, string roomCode, EF_GAME_MODE EFGameMode = EF_GAME_MODE.DEV_TEST)
     {
-        OnStartedRunnerConnection?.Invoke();
+        OnStartedGameRunnerConnection?.Invoke();
 
         if (networkRunnerInstance == null)
         {
@@ -36,31 +55,77 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
         networkRunnerInstance.AddCallbacks(this);
         networkRunnerInstance.ProvideInput = true;
 
+        Dictionary<string, SessionProperty> sessionProperties = new Dictionary<string, SessionProperty>();
+        SessionProperty SessionPropertyEFGameMode = (int) EFGameMode;
+        sessionProperties.Add("EfGameMode", SessionPropertyEFGameMode);
+
         var startGameArgs = new StartGameArgs()
         {
             GameMode = mode,
-            SessionName = rooomCode,
+            SessionName = roomCode,
             PlayerCount = 8,
+            SessionProperties = sessionProperties,
             SceneManager = networkRunnerInstance.GetComponent<INetworkSceneManager>()
         };
+
 
         var result = await networkRunnerInstance.StartGame(startGameArgs);
 
         if (result.Ok)
         {
             //great
-            const string SCENE_NAME = "DevTest";
+            string SCENE_NAME = GetEFGameModeString(EFGameMode);
             networkRunnerInstance.SetActiveScene(SCENE_NAME);
         }
         else
         {
-            Debug.LogError($"Failed to start: {result.ShutdownReason}");
+            Debug.Log($"Failed to start: {result.ShutdownReason}");
         }
     }
+
+    public void OnJoinLobby()
+    {
+        var clientTask = JoinLobby();
+    }
+
+
+    public event Action OnStartedJoiningLobby;
+    public event Action OnJoinedLobbySuccessfully;
+    public event Action OnJoinedLobbyUnsuccessfully;
+
+    private async Task JoinLobby()
+    {
+        if (networkRunnerInstance == null)
+        {
+            networkRunnerInstance = Instantiate(networkRunnerPrefab);
+        }
+
+        networkRunnerInstance.AddCallbacks(this);
+        networkRunnerInstance.ProvideInput = false;
+
+        Debug.Log("JoinLobby Started");
+        OnStartedJoiningLobby?.Invoke();
+
+        string lobbyID = "Lobby";
+
+        var result = await networkRunnerInstance.JoinSessionLobby(SessionLobby.ClientServer);
+
+        if (result.Ok)
+        {
+            Debug.Log("Joined Lobby ok");
+            OnJoinedLobbySuccessfully?.Invoke();
+        }
+        else
+        {
+            Debug.Log($"Unable to join lobby {lobbyID}");
+            OnJoinedLobbyUnsuccessfully?.Invoke();
+        }
+    }
+
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
         Debug.Log("OnPlayerJoined");
-        OnPlayerJoinedSuccessfully?.Invoke();
+        OnPlayerJoinedGameSuccessfully?.Invoke();
     }
 
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)
@@ -71,7 +136,21 @@ public class NetworkRunnerController : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList) 
     {
-        Debug.Log("OnSessionListUpdated"); 
+        Debug.Log("OnSessionListUpdated");
+
+        if (FindFirstObjectByType<RoomList>() == null) return;
+        if (!FindFirstObjectByType<RoomList>().isActiveAndEnabled) return;
+        RoomList RoomBrowserList = FindFirstObjectByType<RoomList>();
+
+        RoomBrowserList.ClearList();
+
+        if (sessionList.Count > 0)
+        {
+            foreach (SessionInfo sessionInfo in sessionList)
+            {
+                RoomBrowserList.AddToList(sessionInfo);
+            }
+        }
     }
 
     #region INetworkRunnerCallbacks

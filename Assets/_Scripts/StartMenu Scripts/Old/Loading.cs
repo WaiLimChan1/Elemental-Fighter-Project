@@ -13,7 +13,7 @@ public class Loading : MonoBehaviour
     [SerializeField] TMP_Text LoadingText;
     [SerializeField] Button CancelButton;
     private NetworkRunnerController networkRunnerController;
-    private float MaxWaitTime = 15;
+    private float MaxWaitTime = 100;
     private float timeCounter;
 
     void DetermineDescriptionText()
@@ -44,8 +44,8 @@ public class Loading : MonoBehaviour
     private void Start()
     {
         networkRunnerController = GlobalManagers.Instance.NetworkRunnerController;
-        networkRunnerController.OnStartedRunnerConnection += OnStartedRunnerConnection;
-        networkRunnerController.OnPlayerJoinedSuccessfully += OnPlayerJoinedSuccessfully;
+        networkRunnerController.OnStartedGameRunnerConnection += OnStartedRunnerConnection;
+        networkRunnerController.OnPlayerJoinedGameSuccessfully += OnPlayerJoinedSuccessfully;
         CancelButton.onClick.AddListener(networkRunnerController.ShutDownRunner);
         this.gameObject.SetActive(false);
     }
@@ -60,7 +60,7 @@ public class Loading : MonoBehaviour
 
     private void OnDestroy()
     {
-        networkRunnerController.OnStartedRunnerConnection -= OnStartedRunnerConnection;
-        networkRunnerController.OnPlayerJoinedSuccessfully -= OnPlayerJoinedSuccessfully;
+        networkRunnerController.OnStartedGameRunnerConnection -= OnStartedRunnerConnection;
+        networkRunnerController.OnPlayerJoinedGameSuccessfully -= OnPlayerJoinedSuccessfully;
     }
 }

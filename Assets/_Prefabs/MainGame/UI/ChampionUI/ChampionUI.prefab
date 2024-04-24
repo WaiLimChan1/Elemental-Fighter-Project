@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2816349775104055435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203090394924997739}
+  m_Layer: 0
+  m_Name: ChampionUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203090394924997739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816349775104055435}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8170956337104271266}
+  - {fileID: 4065537370486723570}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &750815601127980826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1203090394924997739}
+    m_Modifications:
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910628987863857241, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+      propertyPath: m_Name
+      value: AllAttacks_ChampionUI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+--- !u!4 &4065537370486723570 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3603124332125105384, guid: ea8e387aa75bdf4449e58510d40dff21, type: 3}
+  m_PrefabInstance: {fileID: 750815601127980826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4790343435439204405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1203090394924997739}
+    m_Modifications:
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438891290117427426, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+      propertyPath: m_Name
+      value: ItemInventory_ChampionUI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+--- !u!4 &8170956337104271266 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3683846116164099991, guid: 974f541ba797c134689c1031a7fcffda, type: 3}
+  m_PrefabInstance: {fileID: 4790343435439204405}
+  m_PrefabAsset: {fileID: 0}
