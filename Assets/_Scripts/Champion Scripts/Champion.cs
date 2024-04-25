@@ -1,6 +1,7 @@
 using UnityEngine;
 using Fusion;
 using System;
+using Unity.VisualScripting;
 
 public class Champion : NetworkBehaviour, IBeforeUpdate
 {
@@ -44,7 +45,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Player Name
-    public void SetPlayerNickName(NetworkString<_8> nickName) { ResourceBar.SetPlayerNameText(nickName + " " + Object.InputAuthority.PlayerId); }
+    public void SetPlayerName(NetworkString<_8> nickName) { ResourceBar.SetPlayerNameText(nickName + " " + Object.InputAuthority.PlayerId); }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -659,6 +660,9 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             return;
         }
 
+        //If GameManager exists and it stops champion control
+        if (GameManager.CanUseGameManager() && GameManager.Instance.StopChampionTakeInput) return;
+
         //Determine direction
         if (CanChangeDirectionStatus())
         {
@@ -797,7 +801,6 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             attacker.setUltimateMeterNetworked(attacker.ultimateMeterNetworked + damage); //Attack gain UltimateMeter for dealing damage
             if (healthNetworked <= 0) attacker.setUltimateMeterNetworked(attacker.ultimateMeterNetworked + ultimateMeterKillBonus); //Attack gain UltimateMeter for killing enemy
         }
-
         return damage;
     }
 
@@ -1020,6 +1023,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         else AttackBoxesParent.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
+    private void UpdateGameManagerRoundRankingHost()
+    {
+        if (healthNetworked > 0) return;
+        if (!Runner.IsServer) return;
+        if (!GameManager.CanUseGameManager()) return;
+        if (GameManager.Instance.GameStateNetworked != GameManager.GameState.ROUND) return;
+        if (GameManager.Instance.RoundRankingReversedHost.Contains(this.NetworkedPlayer)) return;
+
+        GameManager.Instance.RoundRankingReversedHost_Add(this.NetworkedPlayer);
+    }
+
     public override void FixedUpdateNetwork()
     {
         if (Runner.TryGetInputForPlayer<ChampionData>(Object.InputAuthority, out var championData))
@@ -1032,6 +1046,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         ApplyEffects();
         UpdateResourceBarVisuals();
         UpdateChampionVisual();
+        UpdateGameManagerRoundRankingHost();
     }
 
     public void LateUpdate()

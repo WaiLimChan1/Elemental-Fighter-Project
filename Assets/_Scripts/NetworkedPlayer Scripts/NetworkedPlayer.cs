@@ -8,6 +8,18 @@ public class NetworkedPlayer : NetworkBehaviour
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Components
+    public static bool CanUseNetworkedPlayer(NetworkedPlayer networkedPlayer) { return (networkedPlayer != null && networkedPlayer.Object != default); }
+    public static bool CanUseNetworkedPlayerOwnedChampion(NetworkedPlayer networkedPlayer) 
+    { 
+        return (CanUseNetworkedPlayer(networkedPlayer) && 
+            networkedPlayer.OwnedChampion != null && networkedPlayer.OwnedChampion != default); 
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Components
     private LocalCamera LocalCamera;
     private AllAttacks_ChampionUI AllAttacks_ChampionUI;
     private ItemInventory_ChampionUI ItemInventory_ChampionUI;
@@ -19,10 +31,15 @@ public class NetworkedPlayer : NetworkBehaviour
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Player Name
-    [Networked] private NetworkString<_8> playerName { get; set; }
+    [Networked] public NetworkString<_8> playerName { get; set; }
 
     [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)] 
     private void RpcSetNickName(NetworkString<_8> nickName) { playerName = nickName; }
+
+    public string GetPlayerName()
+    {
+        return playerName.ToString() + " " + Object.InputAuthority.PlayerId;
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -101,7 +118,7 @@ public class NetworkedPlayer : NetworkBehaviour
 
         //Player Name
         if (OwnedChampion != null && OwnedChampion.GetComponent<Champion>() != null)
-            OwnedChampion.GetComponent<Champion>().SetPlayerNickName(playerName);
+            OwnedChampion.GetComponent<Champion>().SetPlayerName(playerName);
 
         //Update Items
         UpdateItemsNetworked();
