@@ -2,6 +2,7 @@ using Fusion;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameManager : NetworkBehaviour
 {
@@ -219,12 +220,26 @@ public class GameManager : NetworkBehaviour
     {
         if (!Runner.IsServer) return;
 
+        List<int> remainingIndexes = new List<int>();
+        for (int i = 0; i < SpawnPositions.Length; i++) remainingIndexes.Add(i);
+
+
         GetAllNetworkedPlayers();
         for (int i = 0; i < NetworkedPlayerList.Count; i++)
         {
             NetworkedPlayer current = NetworkedPlayerList[i];
             if (!NetworkedPlayer.CanUseNetworkedPlayerOwnedChampion(current)) continue;
-            current.OwnedChampion.GetComponent<Champion>().HostReposition(SpawnPositions[Random.Range(0, SpawnPositions.Length)]);
+
+            int randomIndex = 0;
+
+            if (remainingIndexes.Count() > 0)
+            {
+                int randomIndexOfRemainingIndexes = Random.Range(0, remainingIndexes.Count());
+                randomIndex = remainingIndexes[randomIndexOfRemainingIndexes];
+                remainingIndexes.RemoveAt(randomIndexOfRemainingIndexes);
+            }
+
+            current.OwnedChampion.GetComponent<Champion>().HostReposition(SpawnPositions[randomIndex]);
         }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -371,7 +386,7 @@ public class GameManager : NetworkBehaviour
         Round = 0;
         StopChampionTakeInput = false;
         StopResourceRegenAndDecay = true;
-        RemainingTime = TickTimer.None;
+        RemainingTime = TickTimer.CreateFromSeconds(Runner, 0.5f);
 
         ItemCount = 0;
         selectedItemLocal = true;

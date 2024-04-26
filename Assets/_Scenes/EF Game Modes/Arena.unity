@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Testing_ChampionUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5242274025291992501, guid: 2cd01bbd9b6db954887ba35359d61082, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6514694727806107982, guid: 2cd01bbd9b6db954887ba35359d61082, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1716,10 +1720,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   PreRoundDuration: 5
-  RoundDuration: 60
+  RoundDuration: 120
   RoundResultDuration: 10
-  ItemSelectionDuration: 10
-  GameModeGameStates: 00000000010000000200000003000000030000000000000001000000020000000300000003000000000000000100000002000000030000000300000000000000010000000200000004000000
+  ItemSelectionDuration: 15
+  GameModeGameStates: 00000000010000000200000003000000000000000100000002000000030000000000000001000000020000000300000000000000010000000200000003000000000000000100000002000000030000000000000001000000020000000300000000000000010000000200000004000000
   PointsForRoundRanking:
   - 1000
   - 700
