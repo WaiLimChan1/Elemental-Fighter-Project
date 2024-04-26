@@ -12,6 +12,8 @@ public class GameUI : MonoBehaviour
     [SerializeField] private PreRound_GameUI PreRound_GameUI;
     [SerializeField] private Round_GameUI Round_GameUI;
     [SerializeField] private RoundResults_GameUI RoundResults_GameUI;
+    [SerializeField] private ItemSelection_GameUI ItemSelection_GameUI;
+    [SerializeField] private MatchResults_GameUI MatchResults_GameUI;
 
     public void Awake()
     {
@@ -24,6 +26,8 @@ public class GameUI : MonoBehaviour
         PreRound_GameUI.gameObject.SetActive(false);
         Round_GameUI.gameObject.SetActive(false);
         RoundResults_GameUI.gameObject.SetActive(false);
+        ItemSelection_GameUI.gameObject.SetActive(false);
+        MatchResults_GameUI.gameObject.SetActive(false);
     }
 
     public void Update()
@@ -48,6 +52,16 @@ public class GameUI : MonoBehaviour
         {
             RoundResults_GameUI.gameObject.SetActive(true);
             RoundResults_GameUI.UpdateGameUI(gameManager.Round, remainingTime, gameManager.RoundRankingReversedNetworked);
+        }
+        else if (gameManager.GameStateNetworked == GameManager.GameState.ITEM_SELECTION)
+        {
+            ItemSelection_GameUI.gameObject.SetActive(true);
+            ItemSelection_GameUI.UpdateGameUI(gameManager.selectedItemLocal, remainingTime, gameManager.ItemSelectionList);
+        }
+        else if (gameManager.GameStateNetworked == GameManager.GameState.MATCH_RESULTS)
+        {
+            MatchResults_GameUI.gameObject.SetActive(true);
+            MatchResults_GameUI.UpdateGameUI(gameManager.MatchResultNamesNetworked, gameManager.MatchResultPointsNetworked);
         }
     }
 }

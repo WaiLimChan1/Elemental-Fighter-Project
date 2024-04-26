@@ -34,7 +34,7 @@ public class AllAttacks_ChampionUI : MonoBehaviour
 
     public void Update()
     {
-        if (Champion != null)
+        if (Champion != null && Champion.Object != default)
         {
             Champion.SetAttack_ChampionUI(this);
         }

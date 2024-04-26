@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Fusion;
+using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
+using UnityEngine;
 
-public class GameManager : NetworkBehaviour 
+public class GameManager : NetworkBehaviour
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //GameManager Enums
@@ -14,7 +12,8 @@ public class GameManager : NetworkBehaviour
         PRE_ROUND, //Before Round Starts
         ROUND, //During Round
         ROUND_RESULTS, //Round Results
-        ITEM_SELECTION //Selecting Items
+        ITEM_SELECTION, //Selecting Items
+        MATCH_RESULTS //Match Results
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -28,7 +27,7 @@ public class GameManager : NetworkBehaviour
         return GameManager.Instance != null && GameManager.Instance.Object != default;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    
+
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -37,6 +36,13 @@ public class GameManager : NetworkBehaviour
     [SerializeField] float PreRoundDuration = 3f;
     [SerializeField] float RoundDuration = 120f;
     [SerializeField] float RoundResultDuration = 10f;
+    [SerializeField] float ItemSelectionDuration = 10f;
+
+    [SerializeField] GameState[] GameModeGameStates;
+
+    [SerializeField] float[] PointsForRoundRanking;
+
+    [SerializeField] Transform[] SpawnPositions;
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -44,16 +50,17 @@ public class GameManager : NetworkBehaviour
     //---------------------------------------------------------------------------------------------------------------------------------------------
     //Networked Variables
     [Header("Networked Variables")]
-    [Networked] [SerializeField] public GameState GameStateNetworked { get; set; }
-    [Networked] [SerializeField] public int GameStateIndex { get; set; }
-    [Networked] [SerializeField] public int Round { get; set; }
-    [Networked] [SerializeField] public bool StopChampionTakeInput { get; set; }
-    [Networked] [SerializeField] TickTimer RemainingTime { get; set; }
+    [Networked][SerializeField] public GameState GameStateNetworked { get; set; }
+    [Networked][SerializeField] public int GameStateIndex { get; set; }
+    [Networked][SerializeField] public int Round { get; set; }
+    [Networked][SerializeField] public bool StopChampionTakeInput { get; set; }
+    [Networked][SerializeField] public bool StopResourceRegenAndDecay { get; set; }
+    [Networked][SerializeField] TickTimer RemainingTime { get; set; }
     public float getRemainingTime()
     {
         if (Object == default) return 0;
         if (RemainingTime.ExpiredOrNotRunning(Runner)) return 0;
-        return (float) RemainingTime.RemainingTime(Runner);
+        return (float)RemainingTime.RemainingTime(Runner);
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -139,6 +146,22 @@ public class GameManager : NetworkBehaviour
             RoundRankingReversedHost_Add(networkedPlayer);
         }
     }
+
+    public void CalculateRoundPoints()
+    {
+        if (!Runner.IsServer) return;
+
+        int RoundRanking = 0;
+        for (int i = RoundRankingReversedHost.Count - 1; i >= 0; i--)
+        {
+            NetworkedPlayer currentNetworkedPlayer = RoundRankingReversedHost[i];
+            if (!NetworkedPlayer.CanUseNetworkedPlayerOwnedChampion(currentNetworkedPlayer)) continue;
+            if (RoundRanking >= PointsForRoundRanking.Length) continue;
+
+            currentNetworkedPlayer.GamePoints += PointsForRoundRanking[RoundRanking];
+            RoundRanking++;
+        }
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -156,6 +179,7 @@ public class GameManager : NetworkBehaviour
             if (Runner.TryGetPlayerObject(playerRef, out var playerNetworkObject))
             {
                 NetworkedPlayer NetworkedPlayer = playerNetworkObject.GetComponent<NetworkedPlayer>();
+                if (!NetworkedPlayer.CanUseNetworkedPlayer(NetworkedPlayer)) continue;
                 NetworkedPlayerList.Add(NetworkedPlayer);
             }
         }
@@ -168,15 +192,163 @@ public class GameManager : NetworkBehaviour
         int alivePlayers = 0;
         for (int i = 0; i < NetworkedPlayerList.Count; i++)
         {
-            if (NetworkedPlayerList[i] == null || NetworkedPlayerList[i].Object == default) continue;
-            if (NetworkedPlayerList[i].OwnedChampion == null) continue;
-            if (NetworkedPlayerList[i].OwnedChampion.GetComponent<Champion>() == null) continue;
-            if (NetworkedPlayerList[i].OwnedChampion.GetComponent<Champion>().healthNetworked > 0)
+            NetworkedPlayer current = NetworkedPlayerList[i];
+            if (!NetworkedPlayer.CanUseNetworkedPlayerOwnedChampion(current)) continue;
+            if (current.OwnedChampion.GetComponent<Champion>().healthNetworked > 0)
             {
                 alivePlayers++;
             }
         }
         return alivePlayers;
+    }
+
+    public void ReviveAllNetworkedPlayerChampions()
+    {
+        if (!Runner.IsServer) return;
+
+        GetAllNetworkedPlayers();
+        for (int i = 0; i < NetworkedPlayerList.Count; i++)
+        {
+            NetworkedPlayer current = NetworkedPlayerList[i];
+            if (!NetworkedPlayer.CanUseNetworkedPlayerOwnedChampion(current)) continue;
+            current.OwnedChampion.GetComponent<Champion>().HostResetChampion();
+        }
+    }
+
+    public void RepositionAllNetworkedPlayerChampions()
+    {
+        if (!Runner.IsServer) return;
+
+        GetAllNetworkedPlayers();
+        for (int i = 0; i < NetworkedPlayerList.Count; i++)
+        {
+            NetworkedPlayer current = NetworkedPlayerList[i];
+            if (!NetworkedPlayer.CanUseNetworkedPlayerOwnedChampion(current)) continue;
+            current.OwnedChampion.GetComponent<Champion>().HostReposition(SpawnPositions[Random.Range(0, SpawnPositions.Length)]);
+        }
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Item Selection List
+    [Networked] [SerializeField] int ItemCount { get; set; }
+
+    public bool selectedItemLocal;
+
+    public bool needToAddMissedItem;
+    public int backUpItemIndexLocal;
+
+    public const int NUM_SELECTION_ITEMS = 5;
+    [SerializeField] public List<int> ItemSelectionList = new List<int>();
+
+
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public void RPC_GenerateRandomItemSelectionList()
+    {
+        ItemSelectionList.Clear();
+        backUpItemIndexLocal = 0;
+
+        for (int i = 0; i < NUM_SELECTION_ITEMS; i++)
+        {
+            int randomItemIndex = 0;
+            do
+            {
+                randomItemIndex = Random.Range(0, ItemManager.Instance.Items.Length);
+            } while (ItemSelectionList.Contains(randomItemIndex));
+
+            ItemSelectionList.Add(randomItemIndex);
+        }
+
+        backUpItemIndexLocal = ItemSelectionList[Random.Range(0, ItemSelectionList.Count)];
+    }
+
+    public void AddSelectedItem(int itemIndex)
+    {
+        if (Runner.TryGetPlayerObject(Runner.LocalPlayer, out var playerNetworkObject))
+        {
+            NetworkedPlayer LocalNetworkedPlayer = playerNetworkObject.GetComponent<NetworkedPlayer>();
+            if (!NetworkedPlayer.CanUseNetworkedPlayer(LocalNetworkedPlayer)) return;
+
+            LocalNetworkedPlayer.RPC_AddItem(itemIndex);
+
+            selectedItemLocal = true;
+        }
+    }
+
+    //When Item Selection ended, if a player has less item than ItemCount, have them gain an item.
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public void RPC_HandleMissedSelectingItem(int PreviousItemCount)
+    {
+        if (Runner.TryGetPlayerObject(Runner.LocalPlayer, out var playerNetworkObject))
+        {
+            NetworkedPlayer LocalNetworkedPlayer = playerNetworkObject.GetComponent<NetworkedPlayer>();
+            if (!NetworkedPlayer.CanUseNetworkedPlayer(LocalNetworkedPlayer)) return;
+
+            if (LocalNetworkedPlayer.getNumOfItems() < PreviousItemCount)
+            {
+                needToAddMissedItem = true;
+            }
+        }
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Match Results
+    [Header("Match Results")]
+    [Networked, Capacity(MAX_PLAYER_COUNT)] public NetworkArray<NetworkString<_16>> MatchResultNamesNetworked => default;
+    [Networked, Capacity(MAX_PLAYER_COUNT)] public NetworkArray<int> MatchResultPointsNetworked => default;
+
+    public void CalculatePlayerRankByGamePoint()
+    {
+        if (!Runner.IsServer) return;
+
+        GetAllNetworkedPlayers();
+        for (int i = 0; i < NetworkedPlayerList.Count() - 1; i++)
+        {
+            int biggestIndex = i;
+            for (int j = i + 1; j < NetworkedPlayerList.Count(); j++)
+            {
+                if (NetworkedPlayerList[biggestIndex].GamePoints < NetworkedPlayerList[j].GamePoints)
+                    biggestIndex = j;
+            }
+
+            if (biggestIndex != i)
+            {
+                NetworkedPlayer temp = NetworkedPlayerList[i];
+                NetworkedPlayerList[i] = NetworkedPlayerList[biggestIndex];
+                NetworkedPlayerList[biggestIndex] = temp;
+            }
+        }
+    }
+
+    public void StoreMatchResultDataInNetworkArrays()
+    {
+        if (!Runner.IsServer) return;
+
+        CalculatePlayerRankByGamePoint();
+
+        List<NetworkString<_16>> emptyMatchResultNames = Enumerable.Repeat<NetworkString<_16>>("", MAX_PLAYER_COUNT).ToList();
+        MatchResultNamesNetworked.CopyFrom(emptyMatchResultNames, 0, emptyMatchResultNames.Count);
+
+        List<int> emptyMatchResultPoints = Enumerable.Repeat<int>(0, MAX_PLAYER_COUNT).ToList();
+        MatchResultPointsNetworked.CopyFrom(emptyMatchResultPoints, 0, emptyMatchResultPoints.Count);
+
+        List<NetworkString<_16>> MatchResultNamesLocal = new List<NetworkString<_16>>();
+        List<int> MatchResultPointsLocal = new List<int>();
+
+        for (int i = 0; i < NetworkedPlayerList.Count(); i++)
+        {
+            MatchResultNamesLocal.Add(NetworkedPlayerList[i].GetPlayerName());
+            MatchResultPointsLocal.Add((int) NetworkedPlayerList[i].GamePoints);
+        }
+
+        MatchResultNamesNetworked.CopyFrom(MatchResultNamesLocal, 0, Mathf.Clamp(MatchResultNamesLocal.Count, 0, MAX_PLAYER_COUNT));
+        MatchResultPointsNetworked.CopyFrom(MatchResultPointsLocal, 0, Mathf.Clamp(MatchResultPointsLocal.Count, 0, MAX_PLAYER_COUNT));
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -198,54 +370,125 @@ public class GameManager : NetworkBehaviour
         GameStateIndex = 0;
         Round = 0;
         StopChampionTakeInput = false;
+        StopResourceRegenAndDecay = true;
         RemainingTime = TickTimer.None;
+
+        ItemCount = 0;
+        selectedItemLocal = true;
+        needToAddMissedItem = false;
+        backUpItemIndexLocal = 0;
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Begin Game State Logic
     public void BeginPreround()
     {
+        ReviveAllNetworkedPlayerChampions(); //Revive all champions
+        RepositionAllNetworkedPlayerChampions(); //Reposition all champions
+
         GameStateNetworked = GameState.PRE_ROUND;
 
         Round++;
         StopChampionTakeInput = true;
+        StopResourceRegenAndDecay = true;
         RemainingTime = TickTimer.CreateFromSeconds(Runner, PreRoundDuration);
-
-        GameStateIndex++;
     }
 
     public void BeginRound()
     {
+        ReviveAllNetworkedPlayerChampions(); //Revive all champions
+
         GameStateNetworked = GameState.ROUND;
 
         StopChampionTakeInput = false;
+        StopResourceRegenAndDecay = false;
         RemainingTime = TickTimer.CreateFromSeconds(Runner, RoundDuration);
-
-        GameStateIndex++;
 
         RoundRankingReversedHost_Clear();
     }
 
     public void BeginRoundResults()
     {
-        CompleteRoundRankingReversedHost();
+        CompleteRoundRankingReversedHost(); //Complete Round Ranking
+        CalculateRoundPoints(); //Calculate Points
+
         GameStateNetworked = GameState.ROUND_RESULTS;
 
         StopChampionTakeInput = true;
+        StopResourceRegenAndDecay = true;
         RemainingTime = TickTimer.CreateFromSeconds(Runner, RoundResultDuration);
-        GameStateIndex++;
     }
 
-    public void HandleGameStateLogic()
+    public void BeginItemSelection()
+    {
+        RPC_GenerateRandomItemSelectionList(); //Everyone generate their own random item list
+        GameStateNetworked = GameState.ITEM_SELECTION;
+
+        StopChampionTakeInput = true;
+        StopResourceRegenAndDecay = true;
+        RemainingTime = TickTimer.CreateFromSeconds(Runner, ItemSelectionDuration);
+
+        ItemCount++;
+    }
+
+    public void BeginMatchResults()
+    {
+        StoreMatchResultDataInNetworkArrays();
+
+        GameStateNetworked = GameState.MATCH_RESULTS;
+
+        StopChampionTakeInput = true;
+        StopResourceRegenAndDecay = true;
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Game Manager Logic
+    public void HandleEndGameStateLogicHost()
     {
         if (!Runner.IsServer) return;
         if (!RemainingTime.ExpiredOrNotRunning(Runner)) return;
+
+        int currentGameStateIndex = GameStateIndex - 1;
+        if (currentGameStateIndex < 0 || currentGameStateIndex >= GameModeGameStates.Length) return;
+
+        GameState currentGameState = GameModeGameStates[currentGameStateIndex];
+        if (currentGameState == GameState.ITEM_SELECTION)
+        {
+            RPC_HandleMissedSelectingItem(ItemCount);
+        }
+    }
+
+    public void HandleBeginGameStateLogicHost()
+    {
+        if (!Runner.IsServer) return;
+        if (!RemainingTime.ExpiredOrNotRunning(Runner)) return;
+        if (GameStateIndex >= GameModeGameStates.Length) return;
+
+        GameState newGameState = GameModeGameStates[GameStateIndex];
+
+        if (newGameState == GameState.PRE_ROUND) BeginPreround();
+        else if (newGameState == GameState.ROUND) BeginRound();
+        else if (newGameState == GameState.ROUND_RESULTS) BeginRoundResults();
+        else if (newGameState == GameState.ITEM_SELECTION) BeginItemSelection();
+        else if (newGameState == GameState.MATCH_RESULTS) BeginMatchResults();
+
+        GameStateIndex++;
+    }
+
+    public void HandleBeginGameStateLogicLocal()
+    {
+        if (!RemainingTime.ExpiredOrNotRunning(Runner)) return;
+        if (GameStateIndex >= GameModeGameStates.Length) return;
+
+        GameState newGameState = GameModeGameStates[GameStateIndex];
         
-        if (GameStateIndex == 0) BeginPreround();
-        else if (GameStateIndex == 1) BeginRound();
-        else if (GameStateIndex == 2) BeginRoundResults();
+        if (newGameState == GameState.ITEM_SELECTION) selectedItemLocal = false;
     }
 
     public void EndRoundEarly()
@@ -257,10 +500,28 @@ public class GameManager : NetworkBehaviour
         RemainingTime = TickTimer.None;
     }
 
+    public void EndMatchEarly()
+    {
+        if (!Runner.IsServer) return;
+        if (GameStateNetworked == GameState.MATCH_RESULTS) return;
+
+        if (Runner.ActivePlayers.Count() >= 2) return;
+
+        RemainingTime = TickTimer.None;
+        GameStateIndex = GameModeGameStates.Count() - 1;
+    }
+
     public override void FixedUpdateNetwork()
     {
         GetAllNetworkedPlayers();
-        HandleGameStateLogic();
+
+        HandleEndGameStateLogicHost();
+
+        HandleBeginGameStateLogicLocal();
+        HandleBeginGameStateLogicHost();
+
         EndRoundEarly();
+        EndMatchEarly();
     }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
 }

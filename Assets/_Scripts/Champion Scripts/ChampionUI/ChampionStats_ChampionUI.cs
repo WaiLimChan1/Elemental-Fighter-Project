@@ -29,7 +29,7 @@ public class ChampionStats_ChampionUI : MonoBehaviour
 
     public void Update()
     {
-        if (Champion != null)
+        if (Champion != null && Champion.Object != default)
         {
             if (Input.GetKey(KeyCode.C))
             {

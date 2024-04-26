@@ -282,7 +282,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     private void CalculateItemStats()
     {
-        if (NetworkedPlayer == null) return;
+        if (!NetworkedPlayer.CanUseNetworkedPlayer(NetworkedPlayer)) return;
         ItemManager.Item combinedItem = NetworkedPlayer.GetCombinedItemStats();
 
         maxHealth += combinedItem.maxHealthBonus;
@@ -327,6 +327,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     public ItemManager.Item GetCalculatedStatsAsAnItem()
     {
         ItemManager.Item calculatedStats = new ItemManager.Item();
+        if (Object == default) return calculatedStats;
 
         CalculateStats();
 
@@ -932,6 +933,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
     {
         if (!Runner.IsServer) return;
         if (healthNetworked <= 0) return;
+        if (GameManager.CanUseGameManager() && GameManager.Instance.StopResourceRegenAndDecay) return;
 
         setHealthNetworked(healthNetworked + maxHealth * healthRegenPercentage * Runner.DeltaTime);
         setManaNetworked(manaNetworked + maxMana * manaRegenPercentage * Runner.DeltaTime);
@@ -1078,6 +1080,17 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    public void HostResetChampion()
+    {
+        setHealthNetworked(maxHealth);
+        setManaNetworked(maxMana);
+    }
+
+    public void HostReposition(Transform newPosition)
+    {
+        transform.position = newPosition.position;
+    }
+
     //Testing
     [Rpc(sources: RpcSources.InputAuthority, RpcTargets.StateAuthority)]
     public void RPC_RestoreHealthAndMana()

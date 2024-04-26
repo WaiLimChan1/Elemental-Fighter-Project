@@ -63,8 +63,8 @@ public class Testing_ChampionUI : MonoBehaviour
 
     private bool NetworkedPlayerHasChampion()
     {
-        if (NetworkedPlayer == null) return false;
-        if (NetworkedPlayer.OwnedChampion == null) return false;
+        if (NetworkedPlayer == null || NetworkedPlayer.Object == default) return false;
+        if (NetworkedPlayer.OwnedChampion == null || NetworkedPlayer.OwnedChampion == default) return false;
         if (NetworkedPlayer.OwnedChampion.GetComponent<Champion>() == null) return false;
         return true;
     }

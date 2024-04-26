@@ -25,7 +25,7 @@ public class RoundResults_GameUI : MonoBehaviour
             if (!NetworkedPlayer.CanUseNetworkedPlayerOwnedChampion(currentNetworkedPlayer)) continue;
 
             RoundResultsListItems[RoundResultsListItemsIndex].gameObject.SetActive(true);
-            RoundResultsListItems[RoundResultsListItemsIndex].UpdateGameUI(RoundResultsListItemsIndex + 1, currentNetworkedPlayer.GetPlayerName());
+            RoundResultsListItems[RoundResultsListItemsIndex].UpdateGameUI(RoundResultsListItemsIndex + 1, currentNetworkedPlayer.GetPlayerName(), currentNetworkedPlayer.GamePoints);
             RoundResultsListItemsIndex++;
         }
     }

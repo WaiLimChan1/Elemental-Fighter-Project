@@ -2,6 +2,7 @@ using Fusion;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NetworkedPlayer : NetworkBehaviour
@@ -51,6 +52,17 @@ public class NetworkedPlayer : NetworkBehaviour
     [Networked, Capacity(MAX_ITEM_COUNT)] public NetworkArray<int> ItemsNetworked => default;
     public List<int> ItemsHostRecord = new List<int>();
 
+    public int getNumOfItems()
+    {
+        int numOfItems = 0;
+        for (int i = 0; i < ItemsNetworked.Length; i++)
+        {
+            if (ItemsNetworked[i] > -1 && ItemsNetworked[i] < ItemManager.Instance.Items.Length)
+                numOfItems++; 
+        }
+        return numOfItems;
+    }
+
     public void UpdateItemsNetworked()
     {
         if (!Runner.IsServer) return;
@@ -79,10 +91,27 @@ public class NetworkedPlayer : NetworkBehaviour
             ItemInventory_ChampionUI.SetIndividualItem_ChampionUI(i, ItemsNetworked[i]);
         }
     }
+
+    public void AddMissedItem()
+    {
+        if (Runner.LocalPlayer == Object.InputAuthority)
+        {
+            if (GameManager.CanUseGameManager())
+            {
+                if (GameManager.Instance.needToAddMissedItem)
+                {
+                    RPC_AddItem(Random.Range(0, ItemManager.Instance.Items.Count()));
+                    GameManager.Instance.needToAddMissedItem = false;
+                }
+            }
+        }
+    }
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
     [Networked] public NetworkObject OwnedChampion { get; set; }
+    [Networked] public float GamePoints { get; set; }
+
     public override void Spawned()
     {
         ChampionSpawner = GetComponent<ChampionSpawner>();
@@ -95,7 +124,7 @@ public class NetworkedPlayer : NetworkBehaviour
             ItemInventory_ChampionUI = ItemInventory_ChampionUI.Instance;
             Stats_ChampionUI = ChampionStats_ChampionUI.Instance;
 
-            Testing_ChampionUI.Instance.NetworkedPlayer = this;
+            if (Testing_ChampionUI.Instance != null) Testing_ChampionUI.Instance.NetworkedPlayer = this;
 
             RpcSetNickName(GlobalManagers.Instance.NetworkRunnerController.LocalPlayerName);
             ChampionSpawner.Rpc_SpawnChampion(Runner.LocalPlayer, GlobalManagers.Instance.NetworkRunnerController.ChampionSelectionIndex);
@@ -125,6 +154,9 @@ public class NetworkedPlayer : NetworkBehaviour
 
         //Update Item UI locally
         UpdateItemUI();
+
+        //Add missed item
+        AddMissedItem();
     }
 
     public void DespawnOwnedChampion()

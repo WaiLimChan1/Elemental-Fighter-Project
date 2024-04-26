@@ -126,6 +126,7 @@ public class ElementalChampion : Champion
     protected void ApplyUltimateMeterCost()
     {
         if (!Runner.IsServer) return;
+        if (GameManager.CanUseGameManager() && GameManager.Instance.StopResourceRegenAndDecay) return;
 
         if (statusNetworked != Status.BEGIN_DEATH && statusNetworked != Status.FINISHED_DEATH)
             setUltimateMeterNetworked(ultimateMeterNetworked - CostToStayInElementalForm * Runner.DeltaTime);

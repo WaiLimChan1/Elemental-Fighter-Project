@@ -150,6 +150,12 @@ public class InGameLobby : NetworkBehaviour, IPlayerJoined, IPlayerLeft
 
     public void Update()
     {
+        if (Runner != null)
+        {
+            if (Runner.ActivePlayers.Count() > 1) StartGameButton.interactable = true;
+            else StartGameButton.interactable = false;
+        }
+
         UpdateTextMeshProUGUI();
 
         UpdateLobbyPlayerList();
