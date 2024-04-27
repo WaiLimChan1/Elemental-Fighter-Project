@@ -802,6 +802,15 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
             attacker.setUltimateMeterNetworked(attacker.ultimateMeterNetworked + damage); //Attack gain UltimateMeter for dealing damage
             if (healthNetworked <= 0) attacker.setUltimateMeterNetworked(attacker.ultimateMeterNetworked + ultimateMeterKillBonus); //Attack gain UltimateMeter for killing enemy
         }
+
+        //LifeTime Data Update
+        if (NetworkedPlayer.CanUseNetworkedPlayer(this.NetworkedPlayer)) this.NetworkedPlayer.TotalDamageTaken += damage;
+        if (NetworkedPlayer.CanUseNetworkedPlayer(attacker.NetworkedPlayer))
+        {
+            attacker.NetworkedPlayer.TotalDamageDealt += damage;
+            if (healthNetworked <= 0) attacker.NetworkedPlayer.TotalKills++;
+        }
+
         return damage;
     }
 

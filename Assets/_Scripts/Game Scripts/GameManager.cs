@@ -1,4 +1,5 @@
 using Fusion;
+using PlayFab.ClientModels;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -339,6 +340,11 @@ public class GameManager : NetworkBehaviour
                 NetworkedPlayerList[biggestIndex] = temp;
             }
         }
+
+        for (int i = 0; i < NetworkedPlayerList.Count(); i++)
+        {
+            NetworkedPlayerList[i].MatchRanking = i + 1;
+        }
     }
 
     public void StoreMatchResultDataInNetworkArrays()
@@ -370,6 +376,57 @@ public class GameManager : NetworkBehaviour
 
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Upload Match Data To Playfab
+    public bool UploadedLocalPlayerMatchData = false;
+
+    public void SetPlayerMatchData(NetworkedPlayer LocalNetworkedPlayer)
+    {
+        PlayFabManager.PlayerLifeTimeData.LifeTimeKills += LocalNetworkedPlayer.TotalKills;
+        PlayFabManager.PlayerLifeTimeData.LifeTimeDamageDealt += LocalNetworkedPlayer.TotalDamageDealt;
+        PlayFabManager.PlayerLifeTimeData.LifeTimeDamageTaken += LocalNetworkedPlayer.TotalDamageTaken;
+
+        PlayFabManager.PlayerMatchData.TotalKills = LocalNetworkedPlayer.TotalKills;
+        PlayFabManager.PlayerMatchData.TotalDamageDealt = LocalNetworkedPlayer.TotalDamageDealt;
+        PlayFabManager.PlayerMatchData.TotalDamageTaken = LocalNetworkedPlayer.TotalDamageTaken;
+
+        PlayFabManager.PlayerMatchData.PlayerInGameName = LocalNetworkedPlayer.GetPlayerName();
+        PlayFabManager.PlayerMatchData.ChampionSelectionIndex = LocalNetworkedPlayer.ChampionSelectionIndex;
+
+        PlayFabManager.PlayerMatchData.MatchRanking = LocalNetworkedPlayer.MatchRanking;
+        PlayFabManager.PlayerMatchData.GamePoints = LocalNetworkedPlayer.GamePoints;
+        PlayFabManager.PlayerMatchData.ItemIndexes = string.Join(",", LocalNetworkedPlayer.ItemsNetworked);
+    }
+
+    public void SuccessfullyUploadedLocalPlayerMatchData(UpdateUserDataResult result)
+    {
+        UploadedLocalPlayerMatchData = true;
+        PlayFabManager.OnDataSend(result);
+    }
+
+    public void UploadLocalPlayerMatchData()
+    {
+        if (Runner.TryGetPlayerObject(Runner.LocalPlayer, out var playerNetworkObject))
+        {
+            NetworkedPlayer LocalNetworkedPlayer = playerNetworkObject.GetComponent<NetworkedPlayer>();
+            if (!NetworkedPlayer.CanUseNetworkedPlayer(LocalNetworkedPlayer)) return;
+
+            SetPlayerMatchData(LocalNetworkedPlayer);
+
+            UploadedLocalPlayerMatchData = false;
+            PlayFabManager.UploadLocalPlayerMatchData(SuccessfullyUploadedLocalPlayerMatchData);
+        }
+    }
+
+    [Rpc(sources: RpcSources.StateAuthority, RpcTargets.All)]
+    public void RPC_UploadLocalPlayerMatchData()
+    {
+        UploadLocalPlayerMatchData();
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //GameManager Initialization
     public void Awake()
     {
@@ -379,6 +436,8 @@ public class GameManager : NetworkBehaviour
 
     public override void Spawned()
     {
+        PlayFabManager.GetLocalPlayerLifeTimeData(PlayFabManager.OnLifeTimeDataRecieved, PlayFabManager.OnError); //Everyone Get the life time data
+
         if (!Runner.IsServer) return;
 
         GameStateNetworked = GameState.PRE_ROUND;
@@ -452,6 +511,7 @@ public class GameManager : NetworkBehaviour
     public void BeginMatchResults()
     {
         StoreMatchResultDataInNetworkArrays();
+        RPC_UploadLocalPlayerMatchData();
 
         GameStateNetworked = GameState.MATCH_RESULTS;
 

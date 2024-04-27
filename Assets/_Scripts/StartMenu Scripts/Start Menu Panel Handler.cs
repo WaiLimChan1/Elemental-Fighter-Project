@@ -1,4 +1,5 @@
 using Fusion;
+using PlayFab;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,6 +11,7 @@ public class StartMenuPanelHandler : MonoBehaviour
     public static StartMenuPanelHandler Instance { get; private set; }
 
     [Header("Panels")]
+    [SerializeField] public LoginPanel LoginPanel;
     [SerializeField] public StartMenuPanel StartMenuPanel;
     [SerializeField] public HostPanel HostPanel;
     [SerializeField] public RoomBrowserPanel RoomBrowserPanel;
@@ -37,5 +39,18 @@ public class StartMenuPanelHandler : MonoBehaviour
         NRC.RoomCode = roomCode;
 
         NRC.StartGame(mode, roomCode, EF_GAME_MODE);
+    }
+
+    public void Update()
+    {
+        if (!PlayFabClientAPI.IsClientLoggedIn())
+        {
+            LoginPanel.gameObject.SetActive(true);
+
+            StartMenuPanel.gameObject.SetActive(false);
+            HostPanel.gameObject.SetActive(false);
+            RoomBrowserPanel.gameObject.SetActive(false);
+            JoinPanel.gameObject.SetActive(false);
+        }
     }
 }

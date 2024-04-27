@@ -1,3 +1,4 @@
+using PlayFab;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,6 +8,10 @@ using UnityEngine.UI;
 public class StartMenuPanel : MonoBehaviour
 {
     private StartMenuPanelHandler StartMenuPanelHandler;
+
+    [Header("Player Account Information")]
+    [SerializeField] private Button ProfileButton;
+    [SerializeField] private Button LogOutButton;
 
     [Header("Player Information")]
     [SerializeField] private TMP_InputField EnterName;
@@ -25,6 +30,16 @@ public class StartMenuPanel : MonoBehaviour
     public int GetChampionSelectionIndex()
     {
         return ChampionSelection.value;
+    }
+
+    private void ClickedProfileButton()
+    {
+
+    }
+
+    private void ClickedLogOutButton()
+    {
+        PlayFabClientAPI.ForgetAllCredentials();
     }
 
     private void ClickedHostButton()
@@ -50,6 +65,8 @@ public class StartMenuPanel : MonoBehaviour
     {
         StartMenuPanelHandler = GetComponentInParent<StartMenuPanelHandler>();
 
+        ProfileButton.onClick.AddListener(ClickedProfileButton);
+        LogOutButton.onClick.AddListener(ClickedLogOutButton);
         HostButton.onClick.AddListener(ClickedHostButton);
         RoomListButton.onClick.AddListener(ClickedRoomListButton);
         JoinButton.onClick.AddListener(ClickedJoinButton);

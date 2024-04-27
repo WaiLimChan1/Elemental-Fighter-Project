@@ -8,7 +8,7 @@ using UnityEngine;
 public class NetworkedPlayer : NetworkBehaviour
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
-    //Components
+    //Static Functions
     public static bool CanUseNetworkedPlayer(NetworkedPlayer networkedPlayer) { return (networkedPlayer != null && networkedPlayer.Object != default); }
     public static bool CanUseNetworkedPlayerOwnedChampion(NetworkedPlayer networkedPlayer) 
     { 
@@ -109,8 +109,21 @@ public class NetworkedPlayer : NetworkBehaviour
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
 
-    [Networked] public NetworkObject OwnedChampion { get; set; }
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Player Game Stats
+    [Header("Lifetime Data")]
+    [Networked] public int TotalKills { get; set; }
+    [Networked] public float TotalDamageDealt { get; set; }
+    [Networked] public float TotalDamageTaken { get; set; }
+
+    [Header("Host Data")]
+    [Networked] public int ChampionSelectionIndex { get; set; }
+    [Networked] public int MatchRanking { get; set; }
     [Networked] public float GamePoints { get; set; }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+    [Networked] public NetworkObject OwnedChampion { get; set; }
 
     public override void Spawned()
     {

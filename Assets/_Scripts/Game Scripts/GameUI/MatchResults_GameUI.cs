@@ -13,9 +13,12 @@ public class MatchResults_GameUI : MonoBehaviour
     [SerializeField] private Button returnToStartMenu;
 
 
-    public void UpdateGameUI(NetworkArray<NetworkString<_16>> MatchResultNamesNetworked, NetworkArray<int> MatchResultPointsNetworked)
+    public void UpdateGameUI(bool uploadedLocalPlayerMatchData, NetworkArray<NetworkString<_16>> MatchResultNamesNetworked, NetworkArray<int> MatchResultPointsNetworked)
     {
         TitleText.text = $"Match Results";
+
+        if (uploadedLocalPlayerMatchData) returnToStartMenu.interactable = true;
+        else returnToStartMenu.interactable = false;
 
         foreach (RoundResultsListItem_GameUI item in MatchResultsListItems)
             item.gameObject.SetActive(false);

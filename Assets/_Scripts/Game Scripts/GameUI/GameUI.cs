@@ -61,7 +61,7 @@ public class GameUI : MonoBehaviour
         else if (gameManager.GameStateNetworked == GameManager.GameState.MATCH_RESULTS)
         {
             MatchResults_GameUI.gameObject.SetActive(true);
-            MatchResults_GameUI.UpdateGameUI(gameManager.MatchResultNamesNetworked, gameManager.MatchResultPointsNetworked);
+            MatchResults_GameUI.UpdateGameUI(gameManager.UploadedLocalPlayerMatchData, gameManager.MatchResultNamesNetworked, gameManager.MatchResultPointsNetworked);
         }
     }
 }
