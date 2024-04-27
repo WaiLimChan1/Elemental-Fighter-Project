@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using PlayFab;
 using PlayFab.ClientModels;
-using UnityEditor.PackageManager;
 
 public class LoginPanel : MonoBehaviour
 {
