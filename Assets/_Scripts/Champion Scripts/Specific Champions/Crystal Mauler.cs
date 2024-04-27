@@ -5,6 +5,16 @@ using UnityEngine;
 public class CrystalMauler : Champion
 {
     //---------------------------------------------------------------------------------------------------------------------------------------------
+    //Status Logic
+    protected override bool AttackSpeedStatus(Status status)
+    {
+        return (status == Status.AIR_ATTACK || status == Status.ATTACK1 || status == Status.ATTACK2 || status == Status.ATTACK3 || status == Status.SPECIAL_ATTACK);
+    }
+    //---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------
     //Attack Logic
     public override void ApplyCrowdControl(Champion enemy, float crowdControlStrength)
     {

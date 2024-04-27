@@ -27,7 +27,7 @@ public class JoinPanel : MonoBehaviour
 
     private void ClickedJoinRandomButton()
     {
-        StartMenuPanelHandler.StartGame(GameMode.AutoHostOrClient, string.Empty);
+        StartMenuPanelHandler.StartGame(GameMode.AutoHostOrClient, string.Empty, NetworkRunnerController.EF_GAME_MODE.ARENA);
         this.gameObject.SetActive(false);
     }
 

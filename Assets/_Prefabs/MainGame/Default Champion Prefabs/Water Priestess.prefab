@@ -275,6 +275,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   inAirHorizontalMovement: 0
+  _TakeHitRecoveryPercentage: 0
   ultimateMeterDefendCost: 1
   baseMoveSpeed: 15
   roll:
@@ -364,8 +365,10 @@ MonoBehaviour:
     coolDownDuration: 15
   TransformChampion:
     RawGuidValue: f7926dae9ae408c4fa432c8e7ef11a7c
-  TransformHealthGainPercentage: 0.5
+  TransformHealthGainPercentage: 0.3
   TransformManaGainPercentage: 0.5
+  ultimateMeterCost: 1000
+  ultimateMeterKillBonus: 300
   meditate:
     attackName: Meditate
     hitBox: {fileID: 0}

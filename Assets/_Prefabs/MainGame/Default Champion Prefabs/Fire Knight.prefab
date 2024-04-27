@@ -275,6 +275,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   inAirHorizontalMovement: 0
+  _TakeHitRecoveryPercentage: 0
   ultimateMeterDefendCost: 1
   baseMoveSpeed: 15
   roll:
@@ -305,6 +306,21 @@ MonoBehaviour:
   baseCoolDownReduction: 0
   baseOmnivamp: 0
   baseMobilityModifer: 1
+  _maxHealth: 0
+  _maxMana: 0
+  _healthRegenPercentage: 0
+  _manaRegenPercentage: 0
+  _ultimateMeterRegen: 0
+  _ultimateMeterGainMultipier: 0
+  _armor: 0
+  _crowdControlIgnorePercentage: 0
+  _blockPercentage: 0
+  _crowdControlBlockPercentage: 0
+  _physicalDamage: 0
+  _attackSpeed: 0
+  _coolDownReduction: 0
+  _omnivamp: 0
+  _mobilityModifier: 0
   AttackBoxesParent: {fileID: 6256216711447502986}
   Attacks:
   - attackName: Air Attack
@@ -349,7 +365,7 @@ MonoBehaviour:
     coolDownDuration: 10
   TransformChampion:
     RawGuidValue: 0d43b720db65ee44fb62e1d397faa515
-  TransformHealthGainPercentage: 0.5
+  TransformHealthGainPercentage: 0.3
   TransformManaGainPercentage: 0.5
   ultimateMeterCost: 1000
   ultimateMeterKillBonus: 300
