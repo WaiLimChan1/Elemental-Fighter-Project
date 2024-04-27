@@ -48,13 +48,18 @@ public class PlayFabManager : MonoBehaviour
         PlayFabClientAPI.GetUserData(new GetUserDataRequest(), SuccessFunction, ErrorFunction);
     }
 
+    static public bool LifeTimeDataUsable(GetUserDataResult result)
+    {
+        return (result.Data != null &&
+            result.Data.ContainsKey("LifeTimeKills") &&
+            result.Data.ContainsKey("LifeTimeDamageDealt") &&
+            result.Data.ContainsKey("LifeTimeDamageTaken"));
+    }
+
     static public void OnLifeTimeDataRecieved(GetUserDataResult result)
     {
         Debug.Log("Recieved Life Time Data!");
-        if (result.Data != null &&
-            result.Data.ContainsKey("LifeTimeKills") &&
-            result.Data.ContainsKey("LifeTimeDamageDealt") &&
-            result.Data.ContainsKey("LifeTimeDamageTaken"))
+        if (LifeTimeDataUsable(result))
         {
             PlayerLifeTimeData.LifeTimeKills = int.Parse(result.Data["LifeTimeKills"].Value);
             PlayerLifeTimeData.LifeTimeDamageDealt = float.Parse(result.Data["LifeTimeDamageDealt"].Value);
@@ -67,29 +72,34 @@ public class PlayFabManager : MonoBehaviour
 
     //----------------------------------------------------------------------------------------
     //Get Match Data
-    public void GetLocalPlayerMatchData(Action<GetUserDataResult> SuccessFunction, Action<PlayFabError> ErrorFunction)
+    static public void GetLocalPlayerMatchData(Action<GetUserDataResult> SuccessFunction, Action<PlayFabError> ErrorFunction)
     {
         PlayFabClientAPI.GetUserData(new GetUserDataRequest(), SuccessFunction, ErrorFunction);
     }
 
-    public void OnMatchDataRecieved(GetUserDataResult result)
+    static public bool MatchDataUsable(GetUserDataResult result)
     {
-        Debug.Log("Recieved Match Data!");
-        if (result.Data != null &&
+        return (result.Data != null &&
             result.Data.ContainsKey("TotalKills") &&
             result.Data.ContainsKey("TotalDamageDealt") &&
             result.Data.ContainsKey("TotalDamageTaken") &&
-            result.Data.ContainsKey("PlayerInGameName") &&
+            //result.Data.ContainsKey("PlayerInGameName") &&
             result.Data.ContainsKey("ChampionSelectionIndex") &&
             result.Data.ContainsKey("MatchRanking") &&
             result.Data.ContainsKey("GamePoints") &&
-            result.Data.ContainsKey("ItemIndexes"))
+            result.Data.ContainsKey("ItemIndexes"));
+    }
+
+    static public void OnMatchDataRecieved(GetUserDataResult result)
+    {
+        Debug.Log("Recieved Match Data!");
+        if (MatchDataUsable(result))
         {
             PlayerMatchData.TotalKills = int.Parse(result.Data["TotalKills"].Value);
             PlayerMatchData.TotalDamageDealt = float.Parse(result.Data["TotalDamageDealt"].Value);
             PlayerMatchData.TotalDamageTaken = float.Parse(result.Data["TotalDamageTaken"].Value);
 
-            PlayerMatchData.PlayerInGameName = result.Data["PlayerInGameName"].Value;
+            //PlayerMatchData.PlayerInGameName = result.Data["PlayerInGameName"].Value;
             PlayerMatchData.ChampionSelectionIndex = int.Parse(result.Data["ChampionSelectionIndex"].Value);
 
             PlayerMatchData.MatchRanking = int.Parse(result.Data["MatchRanking"].Value);

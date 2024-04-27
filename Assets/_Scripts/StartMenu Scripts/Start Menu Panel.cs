@@ -34,7 +34,9 @@ public class StartMenuPanel : MonoBehaviour
 
     private void ClickedProfileButton()
     {
-
+        StartMenuPanelHandler.ProfilePanel.gameObject.SetActive(true);
+        StartMenuPanelHandler.ProfilePanel.GetData();
+        this.gameObject.SetActive(false);
     }
 
     private void ClickedLogOutButton()

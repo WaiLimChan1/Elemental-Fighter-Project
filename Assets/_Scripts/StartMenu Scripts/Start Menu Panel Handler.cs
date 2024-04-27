@@ -13,6 +13,7 @@ public class StartMenuPanelHandler : MonoBehaviour
     [Header("Panels")]
     [SerializeField] public LoginPanel LoginPanel;
     [SerializeField] public StartMenuPanel StartMenuPanel;
+    [SerializeField] public ProfilePanel ProfilePanel;
     [SerializeField] public HostPanel HostPanel;
     [SerializeField] public RoomBrowserPanel RoomBrowserPanel;
     [SerializeField] public JoinPanel JoinPanel;
@@ -48,6 +49,7 @@ public class StartMenuPanelHandler : MonoBehaviour
             LoginPanel.gameObject.SetActive(true);
 
             StartMenuPanel.gameObject.SetActive(false);
+            ProfilePanel.gameObject.SetActive(false);
             HostPanel.gameObject.SetActive(false);
             RoomBrowserPanel.gameObject.SetActive(false);
             JoinPanel.gameObject.SetActive(false);
