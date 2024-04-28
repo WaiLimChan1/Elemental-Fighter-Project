@@ -358,7 +358,7 @@ MonoBehaviour:
   - attackName: Special Attack
     hitBox: {fileID: 6531086310545977621}
     damage: 100
-    physicalDamageScaling: 2
+    physicalDamageScaling: 1.5
     numOfAttacks: 1
     crowdControlStrength: 20
     manaCost: 100
