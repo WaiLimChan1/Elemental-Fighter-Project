@@ -15,7 +15,10 @@ public class StartMenuPanel : MonoBehaviour
 
     [Header("Player Information")]
     [SerializeField] private TMP_InputField EnterName;
-    [SerializeField] private TMP_Dropdown ChampionSelection;
+
+    //[SerializeField] private TMP_Dropdown ChampionSelection;
+    [SerializeField] private Button ChampionSelectionButton;
+    private int championSelectionIndex;
 
     [Header("Match Making Options")]
     [SerializeField] private Button HostButton;
@@ -27,9 +30,14 @@ public class StartMenuPanel : MonoBehaviour
         return EnterName.text;
     }
 
+    public void SetChampionSelectionIndex(int index)
+    {
+        championSelectionIndex = index;
+    }
+
     public int GetChampionSelectionIndex()
     {
-        return ChampionSelection.value;
+        return championSelectionIndex;
     }
 
     private void ClickedProfileButton()
@@ -42,6 +50,12 @@ public class StartMenuPanel : MonoBehaviour
     private void ClickedLogOutButton()
     {
         PlayFabClientAPI.ForgetAllCredentials();
+    }
+
+    private void ClickedChampionSelect()
+    {
+        StartMenuPanelHandler.ChampionSelectionPanel.gameObject.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 
     private void ClickedHostButton()
@@ -69,6 +83,7 @@ public class StartMenuPanel : MonoBehaviour
 
         ProfileButton.onClick.AddListener(ClickedProfileButton);
         LogOutButton.onClick.AddListener(ClickedLogOutButton);
+        ChampionSelectionButton.onClick.AddListener(ClickedChampionSelect);
         HostButton.onClick.AddListener(ClickedHostButton);
         RoomListButton.onClick.AddListener(ClickedRoomListButton);
         JoinButton.onClick.AddListener(ClickedJoinButton);

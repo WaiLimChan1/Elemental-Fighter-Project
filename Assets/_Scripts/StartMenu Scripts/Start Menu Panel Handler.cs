@@ -13,6 +13,7 @@ public class StartMenuPanelHandler : MonoBehaviour
     [Header("Panels")]
     [SerializeField] public LoginPanel LoginPanel;
     [SerializeField] public StartMenuPanel StartMenuPanel;
+    [SerializeField] public ChampionSelectionPanel ChampionSelectionPanel;
     [SerializeField] public ProfilePanel ProfilePanel;
     [SerializeField] public HostPanel HostPanel;
     [SerializeField] public RoomBrowserPanel RoomBrowserPanel;
