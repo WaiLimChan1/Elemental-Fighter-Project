@@ -37,7 +37,7 @@ public class LoadingPanel : MonoBehaviour
 
     private void OnPlayerJoinedSuccessfully()
     {
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
     }
 
     private void Awake()
