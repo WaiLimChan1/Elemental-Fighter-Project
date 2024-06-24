@@ -628,10 +628,10 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
         {
             status = Status.JUMP_UP;
         }
-        if (Input.GetKeyDown(KeyCode.G) && CanUseAttack(Status.ATTACK1)) status = Status.ATTACK1;
-        if (Input.GetKeyDown(KeyCode.H) && CanUseAttack(Status.ATTACK2)) status = Status.ATTACK2;
-        if (Input.GetKeyDown(KeyCode.J) && CanUseAttack(Status.ATTACK3)) status = Status.ATTACK3;
-        if (Input.GetKeyDown(KeyCode.K) && CanUseAttack(Status.SPECIAL_ATTACK)) status = Status.SPECIAL_ATTACK;
+        if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Mouse0)) && CanUseAttack(Status.ATTACK1)) status = Status.ATTACK1;
+        if ((Input.GetKeyDown(KeyCode.H) || Input.GetKeyDown(KeyCode.Mouse1)) && CanUseAttack(Status.ATTACK2)) status = Status.ATTACK2;
+        if ((Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Mouse4)) && CanUseAttack(Status.ATTACK3)) status = Status.ATTACK3;
+        if ((Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.Mouse3)) && CanUseAttack(Status.SPECIAL_ATTACK)) status = Status.SPECIAL_ATTACK;
         if (Input.GetKey(KeyCode.S))
         {
             //Begin_Defend, then Begin_defend into Defend, then if already Defending, continue Defending
@@ -649,7 +649,7 @@ public class Champion : NetworkBehaviour, IBeforeUpdate
 
     protected virtual void InAirTakeInput()
     {
-        if (Input.GetKeyDown(KeyCode.G) && CanUseAttack(Status.AIR_ATTACK)) status = Status.AIR_ATTACK;
+        if ((Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.Mouse0)) && CanUseAttack(Status.AIR_ATTACK)) status = Status.AIR_ATTACK;
     }
 
     protected virtual void CancelTakeInput() { }
